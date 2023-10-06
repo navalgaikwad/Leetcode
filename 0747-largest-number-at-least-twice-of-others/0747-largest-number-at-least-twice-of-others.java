@@ -1,25 +1,17 @@
 class Solution {
     public int dominantIndex(int[] nums) {
-       
-         int len=nums.length-1;
-        HashMap<Integer,Integer>map= new HashMap<>();
-        for(int i=0; i<len+1; i++){
-            map.put(nums[i], i);
-        }
-        Arrays.sort(nums);
-        int largest= nums[len];
-        System.out.print(largest);
-        int count=0;
+       int first=-1; int second =-1;  int len = nums.length; int index =-1;
         for(int i=0; i<len; i++){
-            if(2*nums[i]>largest){
-                return -1;
+            if(nums[i]>first){
+                second =first;
+                first = nums[i];
+                index = i;
+                
+            }else if(nums[i]>second){
+               second = nums[i];
             }
-          
         }
-        
-        
-        
-        return map.get(nums[len]);
+        return first<2*second?-1:index;
     }
 }
 
