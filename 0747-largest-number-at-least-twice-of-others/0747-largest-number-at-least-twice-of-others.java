@@ -7,7 +7,8 @@ class Solution {
                 first = nums[i];
                 index = i;
                 
-            }else if(nums[i]>second){
+            }
+            else if(nums[i]>second){
                second = nums[i];
             }
         }
