@@ -11,6 +11,11 @@ class Solution {
                 result[1] = i;
                 i += 1;
             }
+            
+            if (result[0] != -1 && result[1] != -1){
+                return result;
+            }
+            
         }
         
         return result;
