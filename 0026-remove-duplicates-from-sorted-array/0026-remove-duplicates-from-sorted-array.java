@@ -3,7 +3,7 @@ class Solution {
         int left = 0;
         int right = 0;
         while(right < nums.length){
-            if(nums[right] > nums[left]){
+            if(nums[right] != nums[left]){
                 left++;
                 nums[left] = nums[right];
             }
