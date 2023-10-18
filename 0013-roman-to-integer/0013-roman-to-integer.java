@@ -15,28 +15,24 @@ class Solution {
       map.put("CD", 400);
       map.put("CM", 900);
       int sum =0;
-      String prev;
-        //MCMXCIV
      for(int i=0; i<s.length(); i++){
         String st1 = s.substring(i, i+1);
-          String st2="";
+        String st2="";
          if(i<=s.length()-2){
               st2 =s.substring(i, i+2); 
          }
        
-         if(map.containsKey(st1)&& map.containsKey(st2)){
+         if(map.containsKey(st2)){
              sum =sum + map.get(st2);
              i=i+1;
          }else{
               if(map.containsKey(st1)){
                 sum =sum + map.get(st1); 
-             }else
-            if(map.containsKey(st2)){
-            sum =sum + map.get(st2); 
+             }else if(map.containsKey(st2)){
+                sum =sum + map.get(st2); 
          }
-        }
-        
+       }
      }
-        return sum;
+      return sum;
     }
 }
