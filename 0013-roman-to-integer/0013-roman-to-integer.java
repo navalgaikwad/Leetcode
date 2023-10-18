@@ -29,8 +29,8 @@ class Solution {
              i=i+1;
          }else{
               if(map.containsKey(st1)){
-            sum =sum + map.get(st1); 
-         }
+                sum =sum + map.get(st1); 
+             }else
             if(map.containsKey(st2)){
             sum =sum + map.get(st2); 
          }
