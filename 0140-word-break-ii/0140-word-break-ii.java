@@ -11,18 +11,20 @@ class Solution {
           if(dp[i] != null){
              for(String word :wordDict){
             
-                 if( i + word.length()<= targetLength && s.substring(i ,i+ word.length()).equals(word)){
+                 if( i + word.length() <= targetLength && s.substring(i , i + word.length()).equals(word)){
+                     
                  List<List<String>> previousCombinations = dp[i];
              
                  List<List<String>> newCombinations = new ArrayList<>();
-                     
+                     //combine the previous comibination and current combination
                     for(List<String> combination: previousCombinations){
                       ArrayList<String> newCombination = new ArrayList<>();
                       newCombination.addAll(combination);
                       newCombination.add(word);
                       newCombinations.add(newCombination);
                     }
-                     if(dp[i +  word.length()]==null){
+                     //if next is null
+                     if(dp[i +  word.length()] == null){
                          dp[i +  word.length()] = newCombinations;   
                      }else{
                          dp[i +  word.length()].addAll(newCombinations);
@@ -33,9 +35,9 @@ class Solution {
           } 
        }
         List<String> currentResult = new ArrayList<>();
-      if(dp[targetLength]==null){
-          return currentResult;
-      }
+          if(dp[targetLength]==null){
+              return currentResult;
+          }
          
         for(List<String> newCombination: dp[targetLength]){
       
@@ -45,5 +47,3 @@ class Solution {
       return currentResult;
     }
 }
-
- //[["cats", "and", "dog"],["cat", "sand", "dog"]]
