@@ -1,6 +1,5 @@
 class Solution {
     public int coinChange(int[] coins, int amount) {
-
         Integer result = helper2(amount, coins, new HashMap<Integer, Integer>() );
         return result != null ? result : -1;
     }
@@ -19,11 +18,12 @@ class Solution {
         for(Integer coin :coins){
            Integer remainderList =  helper2(target - coin , coins, memo);
               if(remainderList != -1){
+                  
                   Integer newCombination = remainderList + 1;
 
                   if(result ==-1 || newCombination < result){
                       result = newCombination;
-                 }
+            }
          }      
       }
      memo.put(target, result);
