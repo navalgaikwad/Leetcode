@@ -1,26 +1,17 @@
 class Solution {
     public int uniquePaths(int m, int n) {
-        int[][] dp = new int[m + 1][ n + 1];
-        return recurssion(m, n, dp);
-    }
-    
-    int recurssion(int m, int n, int[][] dp){
-        
-         if(dp[m][n] != 0){
-             return dp[m][n];
-         }
-        if(m == 1 && n == 1){
-             return 1;
-         }
-         if(m == 0 || n == 0 ){
-             return 0;
-         }
-        
-        int val1 =  recurssion(m - 1, n, dp);
-        int val2 =  recurssion(m, n - 1, dp);
-        
-        dp[m][n] = val1 + val2; 
-        
-        return dp[ m ][ n ];
+       int[][] dp = new int[m][n];
+        dp[0][0] =1;
+        for(int i=0; i<m; i++){
+            for(int j=0; j<n; j++){
+                if( i-1 >=0){
+                    dp[i][j] = dp[i-1][j] + dp[i][j];
+                }
+                if(j-1>=0){
+                      dp[i][j] = dp[i][j-1] + dp[i][j];
+                }
+            } 
+        }
+        return dp[m-1][n-1];
     }
 }
