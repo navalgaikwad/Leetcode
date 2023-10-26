@@ -10,10 +10,10 @@ class Solution {
                 if(grid[i][j]==1){
                  dp[i][j] =0; 
                 }else{
-                    if( i-1>=0 ){
-                    dp[i][j] =  dp[i][j] + dp[i-1][j];
-                } if(j -1>=0){
-                     dp[i][j] =  dp[i][j] + dp[i][j-1];
+                    if( i+1<row ){
+                    dp[i+1][j] =  dp[i][j] + dp[i+1][j];
+                } if(j +1<col){
+                     dp[i][j+1] =  dp[i][j] + dp[i][j+1];
                 }
               }
             }
