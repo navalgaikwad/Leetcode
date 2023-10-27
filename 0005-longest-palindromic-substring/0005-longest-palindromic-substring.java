@@ -26,8 +26,9 @@ class Solution {
         }
         
         if (s.charAt(start) == s.charAt(end)) {
-            palindromeMemo[start][end] = palindrome(start + 1, end - 1, s, palindromeMemo);
-            return palindromeMemo[start][end];
+            boolean result = palindrome(start + 1, end - 1, s, palindromeMemo);
+            palindromeMemo[start][end] = result;
+            return result;
         }
         
         palindromeMemo[start][end] = false;
