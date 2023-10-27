@@ -40,17 +40,15 @@ class Solution {
             return grid[i][j];
         }
 
-        int sum = grid[i][j];
+        //int sum = ;
        
-        int val2 =  helper(grid, i - 1, j - 1, memo);
-        int val1 =  helper(grid, i - 1, j, memo);
+        int val2 =  helper(grid, i - 1, j - 1, memo); //daigonal
+        int val1 =  helper(grid, i - 1, j, memo);//next line
         
-        int result = Math.min(val1, val2);
-        sum = sum + result;
-        memo.put(key, sum);
-       // System.out.print(memo);
-          
-        return sum;
+        int result = Math.min(val1, val2) + grid[i][j];
+       
+        memo.put(key, result); 
+        return result;
     }
 }
 
