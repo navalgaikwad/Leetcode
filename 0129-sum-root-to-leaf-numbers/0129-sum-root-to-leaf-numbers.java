@@ -14,23 +14,26 @@
  * }
  */
 class Solution {
-    int result = 0;
+    int sum = 0;
     public int sumNumbers(TreeNode root) {
-        helper(root, "");
-        return result;
+        helper(root, new ArrayList<>());
+        return sum;
     }
-    
-    void helper(TreeNode root, String sum){
+    void helper(TreeNode root, List<Integer> list){
         if(root == null){
             return;
         }
-        sum = sum + root.val;
-        if(root.left == null && root.right == null){
-            result += Integer.parseInt(sum);
-            return;
+        list.add(root.val);
+      
+        if(root.left == null && root.right== null){
+         String combined = list.stream()
+                           .map(String::valueOf)
+                           .collect(Collectors.joining("")); 
+         sum += Integer.parseInt(combined);
+        System.out.print(sum);
         }
-        helper(root.left, sum);
-        helper(root.right, sum);
-        
+        helper(root.left, list);
+        helper(root.right, list);
+        list.remove(list.size() - 1);
     }
 }
