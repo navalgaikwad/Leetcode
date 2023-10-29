@@ -14,34 +14,23 @@
  * }
  */
 class Solution {
-    class Pair{
-        TreeNode node;
-        int level;
-        Pair(TreeNode node, int level){
-           this.node = node;
-           this.level = level;
-        }
-    }
     public int minDepth(TreeNode root) {
-        if(root == null){
-            return 0;
+        int value = helper(root);
+        if(value  == Integer.MAX_VALUE){
+           return 0; 
         }
-       Queue<Pair> queue = new LinkedList<>();
-       queue.add(new Pair(root, 1));
-       while(!queue.isEmpty()){
-         Pair current = queue.remove();
-        TreeNode curr = current.node;
-        int level = current.level;
-          if(curr.left == null && curr.right==null){
-              return level;
-          }
-          if(curr.left != null){
-             queue.add(new Pair(curr.left, level + 1)); 
-          }
-           if(curr.right != null){
-             queue.add(new Pair(curr.right, level + 1)); 
-          }
-       }
-        return 0;
+       return value;
+    }
+    public int helper(TreeNode root){
+         if(root == null){
+            return Integer.MAX_VALUE;
+        }
+        
+        if(root.left == null && root.right==null){
+            return 1;
+        }
+        int left = helper(root.left);
+        int right = helper(root.right);
+        return 1 + Math.min(left, right);
     }
 }
