@@ -32,7 +32,8 @@ class Solution {
         int mid = map.get(root.val);
 //         root.left = helper(preorder, inorder, inStart, mid - 1, preStart + 1, mid - 1);
 //         root.right = helper(preorder, inorder, mid + 1, inEnd , mid + 1, preEnd);
-        
+        //(preStart + mid - inStart) find the end location
+        //(preStart + mid - inStart) + 1 find the start location of preorder
         root.left = helper(preorder, inorder, inStart, mid - 1, preStart + 1, preStart + mid - inStart);
         root.right = helper(preorder, inorder, mid + 1, inEnd , preStart + mid - inStart + 1, preEnd);
 
