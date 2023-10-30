@@ -14,29 +14,25 @@
  * }
  */
 class Solution {
+      int preorderIndex =0;
       Map<Integer, Integer> map = new HashMap<>();
     public TreeNode buildTree(int[] preorder, int[] inorder) {
       
         for(int i = 0; i<inorder.length; i++){
             map.put(inorder[i], i);
         }
-       return helper(preorder, inorder, 0, inorder.length - 1, 0, preorder.length - 1);
+       return helper(preorder, 0, preorder.length - 1);
     }
-    TreeNode helper(int[] preorder, int[] inorder, int inStart, int inEnd, 
-                    int preStart, int preEnd){
-        if(inStart > inEnd || preStart > preEnd){
+    TreeNode helper(int[] preorder, int preStart, int preEnd){
+        if(preStart > preEnd){
             return null;
         }
-        TreeNode root = new TreeNode(preorder[preStart]);
-        //System.out.println(root.val);
-        int mid = map.get(root.val);
-//         root.left = helper(preorder, inorder, inStart, mid - 1, preStart + 1, mid - 1);
-//         root.right = helper(preorder, inorder, mid + 1, inEnd , mid + 1, preEnd);
-        //(preStart + mid - inStart) find the end location
-        //(preStart + mid - inStart) + 1 find the start location of preorder
-        root.left = helper(preorder, inorder, inStart, mid - 1, preStart + 1, preStart + mid - inStart);
-        root.right = helper(preorder, inorder, mid + 1, inEnd , preStart + mid - inStart + 1, preEnd);
-
+        int rootValue = preorder[preorderIndex++];
+        
+        TreeNode root = new TreeNode( rootValue );
+        root.left = helper(preorder, preStart, map.get(rootValue) - 1);
+        root.right = helper(preorder, map.get(rootValue) + 1, preEnd);
+       
         return root;
     }
 }
