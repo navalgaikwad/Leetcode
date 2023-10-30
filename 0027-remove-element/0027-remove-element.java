@@ -13,11 +13,9 @@ class Solution {
             
         }
         return s;
-        
-    
     }
        void swap(int[] nums,  int s, int e){
-            while(s<e){
+            if(s<e){
                 int temp = nums[s];
                 nums[s] = nums[e];
                 nums[e] = temp;
