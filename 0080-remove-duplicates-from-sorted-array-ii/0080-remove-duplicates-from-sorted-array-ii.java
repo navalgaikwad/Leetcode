@@ -5,7 +5,7 @@ class Solution {
         int count = 0;
         int len = nums.length;
         while(right < len){
-            //same logic if you find left != right
+            //same logic if you find left != right if you find duplicate
             if(nums[right] != nums[left]){
                 left++;
                 nums[left] = nums[right];
@@ -14,7 +14,7 @@ class Solution {
                 count ++;
                   if(count == 2){
                        left++;
-                      //swap everytime when you find counter
+                      //swap everytime when you find counter ==2
                        nums[left] = nums[right];
             }   
         }
