@@ -5,23 +5,20 @@ class Solution {
         int count = 0;
         int len = nums.length;
         while(right < len){
-            
-                 if(nums[right] != nums[left]){
+            if(nums[right] == nums[left]){
+              if(count == 1){
                 left++;
                 nums[left] = nums[right];
-                count =1;
-                     
-            }else{
-                count ++;
-                  if(count == 2){
-                       left++;
-                       nums[left] = nums[right];
-            }   
+            }
+             count++;
+        } else if(nums[right] != nums[left]){
+                left++;
+                nums[left] = nums[right];
+                count = 1;       
+            } 
+           right++;
         }
              
-         
-            right++;
-        }
         return left + 1;  
     }
 }
