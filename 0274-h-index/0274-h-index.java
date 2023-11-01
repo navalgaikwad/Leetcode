@@ -1,20 +1,16 @@
 class Solution {
     public int hIndex(int[] cit) {
         //6, 5,3, 1, 0
-           int n = cit.length;
-        
-//         if( n ==1){
-//             return cit[0];
-//         }
+        int n = cit.length;
         
         Arrays.sort(cit);
         
         int count = 0;
      
-        for(int i = n-1; i >= 0; i--){
-            if(cit[i] > count ){
+        //dont need to check greater because it is already sorted
+        //idea is similar to jump game start from back side
+        for(int i = n-1; i >= 0 && cit[i] > count ; i--){
                 count ++;
-            }
         }
         
         return count;
