@@ -21,7 +21,7 @@ class Solution {
                   
                   Integer newCombination = remainderList + 1;
 
-                  if(result ==-1 || newCombination < result){
+                  if(result ==-1 || newCombination < result){ //check minimum 
                       result = newCombination;
             }
          }      
