@@ -37,6 +37,7 @@ class Solution {
     public int[] findRedundantConnection(int[][] edges) {
         UnionFind uf =new UnionFind(edges.length+1);
         for(int[] edge: edges){
+            
             if(!uf.union(edge[0], edge[1])){
                 return edge;
             }
