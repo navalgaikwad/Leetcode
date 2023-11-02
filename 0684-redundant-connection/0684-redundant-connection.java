@@ -14,7 +14,7 @@ class UnionFind {
         if(x == root[x]){
             return x;
         }
-        return root[x] = find(root[x]);
+        return find(root[x]);
     }
     
     boolean union(int x, int y){
