@@ -28,7 +28,7 @@ class Solution {
         while(!queue.isEmpty()){
             int n = queue.size();
           
-            for(int i = 0; i < n; i++){
+           // for(int i = 0; i < n; i++){
                 int[] current = queue.remove();  
                // visited.add(nextRow + "-" + nextCol); adjacency list
                 for(int[] dir: directions){
@@ -39,7 +39,7 @@ class Solution {
                          visited.add(nextRow + "-" + nextCol);//only for grid
                     }
                 }
-            }
+            //}
             
         }
         
