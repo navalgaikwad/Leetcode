@@ -19,7 +19,7 @@ class Solution {
         
         while(!queue.isEmpty()){
             int size = queue.size();
-          for(int i = 0; i < size; i++){
+         
               
             int[] current = queue.remove();
             int row = current[0];
@@ -35,7 +35,7 @@ class Solution {
                      queue.offer(new int[]{rx, ry, length + 1});
                      visited.add(rx + "-" + ry);//only for grid
                 }
-            }
+            
           }       
         }
         return -1;
