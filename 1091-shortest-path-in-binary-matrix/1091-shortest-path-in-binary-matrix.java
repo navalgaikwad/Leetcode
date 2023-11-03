@@ -17,15 +17,14 @@ class Solution {
         queue.add(new int[]{0, 0, 1});
         visited.add(0 + "-" + 0);//only for grid
         
-        int length = 1;
         while(!queue.isEmpty()){
             int size = queue.size();
-          for(int i = 0; i < size; i++){
+         // for(int i = 0; i < size; i++){
               
             int[] current = queue.remove();
             int row = current[0];
             int col = current[1];
-            // int length = current[2];
+            int length = current[2];
             if(row == m - 1 && col == n - 1){
                 return length;
             }
@@ -37,8 +36,7 @@ class Solution {
                      visited.add(rx + "-" + ry);//only for grid
                 }
             }
-          }
-            length += 1;
+          //}       
         }
         return -1;
     }
