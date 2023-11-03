@@ -16,9 +16,10 @@ class Solution {
         Queue<int[]> queue = new LinkedList<>();
         queue.add(new int[]{0, 0, 1});
         visited.add(0 + "-" + 0);//only for grid
+        
         while(!queue.isEmpty()){
             int size = queue.size();
-          for(int i = 0; i < size; i++){
+         // for(int i = 0; i < size; i++){
               
             int[] current = queue.remove();
             int row = current[0];
@@ -35,7 +36,7 @@ class Solution {
                      visited.add(rx + "-" + ry);//only for grid
                 }
             }
-          }       
+          //}       
         }
         return -1;
     }
