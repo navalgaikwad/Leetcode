@@ -17,8 +17,8 @@ class Solution {
 			adj[connection[0]].add(new Pair(connection[1], 1));
 			adj[connection[1]].add(new Pair(connection[0], 0));
             
-       System.out.println(connection[0] +" "+ connection[1]);
-       System.out.println(connection[1] +" "+ connection[0]);
+     //  System.out.println(connection[0] +" "+ connection[1]);
+     //  System.out.println(connection[1] +" "+ connection[0]);
             
 		}
    
@@ -29,7 +29,7 @@ class Solution {
 	void dfs(ArrayList<Pair> adj[], int src, int parent){
 		for(Pair pair: adj[src]){
 			if(pair.dest!=parent){
-                System.out.println(parent + " "+src+"-"+pair.dest +" - "+pair.color);
+             //   System.out.println(parent + " "+src+"-"+pair.dest +" - "+pair.color);
 				count+=pair.color;
 				dfs(adj, pair.dest, src);
 			}
