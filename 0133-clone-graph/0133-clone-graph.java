@@ -22,6 +22,7 @@ class Solution {
     public Node cloneGraph(Node node) {
     if(node == null ) return null;
      Map<Node, Node> map = new HashMap<>();
+     // need to return references so we need to use Map<Node, Node> map 
      //create a node of node rather list of node
      Queue<Node> queue = new LinkedList<>();
         
@@ -35,9 +36,10 @@ class Solution {
         for(Node neighbor: current.neighbors){
             if(!map.containsKey(neighbor)){
                 queue.add(neighbor);
+                
                 map.put(neighbor, new Node(neighbor.val, new ArrayList<>() ));
             }
-        // add neighbour
+        // add neighbour to current
          map.get(current).neighbors.add(map.get(neighbor));  
         }
      }
