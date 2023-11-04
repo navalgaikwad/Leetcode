@@ -39,7 +39,7 @@ class Solution {
     }
     
     void dfs(char[][] board, int i, int j){
-        if(i < 0 || i>=board.length || j<0 || j>=board[0].length || board[i][j] != 'O' ){
+        if(i < 0 || i>=board.length || j<0 || j>=board[0].length || board[i][j] == 'X' || board[i][j] == '$'){
             return;
         }
       board[i][j] ='$';
