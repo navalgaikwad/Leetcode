@@ -15,7 +15,7 @@ class Solution {
         int n = grid[0].length;
         Queue<int[]> queue = new LinkedList<>();
         queue.add(new int[]{0, 0, 1});
-        visited.add(0 + "-" + 0);//only for grid
+       // visited.add(0 + "-" + 0);//only for grid
         
         while(!queue.isEmpty()){
             int size = queue.size();
