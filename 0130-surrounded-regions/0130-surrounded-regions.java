@@ -5,11 +5,11 @@ class Solution {
         
         for(int i=0; i<col; i++){
             if(board[0][i] == 'O'){
-              //board[0][i] = '$';  
+              // go deep inside row
               dfs(board, 0, i);
             }
-            if(board[row-1][i] == 'O'){
-             // board[row-1][i] = '$';  
+            if(board[row-1][i] == 'O'){ 
+             // go deep inside col
              dfs(board, row-1, i);
             }
         }
