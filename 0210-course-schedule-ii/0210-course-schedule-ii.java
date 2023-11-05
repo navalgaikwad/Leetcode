@@ -4,7 +4,7 @@ class Solution {
         int[] visited = new int[n];
         int[] indegree = new int[n];
         ArrayList<Integer>adj[] = new ArrayList[n];
-        for(int i=0; i<n; i++){
+        for(int i = 0; i < n; i++){
             adj[i] = new ArrayList<>();
         }
         
@@ -15,7 +15,7 @@ class Solution {
         
         Queue<Integer> queue = new LinkedList<>();
         for(int i=0; i<n ;i++){
-            if(indegree[i]==0){
+            if(indegree[i] == 0){
                queue.add(i); 
             }
         }
@@ -24,8 +24,10 @@ class Solution {
         List<Integer> list = new ArrayList<>();
         int i =0;
         while(!queue.isEmpty()){
+            
             int current = queue.remove();
             list.add(current);
+            
             for(Integer neighbour: adj[current]){
                 indegree[neighbour]--;
                 if(indegree[neighbour] == 0){
@@ -33,7 +35,7 @@ class Solution {
                 }
             }
         }
-       // System.out.print(result.length);
+  
         if(list.size() != n ){
            return new int[0];
         }else{
