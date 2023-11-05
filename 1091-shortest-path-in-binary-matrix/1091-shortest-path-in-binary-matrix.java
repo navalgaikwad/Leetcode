@@ -32,8 +32,9 @@ class Solution {
                 int rx = direction[0] + row;
                 int ry = direction[1] + col;
                 if(isValid(grid, rx, ry) && !visited.contains(rx+"-"+ry)){
-                     queue.offer(new int[]{rx, ry, length + 1});
                      visited.add(rx + "-" + ry);//only for grid
+                     queue.offer(new int[]{rx, ry, length + 1});
+                    
                 }
             }
           //}       
