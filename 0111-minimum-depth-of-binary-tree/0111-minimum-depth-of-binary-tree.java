@@ -26,11 +26,12 @@ class Solution {
             return Integer.MAX_VALUE;
         }
         
-        if(root.left == null && root.right==null){
-            return 1;
-        }
+       
         int left = helper(root.left);
         int right = helper(root.right);
+         if(root.left == null && root.right == null){
+            return 1;
+        }
         return 1 + Math.min(left, right);
     }
 }
