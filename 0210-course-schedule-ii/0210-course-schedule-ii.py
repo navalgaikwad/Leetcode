@@ -53,7 +53,7 @@ class Solution:
 #             pre_graph[pair[1]].append(pair[0])
     
     
-        pre_graph = {}
+        pre_graph = defaultdict(list)
 
         # Function to add an edge to the adjacency list
         def add_edge(adj, from_vertex, to_vertex):
@@ -65,8 +65,8 @@ class Solution:
         for pair in prerequisites:
             add_edge(pre_graph, pair[1], pair[0])
             # If you want to include the nodes with no outgoing edges:
-            if pair[0] not in pre_graph:
-                pre_graph[pair[0]] = []
+            # if pair[0] not in pre_graph:
+            #     pre_graph[pair[0]] = []
     
         # Initialize the course status for all courses
         course_status = [NOT_STARTED] * numCourses
