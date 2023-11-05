@@ -1,36 +1,36 @@
 class Solution {
-    public boolean canFinish(int n, int[][] prerequisites) {
-       ArrayList<Integer>adj[] = new ArrayList[n];
-       for(int i=0; i<n; i++){
-           adj[i] = new ArrayList<>();
-       }
-       for(int[] prerequisite:prerequisites){
-           adj[prerequisite[1]].add(prerequisite[0]);
-       }
-        int[] visited = new int[n];
-        for(int i=0; i<n; i++){
-            if(!dfs(adj, i, visited)){
-                return false;
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        ArrayList<Integer> adj[] =new ArrayList[numCourses];
+        int[] indegree = new int[numCourses];
+        for(int i=0; i<numCourses; i++){
+            adj[i] = new ArrayList<>();
+        }
+        for(int[] prerequisite:prerequisites){
+             adj[prerequisite[1]].add(prerequisite[0]);
+             indegree[prerequisite[0]]++;
+            // indegree[prerequisite[1]]++;
+        }
+        Queue<Integer> q = new LinkedList<>();
+        for( int i=0; i<numCourses; i++){
+            if(indegree[i] == 0){
+               q.add(i); 
             }
         }
-        return true;
-    }
-    
-    boolean dfs(ArrayList<Integer>adj[] , int i,  int[] visited){
-        if(visited[i] == 1){
-            return false;
+        int count =0;
+        while(!q.isEmpty()){
+            int current = q.remove();
+            System.out.print(current);
+            count++;
+            for(Integer neighbour:adj[current]){
+                indegree[neighbour]--;
+                if(indegree[neighbour] == 0){
+                  q.add(neighbour);  
+                }
+            }
         }
-        if(visited[i] == 2){
+        if(count == numCourses){
             return true;
         }
-        visited[i] = 1;
-        for(Integer neighbour: adj[i]){
-            if(!dfs(adj, neighbour, visited)){
-                return false;
-            }
-        }
-        visited[i] = 2;
-        return true;
+        return false;
     }
-   
 }
