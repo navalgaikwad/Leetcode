@@ -1,18 +1,19 @@
 class Solution {
-    Set<List<Integer>> answer;
+    List<List<Integer>> result = new ArrayList<>();
     public List<List<Integer>> subsets(int[] nums) {
-         answer = new HashSet<>();
-        helper(0, nums, new ArrayList<>());
-        return new ArrayList<>(answer);
+        List<Integer> ans = new ArrayList<>();
+        helper(nums, ans, 0);
+        return result;
     }
     
-    void helper(int curr, int[] nums, List<Integer> result){
-       
-      answer.add(new ArrayList<>(result));
-      for(int i=curr; i<nums.length; i++){
-        result.add(nums[i]);  
-        helper(i+1, nums, result);
-        result.remove(result.size()-1);
-      }
+    void helper(int[] nums, List<Integer> ans, int curr){
+        result.add(new ArrayList<>(ans));
+        for(int i = curr; i < nums.length; i++){
+            
+            ans.add(nums[i]);
+            helper(nums, ans, i + 1);
+            ans.remove(ans.size() - 1);
+            
+        }
     }
 }
