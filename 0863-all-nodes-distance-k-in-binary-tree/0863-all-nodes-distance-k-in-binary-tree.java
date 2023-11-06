@@ -10,23 +10,28 @@
 class Solution {
     
     
-        private Map<Integer, ArrayList<Integer>> adjListMap = new HashMap<>();
+    private Map<Integer, ArrayList<Integer>> adjListMap = new HashMap<>();
 
-
+    //convert TrreeNode to adjacencyList save parent and child
+    //created adajcency list
     private void buildAdjList(TreeNode node, TreeNode parent) {
         if (node == null) {
             return;
         }
-
+        //check value is present in map
         if (!adjListMap.containsKey(node.val)) {
             adjListMap.put(node.val, new ArrayList<>());
         }
+        //if parent is not null intitally it is null
         if (parent != null) {
-            adjListMap.get(node.val).add(parent.val);
+            //bi - directional account save parent account 
             adjListMap.get(parent.val).add(node.val);
+            adjListMap.get(node.val).add(parent.val);
+           
         }
-
+        //left
         buildAdjList(node.left, node);
+        //right
         buildAdjList(node.right, node);
     }
 
@@ -34,11 +39,12 @@ class Solution {
     public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
         buildAdjList(root, null);
         List<Integer> result = new ArrayList<>();
-        k = k ;
         Queue<int[]> queue = new LinkedList<>();
         
         queue.add(new int[]{target.val, 0});
+        
         HashSet<Integer> set = new HashSet<>();
+        
         set.add(target.val);
         while(!queue.isEmpty()){
             int[] current = queue.remove();
@@ -56,7 +62,6 @@ class Solution {
             }
         }
         
-       // System.out.print(adjListMap);
         return result;
     }
 }
