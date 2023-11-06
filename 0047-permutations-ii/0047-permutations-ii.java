@@ -15,9 +15,9 @@ class Solution {
         }
         
         for(int i = index; i<nums.length; i++){
-            swap(nums, i, index);
+            swap(nums, index, i);
             helper(ans, nums, index + 1);
-            swap(nums, i, index);
+            swap(nums, index, i);
         }
     }
     
