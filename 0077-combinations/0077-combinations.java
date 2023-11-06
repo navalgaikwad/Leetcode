@@ -9,7 +9,7 @@ class Solution {
     
     void helper(int n, int k, int index, List<Integer> ans){
         if(ans.size() == k){
-           System.out.println(index + " "+ ans);
+          // System.out.println(index + " "+ ans);
            result.add(new ArrayList<>(ans)); 
            return;
         }
