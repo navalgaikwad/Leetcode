@@ -25,13 +25,13 @@ class Solution {
     
     private void backtrack(int index, StringBuilder path, String digits) {
         if(path.length() == digits.length()){ //
-            combinations.add(path.toString());
+            combinations.add(path.toString()); //ad ae af
             return;
         }
-         String possibleLetters = letters.get(digits.charAt(index)); // 
+         String possibleLetters = letters.get(digits.charAt(index)); // abc // def
          for(char letter : possibleLetters.toCharArray()){
-            path.append(letter); 
-            backtrack( index + 1, path, digits);
+            path.append(letter); //ad
+            backtrack( index + 1, path, digits); //1, a,  23 // digits.charAt(1);
             path.deleteCharAt(path.length() - 1);
          }
     }
