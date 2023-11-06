@@ -1,65 +1,33 @@
 class Solution {
-    
+    Set<List<Integer>> set = new HashSet<>();
     public List<List<Integer>> permuteUnique(int[] nums) {
-     Set<List<Integer>> result = new HashSet();
-        helper(nums,0 , result);
-        return new ArrayList<>(result);
+        int n = nums.length;
+        ArrayList<Integer> ans = new ArrayList<>();
+        helper(ans, nums, 0);
+        return new ArrayList<>(set);
     }
     
-     void helper(int[] nums, int start, Set<List<Integer>> result){
-        if(start==nums.length){
-              result.add(arrayToList(nums));
+    void helper(ArrayList<Integer> ans, int[] nums, int index){
+        if(index == nums.length){
+           System.out.println(Arrays.toString(nums));
+            set.add(arrayToList(nums)); 
             return;
         }
         
-        for(int i= start; i<nums.length; i++){
-                
-                swap(nums, i, start);
-                helper(nums, start+1, result);
-                swap(nums, i, start);
-        
+        for(int i = index; i<nums.length; i++){
+            swap(nums, i, index);
+            helper(ans, nums, index + 1);
+            swap(nums, i, index);
         }
     }
-      private void swap(int[] nums, int i, int j) {
-            int temp = nums[i];
-            nums[i] = nums[j];
-            nums[j] = temp;
-        }
-
-        private List<Integer> arrayToList(int[] nums) {
-            List<Integer> list = new ArrayList();
-            for (int n : nums)
-                list.add(n);
-            return list;
+    
+    void swap(int[] nums, int i, int j){
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+        
+    }
+     private List<Integer> arrayToList(int[] nums) {
+        return IntStream.of(nums).boxed().collect(Collectors.toList());
         }
 }
-
-//    public List<List<Integer>> permuteUnique(int[] nums) {
-//             Set<List<Integer>> result = new HashSet();
-//             permute(nums, 0, result);
-//             return new ArrayList(result);
-//         }
-
-//         private void permute(int[] nums, int st, Set<List<Integer>> result) {
-//             if (st == nums.length)
-//                 result.add(arrayToList(nums));
-//             for (int i = st; i < nums.length; i++) {
-//                 swap(nums, i, st);
-//                 permute(nums, st + 1, result);
-//                 swap(nums, i, st);
-//             }
-//         }
-
-//         private void swap(int[] nums, int i, int j) {
-//             int temp = nums[i];
-//             nums[i] = nums[j];
-//             nums[j] = temp;
-//         }
-
-//         private List<Integer> arrayToList(int[] nums) {
-//             List<Integer> list = new ArrayList();
-//             for (int n : nums)
-//                 list.add(n);
-//             return list;
-//         }
-//     }
