@@ -10,9 +10,9 @@ class MedianFinder {
     
     public void addNum(int num) {
         if(maxHeap.isEmpty() || num <= maxHeap.peek()){
-            maxHeap.add((double)num);
+            maxHeap.add((double)num);// smaller no 
          } else {
-            minHeap.add((double)num);
+            minHeap.add((double)num);//bigger no
         }
         
         // minHeap.add(Double. valueOf(num));
@@ -23,10 +23,10 @@ class MedianFinder {
         // }
         
              // Balance the heaps if necessary
-        if(maxHeap.size() > minHeap.size() + 1){
-           minHeap.add(maxHeap.remove());
-        } else if(minHeap.size() > maxHeap.size()){
-           maxHeap.add(minHeap.remove());
+        if(maxHeap.size() > minHeap.size() + 1){// maxheap mothi asel than minheap peksha  
+           minHeap.add(maxHeap.remove());//mg remove kar and add in minheap
+        } else if(minHeap.size() > maxHeap.size()){//minheap mothi asel than maxheap peksha
+           maxHeap.add(minHeap.remove()); 
         }
     }
     
