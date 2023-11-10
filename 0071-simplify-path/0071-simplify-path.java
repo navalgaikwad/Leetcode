@@ -6,11 +6,11 @@ class Solution {
      
         for(String part : parts){
             
-            if((part.equals("..") )){
+            if((part.equals("..") )){ // remove the .. value first
                 if(!st.isEmpty()){
                    st.pop();  
                 }
-            }else if(!part.isEmpty()&& !part.equals(".")){
+            }else if(!part.isEmpty()&& !part.equals(".")){ // push the non empty
              st.push(part);   
            }
         }
