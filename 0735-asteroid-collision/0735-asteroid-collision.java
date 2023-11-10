@@ -4,13 +4,14 @@ class Solution {
         for (int ast: asteroids) {
             boolean isDestroyed = false;
             while (!stack.isEmpty() && ast < 0 && stack.peek() > 0) {
-                if (stack.peek() < -ast) {
+                if (-ast > stack.peek()) {
                     stack.pop();
-                } else if (-ast <= stack.peek()) {
+                } else if (-ast < stack.peek()) {
                     isDestroyed = true;
-                    if (-ast == stack.peek()) {
-                        stack.pop();
-                    }
+                    break;
+                } else if (-ast == stack.peek()) {
+                    stack.pop();
+                    isDestroyed = true;
                     break;
                 }
             }
@@ -25,9 +26,9 @@ class Solution {
         for (Integer st: stack) {
             ans[i++] = st;
         }
-        
-        
+
+
         return ans;
     }
-    
+
 }
