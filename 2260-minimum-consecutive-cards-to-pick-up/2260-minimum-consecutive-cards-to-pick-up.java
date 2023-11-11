@@ -7,10 +7,10 @@ class Solution {
         int min = Integer.MAX_VALUE;
         
         for(int right = 0; right < len; right++){
-            
+            // if there is duplicate window size will increase and map size is will be same
             map.put(cards[right], map.getOrDefault(cards[right], 0)+ 1);  
             
-            while(!map.isEmpty() && map.size() < right -left + 1) {
+            while(map.size() < right -left + 1) {
                 min = Math.min(min, right - left + 1);
                 
                 int value = map.get(cards[left]);
