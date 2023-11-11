@@ -11,6 +11,8 @@ class Solution {
             map.put(cards[right], map.getOrDefault(cards[right], 0)+ 1);  
             
             while(map.size() < right -left + 1) {
+         //1,2,3,1,4 L=0 R =3 for this it will come inside while loop R-L+1 = 4
+        // {1:2, 2:1, 3:1} size = 3
                 min = Math.min(min, right - left + 1);
                 
                 int value = map.get(cards[left]);
@@ -23,6 +25,8 @@ class Solution {
             }
            
         }
+        
+    
         
         return min!=Integer.MAX_VALUE? min : -1;
     }
