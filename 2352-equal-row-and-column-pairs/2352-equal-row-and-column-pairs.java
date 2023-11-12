@@ -36,9 +36,9 @@ class Solution {
         for (int[] row : grid) 
         {
             String rowString = Arrays.toString(row);
-            rowCounter.put(rowString, 1 + rowCounter.getOrDefault(rowString, 0));
+            rowCounter.put(rowString,  rowCounter.getOrDefault(rowString, 0) + 1);
         }
-
+        System.out.print(rowCounter);
         // Add up the frequency of each column in the map.
         for (int c = 0; c < n; c++) 
         {
