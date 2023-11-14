@@ -1,20 +1,22 @@
 class Solution {
     public int trap(int[] h) {
-      int leftMax = 0;
-      int rightMax =0;
-      int l=0; int r = h.length -1;
-      int result =0;
-      while(l<=r){
-          if(h[l]<=h[r]){
-              leftMax = Math.max( h[l], leftMax);
-              result = result + (leftMax-h[l] );
-              l++;
-          }else{
-              rightMax = Math.max( h[r], rightMax);
-              result = result + (rightMax - h[r]);
-              r--;
-          }
-      }
+        //logic is on every left check which is greater
+        int left = 0; //satrt from 0
+        int right = h.length - 1 ;// end
+        int leftMax = 0;
+        int rightMax = 0;
+        int result = 0;
+        while(left <= right){
+            if(h[left]<=h[right]){//max : 1
+                leftMax = Math.max(leftMax, h[left]);
+                result = result + (leftMax - h[left]);
+                left++;
+            }else{
+                rightMax = Math.max(rightMax, h[right]);
+                result = result + (rightMax - h[right]);
+                right--; 
+            }
+        }
         return result;
     }
 }
