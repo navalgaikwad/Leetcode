@@ -7,7 +7,7 @@ class Solution {
            if(map.containsKey(sumOfDigit)) {
                int value = map.get(sumOfDigit);
                max = Math.max(max, value + num);
-               if(value < num){
+               if(value < num){//update the latest value
                    map.put(sumOfDigit, num);
                }
            } else {
