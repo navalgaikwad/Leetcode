@@ -12,10 +12,10 @@ class Solution {
         int ans = 0;
 
         for (int num : nums) {
-            curr += num;
+            curr += num; //prefix sum kar
 
-            // Check if (curr - k) exists in the map
-            if (map.containsKey(curr - k)) {
+            // Check if (curr - k) exists in the map(1,2,3,4) k =2 (3 -1) = 2 : (4 -2) = 2
+            if (map.containsKey(curr - k)) { //value asel tarr add kar ans
                 ans += map.get(curr - k);
             }
 
