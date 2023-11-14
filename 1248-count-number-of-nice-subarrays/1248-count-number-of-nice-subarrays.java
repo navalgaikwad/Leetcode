@@ -14,7 +14,7 @@ class Solution {
             
             map.put(curr, map.getOrDefault(curr, 0) + 1);
         }
-        System.out.print(map);
+        //System.out.print(map);
         return ans;
     }
 }
