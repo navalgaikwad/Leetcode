@@ -5,7 +5,7 @@ class Solution {
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
         int replace = 0;
-        for(char c : t.toCharArray()) {
+        for(char c : t.toCharArray()) { //when count ==0 it is the magic a ==0
             if(map.getOrDefault(c, 0) == 0){
                 replace++;
             }else{
@@ -16,6 +16,9 @@ class Solution {
     }
 }
 
+//b = 1
+//a = 0 count = 1
+//
 
 
 
