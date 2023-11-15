@@ -1,18 +1,17 @@
 class Solution {
     public int majorityElement(int[] nums) {
-        int maj = nums[0];
-        int count =1;
-        for(int i=1; i<nums.length; i++){
-            if(nums[i] == maj){
-                count++;
-            }else{
-                count --;
-            }
-            if(count == 0){
-                maj = nums[i];
-                count = 1;
-            }
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int num : nums){
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
-        return maj;
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)->map.get(b) - map.get(a));
+        pq.addAll(map.keySet());
+        
+        return pq.remove();
     }
 }
+
+//323
+//1/0/1
+
+//12101/
