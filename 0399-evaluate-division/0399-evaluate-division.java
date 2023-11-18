@@ -22,7 +22,7 @@ class Solution {
             adj.get(equation.get(1)).add(new Node(equation.get(0), 1/values[j]));
             j++;
         }
-        System.out.print(adj);
+       // System.out.print(adj);
         //HashSet<String> visited = new HashSet<>();
          double[] result = new double[queries.size()];
         for(int i=0; i<queries.size(); i++){
@@ -39,26 +39,28 @@ class Solution {
         return result;
         //return new double[]{};
     }
-    
+
+    //here it is not asked maximum path, just asked product.
     double dfs(Map<String, List<Node>> adj, String src, String dst, HashSet<String> visited){
         visited.add(src);
         if(src.equals(dst)){
             return 1.0;
         }
-       // double total = 0.0;
+       double  total =-1;
         for(Node neighbour: adj.get(src)){
              String neigb = neighbour.node;
              double weight = neighbour.weight;
             if(!visited.contains(neigb)){
-             double  total = dfs(adj, neigb, dst, visited);
-             if(total!=-1){
+                
+             //to return multiplication declare total here and return it immediately
+             //do not declare it above and return it is only used to 
+              total = dfs(adj, neigb, dst, visited);
+             if(total != -1){ //check for 
                total = total * weight; 
               return total;
              }
-               
-             
-            }
+          }
         }
-        return -1;
+        return total;
     }
 }
