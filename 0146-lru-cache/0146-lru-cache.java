@@ -13,6 +13,7 @@ class LRUCache {
     int capacity;
     Node head = new Node(0, 0);
     Node tail = new Node(0, 0);
+    
     public LRUCache(int _capacity) {
         this.capacity = _capacity;
         head.next = tail;// very important 
@@ -59,16 +60,12 @@ class LRUCache {
         Node prevHead = head;
         
         head.next = node;
-        node.prev = head;
+        node.prev = prevHead;
         
         node.next = nextHead;
         nextHead.prev = node;
     }
-    
-    
-     
-    
-    
+
     void remove(Node node){
         map.remove(node.key); 
         Node next = node.next;
