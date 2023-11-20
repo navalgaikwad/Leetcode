@@ -1,9 +1,9 @@
 class Solution {
-    public boolean checkIfPangram(String s) {
-        Set<Character> set = new HashSet<>();
-        for(Character sne : s.toCharArray()){
-           set.add(sne);
+    public boolean checkIfPangram(String sentence) {
+       Set<Character> set = new HashSet<>();
+        for(char s: sentence.toCharArray()){
+            set.add(s);
         }
-        return set.size() == 26;
+        return set.size()==26;
     }
 }
