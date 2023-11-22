@@ -5,7 +5,6 @@ class Solution {
         int i=0;
         for(int num: nums){
             no[num]++;
-          //  i++;
         }
        for(int n =0; n<len; n++){
         if(no[n]==0){
