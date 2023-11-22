@@ -1,10 +1,13 @@
 import java.util.*;
 
 class TimeMap {
-    Map<String, TreeMap<Integer, String>> timemap;
+    Map<String, TreeMap<Integer, String>> timemap;// took key and TreeMap<> with integer, String
+    //one key can have multiple timestamp 
+    //key :[{1, "naval"},{2, "naval"},{3, "naval"}]
 
     public TimeMap() {
         timemap = new HashMap<>();
+        //key :[{1, "naval"},{2, "naval"},{3, "naval"}]
     }
 
     public void set(String key, String value, int timestamp) {
@@ -19,11 +22,13 @@ class TimeMap {
         if (!timemap.containsKey(key)) {
             return "";
         }
-        TreeMap<Integer, String> map = timemap.get(key);
-        Integer closestTimestamp = map.floorKey(timestamp);
+        TreeMap<Integer, String> map = timemap.get(key); // get the map
+        Integer closestTimestamp = map.floorKey(timestamp);// get the time stamp from map if not found return empty 
         if (closestTimestamp != null) {
             return map.get(closestTimestamp);
         }
         return "";
     }
 }
+// one key can have multiple timestamp
+//key :[{1, "naval"},{2, "naval"},{3, "naval"}]
