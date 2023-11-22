@@ -1,44 +1,58 @@
+import java.util.Arrays;
+
 class Allocator {
-    int[] array;
-    public Allocator(int n) {
-        array = new int[n];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = -1;
-        }
+    private int[] memoryArray;
+
+    public Allocator(int size) {
+        memoryArray = new int[size];
+        Arrays.fill(memoryArray, -1); // Initializing memory blocks as unavailable (-1 means available)
     }
-    public int allocate(int size, int mID) {
-        if (size > array.length) {
-            return -1;
+
+    public int allocate(int blockSize, int mID) {
+        if (blockSize > memoryArray.length) {
+            return -1; // Indicate failure to allocate if requested block size exceeds available memory size
         }
+
         int count = 0;
         int startIndex = 0;
         int endIndex = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == -1) {
+
+        for (int i = 0; i < memoryArray.length; i++) {
+            if (memoryArray[i] == -1) {
                 count++;
             } else {
                 count = 0;
                 startIndex = i + 1;
             }
-            if (count == size) {
+
+            if (count == blockSize) {
                 endIndex = i;
                 break;
             }
         }
+
         if (startIndex > endIndex) {
-            return -1;
+            return -1; // Indicate failure to allocate contiguous memory blocks of required size
         }
-        Arrays.fill(array, startIndex, Math.min(endIndex + 1, array.length), mID);
-        return startIndex;
+
+        Arrays.fill(memoryArray, startIndex, Math.min(endIndex + 1, memoryArray.length), mID);
+        return startIndex; // Return the starting index of allocated memory
     }
+
     public int free(int mID) {
-        int count = 0;   
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == mID) {
+        int count = 0;
+
+        for (int i = 0; i < memoryArray.length; i++) {
+            if (memoryArray[i] == mID) {
                 count++;
-                array[i] = -1;
+                memoryArray[i] = -1; // Free the memory block
             }
         }
-        return count;
+
+        return count; // Return the number of freed memory blocks
     }
 }
+
+
+//StartIndex and EndIndex and fill the array
+//for free the memory
