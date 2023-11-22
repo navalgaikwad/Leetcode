@@ -20,29 +20,23 @@ class Node {
 
 class Solution {
     public Node cloneGraph(Node node) {
-    if(node == null ) return null;
-     Map<Node, Node> map = new HashMap<>();
-     // need to return references so we need to use Map<Node, Node> map 
-     //create a node of node rather list of node
-     Queue<Node> queue = new LinkedList<>();
-        
-     queue.add(node);
-     //put first node along with new node
-     map.put(node, new Node(node.val, new ArrayList<>()));
-     while(!queue.isEmpty()){
-        Node current = queue.remove();//1
-      
-         //visit neighbour
-        for(Node neighbor: current.neighbors){
-            if(!map.containsKey(neighbor)){
-                queue.add(neighbor);
-                
-                map.put(neighbor, new Node(neighbor.val, new ArrayList<>() ));
-            }
-        // add neighbour to current
-         map.get(current).neighbors.add(map.get(neighbor));  
+        if(node == null){
+            return null;
         }
-     }
-     return map.get(node);
+        Map<Node, Node> map = new HashMap<>();
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(node);
+        map.put(node, new Node(node.val, new ArrayList<>()));
+        while(!queue.isEmpty()){
+            Node current = queue.remove();
+            for(Node neighbour : current.neighbors){
+              if(!map.containsKey(neighbour)){
+                queue.add(neighbour);
+                map.put(neighbour, new Node(neighbour.val, new ArrayList<>()));
+            }
+            map.get(current).neighbors.add(map.get(neighbour));
+          }
+        }
+        return map.get(node);
     }
 }
