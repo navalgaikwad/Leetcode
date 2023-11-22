@@ -1,35 +1,33 @@
-import java.util.*;
-
 class TimeMap {
-    Map<String, TreeMap<Integer, String>> timemap;// took key and TreeMap<> with integer, String
-    //one key can have multiple timestamp 
-    //key :[{1, "naval"}]
-
+    //key:[{1, naval}]
+    Map<String, TreeMap<Integer, String>> map;
     public TimeMap() {
-        timemap = new HashMap<>();
-        //key :[{1, "naval"},{2, "naval"},{3, "naval"}]
+        map = new HashMap<>();
     }
-
+    
     public void set(String key, String value, int timestamp) {
-        if (!timemap.containsKey(key)) {
-            timemap.put(key, new TreeMap<>());
+        if(!map.containsKey(key)){
+           map.put(key, new TreeMap<>()); 
         }
-        TreeMap<Integer, String> map = timemap.get(key);
-        map.put(timestamp, value);
+        map.get(key).put(timestamp, value);
     }
-
+    
     public String get(String key, int timestamp) {
-        if (!timemap.containsKey(key)) {
-            return "";
+        if(!map.containsKey(key)){
+           return ""; 
         }
-        TreeMap<Integer, String> map = timemap.get(key); // get the map
-        Integer closestTimestamp = map.floorKey(timestamp);// get the time stamp from map if not found return empty 
-        if (closestTimestamp != null) {
-            return map.get(closestTimestamp);
+        TreeMap<Integer, String> timeMap = map.get(key);
+        Integer closestTime = timeMap.floorKey(timestamp);
+        if(closestTime != null){
+            return timeMap.get(closestTime);
         }
-        return "";
+       return "";  
     }
 }
-// one key can have multiple timestamp
-//key :[{1, "naval"}].. correct
-//timestamp:[key, value] ... wrong. work for some cases
+
+/**
+ * Your TimeMap object will be instantiated and called as such:
+ * TimeMap obj = new TimeMap();
+ * obj.set(key,value,timestamp);
+ * String param_2 = obj.get(key,timestamp);
+ */
