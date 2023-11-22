@@ -3,7 +3,7 @@ import java.util.*;
 class TimeMap {
     Map<String, TreeMap<Integer, String>> timemap;// took key and TreeMap<> with integer, String
     //one key can have multiple timestamp 
-    //key :[{1, "naval"},{2, "naval"},{3, "naval"}]
+    //key :[{1, "naval"}]
 
     public TimeMap() {
         timemap = new HashMap<>();
@@ -31,4 +31,5 @@ class TimeMap {
     }
 }
 // one key can have multiple timestamp
-//key :[{1, "naval"},{2, "naval"},{3, "naval"}]
+//key :[{1, "naval"}].. correct
+//timestamp:[key, value] ... wrong. work for some cases
