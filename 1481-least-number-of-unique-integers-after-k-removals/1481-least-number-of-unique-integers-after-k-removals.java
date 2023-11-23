@@ -10,7 +10,7 @@ class Solution {
         
         //[5,5,4], k = 1
         while(!pq.isEmpty() && k > 0){
-            int freq  = pq.remove();
+            int freq  = pq.remove(); // play with value not key
             k = k -freq;
         }
         return k == 0 ? pq.size() : (pq.size() + 1);
