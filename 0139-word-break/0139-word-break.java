@@ -1,27 +1,25 @@
-import java.util.*;
-
-public class Solution {
+class Solution {
     public boolean wordBreak(String s, List<String> wordDict) {
-        return helper(s, new HashSet<>(wordDict), new HashMap<>(), 0);
-    }
-    
-    boolean helper(String s, Set<String> wordDict, Map<Integer, Boolean> memo, int index) {
-        if (memo.containsKey(index)) {
-            return memo.get(index);
-        }
-        
-        if (index == s.length()) {
-            return true;
-        }
-        
-        for (int i = index + 1; i <= s.length(); i++) {
-            if (wordDict.contains(s.substring(index, i)) && helper(s, wordDict, memo, i)) {
-                memo.put(index, true);
+        Set<String> word = new HashSet<>(wordDict);
+        Queue<Integer> queue = new LinkedList<>();
+        boolean[] seen = new boolean[s.length() + 1];
+        queue.add(0);//add 0 index
+        int len = s.length();
+        while(!queue.isEmpty()){
+            int start = queue.remove();
+            if(start == len){
                 return true;
             }
+            for(int end = start + 1; end <= len; end++){
+                if(seen[end]){
+                    continue;
+                }
+                if(word.contains(s.substring(start, end))){
+                    queue.add(end);
+                    seen[end] = true;
+                }
+            }
         }
-        
-        memo.put(index, false);
         return false;
     }
 }
