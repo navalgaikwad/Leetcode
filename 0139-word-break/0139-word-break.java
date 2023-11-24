@@ -1,23 +1,23 @@
 class Solution {
     public boolean wordBreak(String s, List<String> wordDict) {
-        return helper(s, wordDict);
+        return helper(s, wordDict, new HashMap<>());
     }
     
-    private static boolean helper(String target, List<String> wordBank){
-     int targetLength = target.length();
-     boolean[] dp = new boolean[targetLength + 1];
-    
-     dp[0] = true;
+    boolean helper(String s, List<String> wordDict, Map<String, Boolean> memo) {
+        if(memo.containsKey(s)) return memo.get(s);
+        if(s.isEmpty()){
+            return true;
+        }
         
-     for(int i = 0; i <= targetLength; i++){
-         if(dp[i]){
-         for(String word :wordBank){
-           if(i + word.length()<=targetLength && target.substring(i, i +word.length()).equals(word)){
-               dp[i +word.length()] = true;
-           }  
-        }       
-      }
-     }
-     return dp[targetLength];  
+        for(String word: wordDict){
+            if(s.startsWith(word)){
+               if(helper(s.substring(word.length()), wordDict, memo)) {
+                   memo.put(s, true);
+                   return true;
+               } 
+            }
+        }
+        memo.put(s, false);
+        return false;
     }
 }
