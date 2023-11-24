@@ -4,11 +4,10 @@ class Solution {
     }
     
     boolean helper(String s, List<String> wordDict, Map<String, Boolean> memo) {
-        if(memo.containsKey(s)) return memo.get(s);
         if(s.isEmpty()){
             return true;
         }
-        
+        if(memo.containsKey(s)) return memo.get(s);
         for(String word: wordDict){
             if(s.startsWith(word)){
                if(helper(s.substring(word.length()), wordDict, memo)) {
