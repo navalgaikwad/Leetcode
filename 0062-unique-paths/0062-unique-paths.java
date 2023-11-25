@@ -10,7 +10,7 @@ class Solution {
               if(i - 1 >= 0) dp[i][j] += dp[i-1][j];
               if(j - 1 >= 0) dp[i][j] += dp[i][j-1];  
                 
-             System.out.println(dp[i][j]);
+             //System.out.println(dp[i][j]);
             }
         }
        
