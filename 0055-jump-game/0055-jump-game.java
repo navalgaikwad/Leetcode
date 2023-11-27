@@ -1,17 +1,25 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 class Solution {
     public boolean canJump(int[] nums) {
-      int reachable = 0; //3
-       for(int i = 0; i < nums.length; i ++) {
-           if(i > reachable) return false;
-           reachable = Math.max(reachable, i + nums[i]);
-       } 
-       return true;
+        if(nums[0]==0 && nums.length<2) return true;
+        return dp(nums, 0, new HashMap<>());
+    }
+    boolean dp(int[] nums, int currentIndex, HashMap<Integer, Boolean> memo){
+        if(currentIndex==nums.length -1){
+            return true;
+        }
+        if(memo.containsKey(currentIndex)) return memo.get(currentIndex);
         
+        for(int i = 1; i< nums[currentIndex]+1; i++){
+            int nextStep = i + currentIndex;
+            if(nextStep < nums.length){
+               if(dp(nums, nextStep, memo)){
+                memo.put(currentIndex, true);
+                return true;
+            } 
+          }
+            
+        }
+        memo.put(currentIndex, false);
+        return false;
     }
 }
-
