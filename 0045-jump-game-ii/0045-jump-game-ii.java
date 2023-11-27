@@ -1,24 +1,31 @@
 class Solution {
     public int jump(int[] nums) {
-        int len = nums.length;
-        int[] dp = new int[len+1];
-        Arrays.fill(dp, -1);
-        dp[0] = 0;
-        for(int i=0; i<=len; i++){
-            if(dp[i]!=-1){
-                for(int coin = 1; coin<=nums[i]; coin++){
-                    
-                    int nextPostion = i + coin;
-                    if(nextPostion < len){
-                        int currentPosition = dp[i];
-                        if(dp[nextPostion]==-1 || currentPosition < dp[nextPostion]){
-                            dp[nextPostion] = currentPosition + 1;
-                        } 
+        if(nums.length<2) return 0;
+        return dp(nums, 0, new HashMap<>());
+    }
+    
+    int dp(int[] nums, int currentPosition, HashMap<Integer,Integer> memo){
+        if(memo.containsKey(currentPosition)){
+            return memo.get(currentPosition);
+        }
+        if(currentPosition == nums.length -1){
+            return 0;
+        }
+        
+        int minCoin = -1;
+        for(int coin = 1; coin<nums[currentPosition] +1; coin++){
+            int nextPosition = coin + currentPosition;
+            if(nextPosition < nums.length){
+                int jump = dp(nums, nextPosition, memo);
+                if(jump != -1){
+                    int newJump = jump + 1;
+                    if(minCoin == -1 || newJump < minCoin){
+                        minCoin = newJump;
                     }
-                    
                 }
             }
         }
-        return dp[len - 1];
+        memo.put(currentPosition, minCoin);
+       return  minCoin;
     }
 }
