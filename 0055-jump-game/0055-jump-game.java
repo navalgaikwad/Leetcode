@@ -1,25 +1,22 @@
 class Solution {
     public boolean canJump(int[] nums) {
-      //  if(nums[0] == 0 && nums.length < 2) return true;
-        return dp(nums, 0, new HashMap<>());
-    }
-    boolean dp(int[] nums, int currentIndex, HashMap<Integer, Boolean> memo){
-        if(currentIndex == nums.length -1){
-            return true;
-        }
-        if(memo.containsKey(currentIndex)) return memo.get(currentIndex);
-        
-        for(int coin = 1; coin< nums[currentIndex] + 1; coin++){
-            int nextStep = coin + currentIndex; // it is same as coin change
-            //move to next step
-            if(nextStep < nums.length){//check for nextstep is less than array length
-                if(dp(nums, nextStep, memo)){
-                    memo.put(currentIndex, true);
-                    return true;
-                } 
+        int len = nums.length;
+        boolean[] dp = new boolean[len + 1];
+        dp[0] = true;
+        for(int i= 0; i<=len; i++){
+            if(dp[i]){
+                for(int coin = 1; coin <=nums[i]; coin++){
+                    int nextPosition = i + coin;
+                    if(nextPosition < len){
+                        dp[nextPosition] = true;
+                        if(nextPosition == len - 1){
+                            return true;
+                        }
+                    }
+                    
+                }
             }
         }
-        memo.put(currentIndex, false);
-        return false;
+        return dp[len - 1];
     }
 }
