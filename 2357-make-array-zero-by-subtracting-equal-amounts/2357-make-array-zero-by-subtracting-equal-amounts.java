@@ -1,11 +1,17 @@
 class Solution {
     public int minimumOperations(int[] nums) {
-        PriorityQueue<Integer> pq = new PriorityQueue<>((a,b) -> b-a);
-        for(int num : nums){
-            if(num!=0 && !pq.contains(num)){
-              pq.add(num);  
-            }
+//         PriorityQueue<Integer> pq = new PriorityQueue<>((a,b) -> b-a);
+//         for(int num : nums){
+//             if(num!=0 && !pq.contains(num)){
+//               pq.add(num);  
+//             }
             
+//         }
+        Set<Integer> set = new HashSet<>();
+        for(int num : nums){
+            if(num!=0) {
+            set.add(num);
+            }
         }
        // int count =0;
        // while(!pq.isEmpty()){
@@ -13,7 +19,7 @@ class Solution {
        //      count++;
        //  }
         
-        return pq.size();
+        return set.size();
     }
     void helper(int[] nums, int val){
         for(int i=0; i<nums.length; i++){
