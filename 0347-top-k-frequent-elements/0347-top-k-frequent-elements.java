@@ -8,13 +8,11 @@ class Solution {
         PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> map.get(b) - map.get(a));
         pq.addAll(map.keySet());
         
-        int[] result = new int[k];
+        int[] num = new int[k];
         int i = 0;
-        while(k>0){
-            result[i] = pq.remove();
-            k--;
-            i++;
+        while(k-- > 0){
+            num[i++] = pq.remove();
         }
-        return result;
+        return num;
     }
 }
