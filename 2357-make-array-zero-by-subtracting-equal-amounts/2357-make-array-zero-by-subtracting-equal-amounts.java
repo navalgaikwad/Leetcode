@@ -7,6 +7,9 @@ class Solution {
 //             }
             
 //         }
+         if(nums[0] == 0 && nums.length == 1){
+            return 0;
+        }
         Set<Integer> set = new HashSet<>();
         for(int num : nums){
             if(num!=0) {
