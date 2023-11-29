@@ -7,13 +7,13 @@ class Solution {
             }
             
         }
-       int count =0;
-       while(!pq.isEmpty()){
-            helper(nums, pq.remove());
-            count++;
-        }
+       // int count =0;
+       // while(!pq.isEmpty()){
+       //      helper(nums, pq.remove());
+       //      count++;
+       //  }
         
-        return count;
+        return pq.size();
     }
     void helper(int[] nums, int val){
         for(int i=0; i<nums.length; i++){
