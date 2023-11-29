@@ -1,31 +1,33 @@
 class Solution {
     public int halveArray(int[] nums) {
-        //[5,19,8,1]
-        //19 9.5
-        //[9.5, 8, 5, 1]//1
-        //[8, 4.5, 5, 1]//2
-        //[5, 4, 4.5, 1]//3
-        //total = 33 half = 14
-        Double total =0.0;
-    PriorityQueue<Double> pq = new PriorityQueue<>((a, b) -> Double.compare(b, a));
-
+        PriorityQueue<Double> pq = new PriorityQueue<>((a, b) -> Double.compare(b, a));
+        if(nums.length<2){
+            return 1;
+        }
+        double sum = 0;
         for(int num : nums){
             pq.add((double)num);
-            total = total+num;
+            sum = sum + num;
         }
-        Double half = total / 2;
-        int count =0;
-        while(!pq.isEmpty()&& total > half){ // [5,19,8,1] [19, 8, 5, 1]
-            Double num = pq.remove();//19
-            num = num / 2;//9.5
-            total = total - num;//33 - 
+        double half = (sum/2);
+        int count =0 ;
+        while(sum>half){
+            double value = pq.remove();
+            value = value/2;
+            sum = sum - value;
+            pq.add(value);
             count++;
-            pq.add(num);
-            // if(total < half){
-            //     return count;
-            // }
-         
         }
         return count;
     }
 }
+
+//5,19,8,1
+//25+8 = 33 /2 = 16.5
+
+//19.5 9.5
+//16.5
+//19,8,5,1 = 33 - 9.5 = 23.5 > 16.5
+//9.5, 8, 5, 1
+//8,5, 4.75,1 23.5 - 4.74 = 18.75 > 16.5
+//4
