@@ -1,32 +1,21 @@
 class MedianFinder {
-
-    //PriorityQueue<Double> maxHeap = new PriorityQueue<>((a,b)->b-a);
-    PriorityQueue<Double> maxHeap = new PriorityQueue<>((a, b) -> Double.compare(b, a));
     PriorityQueue<Double> minHeap = new PriorityQueue<>();
-   
+    PriorityQueue<Double> maxHeap = new PriorityQueue<>((a, b) -> Double.compare(b, a));
     public MedianFinder() {
         
     }
     
     public void addNum(int num) {
-        if(maxHeap.isEmpty() || num <= maxHeap.peek()){
-            maxHeap.add((double)num);// smaller no 
-         } else {
-            minHeap.add((double)num);//bigger no
+        if(maxHeap.isEmpty() || (long)num<=maxHeap.peek()){
+            maxHeap.add((double)num);
+        }else{
+            minHeap.add((double)num);
         }
         
-        // minHeap.add(Double. valueOf(num));
-        // int size1 = maxHeap.size();
-        // int size2 = minHeap.size();
-        // if( size2 -size1 > 1 ){
-        //    maxHeap.add(minHeap.remove()); 
-        // }
-        
-             // Balance the heaps if necessary
-        if(maxHeap.size() > minHeap.size() + 1){// maxheap mothi asel than minheap peksha  
-           minHeap.add(maxHeap.remove());//mg remove kar and add in minheap
-        } else if(minHeap.size() > maxHeap.size()){//minheap mothi asel than maxheap peksha
-           maxHeap.add(minHeap.remove()); 
+        if(maxHeap.size() > minHeap.size()+1){
+            minHeap.add(maxHeap.remove());
+        }else if(minHeap.size() > maxHeap.size()){
+             maxHeap.add(minHeap.remove());
         }
     }
     
@@ -40,7 +29,6 @@ class MedianFinder {
             return val;
         }
        return maxHeap.peek();
-       // return minHeap.peek();
     }
 }
 
