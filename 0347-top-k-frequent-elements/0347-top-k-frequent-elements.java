@@ -5,14 +5,20 @@ class Solution {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
         
-        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> map.get(b) - map.get(a));
-        pq.addAll(map.keySet());
         
-        int[] num = new int[k];
-        int i = 0;
-        while(k-- > 0){
-            num[i++] = pq.remove();
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> map.get(a) -map.get(b));
+        for(Integer m: map.keySet()) {
+            pq.add(m);
+            while(pq.size() > k){
+                pq.remove();
+            }
         }
-        return num;
+        int[] array = new int[pq.size()];
+        int i = 0;
+        for (Integer integer : pq) {
+            array[i] = integer;
+            i++;
+        }
+        return array;
     }
 }
