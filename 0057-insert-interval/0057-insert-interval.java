@@ -1,42 +1,54 @@
 class Solution {
+    private boolean overlap(int[] a, int[] b){
+        return a[0] <= b[1] && b[0] <= a[1];
+    }
     public int[][] insert(int[][] intervals, int[] newInterval) {
-     List<int[]> left = new ArrayList<>();
-     List<int[]> right = new ArrayList<>();
-        int s = newInterval[0];
-        int e = newInterval[1];
-        //[[1,2],[3,5],[6,7],[8,10],[12,16]]  [4,8]
-        
-        for(int[] interval :intervals){
-             if( interval[1] < newInterval[0]){ // 2<4
-             left.add(interval);
-         }
+         int[][] result = new int[1][2];
+        if(intervals.length==0){
+            result[0] = newInterval;
+            return result;
+        }
+        LinkedList<int[]> mergedList = new LinkedList<>();
+        boolean overlapping = false;
+        for(int[] interval : intervals){
+            mergedList.add(interval);
+            if(overlap(interval, newInterval)){
+                mergedList.getLast()[1] = Math.max(newInterval[1], mergedList.getLast()[1]);
+                mergedList.getLast()[0] = Math.min(newInterval[0], mergedList.getLast()[0]);
+                overlapping = true;
+            }
         }
         
-     for(int[] interval :intervals){
-            if(interval[0] > newInterval[1]){
-             right.add(interval);
-         } 
-       }
-        int leftLength =left.size();
-        int rightLength = right.size();
-        if( leftLength + rightLength != intervals.length){
-             s = Math.min(s, intervals[leftLength][0]);
-             e = Math.max(e, intervals[(intervals.length -1) - rightLength][1]);
-         
+        if(!overlapping){
+            mergedList.addLast(newInterval);
         }
-        //  s = min(s, intervals[len(left)].start)
-        // e = max(e, intervals[~len(right)].end)
-        
-        List<int[]> result = new ArrayList<>();
-        result.addAll(left);
-        int[] mergedInterval = new int[2];
-        mergedInterval[0] = s;
-        mergedInterval[1] = e;
-        result.add(mergedInterval);
-        result.addAll(right);
-        
-        return result.toArray(new int[ result.size() ][ ]);
-      //  return Arrays.toArray;
-        
+       
+        int i = 0;
+        result = new int[mergedList.size()][2];
+        for (int[] interval : mergedList){
+            result[i] = interval;
+            i += 1;
+        }
+        return mergeTheInterval(result);
+    }
+    
+    int[][] mergeTheInterval(int[][] intervals) {
+        LinkedList<int[]> mergedList = new LinkedList<>();
+         Arrays.sort(intervals, (a, b) -> a[0] - b[0]); 
+        for(int[] interval :intervals) {
+           if(mergedList.isEmpty() || mergedList.getLast()[1] < interval[0]){
+                mergedList.add(interval);
+            }else if(interval[0] <= mergedList.getLast()[1]){
+                mergedList.getLast()[1] =  Math.max(interval[1], mergedList.getLast()[1]);
+                //take max from intervals
+            }
+        }
+       int[][] result = new int[mergedList.size()][2];
+        int i = 0;
+        for (int[] interval : mergedList){
+            result[i] = interval;
+            i += 1;
+        }
+        return result;
     }
 }
