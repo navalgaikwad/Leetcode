@@ -1,8 +1,6 @@
 class Solution {
     public boolean carPooling(int[][] trips, int capacity) {
-        if(trips.length == 1){
-            return trips[0][0]<=capacity;
-        }
+       
         Map<Integer, Integer> map = new TreeMap<>();
         for(int i=0; i<trips.length; i++){
             map.put(trips[i][1], map.getOrDefault(trips[i][1], 0) + trips[i][0]);
