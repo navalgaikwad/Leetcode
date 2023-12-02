@@ -1,4 +1,5 @@
 class Solution {
+    //to do
     public int[] maxSlidingWindow(int[] nums, int k) {
         Deque<Integer> deq = new LinkedList<>();
         int[] result = new int[nums.length - k +1];
@@ -8,6 +9,7 @@ class Solution {
                 deq.removeLast();
             }
             deq.addLast(i);
+            //check for window size
             if(deq.peek() + k == i){
                deq.removeFirst(); 
             }
