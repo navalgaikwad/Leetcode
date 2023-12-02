@@ -5,7 +5,8 @@ public class Solution extends VersionControl {
     public int firstBadVersion(int n) {
         int left = 1;
         int right = n;
-        int firstBadVersion = 0;
+        int firstBadVersion = n;
+        
         while(left <= right){
             int mid = left + (right - left)/2;
             //search untill we find first bad version search it on left side after that
