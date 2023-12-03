@@ -12,14 +12,14 @@ class Solution {
             if(nums[mid] == target){
                 return mid;
             }
-            if(nums[left] <= nums[mid]) {// normal sorted
-               if(nums[left] <= target && nums[mid] > target ) {
+            if(nums[left] <= nums[mid]) {// normal sorted//starting and middle
+               if(nums[left] <= target && nums[mid] > target ) { // normal condition
                     right = mid - 1;
                 }else {
                     left = mid + 1;
                 } 
             } else {
-            if(nums[right] >= nums[mid]) {// right side normal sorted
+            if(nums[right] >= nums[mid]) {// right side normal sorted last and miidle
                if(nums[right] >= target && nums[mid] < target ) {
                     left = mid + 1;
                 }else {
