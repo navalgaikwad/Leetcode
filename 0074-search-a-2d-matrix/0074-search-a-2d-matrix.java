@@ -13,7 +13,7 @@ class Solution {
         
         while(left <= right) {
             int mid = left + (right - left) / 2;
-            int row = mid/matrix[0].length;
+            int row = mid / matrix[0].length;
             int col = mid % matrix[0].length;
             
             if( matrix[row][col] == target) {
