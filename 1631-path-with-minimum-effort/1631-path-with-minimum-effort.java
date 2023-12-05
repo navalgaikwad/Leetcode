@@ -1,11 +1,13 @@
 class Solution {
     // important learning here
-    //
+    //to check for Math.abs(heights[i][j] - heights[i + 1][j]) diff not more than mid
+    //best one
     public int minimumEffortPath(int[][] heights) {
         int m = heights.length;
         int n = heights[0].length;
         int left = 0;
         int right = 0;
+        //find the max value in the 
         for (int[] row: heights) {
             for (int num: row) {
                 right = Math.max(right, num);
@@ -23,7 +25,7 @@ class Solution {
         
         return left;
     }
-    
+    //run the dfs
     boolean dfs(int[][] heights, int i, int j, int mid, boolean[][] seen) {
     if (i < 0 || i >= heights.length || j < 0 || j >= heights[0].length || seen[i][j]) {
         return false;
