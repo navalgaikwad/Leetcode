@@ -5,6 +5,7 @@ class Solution {
         for (int num : nums) {
             right = Math.max(right, num);
         }
+        //find max
         int result =right;
         while(left <= right) {
             int mid = left + (right - left)/2;
@@ -18,7 +19,7 @@ class Solution {
         }
         return result;
     }
-    
+    //division must be ceil
      boolean helper(int[] nums, int threshold, int divisor) {
         int sum = 0;
         for (int num : nums) {
@@ -27,3 +28,4 @@ class Solution {
         return sum <= threshold;
     }
 }
+//rest is the same
