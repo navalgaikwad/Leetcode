@@ -1,19 +1,26 @@
+
 class Solution {
     public int minSteps(String s, String t) {
-        //take map find count
-        //if count ==0 from map than increase the result
-        Map<Character, Integer> map = new HashMap<>();
-        for(char ch: s.toCharArray()){
-            map.put(ch, map.getOrDefault(ch, 0) + 1);
+        Map<Character, Integer> charCounts = new HashMap<>();
+        
+      
+        for(char c : s.toCharArray()) {
+            charCounts.put(c, charCounts.getOrDefault(c, 0) + 1);
         }
-        int count = 0;
-        for(char ch: t.toCharArray()){
-            
-            if(map.getOrDefault(ch, 0) <= 0){
-                count++;
+
+      
+        for(char c : t.toCharArray()) {
+            charCounts.put(c, charCounts.getOrDefault(c, 0) - 1);
+        }
+
+        int result =0;
+        for(int val : charCounts.values()) {
+            if(val >=0) {
+               result = result + val;  
             }
-            map.put(ch, map.getOrDefault(ch, 0) - 1);
+           
         }
-        return count;
+        System.out.print(charCounts);
+        return result;
     }
 }
