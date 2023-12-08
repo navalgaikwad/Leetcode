@@ -14,6 +14,7 @@ class Solution {
             plates[i] = count;
         }
         
+        //calculate candels from left
          int index = -1;
          for(int i= len - 1; i >= 0; i--) {
              if(s.charAt(i) == ('|')) {
@@ -22,6 +23,7 @@ class Solution {
             leftCandels[i] = index;
         }
         
+        // //calculate candels from right
          index = -1;
          for(int i=0; i < len; i++) {
              if(s.charAt(i) == ('|')) {
@@ -30,9 +32,11 @@ class Solution {
             rightCandels[i] = index;
         }
         
+        //then find the left index and right index and leftIndex < rightIndex
         int[] result = new int[queries.length];
         int k = 0;
         for(int[] query:queries) {
+            
             int value1 = query[0];
             int value2 = query[1];
             
@@ -42,7 +46,7 @@ class Solution {
             if(leftIndex != -1 && rightIndex != -1 && leftIndex < rightIndex) {
                result[k++] = Math.abs(plates[rightIndex] - plates[leftIndex]);
             }else {
-                result[k++] = 0;
+               result[k++] = 0;
             }
         }
         
