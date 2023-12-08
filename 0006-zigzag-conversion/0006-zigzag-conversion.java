@@ -1,6 +1,5 @@
 class Solution {
     public String convert(String s, int numRows) {
-        // Edge case: if numRows is 1 or s is not long enough to form a zigzag
         if (numRows == 1 || numRows >= s.length()) {
             return s;
         }
@@ -11,13 +10,13 @@ class Solution {
             result[i] = new ArrayList<>();
         }
         
-        int index = 0;
+        int index = 0;//maintain the index for string index
         while (index < s.length()) {
-            
+            //go to 0 to last
             for (int j = 0; j < numRows && index < s.length(); j++) {
                 result[j].add(s.charAt(index++));
             }
-            
+            //last -2 to 1
             for (int j = numRows - 2; j >= 1 && index < s.length(); j--) {
                 result[j].add(s.charAt(index++));
             }
