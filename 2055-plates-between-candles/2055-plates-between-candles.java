@@ -15,7 +15,7 @@ class Solution {
         }
         
         //calculate candels from left
-         int index = -1;
+         int index = -1; //intialise it -1 not 0 because 0 is valid index
          for(int i= len - 1; i >= 0; i--) {
              if(s.charAt(i) == ('|')) {
                 index = i;
