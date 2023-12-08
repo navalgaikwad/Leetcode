@@ -1,40 +1,34 @@
 class RandomizedSet {
-  Map<Integer, Integer> dict;
-  List<Integer> list;
-  Random rand = new Random();
-
-  /** Initialize your data structure here. */
-  public RandomizedSet() {
-    dict = new HashMap();
-    list = new ArrayList();
-  }
-
-  /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
-  public boolean insert(int val) {
-    if (dict.containsKey(val)) return false;
-
-    dict.put(val, list.size());
-    list.add(list.size(), val);
-    return true;
-  }
-
-  /** Removes a value from the set. Returns true if the set contained the specified element. */
-  public boolean remove(int val) {
-    if (! dict.containsKey(val)) return false;
-
-    // move the last element to the place idx of the element to delete
-    int lastElement = list.get(list.size() - 1);
-    int idx = dict.get(val);
-    list.set(idx, lastElement);
-    dict.put(lastElement, idx);
-    // delete the last element
-    list.remove(list.size() - 1);
-    dict.remove(val);
-    return true;
-  }
-
-  /** Get a random element from the set. */
-  public int getRandom() {
-    return list.get(rand.nextInt(list.size()));
-  }
+    Set<Integer> hs = new HashSet<>();
+    public RandomizedSet() {
+        
+    }
+    
+    public boolean insert(int val) {
+        return hs.add(val);
+    }
+    
+    public boolean remove(int val) {
+        return hs.remove(val);
+    }
+    
+    public int getRandom() {
+        Integer[] arrayNumbers = hs.toArray(new Integer[hs.size()]); 
+  
+        // generate a random number 
+        Random rndm = new Random(); 
+  
+        // this will generate a random number between 0 and 
+        // HashSet.size - 1 
+        int rndmNumber = rndm.nextInt(hs.size()); 
+        return arrayNumbers[rndmNumber];
+    }
 }
+
+/**
+ * Your RandomizedSet object will be instantiated and called as such:
+ * RandomizedSet obj = new RandomizedSet();
+ * boolean param_1 = obj.insert(val);
+ * boolean param_2 = obj.remove(val);
+ * int param_3 = obj.getRandom();
+ */
