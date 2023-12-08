@@ -1,26 +1,25 @@
 class Solution {
     public int compress(char[] chars) {
-        StringBuilder sb = new StringBuilder();
-        int left=0;
-        int right=0;
-        int len = chars.length;
-        int count =0;
-        while(right < len){
-            
-            char c = chars[right];
-            sb.append(c);
-            count =0;
-            while(right<len && chars[right] == c){
+        //take one char search untill you find reapeating character
+        //find the count
+        //if count >1 then append to char
+        //otherwise 
+        int i = 0;
+        int index =0;
+        while(i < chars.length) {
+            char ch = chars[i];
+            int count =0;
+            while(i < chars.length && ch == chars[i]) {
+                i++;
                 count++;
-                right++;
             }
-            if(count>1){
-              sb.append(count);  
+            chars[index++] = ch;
+            if(count > 1) {
+                 for (char c : Integer.toString(count).toCharArray()) {
+                    chars[index++] = c;
+                }
             }
         }
-        for (int i = 0; i < sb.length(); i++) {
-           chars[i]=sb.charAt(i);
-        }
-        return sb.length();
+        return index;
     }
 }
