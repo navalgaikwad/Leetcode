@@ -1,70 +1,76 @@
-import java.util.HashMap;
-import java.util.Map;
+class TrieNode{
+    private TrieNode[] children;
+    private boolean isEndOfWord; // which will have children and isEnd
+
+    public TrieNode() {
+        children = new TrieNode[26];  // 26 letters of the alphabet
+        isEndOfWord = false;
+    }
+
+    public boolean containsKey(char ch) {
+        return children[ch - 'a'] != null;//convert ch to integer and return the true o
+    }
+
+    public TrieNode get(char ch) {
+        return children[ch - 'a'];//
+    }
+
+    public void put(char ch, TrieNode node) {
+        children[ch - 'a'] = node;
+    }
+
+    public void setEnd() {
+        isEndOfWord = true;
+    }
+
+    public boolean isEnd() {
+        return isEndOfWord;
+    }
+}
 
 class Trie {
-
-    // Trie Node
-    static class Node {
-        char c;
-        Map<Character, Node> children;
-        boolean isWord;
-
-        public Node(char c) {
-            this.c = c;
-            this.children = new HashMap<>();
-            this.isWord = false;
-        }
-
-        @Override
-        public String toString() {
-            return "c: " + c + " " +
-                   "children: " + children.keySet().toString();
-        }
-    }
-
-    private Node root;
+    // new class 
+    //TrieNode
+    // which will have children and isEnd
+    private TrieNode root;
 
     public Trie() {
-        this.root = new Node('\0');
+        root = new TrieNode();
     }
 
-    public void insert(String word) {
-        Node curr = root;
-        for (char ch : word.toCharArray()) {
-            curr.children.putIfAbsent(ch, new Node(ch));
-            curr = curr.children.get(ch);
+    public void insert(String word) {//same as clone node
+        TrieNode node = root;
+        for (int i = 0; i < word.length(); i++) {
+            char currentChar = word.charAt(i);
+            if (!node.containsKey(currentChar)) { // check if present if not present add currentChar to with next trieNode
+                node.put(currentChar, new TrieNode());
+            }
+            node = node.get(currentChar);
         }
-        curr.isWord = true;
+        node.setEnd();// it will be at the last
     }
 
     public boolean search(String word) {
-        Node lastNode = findLastNode(word);
-        return lastNode != null && lastNode.isWord;
+        TrieNode node = searchPrefix(word);
+        return node != null && node.isEnd(); //check node is not null and not end
     }
 
     public boolean startsWith(String prefix) {
-        return findLastNode(prefix) != null;
+        TrieNode node = searchPrefix(prefix);
+        return node != null;
     }
 
-    private Node findLastNode(String str) {
-        Node curr = root;
-        for (char ch : str.toCharArray()) {
-            if (!curr.children.containsKey(ch)) {
-                return null;
+    private TrieNode searchPrefix(String word) {
+        TrieNode node = root; //searching start from root
+        for (int i = 0; i < word.length(); i++) {
+            char curLetter = word.charAt(i);// take one char
+            if (node.containsKey(curLetter)) {// check if key is present
+                node = node.get(curLetter); // assign next node value to node
+            } else {
+                return null; // if not matching return null
             }
-            curr = curr.children.get(ch);
         }
-        return curr;
-    }
-
-    // Usage
-    public static void main(String[] args) {
-        Trie trie = new Trie();
-        trie.insert("apple");
-        System.out.println(trie.search("apple"));   // returns true
-        System.out.println(trie.search("app"));     // returns false
-        System.out.println(trie.startsWith("app")); // returns true
-        trie.insert("app");
-        System.out.println(trie.search("app"));     // returns true
+        return node;
     }
 }
+
