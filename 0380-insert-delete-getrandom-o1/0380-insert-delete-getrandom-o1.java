@@ -1,40 +1,43 @@
-import java.util.*;
-
 class RandomizedSet {
-   
-    Map<Integer, Integer> indexMap;
-    List<Integer> listOfKey;
-    Random rndm;
-    
+
+    List<Integer> nums;
+    Map<Integer, Integer> idxMap;
+    Random random;
+
     public RandomizedSet() {
-        indexMap = new HashMap<>();
-        listOfKey = new ArrayList<>(); // An ArrayList is usually more efficient for random access
-        rndm = new Random();
+        nums = new ArrayList<>();
+        idxMap = new HashMap<>();
+        random = new Random();
     }
 
     public boolean insert(int val) {
-        if (!indexMap.containsKey(val)) {
-            indexMap.put(val, listOfKey.size());
-            listOfKey.add(val);
-            return true;
-        }
-        return false;
-    }
-    
-    public boolean remove(int val) {
-        if (!indexMap.containsKey(val)) {
+        if (idxMap.containsKey(val)) {
             return false;
         }
-        int indexToRemove = indexMap.get(val);
-        int lastElement = listOfKey.get(listOfKey.size() - 1);
-        Collections.swap(listOfKey, indexToRemove, listOfKey.size() - 1);
-        listOfKey.remove(listOfKey.size() - 1);
-        indexMap.put(lastElement, indexToRemove);
-        indexMap.remove(val);
+
+        idxMap.put(val, nums.size()); //val and list of the list where index is saved
+        nums.add(val);//and save in the list
         return true;
     }
-    
+
+    public boolean remove(int val) {
+        if (!idxMap.containsKey(val)) {
+            return false;
+        }
+        // if both are not matching 
+        int idx = idxMap.get(val);
+        int lastIdx = nums.size() - 1; 
+        if (idx != lastIdx) {
+            int lastVal = nums.get(lastIdx);// get the last value
+            nums.set(idx, lastVal);//update the last index
+            idxMap.put(lastVal, idx);// update map
+        }
+        nums.remove(lastIdx);// if both are same  remove from the the map and and list
+        idxMap.remove(val);
+        return true;
+    }
+
     public int getRandom() {
-        return listOfKey.get(rndm.nextInt(listOfKey.size()));
+        return nums.get(random.nextInt(nums.size()));
     }
 }
