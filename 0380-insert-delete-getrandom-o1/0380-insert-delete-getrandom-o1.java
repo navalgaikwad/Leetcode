@@ -1,51 +1,40 @@
+import java.util.*;
+
 class RandomizedSet {
    
-    Map<Integer, Integer> indexMap = new HashMap<>();
+    Map<Integer, Integer> indexMap;
+    List<Integer> listOfKey;
+    Random rndm;
+    
     public RandomizedSet() {
-        
+        indexMap = new HashMap<>();
+        listOfKey = new ArrayList<>(); // An ArrayList is usually more efficient for random access
+        rndm = new Random();
     }
-    int index =0;
+
     public boolean insert(int val) {
-         if(!indexMap.containsKey(val)) {
-            
-             indexMap.put(val, val);
-        
-             return true;
-         }
+        if (!indexMap.containsKey(val)) {
+            indexMap.put(val, listOfKey.size());
+            listOfKey.add(val);
+            return true;
+        }
         return false;
-        
     }
     
     public boolean remove(int val) {
-           Integer ind = indexMap.remove(val);
-           if(ind!=null) {
-            
-               return true;
-           }
-        return false;
+        if (!indexMap.containsKey(val)) {
+            return false;
+        }
+        int indexToRemove = indexMap.get(val);
+        int lastElement = listOfKey.get(listOfKey.size() - 1);
+        Collections.swap(listOfKey, indexToRemove, listOfKey.size() - 1);
+        listOfKey.remove(listOfKey.size() - 1);
+        indexMap.put(lastElement, indexToRemove);
+        indexMap.remove(val);
+        return true;
     }
     
     public int getRandom() {
-      //  Integer[] arrayNumbers = hs.toArray(new Integer[hs.size()]); 
-  
-        // generate a random number 
-        Random rndm = new Random(); 
-  
-        // this will generate a random number between 0 and 
-        // HashSet.size - 1 
-        int rndmNumber = rndm.nextInt(indexMap.size());
-        // Get the key at the random index
-        Integer randomKey = new ArrayList<>(indexMap.keySet()).get(rndmNumber);
-        
-        return randomKey;
-        
+        return listOfKey.get(rndm.nextInt(listOfKey.size()));
     }
 }
-
-/**
- * Your RandomizedSet object will be instantiated and called as such:
- * RandomizedSet obj = new RandomizedSet();
- * boolean param_1 = obj.insert(val);
- * boolean param_2 = obj.remove(val);
- * int param_3 = obj.getRandom();
- */
