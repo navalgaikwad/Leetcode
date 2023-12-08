@@ -1,47 +1,53 @@
 class Solution {
-    
-    public int[] platesBetweenCandles(String st, int[][] queries) {
-      int len = queries.length;
-      int[] left = new int[st.length()];
-      int[] right = new int[st.length()];
-      int[] sum = new int[st.length()];
-      int[] result = new int[len];
+    public int[] platesBetweenCandles(String s, int[][] queries) {
+        int len = s.length() ;
+        int[] plates = new int[len];
+        int[] leftCandels = new int[len];
+        int[] rightCandels = new int[len];
         
-        int counter = -1;
-        for(int i= 0; i<st.length(); i++){
-            if(st.charAt(i)=='|'){
-                counter = i;
+        //plates[i]
+        int count =0;
+        for (int i = 0; i < len; i++) {
+            if (s.charAt(i) == '*') {
+                count++;
             }
-            left[i]=counter;     
-        }
-        counter=-1;
-        for(int i= st.length()-1; i>= 0; i--){
-            if(st.charAt(i)=='|'){
-                counter = i;
-            }
-            right[i] = counter;   
+            plates[i] = count;
         }
         
-        counter= 0;
-        for(int i= 0; i<st.length(); i++){
-            if(st.charAt(i)=='*'){
-                counter += 1;
+         int index = -1;
+         for(int i= len - 1; i >= 0; i--) {
+             if(s.charAt(i) == ('|')) {
+                index = i;
             }
-            sum[i] = counter;   
+            leftCandels[i] = index;
         }
         
-        int i=0;
-        for(int[] q: queries){
-            int l = q[0];
-            int r = q[1];
-            l = right[l];
-            r = left[r];
-            if(l ==-1 || r == -1 || r<l){
-                result[i++]=0;
-            }else{
-                 result[i++]=sum[r]- sum[l];
-            }  
+         index = -1;
+         for(int i=0; i < len; i++) {
+             if(s.charAt(i) == ('|')) {
+                index = i;
+            }
+            rightCandels[i] = index;
         }
-       return result; 
+        
+        int[] result = new int[queries.length];
+        int k = 0;
+        for(int[] query:queries) {
+            int value1 = query[0];
+            int value2 = query[1];
+            
+            int leftIndex = leftCandels[value1];
+            int rightIndex = rightCandels[value2];
+            
+            if(leftIndex != -1 && rightIndex != -1 && leftIndex < rightIndex) {
+               result[k++] = Math.abs(plates[rightIndex] - plates[leftIndex]);
+            }else {
+                result[k++] = 0;
+            }
+        }
+        
+       
+        return result;
+       // return new int[]{};
     }
 }
