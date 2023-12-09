@@ -4,7 +4,7 @@ class Solution {
         long right = 100000000000000L;
         while(left < right) {
             long mid = left + (right-left)/2;
-            if(compelteTheTrip(time, mid, totalTrips)>=totalTrips) {
+            if(compelteTheTrip(time, mid, totalTrips) >= totalTrips) {
                 right = mid;
             }else {
                 left = mid + 1;
@@ -13,12 +13,12 @@ class Solution {
         return left;
     }
     
-    long compelteTheTrip(int[] times, long mid, int totalTrips) {
+    long compelteTheTrip(int[] times, long currentTime, int totalTrips) {
         long count = 0;
         for(int time : times) {
             long t = (long)time;
-            count +=mid/t;
-            if(count >= totalTrips ){
+            count += currentTime / t;
+            if(count >= totalTrips ){//count is greater than totalTrips break it
                 break;
             }
         }
