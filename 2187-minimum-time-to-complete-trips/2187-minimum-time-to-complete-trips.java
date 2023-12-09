@@ -18,9 +18,9 @@ class Solution {
         for(int time : times) {
             long t = (long)time;
             count +=mid/t;
-            // if(count >= totalTrips ){
-            //     break;
-            // }
+            if(count >= totalTrips ){
+                break;
+            }
         }
         return count;
     }
