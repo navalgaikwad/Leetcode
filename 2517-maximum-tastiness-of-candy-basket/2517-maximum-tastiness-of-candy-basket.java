@@ -1,9 +1,9 @@
 class Solution {
     public int maximumTastiness(int[] price, int k) {
-        Arrays.sort(price);
+        Arrays.sort(price);//sort it
         int left =0;
-        int right = price[price.length-1] - price[0];
-        while(left<=right) {
+        int right = price[price.length-1] - price[0];//find highest price we are playing with price
+        while(left<=right) {//finding maximum template
             int mid = left + (right- left)/2;
             if(helper(price, k, mid)) {
                 left = mid + 1;
@@ -18,7 +18,7 @@ class Solution {
         int count = 1;
         int previous = price[0];
         for(int i=1; i<price.length; i++) {
-            if(price[i] - previous >= gap) {
+            if(price[i] - previous >= gap) {//find the gap
                 count++;
                 previous = price[i];
             }
