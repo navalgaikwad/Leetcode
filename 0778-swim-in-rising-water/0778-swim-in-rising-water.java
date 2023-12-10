@@ -1,30 +1,35 @@
 class Solution {
     public int swimInWater(int[][] grid) {
-           int length = grid.length;
-       // int low =grid[0][0];
-        int s=grid[0][0];
-        int e =length*length-1;
-        while(s<e){
-             boolean visited[][] = new boolean[length][length];
-            int mid = s + (e-s)/2;
-            if(dfs(grid, 0, 0, mid, visited)){
-                e = mid;
-            }else{
-                s = mid+1;
+        int left =grid[0][0];
+        int right = grid.length * grid.length - 1;
+       
+        while(left<=right) {
+            boolean visited[][] = new boolean[grid.length][grid.length];
+            int mid = left + (right - left)/2;
+            if(dfs(grid, 0, 0, mid, visited)) {
+                right = mid - 1;
+            }else {
+                left = mid + 1;
             }
         }
-        return s;
+        return left;
     }
     
-    boolean dfs(int[][] grid, int i, int j, int no, boolean visited[][]){
-        if(i<0 || i>=grid.length || j<0||j>=grid[0].length || grid[i][j]>no || visited[i][j]){
+    boolean dfs(int[][] grid, int i, int j, int mid, boolean visited[][]) {
+        
+        int len = grid.length;
+        if(i<0 || i>=len || j<0 || j>=grid[0].length || grid[i][j] > mid|| visited[i][j]) {
             return false;
         }
-        visited[i][j]=true;
-        if( i== grid.length-1 && j == grid.length-1){
+        if(i == len - 1 && j ==len - 1) {
             return true;
         }
-        return dfs(grid, i+1, j, no, visited) || dfs(grid, i, j+1, no, visited) 
-            || dfs(grid, i-1, j, no, visited) || dfs(grid, i, j-1, no,visited);
+       visited[i][j] = true;
+       boolean flag = dfs(grid, i + 1, j, mid, visited) ||
+        dfs(grid, i , j + 1, mid, visited)||
+        dfs(grid, i - 1, j, mid, visited)||
+        dfs(grid, i, j - 1, mid, visited);
+        //visited[i][j] = false;
+        return flag;
     }
 }
