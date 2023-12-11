@@ -1,54 +1,36 @@
 class Solution {
     public int waysToSplitArray(int[] nums) {
-        int len = nums.length;
-        long[] maxSumFromStart = new long[len];
-        long[] maxSumFromEnd = new long[len];
-        // maxSumFromStart = helper1(nums, len);
-        // maxSumFromEnd = helper2(nums, len);
-       
-         long sumFromStart = 0, sumFromEnd = 0;
-        for (int i = 0, j = len - 1; i < len; i++, j--) {
-            sumFromStart += nums[i];
-            sumFromEnd += nums[j];
-            maxSumFromStart[i] = sumFromStart;
-            maxSumFromEnd[j] = sumFromEnd;
+        int n = nums.length;
+        long[] prefixSum = new long[n];
+        long[] suffixSum = new long[n];
+
+        // Calculate prefix sum
+        prefixSum[0] = nums[0];
+        for (int i = 1; i < n; i++) {
+            prefixSum[i] = prefixSum[i - 1] + nums[i];
+        }
+        //10  14  6  13
+        for(long suffix: prefixSum) {
+            System.out.print(suffix +"  ");
         }
         
+        // Calculate suffix sum 
+        //13  3  -1  7  
+        suffixSum[n - 1] = nums[n - 1];
+        for (int i = n - 2; i >= 0; i--) {
+            suffixSum[i] = suffixSum[i + 1] + nums[i];
+        }
+        for(long suffix: suffixSum) {
+            System.out.print(suffix +"  ");
+        }
+        // Count valid splits
         int count = 0;
-        
-        for(int i = 0; i < len-1 ;i++){
-            if(maxSumFromStart[i]>= maxSumFromEnd[i+1]){
+        for (int i = 0; i < n - 1; i++) {
+            if (prefixSum[i] >= suffixSum[i + 1]) {
                 count++;
             }
         }
+
         return count;
     }
-    
-    
-    // long[] helper1(int[] nums, int len ){
-    //     long[] maxSumFromStart = new long[len];
-    //     long sum =0;
-    //     for(int i =0; i<len; i++){
-    //         sum = sum + nums[i];
-    //         maxSumFromStart[i] = sum; 
-    //     }
-    //     return maxSumFromStart;
-    // }
-    // long[] helper2(int[] nums, int len ){
-    //     long[] maxSumFromEnd = new long[len];
-    //     long sum =0;
-    //     for(int i =len - 1; i>=0; i--){
-    //         sum = sum + nums[i];
-    //         maxSumFromEnd[i] = sum; 
-    //     }
-    //     return maxSumFromEnd;
-    // }
-    
 }
-//3 -1 =2
-//sum of 10 
-    //10, 14,  6, 13
-   // 13,  3, -1,  7
-    
-    
-    
