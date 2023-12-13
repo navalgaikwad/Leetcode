@@ -1,20 +1,22 @@
 class Solution {
     public int subarraySum(int[] nums, int k) {
-        int count = 0;
-        int sum = 0;
-        Map<Integer, Integer> sumFrequency = new HashMap<>();
-        sumFrequency.put(0, 1); // To handle the case when the sum equals k at the beginning
 
+        int count = 0;
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(0, 1);
+        int sum = 0;
         for (int num : nums) {
-            sum += num;
-            // Check if there is a subarray (ending at the current index) whose sum equals k
-            if (sumFrequency.containsKey(sum - k)) {
-                count += sumFrequency.get(sum - k);
+            sum = sum + num;
+            if(map.containsKey(sum - k)){
+               count += map.get(sum - k); 
             }
-            // Update the frequency of the current sum
-            sumFrequency.put(sum, sumFrequency.getOrDefault(sum, 0) + 1);
+            map.put(sum, map.getOrDefault(sum, 0) + 1);
         }
 
         return count;
     }
 }
+//nums = [1,1,1], k = 2
+//1,2, 3
+//1,2,3
+//1,3,6
