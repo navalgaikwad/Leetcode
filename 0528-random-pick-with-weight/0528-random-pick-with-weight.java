@@ -15,14 +15,14 @@ class Solution {
         int idx = random.nextInt(wSums[len-1]) + 1;
         int left = 0, right = len - 1;
         // search position 
-        while(left < right){
+        while(left <= right){
             int mid = left + (right-left)/2;
             if(wSums[mid] == idx)
                 return mid;
             else if(wSums[mid] < idx)
                 left = mid + 1;
             else
-                right = mid;
+                right = mid -1;
         }
         return left;
     }
