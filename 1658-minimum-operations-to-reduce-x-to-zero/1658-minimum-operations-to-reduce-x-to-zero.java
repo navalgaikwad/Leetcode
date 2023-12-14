@@ -1,23 +1,26 @@
 class Solution {
     public int minOperations(int[] nums, int x) {
         int target = Arrays.stream(nums).sum() - x;
-        int cur_sum = 0;
-        int max_window = -1;
-        int l = 0;
+        int left = 0, sum = 0, len = nums.length;
+        int result = -1;  // Use MIN_VALUE for initial comparison
 
-        for (int r = 0; r < nums.length; r++) {
-            cur_sum += nums[r];
+        for (int right = 0; right < len; right++) {
+            sum += nums[right];
 
-            while (l <= r && cur_sum > target) {
-                cur_sum -= nums[l];
-                l++;
+            // Shrink the window when sum exceeds or equals target
+            while (left <= right && sum > target) {
+                
+                sum -= nums[left];
+                left++;
+              
             }
-
-            if (cur_sum == target) {
-                max_window = Math.max(max_window, r - l + 1);
-            }
+              if (sum == target) {
+                    result = Math.max(result, right - left + 1);
+                } 
         }
 
-        return max_window == -1 ? -1 : nums.length - max_window;
+        return result == -1 ? -1 : len - result;
     }
 }
+
+
