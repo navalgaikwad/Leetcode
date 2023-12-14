@@ -25,7 +25,7 @@ class Solution {
             sum=sum+nums[i];
             if(sum > mid) {
                 count++;
-                sum = nums[i];
+                sum = nums[i];//create partion
             }
         }
         return count<=k;
