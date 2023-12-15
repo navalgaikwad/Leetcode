@@ -1,40 +1,37 @@
 class Solution {
     public int splitArray(int[] nums, int k) {
-        int low = Arrays.stream(nums).max().getAsInt();
-        int high = Arrays.stream(nums).sum();
-        int ans =0;
-        while(low <= high) {
-            int mid = low + (high - low)/2;
-            
-            if(check(nums,k, mid)){
+        int left = Arrays.stream(nums).max().getAsInt();
+        int right = Arrays.stream(nums).sum();
+        int ans = 0;
+        while(left <= right) {
+            int mid = left + (right - left)/2;
+            if(helper(nums, k, mid)) {
                 ans = mid;
-                high = mid-1;
-            }
-            else{
-                low = mid+1;
+                right = mid - 1; 
+            }else {
+                left = mid + 1; 
             }
         }
         return ans;
-        
     }
     
-    boolean check(int[] nums, int k, int mid) {
+    boolean helper(int[] nums, int k, int mid) {
+        int subcount = 1;
         int sum = 0;
-        int count = 1;
-        for(int i =0 ;i<nums.length; i++) {
-            sum=sum+nums[i];
+        for(int i = 0; i<nums.length; i++) {
+            sum = sum + nums[i];
             if(sum > mid) {
-                count++;
-                sum = nums[i];//create partion
+                subcount++;
+                sum = nums[i];
             }
         }
-        return count<=k;
+        
+        return subcount <= k;
     }
 }
 
-//[7,2,5,10,8] 5-2 = 3
-//[2,5,7,8,10] k = 2
-//[2,7,14,22,32] k = 2
-//14-2+2
-//32-22+8=10+8=18
-//binary search
+//[7,2,5,10,8]
+//[]
+//int left = min
+//int 
+//find low and high
