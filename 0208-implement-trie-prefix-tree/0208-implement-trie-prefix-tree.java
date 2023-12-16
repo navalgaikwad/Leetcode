@@ -1,49 +1,48 @@
-class Trie {
-
-    class Node {
-        char c;
-        Map<Character, Node> children;
-        boolean isEnd;
-        Node(char c) {
-            this.c = c;
-            this.children = new HashMap<>();
-            this.isEnd = false;
-        }
+class Node {
+    char c;
+    boolean isEnd;
+    HashMap<Character, Node> children;
+    Node(char c) {
+        this.children = new HashMap<>();
+        this.isEnd = false;
+        this.c = c;
     }
+}
+class Trie {
     Node root;
     public Trie() {
-        this.root = new Node('\0');
+        root = new Node('\0');
     }
     
     public void insert(String word) {
         Node curr = root;
-        for(char c : word.toCharArray()) {
-            if(!curr.children.containsKey(c)) {
-                curr.children.put(c, new Node(c));
+        for(char wrd: word.toCharArray()) {
+            if(!curr.children.containsKey(wrd)) {
+                 curr.children.put(wrd, new Node(wrd));
             }
-            curr = curr.children.get(c);
+           curr = curr.children.get(wrd);
         }
         curr.isEnd = true;
     }
     
     public boolean search(String word) {
-        Node curr = root;
-        for(char c : word.toCharArray()) {
-            if(!curr.children.containsKey(c)) {
-                return false;
+         Node curr = root;
+        for(char wrd: word.toCharArray()) {
+            if(!curr.children.containsKey(wrd)) {
+                 return false;
             }
-            curr = curr.children.get(c);
+           curr = curr.children.get(wrd);
         }
         return curr.isEnd;
     }
     
     public boolean startsWith(String prefix) {
         Node curr = root;
-        for(char c : prefix.toCharArray()) {
-            if(!curr.children.containsKey(c)) {
-                return false;
+        for(char wrd: prefix.toCharArray()) {
+            if(!curr.children.containsKey(wrd)) {
+                 return false;
             }
-            curr = curr.children.get(c);
+           curr = curr.children.get(wrd);
         }
         return true;
     }
