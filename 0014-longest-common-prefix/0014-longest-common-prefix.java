@@ -10,7 +10,7 @@ class Solution {
             }
         }
         int j ;
-        System.out.print(smallest);
+        //System.out.print(smallest);
         for(int i =0; i<smallest.length(); i++) {
             for( j =0; j<strs.length; j++) {
                 if(smallest.charAt(i) != strs[j].charAt(i)) {
