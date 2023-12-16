@@ -11,13 +11,14 @@ class Solution {
         map.put('C', 100);
         map.put('D', 500);
         map.put('M', 1000);
-        for(int i = len; i>=0; i--){
-           int value =  map.get(s.charAt(i));
-            if(value < prev){
+        for( int i =len; i>=0; i--) {
+            char c = s.charAt(i);
+            int value = map.get(c);
+            if( value < prev) {//5
                 total = total - value;
-            }else{
-               total = total + value;
-           }
+            }else {
+               total = total + value; 
+            }
             prev = value;
         }
         return total;
