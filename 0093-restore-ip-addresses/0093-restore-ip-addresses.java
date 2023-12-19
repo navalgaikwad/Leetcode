@@ -1,39 +1,37 @@
-class Solution {
-    
-    public List<String> restoreIpAddresses(String s) {
-        List<String> result = new ArrayList<>();
-        backTracking(s, 0, "", 0, result);
-        return result;
-    }
-    void backTracking(String s, int i, String ans, int part, List<String> result) {
-        int len = s.length();
-        if(part == 4 || i == len) {
-            if(part == 4 && i == len) {
-                result.add(ans.substring(0, ans.length() - 1)); 
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+            // Backtracking helper method.
+        List<String> ipAddresses = new ArrayList<>();
+     java.util.function.Function<String, Boolean> isValid = (octet) -> 
+                !(octet.charAt(0) == '0' && octet.length() > 1) && Integer.parseInt(octet) <= 255;
+
+        void backtrack(String s, List<String> current, int index) {
+            if (current.size() > 4) {
+                return;
             }
-            return;
+
+            if (index == s.length() && current.size() == 4) {
+                ipAddresses.add(String.join(".", current));
+                return;
+            }
+
+            for (int i = 1; i <= 3; i++) {
+                if (index + i <= s.length()) {
+                    String octet = s.substring(index, index + i);
+                    if (isValid.apply(octet)) {
+                        current.add(octet);
+                        backtrack(s, current, index + i);
+                        current.remove(current.size() - 1);
+                    }
+                }
+            }
         }
-        //for single value
-        backTracking(s, i + 1, ans + s.charAt(i)+".", part + 1, result);  
-        if(i + 2 <= len && helper(s.substring(i, i + 2))) { //divided in 2 part size of 2 that means
-            backTracking(s, i + 2, ans + s.substring(i, i + 2)+".", part + 1, result);
-        }
-        if(i + 3 <= len && helper(s.substring(i, i + 3))) {//divided in 3 part size of 3 that means
-            backTracking(s, i + 3, ans + s.substring(i, i + 3)+".", part + 1, result);
-        }  
-    }
+    public List<String> restoreIpAddresses(String s) {
     
-    
-    boolean helper(String s) {
-        if(s.charAt(0) == '0') return false;
-        return Integer.parseInt(s) <= 255;
+        // Start the backtracking process.
+        backtrack(s, new ArrayList<>(), 0);
+        return ipAddresses;
     }
 }
-//25525511135
-
-//for single
-//i + 1 : 1
-//i + 2 : for 2 value
-//i + 3 : for 3 value
-//use string rather than stringbuilder
-//ans append to s.substring
