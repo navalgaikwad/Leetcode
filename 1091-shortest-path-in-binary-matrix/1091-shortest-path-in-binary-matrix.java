@@ -4,6 +4,10 @@ class Solution {
         return bfs(grid, 0, 0);
     }
     
+    boolean isValid(int[][] grid, int i, int j, boolean[][] visited) {
+        int len = grid.length;
+        return i >= 0 && i < len && j >= 0 && j < grid[0].length && !visited[i][j] && grid[i][j] == 0;
+    }
     int bfs(int[][] grid, int i, int j) {
        int[][] direction = new int[][]{{0,-1}, {-1,0}, {1,1}, {-1, -1}, {1, 0}, {0, 1}, {-1, 1}, {1, -1}};
         
@@ -32,7 +36,7 @@ class Solution {
                 int newX = row + dir[0];
                 int newY = col + dir[1];
                 
-                if(newX >= 0 && newX < len && newY >= 0 && newY < grid[0].length && !visited[newX][newY] && grid[newX][newY] == 0) {
+                if(isValid(grid, newX, newY, visited)) {
                     visited[newX][newY] = true;
                     q.add(new int[]{newX, newY, level + 1});
                 }
@@ -40,5 +44,4 @@ class Solution {
         }
         return -1;
     }
-    
 }
