@@ -9,7 +9,7 @@ class Solution {
         return i >= 0 && i < len && j >= 0 && j < grid[0].length && !visited[i][j] && grid[i][j] == 0;
     }
     int bfs(int[][] grid, int i, int j) {
-       int[][] direction = new int[][]{{0,-1}, {-1,0}, {1,1}, {-1, -1}, {1, 0}, {0, 1}, {-1, 1}, {1, -1}};
+        int[][] direction = new int[][]{{0,-1}, {-1,0}, {1,1}, {-1, -1}, {1, 0}, {0, 1}, {-1, 1}, {1, -1}};
         
         int len = grid.length;
         
@@ -17,7 +17,7 @@ class Solution {
         Queue<int[]> q = new LinkedList<>();
         
         q.add(new int[]{i, j, 1});
-        visited[i][j] = true; 
+        visited[i][j] = true; //make sure to add visited true whenever you add value in the queue
         
         while(!q.isEmpty()) {
             
@@ -27,7 +27,7 @@ class Solution {
             int col = current[1];
             int level =current[2];
             
-            if(row == len - 1 && col == len -1) {
+            if(row == len - 1 && col == len - 1) {
                 return level;
             }
             
