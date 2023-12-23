@@ -1,25 +1,20 @@
 class Solution {
-    List<List<Integer>> result = new ArrayList<>();
     public List<List<Integer>> combine(int n, int k) {
-        List<Integer> ans = new ArrayList<>();
-        helper(n, k, 1, ans);
+        List<List<Integer>> result = new ArrayList<>();
+        backTracking(result, n, k, new ArrayList<>(), 1);
         return result;
         
     }
     
-    void helper(int n, int k, int index, List<Integer> ans){
-        if(ans.size() == k){
-          // System.out.println(index + " "+ ans);
-           result.add(new ArrayList<>(ans)); 
-           return;
+    void backTracking(List<List<Integer>> result, int n, int k, List<Integer> ans, int index) {
+        if(ans.size() == k) {
+            result.add(new ArrayList<>(ans));
+            return;
         }
-        
-        for(int i = index; i <= n; i++){
-           // System.out.println(i);
+        for(int i = index; i<=n; i++) {
             ans.add(i);
-            helper(n, k, i + 1, ans);
-            ans.remove(ans.size() - 1);
+            backTracking(result, n, k , ans, i + 1);
+            ans.remove(ans.size() -1);
         }
     }
-    
 }
