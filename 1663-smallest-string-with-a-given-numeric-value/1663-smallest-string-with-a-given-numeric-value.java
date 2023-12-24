@@ -1,28 +1,13 @@
 class Solution {
     public String getSmallestString(int n, int k) {
-        char[] arr = new char[n];
-        Arrays.fill(arr, 'a');
-        k = k - n;//  minus from k
-        while(k>0) {
-            n--;//decrement n
-            arr[n]+=Math.min(25, k);//take min value
+        char[] result = new char[n];
+        Arrays.fill(result, 'a');
+        k = k - n;
+        while(k > 0) {
+            n--;
+            result[n] += Math.min(25, k);
             k = k - Math.min(25, k);
         }
-        return String.valueOf(arr);
+        return String.valueOf(result);
     }
 }
-
-//     public String getSmallestString(int n, int k) {
-//         char arr[] = new char[n];
-//         Arrays.fill(arr,'a');
-
-//         k=k-n;
-
-//         while(k>0){
-//             n--;
-//             arr[n] += Math.min(25,k);
-//             k = k-Math.min(25,k);
-//         }
-
-//         return String.valueOf(arr);
-    
