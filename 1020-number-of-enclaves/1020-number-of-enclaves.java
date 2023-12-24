@@ -16,7 +16,6 @@ class Solution {
         for(int i = 0; i < n; i++) {//col
             dfs(grid, 0, i); 
             dfs(grid, m - 1, i); 
-            
         }
          
         for(int i = 0 ;i < m; i++) {
@@ -26,7 +25,6 @@ class Solution {
                 }
             }
         }
-       
         return result;
     }
    
