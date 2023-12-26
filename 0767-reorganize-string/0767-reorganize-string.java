@@ -1,29 +1,25 @@
 class Solution {
     public String reorganizeString(String s) {
-       
         Map<Character, Integer> map = new HashMap<>();
-        for(char va: s.toCharArray()){
-            map.put(va, map.getOrDefault(va, 0)+ 1);
+        for(char c : s.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0)+1);
         }
         PriorityQueue<Character> pq = new PriorityQueue<>((a,b)->map.get(b) - map.get(a));
         pq.addAll(map.keySet()); // sort by frequecy
-        
-        StringBuilder sb = new StringBuilder();
-        while(pq.size()>1){ // pq size is greater than 1
-            Character first = pq.remove(); // remove first
-            Character second = pq.remove();// remove second
+        String result = "";
+        while(pq.size() > 1) {
+           char a = pq.remove();
+           char b = pq.remove();
             
-            sb.append(first);// append to ans
-            sb.append(second);//appenf to ans
-            
-            map.put(first, map.get(first) - 1); // update the count
-            map.put(second, map.get(second) - 1);//update the count
-            
-            if(map.get(first)>=1){ // if frequncy is greater than 1 
-                pq.add(first);
+            result+=a;
+            result+=b;
+            map.put(a, map.getOrDefault(a, 0) - 1);
+            map.put(b, map.getOrDefault(b, 0) - 1);
+            if(map.get(a)!=0) {
+                pq.add(a);
             }
-             if(map.get(second)>=1){// if frequncy is greater than 1 
-                pq.add(second);
+            if(map.get(b)!=0) {
+                pq.add(b);
             }
         }
         if(!pq.isEmpty()){
@@ -31,14 +27,8 @@ class Solution {
            if(map.get(c)>1){
                return "";
            }
-           sb.append(c);
+           result+=c;
         }
-        return sb.toString();
+        return result;
     }
 }
-//aab
-//aba
-
-//aaab
-//abaa
-//counting
