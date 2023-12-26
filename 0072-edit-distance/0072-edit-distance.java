@@ -7,7 +7,7 @@ class Solution {
         for(int i =1; i<=len1; i++) { //delection operation
             dp[i][0] = i; 
         }
-        for(int j =1; j<=len2; j++) { //delection operation
+        for(int j =1; j<=len2; j++) { //insertion operation
             dp[0][j] = j; 
         }
         
@@ -23,6 +23,15 @@ class Solution {
         return dp[len1][len2];
     }
 }
+
+//[
+//[0,1,2,3],
+//[1,0,0,0],
+//[2,0,0,0],
+//[3,0,0,0],
+//[4,0,0,0],
+//[5,0,0,0]
+//]
 
 
 // ```
