@@ -1,8 +1,9 @@
 class Solution {
     public List<List<String>> partition(String s) {
-        List<List<String>> result = new ArrayList<List<String>>();
-        Boolean[][] palindromeMemo = new Boolean[s.length()][s.length()];
-        helper(0, s,  result, new ArrayList<String>(), palindromeMemo);
+        List<List<String>> result = new ArrayList<>();
+        Boolean[][] memo = new Boolean[s.length()][s.length()];
+        
+        helper(0, s, result, new ArrayList<>(), memo);
         return result;
     }
     
@@ -11,11 +12,11 @@ class Solution {
             result.add(new ArrayList<>(runningList));
             return;
         }
-        for(int i = start; i< s.length(); i++) {
+        for(int i = start; i<s.length(); i++) {
             if(palindrome(start, i, s, memo)) {
                 runningList.add(s.substring(start, i + 1));
                 helper(i + 1, s, result, runningList, memo);
-                runningList.remove(runningList.size() -1);
+                runningList.remove(runningList.size() - 1);
             }
         }
     }
@@ -24,10 +25,11 @@ class Solution {
         if(start >= end) {
             return true;
         }
-        if(memo[start][end]!=null) return memo[start][end];
-        
-        if(s.charAt(start) == s.charAt(end)) {
-            memo[start][end] = palindrome(start+1, end - 1, s, memo);
+        if(memo[start][end]!=null) {
+            return memo[start][end];
+        }
+        if(s.charAt(start)==s.charAt(end)) {
+            memo[start][end] = palindrome(start + 1, end - 1, s, memo);
             return memo[start][end];
         }
         memo[start][end] = false;
