@@ -8,14 +8,14 @@ class Solution {
             q.add(i);
         }
         int i = 0; //make it global 
-        while(!q.isEmpty()) {
+        while(q.size()>1) {
             i = (i + k - 1) % q.size(); //based on size it should reduce and find the index
             q.remove(i);
-            if(q.size()== 1) {
+            if(q.size() == 1) {
                 break;
             }
         }
-        System.out.print(q);
+        //System.out.print(q);
         return q.get(0);
     }
 }
