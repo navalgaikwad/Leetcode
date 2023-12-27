@@ -18,11 +18,24 @@ class Solution {
         // }
         // //System.out.print(q);
         // return q.get(0);
-        int ans = 0;
-        for(int i = 1; i <= n; i++)
-        {
-            ans = (ans + k) % i;
-        }
-        return ans + 1;
+        // int ans = 0;
+        // for(int i = 1; i <= n; i++)
+        // {
+        //     ans = (ans + k) % i;
+        // }
+        // return ans + 1;
+        
+        int i = 1, ans = 0;
+ 
+    // Run a while loop till i <= N
+        while (i <= n) {
+ 
+      // Update the Value of ans and Increment i by 1
+        ans = (ans + k) % i;
+        i++;
+       }
+ 
+    // Return required answer
+    return ans + 1;
     }
 }
