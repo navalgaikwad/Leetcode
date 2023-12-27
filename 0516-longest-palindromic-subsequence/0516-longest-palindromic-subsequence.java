@@ -1,34 +1,26 @@
 class Solution {
     public int longestPalindromeSubseq(String s) {
-        if(s.length()<=1){
-            return 1;
+        int n = s.length();
+        int[][] dp = new int[n][n];
+
+        // Every single character is a palindrome of length 1
+        for (int i = 0; i < n; i++) {
+            dp[i][i] = 1;
         }
-        String rev="";
-        for(int i=0; i<s.length() ; i++){
-            rev=s.charAt(i)+rev+"";
+
+        // Fill the table
+        // The outer loop is for the length of the substring
+        for (int length = 2; length <= n; length++) {
+            for (int start = 0; start <= n - length; start++) {
+                int end = start + length - 1;
+                if (s.charAt(start) == s.charAt(end)) {
+                    dp[start][end] = dp[start + 1][end - 1] + 2;
+                } else {
+                    dp[start][end] = Math.max(dp[start + 1][end], dp[start][end - 1]);
+                }
+            }
         }
-        System.out.print(rev);
-        return dp(s, rev, new HashMap<>(), s.length() - 1, rev.length() - 1);
-    }
-    
-    
-    int dp(String s, String t, Map<String, Integer> memo, int i, int j) {
-        String key = i+"-"+j;
-        if(i <0 || j<0) {
-            return 0;
-        }
-        if(memo.containsKey(key)) {
-            return memo.get(key);
-        }
-        if(s.charAt(i)==t.charAt(j)) {
-            return 1 + dp(s, t, memo, i-1, j-1);//both are matching decrement both side
-        }
-        
-        int result = Math.max(dp(s, t, memo, i-1, j),  dp(s, t, memo, i, j-1));
-        memo.put(key, result);
-        return result;
+
+        return dp[0][n - 1];
     }
 }
-
-// it is same as https://leetcode.com/problems/longest-common-subsequence/
-//extension to this only reverse the word first then pass it to lcs
