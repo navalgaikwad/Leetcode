@@ -8,8 +8,9 @@ class Solution {
             q.add(i);
         }
         int i = 0; //make it global 
-        while(q.size()>1) {
-            i = (i + k - 1) % q.size(); //based on size it should reduce and find the index
+        k = k - 1;// reduce it by 1
+        while(!q.isEmpty()) {
+            i = (i + k) % q.size(); //based on size and find the index
             q.remove(i);
             if(q.size() == 1) {
                 break;
