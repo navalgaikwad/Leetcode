@@ -21,7 +21,7 @@ class Solution {
             return memo.get(key);
         }
         if(s.charAt(i)==t.charAt(j)) {
-            return 1 + dp(s, t, memo, i-1, j-1);
+            return 1 + dp(s, t, memo, i-1, j-1);//both are matching decrement both side
         }
         
         int result = Math.max(dp(s, t, memo, i-1, j),  dp(s, t, memo, i, j-1));
@@ -29,3 +29,6 @@ class Solution {
         return result;
     }
 }
+
+// it is same as https://leetcode.com/problems/longest-common-subsequence/
+//extension to this only reverse the word first then pass it to lcs
