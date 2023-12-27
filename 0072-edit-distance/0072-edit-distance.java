@@ -17,7 +17,8 @@ public class Solution {
         if (memo[i][j] != -1) {
             return memo[i][j];
         }
-
+        //when palindrome we are incrementing here we are not doing anything
+        //two strings are given
         if (word1.charAt(i) == word2.charAt(j)) {
             memo[i][j] = minDistanceHelper(word1, word2, i - 1, j - 1, memo);
         } else {
@@ -25,6 +26,7 @@ public class Solution {
             int delete = minDistanceHelper(word1, word2, i - 1, j, memo);
             int replace = minDistanceHelper(word1, word2, i - 1, j - 1, memo);
             memo[i][j] = 1 + Math.min(insert, Math.min(delete, replace));
+            //minimum of all the operation
         }
         return memo[i][j];
     }
