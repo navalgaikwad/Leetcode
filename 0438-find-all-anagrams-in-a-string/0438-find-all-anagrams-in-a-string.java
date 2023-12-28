@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 class Solution {
     public List<Integer> findAnagrams(String s, String p) {
         int k = p.length();
