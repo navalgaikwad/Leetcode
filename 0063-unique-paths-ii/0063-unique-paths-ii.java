@@ -6,10 +6,10 @@ class Solution {
         dp[0][0] = 1;
         for(int i = 0; i < row; i++){
             for(int j =0; j < col; j++){
-                if(grid[i][j]==1){
+                if(grid[i][j]==1){//when you find obstacle 
                  dp[i][j] =0; 
                 }else {
-                if(grid[i][j] != 1){
+                if(grid[i][j] == 0){
                    if(i +1 < row){
                        dp[i+1][j] += dp[i][j];
                    }
