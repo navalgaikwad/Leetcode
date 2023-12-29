@@ -8,19 +8,16 @@ class Solution {
             for(int j =0; j < col; j++){
                 if(grid[i][j]==1){//when you find obstacle 
                  dp[i][j] =0; 
-                }else {
-                if(grid[i][j] == 0){
+                }else if(grid[i][j] == 0){
                    if(i +1 < row){
                        dp[i+1][j] += dp[i][j];
                    }
                     if(j + 1 < col){
                         dp[i][j+1] +=dp[i][j];
-                    }
+                  }
                 }
               }
-            } 
-            
-        }
+           }
         return dp[row-1][col-1];
     }
 }
