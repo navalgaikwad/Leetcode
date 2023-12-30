@@ -1,17 +1,42 @@
 class Solution {
     public int coinChange(int[] coins, int amount) {
-        long[]dp = new long[amount+1];
-        Arrays.fill(dp, Long.MAX_VALUE);
-        dp[0] =0;
-        for(int i=0; i<=amount; i++) {
-            if(dp[i] !=Long.MAX_VALUE) {
-                for(int coin : coins) {
-                    if(i <= amount - coin) {
-                       dp[i + coin] = Math.min(dp[i + coin], dp[i] + 1); 
-                    }
+        //HashMap<Integer, ArrayList<Integer>> memo = new HashMap<>();
+        HashMap<Integer, Integer> memo = new HashMap<>();
+        Integer result = dp(coins, amount, memo);
+        //System.out.print(result);
+        //return result != null ? result.size() : -1;
+        return result != null ? result : -1;
+    }
+    
+    Integer dp(int[] coins, int target, HashMap<Integer, Integer> memo) {
+        if(memo.containsKey(target)) {
+            return memo.get(target);
+        }
+        if(target == 0) {
+            // ArrayList<Integer> baseList = new ArrayList<>();
+            // return baseList;
+            return 0;
+        }
+        if(target < 0) {
+            return null;
+        }
+        //ArrayList<Integer> result = null;
+        Integer result = null;
+        for(int coin : coins) {
+            int remainder = target - coin;
+            Integer remainderList = dp(coins, remainder, memo);
+            if(remainderList != null) {
+                // ArrayList<Integer> combination = new ArrayList<>();
+                // combination.addAll(remainderList);
+                // combination.add(coin);
+                int combination = remainderList + 1;
+                
+                if(result==null || combination < result) {
+                    result = combination;
                 }
             }
         }
-         return dp[amount] > amount ? -1 : (int) dp[amount];
+        memo.put(target, result);
+        return result;
     }
 }
