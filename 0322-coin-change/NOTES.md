@@ -19,22 +19,3 @@ ArrayList<Integer> result = null;
 ​
 for(Integer coin :coins){
 ArrayList<Integer> remainderList =  helper2(target - coin , coins, memo);
-if(remainderList != null){
-ArrayList<Integer> newCombination = new ArrayList<>();
-newCombination.addAll(remainderList);
-newCombination.add(coin);
-if(result == null || newCombination.size() < result.size()){
-result = newCombination;
-}
-}
-}
-memo.put(target, result);
-return result;
-}
-}
-```
-​
-​
-int a = Integer.MAX_VALUE;
-a += 1;
-System.out.println(a);  // whenever
