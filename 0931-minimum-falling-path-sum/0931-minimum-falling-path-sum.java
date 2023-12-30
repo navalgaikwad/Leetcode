@@ -13,6 +13,7 @@ class Solution {
         return min;
     }
    //same as minimum path sum same condition
+    //building from bottom to top 
     private int dfs(int[][] matrix, int i, int j, Integer[][] memo) {
         if (j < 0 || j >= matrix[0].length) { // correct condition for j 
             return Integer.MAX_VALUE;
