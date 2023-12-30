@@ -1,25 +1,25 @@
 class Solution {
     public boolean wordBreak(String s, List<String> wordDict) {
-        Set<String> set = new HashSet<>(wordDict);
-        
-        int len = s.length();
-        boolean[] seen = new boolean[len + 1];
-        Queue<Integer> queue = new LinkedList<>();
-        queue.add(0);
-        while(!queue.isEmpty()) {
-            int start = queue.remove();
-            if(start == len) return true;
-           
-            for(int i = start + 1; i<=len; i++) {
-                 if(seen[i]) {
-                     continue;
-                 }
-                if(set.contains(s.substring(start, i))) {
-                    queue.add(i);
-                    seen[i] = true;
+        return dp(s, wordDict, new HashMap<>());
+    }
+    
+    boolean dp(String target, List<String> wordDict, HashMap<String, Boolean> memo) {
+        if(memo.containsKey(target)) {
+            return memo.get(target);
+        }
+        if(target == "") {
+            return true;
+        }
+        for(String word : wordDict) {
+            if(target.startsWith(word)) {
+                String slice = target.substring(word.length());
+                if(dp(slice, wordDict, memo)) {
+                    memo.put(target, true);
+                    return true;
                 }
             }
         }
+        memo.put(target, false);
         return false;
     }
 }
