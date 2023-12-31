@@ -1,32 +1,30 @@
 class Solution {
     public int coinChange(int[] coins, int amount) {
-        Integer value = dp(coins, amount, new HashMap<>());
-        if(value!=null) return value;
-        return -1;
+        Integer result = dp(coins, amount, new HashMap<>());
+        return result == null ? -1 : result;  
     }
-    Integer dp(int[] coins, int target, HashMap<Integer, Integer> memo) {
+    Integer dp(int[] coins, int target, HashMap<Integer, Integer> memo){
         if(memo.containsKey(target)) {
             return memo.get(target);
         }
         if(target == 0) {
-           // ArrayList<Integer> baseList = new ArrayList<>();
             return 0;
         }
         if(target < 0) {
             return null;
         }
-        Integer result = null;
+        Integer shortest = null;
         for(int coin : coins) {
             int remainder = target - coin;
-            Integer combinations = dp(coins, remainder, memo);
-            if(combinations != null) {
-                Integer newCombination = combinations + 1;
-                if(result == null || newCombination < result) {
-                    result = newCombination;
+            Integer remainderList = dp(coins, remainder, memo);
+            if(remainderList != null) {
+                Integer combination = remainderList + 1;
+                if(shortest == null || combination < shortest) {
+                    shortest = combination;
                 }
             }
         }
-        memo.put(target, result);
-        return result;
+        memo.put(target, shortest);
+        return shortest;
     }
 }
