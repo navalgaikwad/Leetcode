@@ -1,18 +1,19 @@
 class Solution {
     public boolean isIsomorphic(String s, String t) {
-        int[] map1 = new int[200];
-        int[] map2 = new int[200];
         if(s.length() != t.length()) {
             return false;
         }
-        int i = 0;
-        while(i < s.length()) {
-            if(map1[s.charAt(i)]!=map2[t.charAt(i)]) {
+        int[] sArray = new int[200];
+        int[] tArray = new int[200];
+        int i =0;
+        int len = s.length();
+        int j=0;
+        while(i < len) {
+            if(sArray[s.charAt(i)] != tArray[t.charAt(i)]){
                 return false;
             }
-            
-            map1[s.charAt(i)] = i+1;
-            map2[t.charAt(i)] = i+1;
+            sArray[s.charAt(i)] = i+1;
+            tArray[t.charAt(i)] = i+1;
             i++;
         }
         return true;
