@@ -1,49 +1,35 @@
-public class Solution {
+class Solution {
     public List<String> removeInvalidParentheses(String s) {
-      List<String> res = new ArrayList<>();
-      
-      // sanity check
-      if (s == null) return res;
-      
-      Set<String> visited = new HashSet<>();
-      Queue<String> queue = new LinkedList<>();
-      
-      // initialize
-      queue.add(s);
-      visited.add(s);
-      
-      boolean found = false;
-      
-      while (!queue.isEmpty()) {
-        s = queue.poll();
-        
-        if (isValid(s)) {
-          // found an answer, add to the result
-          res.add(s);
-          found = true;
+        List<String> result = new ArrayList<>();
+        if(s == null) {
+            return result;
         }
-      
-        if (found) continue;
-      
-        // generate all possible states
-        for (int i = 0; i < s.length(); i++) {
-          // we only try to remove left or right paren
-          if (s.charAt(i) != '(' && s.charAt(i) != ')') continue;//to check for character
-        
-          String t = s.substring(0, i) + s.substring(i + 1);
-        
-          if (!visited.contains(t)) {
-            // for each state, if it's not visited, add it to the queue
-            queue.add(t);
-            visited.add(t);
-          }
+        Queue<String> q = new LinkedList<>();
+        Set<String> visited = new HashSet<>();
+        q.add(s);
+        visited.add(s);
+        boolean found = false;
+        while(!q.isEmpty()) {
+            String current = q.remove();
+            if(isValid(current)) {
+                found = true;
+                result.add(current);
+            }
+            if(found) {
+                continue;
+            }
+            for(int i =0; i<current.length(); i++) {
+                if(current.charAt(i)!='(' && current.charAt(i)!=')') continue;
+                String value = current.substring(0, i) + current.substring(i + 1);
+                if(!visited.contains(value)) {
+                    q.add(value);
+                    visited.add(value);
+                }
+            }
         }
-      }
-      
-      return res;
+        return result;
     }
     
-    // helper function checks if string s contains valid parantheses
     boolean isValid(String s) {
       int count = 0;
     
