@@ -1,20 +1,22 @@
 class Solution {
     public int uniquePaths(int m, int n) {
-        int[][] dp = new int[m+1][n+1];
-       // Arrays.fill(dp[], -1);
-        dp[1][1] = 1;
-        for(int i =1; i<=m; i++) {
-            for(int j =1; j<=n; j++) {
-                    if(i - 1 >=0) {
-                        int prevI = dp[i-1][j] ;
-                       dp[i][j] += prevI; 
-                    }
-                    if(j - 1 >= 0) {
-                       int prevJ = dp[i][j-1];
-                       dp[i][j] +=  prevJ;  
-                    }
-            }
+        Integer[][] memo = new Integer[m][n];
+        return memoDP(m - 1, 0, m, n, memo);
+    }
+
+    private int memoDP(int i, int j, int m, int n, Integer[][] memo) {
+        if (i == 0 && j == n - 1) {
+            return 1;
         }
-         return dp[m][n];
+        if (i < 0 || j >= n) {
+            return 0;
+        }
+        if (memo[i][j] != null) {
+            return memo[i][j];
+        }
+        int down = memoDP(i - 1, j, m, n, memo);
+        int right = memoDP(i, j + 1, m, n, memo);
+        memo[i][j] = down + right;
+        return memo[i][j];
     }
 }
