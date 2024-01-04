@@ -1,33 +1,30 @@
 class Solution {
     Set<List<Integer>> set = new HashSet<>();
     public List<List<Integer>> permuteUnique(int[] nums) {
-        int n = nums.length;
-        ArrayList<Integer> ans = new ArrayList<>();
-        helper(ans, nums, 0);
+        backTracking(nums, 0);
         return new ArrayList<>(set);
     }
     
-    void helper(ArrayList<Integer> ans, int[] nums, int index){
-        if(index == nums.length){
-           System.out.println(Arrays.toString(nums));
-            set.add(arrayToList(nums)); 
+    void backTracking(int[] nums, int start) {
+        if(start == nums.length) {
+            set.add(arrayToList(nums));
             return;
         }
         
-        for(int i = index; i<nums.length; i++){
-            swap(nums, index, i);
-            helper(ans, nums, index + 1);
-            swap(nums, index, i);
+        for(int i = start; i<nums.length; i++) {
+            swap(nums, start, i);
+            backTracking(nums, start + 1);
+            swap(nums, start, i);
         }
     }
     
-    void swap(int[] nums, int i, int j){
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-        
+    void swap(int[] nums, int start, int end) {
+        int temp = nums[start];
+        nums[start] = nums[end];
+        nums[end] = temp;
     }
+    
      private List<Integer> arrayToList(int[] nums) {
         return IntStream.of(nums).boxed().collect(Collectors.toList());
-        }
+    }
 }
