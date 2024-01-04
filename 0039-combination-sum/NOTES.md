@@ -22,8 +22,19 @@ We start with 2, and our path is [2].
 In the next recursive call, we still start from 2 because we can use 2 multiple times.
 Once we return from the recursion that started with [2, 2], we move on to [2, 3]. If we didn't have the index, we might end up considering [3, 2] in a later call, which is the same combination as [2, 3] just in a different order.
 By using the indexed loop and starting from the current index, we make sure each combination is considered only once, thus effectively handling the uniqueness constraint.
-​
-​
-​
-​
-​
+class Solution {
+public List<List<Integer>> combinationSum(int[] candidates, int target) {
+return dp(candidates, target, new HashMap<>());
+}
+List<List<Integer>> dp(int[] candidates, int target, HashMap<Integer, List<List<Integer>>> memo) {
+if(memo.containsKey(target)) {
+return memo.get(target);
+}
+if(target == 0) {
+List<List<Integer>> baseList = new ArrayList<>();
+baseList.add(new ArrayList<>());
+return baseList;
+}
+if(target < 0) {
+return null;
+}
