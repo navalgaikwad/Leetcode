@@ -1,22 +1,20 @@
 class Solution {
     public int uniquePaths(int m, int n) {
-        return dp(m, n, new HashMap<>());
-    }
-    
-    int dp(int m, int n, HashMap<String, Integer>memo) {
-        String key = m+"-"+n;
-        if(memo.containsKey(key)) {
-            return memo.get(key);
+        int[][] dp = new int[m+1][n+1];
+       // Arrays.fill(dp[], -1);
+        dp[1][1] = 1;
+        for(int i =1; i<=m; i++) {
+            for(int j =1; j<=n; j++) {
+                    if(i - 1 >=0) {
+                        int prevI = dp[i-1][j] ;
+                       dp[i][j] += prevI; 
+                    }
+                    if(j - 1 >= 0) {
+                       int prevJ = dp[i][j-1];
+                       dp[i][j] +=  prevJ;  
+                    }
+            }
         }
-        if(m == 1 && n == 1) {
-            return 1;
-        }
-        if(m < 0 || n < 0) {
-            return 0;
-        }
-        int result =  dp(m - 1, n, memo) + dp(m , n-1, memo);
-        memo.put(key, result);
-        return result;
-        
+         return dp[m][n];
     }
 }
