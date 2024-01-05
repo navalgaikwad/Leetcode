@@ -1,9 +1,9 @@
 class Solution {
     public int coinChange(int[] coins, int amount) {
-        Integer result = dp(coins, amount, new HashMap<>());
-        return result;  
+        return dp(coins, amount, new HashMap<>());
     }
-    Integer dp(int[] coins, int target, HashMap<Integer, Integer> memo){
+    
+    Integer dp(int[] coins, int target, HashMap<Integer, Integer> memo) {
         if(memo.containsKey(target)) {
             return memo.get(target);
         }
@@ -14,17 +14,19 @@ class Solution {
             return -1;
         }
         Integer shortest = -1;
-        for(int coin : coins) {
+        for(int coin: coins) {
             int remainder = target - coin;
-            Integer remainderList = dp(coins, remainder, memo);
+            int remainderList = dp(coins, remainder, memo);
             if(remainderList != -1) {
-                Integer combination = remainderList + 1;
-                if(shortest == -1 || combination < shortest) {
-                    shortest = combination;
+                Integer count = remainderList + 1;
+                if(shortest == -1 || count < shortest) {
+                    shortest = count;
                 }
+                
             }
         }
         memo.put(target, shortest);
         return shortest;
     }
 }
+
