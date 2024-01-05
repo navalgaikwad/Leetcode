@@ -19,3 +19,8 @@ class Solution {
         return max;
     }
 }
+//fill arr with 1
+//run for loop on arr length
+//inside loop on index till j <i
+//check nums[i] > nums[j] and count < nextcount
+//then update the dp[i]
