@@ -1,19 +1,18 @@
 class Solution {
-    List<List<Integer>> result = new ArrayList<>();
+    HashSet<List<Integer>> result = new HashSet<>();
     public List<List<Integer>> subsets(int[] nums) {
-        List<Integer> ans = new ArrayList<>();
-        helper(nums, ans, 0);
-        return result;
+        backTracking(nums, new ArrayList<>(), 0);
+       // System.out.print(result);
+        return new ArrayList<>(result);
     }
     
-    void helper(int[] nums, List<Integer> ans, int curr){
-        result.add(new ArrayList<>(ans));
-        for(int i = curr; i < nums.length; i++){
-            
-            ans.add(nums[i]);
-            helper(nums, ans, i + 1);
-            ans.remove(ans.size() - 1);
-            
+    void backTracking(int[] nums, List<Integer> runningList, int index) {
+        
+        result.add(new ArrayList<>(runningList));
+        for(int i=index; i<nums.length; i++) {
+            runningList.add(nums[i]);
+            backTracking(nums, runningList, i + 1);
+            runningList.remove(runningList.size() - 1);
         }
     }
 }
