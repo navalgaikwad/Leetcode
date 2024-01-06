@@ -1,27 +1,17 @@
-
 class Solution {
     public int minSteps(String s, String t) {
-        Map<Character, Integer> charCounts = new HashMap<>();
+        int[] count = new int[26];
         
-      // count the charatcer from s
-        for(char c : s.toCharArray()) {
-            charCounts.put(c, charCounts.getOrDefault(c, 0) + 1);
+        for(char c: s.toCharArray()) {
+            count[c - 'a']++;
         }
-
-      //subtract the count charcter from t
-        for(char c : t.toCharArray()) {
-            charCounts.put(c, charCounts.getOrDefault(c, 0) - 1);
-        }
-
-        int result =0;
-        //add the final result
-        for(int val : charCounts.values()) {
-            if(val >= 0) {
-               result = result + val;  
+        int cnt =0;
+        for(char c: t.toCharArray()) {
+            count[c- 'a']--;
+            if(count[c- 'a'] < 0) {
+                cnt++;
             }
-           
         }
-        //System.out.print(charCounts);
-        return result;
+        return cnt;
     }
 }
