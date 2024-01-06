@@ -16,22 +16,19 @@
 class Solution {
     public int minDepth(TreeNode root) {
         int value = helper(root);
-        if(value  == Integer.MAX_VALUE){
-           return 0; 
-        }
-       return value;
+        return value == Integer.MAX_VALUE ? 0 : value;
     }
-    public int helper(TreeNode root){
+    int helper(TreeNode root) {
          if(root == null){
             return Integer.MAX_VALUE;
         }
         
-       
-        int left = helper(root.left);
-        int right = helper(root.right);
-         if(root.left == null && root.right == null){
+        if(root.left == null && root.right == null){
             return 1;
         }
-        return 1 + Math.min(left, right);
+        int left = helper(root.left);
+        int right = helper(root.right);
+        int result = 1 + Math.min(left, right);
+        return result;
     }
 }
