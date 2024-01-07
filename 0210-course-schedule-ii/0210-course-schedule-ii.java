@@ -1,50 +1,53 @@
 class Solution {
-    public int[] findOrder(int numCourses, int[][] prerequisites) {
-        int n =numCourses;
-        int[] visited = new int[n];
-        int[] indegree = new int[n];
-        ArrayList<Integer>adj[] = new ArrayList[n];
-        for(int i = 0; i < n; i++){
+       public int[] findOrder(int numCourses, int[][] pres) {
+         
+        ArrayList<Integer>[]adj=new ArrayList[numCourses];
+        for(int i=0;i<numCourses; i++){
             adj[i] = new ArrayList<>();
         }
-        
-        for(int[] pre: prerequisites){
+
+        for(int[] pre: pres){
             adj[pre[1]].add(pre[0]);
-            indegree[pre[0]]++;
+        }
+
+        int[] ans = new int[numCourses];
+        int[] visited=new int[numCourses];
+        Stack<Integer> stack=new Stack<>();
+        for (int i=0; i< numCourses; i++){
+           if(!dfs(adj, stack, i, visited)){
+                 return new int[]{};
+           }
         }
         
-        Queue<Integer> queue = new LinkedList<>();
-        for(int i=0; i<n ;i++){
-            if(indegree[i] == 0){
-               queue.add(i); 
-            }
+        int i = 0;
+        while (!stack.isEmpty()) {
+            ans[i++] = stack.peek();
+            stack.pop();
         }
-        
-        int[] result = new int[n];
-        List<Integer> list = new ArrayList<>();
-        int i =0;
-        while(!queue.isEmpty()){
-            
-            int current = queue.remove();
-            list.add(current);
-            
-            for(Integer neighbour: adj[current]){
-                indegree[neighbour]--;
-                if(indegree[neighbour] == 0){
-                    queue.add(neighbour);
-                }
-            }
-        }
-  
-        if(list.size() != n ){
-           return new int[0];
-        }else{
-            for(Integer li: list){
-               result[i++]= li; 
-            }
-        }
-       
-      return result;
+        return ans;
     }
+    
+  boolean dfs(ArrayList<Integer>[]adj,Stack<Integer> stack, int node, int[] visited){
+        if(visited[node]==1) {
+            return false;
+        }
+        if(visited[node]==2){
+            return true;
+        }
+        visited[node]=1;
+
+        for(int neighbour: adj[node]){
+           
+                if (!dfs(adj, stack, neighbour, visited)){
+                    return false;
+                }
+            
+        }
+        stack.push(node);
+        visited[node] = 2;
+
+        return true;
+
+    }
+    
 }
-   
