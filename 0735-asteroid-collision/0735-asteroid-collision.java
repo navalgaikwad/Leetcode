@@ -1,34 +1,35 @@
 class Solution {
-    public int[] asteroidCollision(int[] asteroids) {
-        Stack < Integer > stack = new Stack < > ();
-        for (int ast: asteroids) {
-            boolean isDestroyed = false;
-            while (!stack.isEmpty() && ast < 0 && stack.peek() > 0) { //pop(>) //dont do(<) // pop (==)
-                if (-ast > stack.peek()) { //greater than ahe pop kart raha //pop kar
-                    stack.pop();
-                } else if (-ast < stack.peek()) {//dont add in the stack or pop
-                    isDestroyed = true; // ast less than ahe tar kahi karu noko dont add in stack
+    public int[] asteroidCollision(int[] aste) {
+        Stack<Integer> st = new Stack<>();
+        int i =0; 
+        while(i<aste.length) {
+            boolean flag = true;
+            int no;
+            while(!st.isEmpty() &&  st.peek() >0 && aste[i]<0) {
+                if((-aste[i]) == st.peek()) {
+                    st.pop() ;
+                    flag = false;
                     break;
-                } else if (-ast == stack.peek()) { // pop
-                    stack.pop(); //equal ahet stack ani ast tar pop kar stack madhun ani destroy pan kar
-                    isDestroyed = true;
+                }else if(-aste[i] > st.peek()) {
+                       st.pop() ;
+            
+                    //flag = false;
+                }else if(-aste[i] < st.peek()){
+                    flag = false;
                     break;
                 }
+                //i++;
             }
-
-            if (!isDestroyed) { // not destroyed asel tar add kart raha
-                stack.push(ast);
+            if(flag) {
+              st.push(aste[i]);  
             }
-        }
-
-        int[] ans = new int[stack.size()];
-        int i = 0;
-        for (Integer st: stack) {
-            ans[i++] = st;
-        }
-
-
-        return ans;
+            i++;
     }
-
+        int[] ans = new int[st.size()];
+        int j = 0;
+        for (Integer s: st) {
+            ans[j++] = s;
+        }
+        return ans;
+}
 }
