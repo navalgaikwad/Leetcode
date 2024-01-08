@@ -11,55 +11,48 @@
 class Solution {
     public ListNode sortList(ListNode head) {
         return sort(head);
-    }
-    
-    private ListNode sort(ListNode head){
-        if(head == null || head.next == null){
-             return  head;
-        }
-         
-     ListNode mid = middle(head);
-     ListNode next = mid.next;
-     mid.next = null;
-     ListNode  left = sort(head);
-     ListNode  right = sort(next);
-         
-     return mergeLinkList(left, right);
-    }
-    
-    private ListNode mergeLinkList(ListNode left, ListNode right){
-        ListNode temp = new ListNode(0);
-        ListNode dm = temp;
         
-        while(left!= null && right!=null){
-           if(left.val < right.val){
-                dm.next = left;
-                left = left.next;
-            }else{
-                dm.next = right;
-                right = right.next; 
-            }
-            dm = dm.next;
-        }
-    
-        dm.next = (left == null) ? right : left;  
-        return temp.next;
     }
     
-    private ListNode middle(ListNode head){
+    ListNode sort(ListNode head) {
+        if(head == null || head.next == null) {
+            return head;
+        }
+        ListNode middle = middle(head);
+        ListNode nextNodeOfMiddle = middle.next;
+        middle.next = null;
+        ListNode left = sort(head);
+        ListNode right = sort(nextNodeOfMiddle);
+        
+        return mergerList(left, right);
+    }
+    
+    ListNode middle(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
         ListNode prev = null;
-        
-        while(fast !=null && fast.next != null){
+        while(fast!=null && fast.next!=null) {
             prev = slow;
-            slow = slow.next;
+            slow= slow.next;
             fast = fast.next.next;
         }
-        
-        // if(prev != null){
-        //     prev.next = null;
-        // }
         return prev;
+    }
+    
+    ListNode mergerList(ListNode low, ListNode high) {
+        ListNode root = new ListNode(-1);
+        ListNode tmp = root;
+        while(low != null && high != null) {
+            if(low.val < high.val) {
+                tmp.next = low;
+                low = low.next;
+            }else {
+                tmp.next = high;
+                high = high.next;
+            }
+            tmp= tmp.next;
+        }
+        tmp.next = (low == null) ? high : low;
+        return root.next;
     }
 }
