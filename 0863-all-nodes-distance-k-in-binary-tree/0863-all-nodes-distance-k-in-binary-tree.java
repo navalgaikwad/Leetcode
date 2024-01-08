@@ -42,7 +42,7 @@ class Solution {
                continue;
             }
             for(Integer neighbour: adjListMap.get(src)) {
-                if(!visited.contains(neighbour) && level<k) {
+                if(!visited.contains(neighbour)) {
                     visited.add(neighbour);
                     q.add(new int[]{neighbour, level +1});
                 }
