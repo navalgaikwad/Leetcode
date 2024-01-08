@@ -14,26 +14,24 @@
  * }
  */
 class Solution {
-    //Input: inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]
-    int postIndex = 0;
-    Map<Integer, Integer> map = new HashMap<>();
+    Map<Integer, Integer> inorderMap = new HashMap<>();
+    int i = 0;
     public TreeNode buildTree(int[] inorder, int[] postorder) {
-       postIndex =  postorder.length - 1;
-       for(int i=0;i<inorder.length; i++){
-           map.put(inorder[i], i);
-       }
-       return helper(postorder, 0, postorder.length - 1); 
+        i =  postorder.length - 1; //for post start from end
+        for(int i =0 ;i<inorder.length; i++) {
+            inorderMap.put(inorder[i], i);
+        }
+        return buildTree(postorder, 0, postorder.length-1);
     }
-    TreeNode helper(int[] postorder, int start, int end) {
-        if (start > end || postIndex < 0) {  
+    TreeNode buildTree(int[] postorder, int low, int high) {
+        if(low > high || i < 0) {
             return null;
         }
-        int post = postorder[postIndex--];
-
-        TreeNode root = new TreeNode(post);
-        root.right = helper(postorder, map.get(post) + 1, end);  
-        root.left = helper(postorder, start, map.get(post) - 1);
-       
+        int rootValue =postorder[i--];//satrt from end
+        TreeNode root = new TreeNode(rootValue);
+        root.right = buildTree(postorder, inorderMap.get(rootValue) + 1, high);
+        root.left = buildTree(postorder, low, inorderMap.get(rootValue) - 1);
+        
         return root;
     }
 }
