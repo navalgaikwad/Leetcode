@@ -1,10 +1,8 @@
 class SeatManager {
-    List<Integer> ans = new ArrayList<>();
-    PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+    PriorityQueue<Integer> pq = new PriorityQueue<>();
     public SeatManager(int n) {
-        ans = new ArrayList<>();
-        for(int i = 1; i <= n; i++){
-            pq.offer(i);
+        for(int i =1; i<=n; i++) {
+            pq.add(i);
         }
     }
     
@@ -13,7 +11,7 @@ class SeatManager {
     }
     
     public void unreserve(int seatNumber) {
-         pq.add(seatNumber);
+        pq.add(seatNumber);
     }
 }
 
