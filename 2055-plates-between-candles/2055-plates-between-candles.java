@@ -1,9 +1,9 @@
 class Solution {
     public int[] platesBetweenCandles(String s, int[][] queries) {
-        int len = s.length() ;
+        int len = s.length();
+        int[] leftSideCandles = new int[len];
+        int[] rightSideCandles = new int[len];
         int[] plates = new int[len];
-        int[] leftCandels = new int[len];
-        int[] rightCandels = new int[len];
         
         //plates[i]
         int count =0;
@@ -14,44 +14,34 @@ class Solution {
             plates[i] = count;
         }
         
-        //calculate candels from left
-         int index = -1; //intialise it -1 not 0 because 0 is valid index
-         for(int i= len - 1; i >= 0; i--) {
-             if(s.charAt(i) == ('|')) {
-                index = i;
+         count=-1;
+        for(int i=0; i<len; i++) {
+            if(s.charAt(i)=='|') {//candel asel tar count kar
+                count = i;
             }
-            leftCandels[i] = index;
+            rightSideCandles[i] = count;
         }
         
-        // //calculate candels from right
-         index = -1;
-         for(int i=0; i < len; i++) {
-             if(s.charAt(i) == ('|')) {
-                index = i;
+        count =-1;
+        for(int i=len-1; i>=0; i--) {//candel asel tar count kar
+            if(s.charAt(i)=='|') {
+                count = i;
             }
-            rightCandels[i] = index;
+            leftSideCandles[i] = count;
         }
-        
-        //then find the left index and right index and leftIndex < rightIndex
-        int[] result = new int[queries.length];
-        int k = 0;
-        for(int[] query:queries) {
+         int[] result = new int[queries.length];
+        int k =0;
+        for(int[] query : queries) {
+            int left = leftSideCandles[query[0]];
+            int right = rightSideCandles[query[1]];
             
-            int value1 = query[0];
-            int value2 = query[1];
-            
-            int leftIndex = leftCandels[value1];
-            int rightIndex = rightCandels[value2];
-            
-            if(leftIndex != -1 && rightIndex != -1 && leftIndex < rightIndex) {
-               result[k++] = Math.abs(plates[rightIndex] - plates[leftIndex]);
+             if(left != -1 && right != -1 && left < right) {
+               result[k++] = Math.abs(plates[right] - plates[left]);
             }else {
                result[k++] = 0;
             }
         }
         
-       
         return result;
-       // return new int[]{};
     }
 }
