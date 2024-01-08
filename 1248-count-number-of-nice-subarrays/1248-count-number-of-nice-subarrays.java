@@ -4,9 +4,9 @@ class Solution {
         int curr = 0;
         int ans = 0;
         int len = nums.length;
-        map.put(0, 1);
+        map.put(0, 1);//add default value
         for(int i = 0; i<len; i++){
-            curr = curr + (nums[i]%2);
+            curr = curr + (nums[i]%2);//odd no
             
             if(map.containsKey(curr - k)){
                 ans = ans + map.get(curr - k);
