@@ -26,7 +26,7 @@ class Solution {
             for(int[] dir: directions) {
                 int x = row+dir[0];
                 int y = col+dir[1];
-                int obst = obs + (grid[row][col] == 1 ? 1 : 0);//add obscle in it
+                int obst = obs + (grid[row][col] == 1 ? 1 : 0);//add obscle in it of row and col
                 
                 if(x < m && x>=0 && y<n && y>=0 && obst<= k && !visited[x][y][obst]) {
                     q.add(new int[]{x, y, level+1, obst});
