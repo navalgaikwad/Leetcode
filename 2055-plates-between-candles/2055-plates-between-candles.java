@@ -5,6 +5,8 @@ class Solution {
         int[] rightSideCandles = new int[len];
         int[] plates = new int[len];
         
+        //1. count stars
+        //2.count candles from left and right side
         //plates[i]
         int count =0;
         for (int i = 0; i < len; i++) {
@@ -22,7 +24,7 @@ class Solution {
             rightSideCandles[i] = count;
         }
         
-        count =-1;
+        count =-1;//vv imp -1
         for(int i=len-1; i>=0; i--) {//candel asel tar count kar
             if(s.charAt(i)=='|') {
                 count = i;
