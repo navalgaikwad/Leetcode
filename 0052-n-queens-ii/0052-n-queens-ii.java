@@ -1,37 +1,32 @@
 class Solution {
     int size;
     public int totalNQueens(int n) {
-        size = n;
-       
-        return  backTrack(0, new HashSet<>(), new HashSet<>(), new HashSet<>());
+        this.size = n;
+        return backTracking(0, new HashSet<>(), new HashSet<>(), new HashSet<>());
     }
     
-    int backTrack(int row, HashSet<Integer> diagonalSet, HashSet<Integer> antiDiagonalSet, HashSet<Integer> cols){
-        if(row == size){
+    int backTracking(int row, HashSet<Integer> diagonalSet, HashSet<Integer> antiDiagonal, HashSet<Integer> cols) { 
+        if(row == size) {
             return 1;
         }
-        int solution = 0;
-        for(int col =0; col < size; col++){
+        
+        int solution =0;
+        for(int col=0; col < size; col++) {
             int diagonal = row - col; // top right to bottom left
-            int antiDiagonal = row + col;// top left to bottom right
-            
-            //check in the set if it avaiable 
-            if(cols.contains(col) || diagonalSet.contains(diagonal) || antiDiagonalSet.contains(antiDiagonal)){
+            int antiDiag = row + col; // top left to bottom right
+            if(diagonalSet.contains(diagonal) || antiDiagonal.contains(antiDiag) || cols.contains(col)) {
                 continue;
             }
             
-            //if not add in the cols, diagonalSet, antiDiagonalSet
             cols.add(col);
+            antiDiagonal.add(antiDiag);
             diagonalSet.add(diagonal);
-            antiDiagonalSet.add(antiDiagonal);
-            solution += backTrack(row + 1, diagonalSet, antiDiagonalSet, cols);
-            
-            //onces everything is done remove evryting
+            solution+=backTracking(row+1, diagonalSet, antiDiagonal, cols);
+
             cols.remove(col);
+            antiDiagonal.remove(antiDiag);
             diagonalSet.remove(diagonal);
-            antiDiagonalSet.remove(antiDiagonal);
-            
         }
-        return solution;
+         return solution;
     }
 }
