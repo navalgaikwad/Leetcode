@@ -39,7 +39,7 @@ class Solution {
             int level = current[1];
             if(level == k) {
                result.add(src);
-               //continue;
+               continue;
             }
             for(Integer neighbour: adjListMap.get(src)) {
                 if(!visited.contains(neighbour)) {
