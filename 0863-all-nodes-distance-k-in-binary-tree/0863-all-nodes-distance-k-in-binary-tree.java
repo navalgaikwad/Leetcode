@@ -8,60 +8,46 @@
  * }
  */
 class Solution {
-    
-    
     private Map<Integer, ArrayList<Integer>> adjListMap = new HashMap<>();
-
-    //convert TrreeNode to adjacencyList save parent and child
-    //created adajcency list
-    private void buildAdjList(TreeNode node, TreeNode parent) {
-        if (node == null) {
+    void buildList(TreeNode child, TreeNode parent) {
+        if(child == null) {
             return;
         }
-        //check value is present in map
-        if (!adjListMap.containsKey(node.val)) {
-            adjListMap.put(node.val, new ArrayList<>());
+        if(!adjListMap.containsKey(child.val)) {
+            adjListMap.put(child.val, new ArrayList<>());
         }
-        //if parent is not null intitally it is null
         if (parent != null) {
-            //bi - directional account save parent account 
-            adjListMap.get(parent.val).add(node.val);
-            adjListMap.get(node.val).add(parent.val);
-           
+            adjListMap.get(child.val).add(parent.val);
+            adjListMap.get(parent.val).add(child.val);
         }
-        //left
-        buildAdjList(node.left, node);
-        //right
-        buildAdjList(node.right, node);
+        buildList(child.left, child);
+        buildList(child.right, child);
+        
     }
-
-    
     public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
-        buildAdjList(root, null);
+        buildList(root, null);
+       // System.out.print(adjListMap);
         List<Integer> result = new ArrayList<>();
-        Queue<int[]> queue = new LinkedList<>();
+        Queue<int[]> q = new LinkedList<>();
+        q.add(new int[]{target.val, 0});
+        HashSet<Integer> visited = new HashSet<>();
+        visited.add(target.val);
         
-        queue.add(new int[]{target.val, 0});
-        
-        HashSet<Integer> set = new HashSet<>();
-        
-        set.add(target.val);
-        while(!queue.isEmpty()){
-            int[] current = queue.remove();
+        while(!q.isEmpty()) {
+            int[] current = q.remove();
             int src = current[0];
             int level = current[1];
-            if(level == k){
+            if(level == k) {
                result.add(src);
                continue;
             }
-            for(Integer neighbour: adjListMap.get(src)){
-                if(!set.contains(neighbour) && level <=k){
-                   queue.add(new int[]{neighbour, level + 1}); 
-                   set.add(neighbour);
+            for(Integer neighbour: adjListMap.get(src)) {
+                if(!visited.contains(neighbour) && level<k) {
+                    visited.add(neighbour);
+                    q.add(new int[]{neighbour, level +1});
                 }
             }
         }
-        
-        return result;
+      return result;
     }
 }
