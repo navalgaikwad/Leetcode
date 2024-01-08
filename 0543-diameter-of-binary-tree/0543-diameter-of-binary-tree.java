@@ -14,30 +14,22 @@
  * }
  */
 class Solution {
-     class Pair{
-        int diameter;
-        int dept;
-        Pair(int diameter, int dept){
-            this.diameter = diameter;
-            this.dept = dept;
-        }
-    }
+    int diameter = 0;
+
     public int diameterOfBinaryTree(TreeNode root) {
-        Pair pair = helper(root);
-        return pair.diameter;
+        height(root);
+        return diameter - 1;
     }
-    
-    Pair helper(TreeNode root){
-        if(root == null){
-            return new Pair(0, 0);
+
+    int height(TreeNode root) {
+        if (root == null) {
+            return 0;
         }
-        Pair left  = helper(root.left);
-        Pair right =  helper(root.right);
-        
-        int daimeter = Math.max(Math.max(left.diameter, right.diameter), left.dept + right.dept);
-        
-        int dept = Math.max(left.dept, right.dept) + 1;
-        return new Pair(daimeter, dept);
-        
+
+        int leftH = height(root.left);
+        int rightH = height( root.right);
+        diameter = Math.max(diameter, leftH + rightH + 1);
+
+        return Math.max(leftH, rightH) + 1;
     }
 }
