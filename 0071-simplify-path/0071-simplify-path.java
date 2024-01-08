@@ -1,22 +1,18 @@
 class Solution {
     public String simplifyPath(String path) {
         String[] parts = path.split("/");
-  
         Stack<String> st = new Stack<>();
-     
-        for(String part : parts){
-            
-            if((part.equals("..") )){ // remove the .. value first
-                if(!st.isEmpty()){
-                   st.pop();  
+        for(String part: parts) {
+            if(part.equals("..")) {//double dots
+                if(!st.isEmpty()) {
+                    st.pop();
                 }
-            }else if(!part.isEmpty()&& !part.equals(".")){ // push the non empty
-             st.push(part);   
-           }
+            }else if(!part.isEmpty()&&!part.equals(".")) { //single dots
+                st.push(part);
+            }
         }
-       
         if(st.isEmpty())  return "/";
-     StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
    
          for(String s: st){
               sb.append("/"+s);
