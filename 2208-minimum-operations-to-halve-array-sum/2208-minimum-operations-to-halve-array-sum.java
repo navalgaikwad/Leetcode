@@ -1,5 +1,8 @@
 class Solution {
     public int halveArray(int[] nums) {
+        if(nums.length<2){
+            return 1;
+        }
         PriorityQueue<Double> pq = new PriorityQueue<>((a,b)->Double.compare(b,a));
         double sum = 0;
         for(int num : nums) {
