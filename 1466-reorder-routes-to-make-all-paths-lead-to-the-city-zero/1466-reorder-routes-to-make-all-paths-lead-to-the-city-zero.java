@@ -1,38 +1,57 @@
 class Solution {
-	class Pair{
-		int dest;
-		int color;
-		Pair(int dest, int color){
-			this.dest=dest;
-			this.color=color;
-		}
-	}
-    int count =0;
     public int minReorder(int n, int[][] connections) {
-	ArrayList<Pair> adj[] =new ArrayList[n];
-		for(int i=0; i<n; i++){
-				adj[i] = new ArrayList<>();
-		}
-		for(int[] connection: connections){
-			adj[connection[0]].add(new Pair(connection[1], 1));
-			adj[connection[1]].add(new Pair(connection[0], 0));
-            
-     //  System.out.println(connection[0] +" "+ connection[1]);
-     //  System.out.println(connection[1] +" "+ connection[0]);
-            
-		}
-   
-	dfs(adj, 0, -1);
-    return count;
-	}
-	
-	void dfs(ArrayList<Pair> adj[], int src, int parent){
-		for(Pair pair: adj[src]){
-			if(pair.dest!=parent){
-             //   System.out.println(parent + " "+src+"-"+pair.dest +" - "+pair.color);
-				count+=pair.color;
-				dfs(adj, pair.dest, src);
-			}
-		}
-	}
+        ArrayList<int[]> adj[] = new ArrayList[n];
+        for (int i = 0; i < n; i++) {
+            adj[i] = new ArrayList<>();
+        }
+
+        for (int[] con : connections) {
+            adj[con[0]].add(new int[]{con[1], 1});
+            adj[con[1]].add(new int[]{con[0], 0});
+        }
+
+        return dfs(adj, 0, new HashSet<>());
+    }
+
+    int dfs(ArrayList<int[]> adj[], int parent, HashSet<Integer> visited) {
+        int solution = 0;
+        visited.add(parent);
+        for (int[] neighbour : adj[parent]) {
+            int neighbourNode = neighbour[0];
+            int count = neighbour[1];
+            if (!visited.contains(neighbourNode)) {
+                solution += count + dfs(adj, neighbourNode, visited);
+            }
+        }
+        return solution;
+    }
 }
+// class Solution {
+//     public int minReorder(int n, int[][] connections) {
+//         ArrayList<int[]>[] adj = new ArrayList[n];
+//         for (int i = 0; i < n; i++) {
+//             adj[i] = new ArrayList<>();
+//         }
+
+//         for (int[] con : connections) {
+//             adj[con[0]].add(new int[]{con[1], 1}); // Reorder: 1 means reorder needed
+//             adj[con[1]].add(new int[]{con[0], 0}); // No reorder: 0 means no reorder needed
+//         }
+
+//         return dfs(adj, 0, new HashSet<>());
+//     }
+
+//     int dfs(ArrayList<int[]>[] adj, int parent, HashSet<Integer> visited) {
+//         int solution = 0;
+//         visited.add(parent);
+//         for (int[] neighbour : adj[parent]) {
+//             int neighbourNode = neighbour[0];
+//             int isReorder = neighbour[1];
+//             if (!visited.contains(neighbourNode)) {
+//                 solution += isReorder + dfs(adj, neighbourNode, visited);
+//             }
+//         }
+//         return solution;
+//     }
+// }
+
