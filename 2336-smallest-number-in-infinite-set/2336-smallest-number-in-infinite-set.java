@@ -1,9 +1,8 @@
 class SmallestInfiniteSet {
-    PriorityQueue<Integer> pq;
+    PriorityQueue<Integer> pq =new PriorityQueue<>();
     public SmallestInfiniteSet() {
-        pq = new PriorityQueue<>();
-        for(int i=1; i<=1000; i++){
-           pq.add(i); 
+        for(int i =1; i<=1000; i++) {
+            pq.add(i);
         }
     }
     
@@ -13,9 +12,8 @@ class SmallestInfiniteSet {
     
     public void addBack(int num) {
         if(!pq.contains(num)){
-             pq.add(num);
+           pq.add(num); 
         }
-       
     }
 }
 
