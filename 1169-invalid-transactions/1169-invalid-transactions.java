@@ -36,14 +36,15 @@ class Solution {
         List<String> result = new ArrayList<>();
 
         for (Person person : newArray) {
+             boolean invalid = false;
             if (person.amount > 1000) {
-                result.add(person.toCommaSeparatedString());
-                continue;
+                //result.add(person.toCommaSeparatedString());
+                invalid = true;
             }
 
-            boolean invalid = false;
-
-            for (Person prev : newArray) {
+           
+            if(!invalid) {
+                for (Person prev : newArray) {
                 if (person.name.equals(prev.name) && !person.city.equals(prev.city)
                         && Math.abs(person.startTime - prev.startTime) <= 60) {
                     invalid = true;
@@ -51,6 +52,8 @@ class Solution {
                 }
             }
 
+            }
+            
             if (invalid) {
                 result.add(person.toCommaSeparatedString());
             }
