@@ -1,35 +1,50 @@
-class Solution {
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Solution {
     public List<Integer> findAnagrams(String s, String p) {
-        int k = p.length();
-        int left = 0;
-        List<Integer> result = new ArrayList<>();
-        for(int right = 0; right <= s.length() - k; right++) {
-            String sub = s.substring(left, right + k);
-            if(checkAnagram(sub, p)) {
-                result.add(left);
-            }
-            left++;
-        }
-        return result;
-    }
-    
-    boolean checkAnagram(String sub, String p) {
-        // Frequency arrays for comparison
-        int[] subCount = new int[26];
-        int[] pCount = new int[26];
+        Map<Character, Integer> table = new HashMap<>();
+        List<Integer> ans = new ArrayList<>();
 
-        // Populate the frequency arrays
-        for (int i = 0; i < sub.length(); i++) {
-            subCount[sub.charAt(i) - 'a']++;
-            pCount[p.charAt(i) - 'a']++;
+        for (char c : p.toCharArray()) {
+            table.put(c, table.getOrDefault(c, 0) + 1);
         }
 
-        // Compare the frequency arrays
-        for (int i = 0; i < 26; i++) {
-            if (subCount[i] != pCount[i]) {
-                return false;
+        if (s.length() < p.length() || s.length() == 0) {
+            return ans;
+        }
+
+        int begin = 0, end = 0, wordSize = p.length();
+        int counter = table.size();
+
+        while (end < s.length()) {
+            char endChar = s.charAt(end);
+
+            if (table.containsKey(endChar)) {
+                table.put(endChar, table.get(endChar) - 1);
+                if (table.get(endChar) == 0) counter--;
+            }
+
+            end++;
+
+            while (counter == 0) {
+                if (end - begin == wordSize) {
+                    ans.add(begin);
+                }
+
+                char beginChar = s.charAt(begin);
+
+                if (table.containsKey(beginChar)) {
+                    table.put(beginChar, table.get(beginChar) + 1);
+                    if (table.get(beginChar) > 0) counter++;
+                }
+
+                begin++;
             }
         }
-        return true;
+
+        return ans;
     }
 }
