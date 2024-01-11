@@ -1,35 +1,37 @@
-public class Solution {
+class Solution {
     public String minWindow(String s, String t) {
-        int[] map = new int[128];//size 128
-        for (char c : t.toCharArray()) {
-            map[c]++;//add all value in map 
+        Map<Character, Integer> map = new HashMap<>();
+        for(char c : t.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }
+        int left =0;
+        int counter = map.size();
+        int len = Integer.MAX_VALUE;
 
-        int counter = t.length(), begin = 0, end = 0;
-        int minLen = Integer.MAX_VALUE, head = 0;
-        while (end < s.length()) {
-            int count = map[s.charAt(end)]--;
-            end++;
-            if (count > 0) {
-                counter--;
-            }
-            while (counter == 0) {
-                if (end - begin < minLen) {
-                    minLen = end - begin;
-                    head = begin;
-                }
-                int beginCount = map[s.charAt(begin)]++;
-                begin++;
-                if (beginCount == 0) {
-                    counter++;
+        String ans = "";
+        for(int right =0; right<s.length(); right++) {
+           
+            if(map.containsKey(s.charAt(right))) {
+                map.put(s.charAt(right), map.get(s.charAt(right)) - 1);
+                if(map.get(s.charAt(right)) == 0) {
+                    counter--;
                 }
             }
             
+            while(counter == 0) {
+                 if (right - left < len) {
+                    len = right - left ;
+                    ans = s.substring(left, right + 1);
+                }
+                if(map.containsKey(s.charAt(left))) {
+                    map.put(s.charAt(left), map.get(s.charAt(left)) + 1);
+                    if(map.get(s.charAt(left)) > 0) {
+                        counter++;
+                    }
+                }
+                left++;
+            }
         }
-        return minLen == Integer.MAX_VALUE ? "" : s.substring(head, head + minLen);
+        return ans;
     }
 }
-//maintain the counter 
-//counter is minus untill 0
-//when zero find the min length
-//if we find any character we need to increase the counter and character counter
