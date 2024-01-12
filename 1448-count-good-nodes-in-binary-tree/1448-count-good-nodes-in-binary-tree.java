@@ -14,26 +14,24 @@
  * }
  */
 class Solution {
+    int counter = 0;
+
     public int goodNodes(TreeNode root) {
-        return helper(root, root.val);
+        helper(root, Integer.MIN_VALUE);
+        return counter;
     }
-    
-    
-    int helper(TreeNode root, int max){
-        if(root==null){
-            return 0;
+
+    void helper(TreeNode root, int maxValue) {
+        if (root == null) {
+            return;
         }
-        //int maxV  = Math.max(root.val, max);
-        int total = 0;
-        if(root.val>=max){
-            total=total+1;
-            max=root.val;
+
+        if (root.val >= maxValue) {
+            counter++;
+            maxValue = root.val;
         }
-        
-        int left= helper(root.left, max);
-        int right=helper(root.right, max);
-        
-        total=total+left+right;
-        return total;
+
+        helper(root.left, maxValue);
+        helper(root.right, maxValue);
     }
 }
