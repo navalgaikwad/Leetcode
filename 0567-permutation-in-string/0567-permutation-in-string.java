@@ -4,34 +4,32 @@ class Solution {
         for(char c : s1.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
-        int counter =map.size();
+        int counter = map.size();
         int left =0;
-       // int right =0;
-        for(int right = 0; right < s2.length(); right++) {
+        for(int right =0; right<s2.length(); right++) {
+            char rightChar = s2.charAt(right);
+            if(map.containsKey(rightChar)) {
+                map.put(rightChar, map.getOrDefault(rightChar, 0) - 1);
+                if(map.get(rightChar) == 0) {
+                    counter--;
+                }
+            }
             
-         if(map.containsKey(s2.charAt(right))) {
-             map.put(s2.charAt(right), map.get(s2.charAt(right))-1);
-             if(map.get(s2.charAt(right)) == 0) {
-                 counter--;
-             }
-         }
-         
             while(counter == 0) {
-                if(right - left +1 == s1.length()) {
+                if(right - left + 1 == s1.length()){
                     return true;
                 }
-              if(map.containsKey(s2.charAt(left))) {
-             map.put(s2.charAt(left), map.get(s2.charAt(left))+1);
-             if(map.get(s2.charAt(left))> 0) {
-                 counter++;
-             }
-         }
-            left++;
+                char leftChar = s2.charAt(left);
+                if(map.containsKey(leftChar)) { 
+                    map.put(leftChar, map.getOrDefault(leftChar, 0) + 1);
+                    if(map.get(leftChar) > 0) {
+                        counter++;
+                        
+                    }
+                }
+                left++;
+            }
         }
-         
-            
-        //return false;    
+        return false;
     }
-        return false;  
-}
 }
