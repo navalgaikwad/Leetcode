@@ -1,29 +1,33 @@
 class Solution {
     public int characterReplacement(String s, int k) {
-    
-        int n = s.length();
-        int maxFreq = 0;
-        int maxLen = 0;
-        int start = 0;
-        int[] freq = new int[26]; // Assuming lowercase English letters
+        Map<Character, Integer> map = new HashMap<>();
+        int left = 0;
+        int len = 0;
+        int maxCount = 0;
 
-        for (int end = 0; end < n; end++) {
-            char currentChar = s.charAt(end);
-            freq[currentChar - 'A']++; // Convert character to index (A=0, B=1, ..., Z=25)
-            maxFreq = Math.max(maxFreq, freq[currentChar - 'A']);
+        for (int right = 0; right < s.length(); right++) {
+            char currentChar = s.charAt(right);
+            map.put(currentChar, map.getOrDefault(currentChar, 0) + 1);
 
-            // Check if the current window can be expanded within the limits
-            while (end - start + 1 - maxFreq > k) {
-                char startChar = s.charAt(start);
-                freq[startChar - 'A']--;
-                start++;
+            // Update the maximum count of a character in the current window
+            maxCount = Math.max(maxCount, map.get(currentChar));
+
+            // Adjust the window size based on the allowed replacements (k)
+            while (right - left + 1 - maxCount > k) {
+                map.put(s.charAt(left), map.getOrDefault(s.charAt(left), 0) - 1);
+                if (map.get(s.charAt(left)) == maxCount) {
+                    maxCount--;
+                }
+                if (map.get(s.charAt(left)) == 0) {
+                    map.remove(s.charAt(left));
+                }
+                left++;
             }
 
-            // Update maxLen for the current window size
-            maxLen = Math.max(maxLen, end - start + 1);
+            // Update the maximum length of the valid substring
+            len = Math.max(len, right - left + 1);
         }
 
-        return maxLen;
-      
+        return len;
     }
 }
