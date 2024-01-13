@@ -1,6 +1,5 @@
 class Solution {
-    
-    int atMost(int[] nums, int k){
+     int atMost(int[] nums, int k){
         Map<Integer, Integer> map = new HashMap<>();
         int left =0 ;
         //int right =0;
