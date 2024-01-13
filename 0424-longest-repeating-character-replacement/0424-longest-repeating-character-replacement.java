@@ -1,30 +1,37 @@
-class Solution {
+import java.util.HashMap;
+import java.util.Map;
+
+public class Solution {
     public int characterReplacement(String s, int k) {
-        Map<Character, Integer> map = new HashMap<>();
         int left = 0;
         int len = 0;
-        int maxCount = 0;
+        int maxFreq = 0;
 
+        // Frequency map to keep track of characters in the current window
+        Map<Character, Integer> charFrequency = new HashMap<>();
+
+        // Iterate through the string
         for (int right = 0; right < s.length(); right++) {
-            char currentChar = s.charAt(right);
-            map.put(currentChar, map.getOrDefault(currentChar, 0) + 1);
+            char rightChar = s.charAt(right);
 
-            // Update the maximum count of a character in the current window
-            maxCount = Math.max(maxCount, map.get(currentChar));
+            // Update charFrequency map
+            charFrequency.put(rightChar, charFrequency.getOrDefault(rightChar, 0) + 1);
 
-            // Adjust the window size based on the allowed replacements (k)
-            while (right - left + 1 - maxCount > k) {
-                map.put(s.charAt(left), map.getOrDefault(s.charAt(left), 0) - 1);
-                if (map.get(s.charAt(left)) == maxCount) {
-                    maxCount--;
-                }
-                if (map.get(s.charAt(left)) == 0) {
-                    map.remove(s.charAt(left));
-                }
+            // Update max frequency
+            maxFreq = Math.max(maxFreq, charFrequency.get(rightChar));
+
+            // Calculate the number of replacements needed
+            int replacementsNeeded = (right - left + 1) - maxFreq;
+
+            // Check if replacements needed are within the allowed limit
+            if (replacementsNeeded > k) {
+                // Move the left pointer
+                char leftChar = s.charAt(left);
+                charFrequency.put(leftChar, charFrequency.get(leftChar) - 1);
                 left++;
             }
 
-            // Update the maximum length of the valid substring
+            // Update the maximum length
             len = Math.max(len, right - left + 1);
         }
 
