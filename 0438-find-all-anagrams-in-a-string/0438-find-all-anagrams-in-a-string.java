@@ -1,50 +1,34 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-public class Solution {
+class Solution {
     public List<Integer> findAnagrams(String s, String p) {
-        Map<Character, Integer> table = new HashMap<>();
-        List<Integer> ans = new ArrayList<>();
-
-        for (char c : p.toCharArray()) {
-            table.put(c, table.getOrDefault(c, 0) + 1);
+        Map<Character, Integer> map = new HashMap<>();
+        for(char c : p.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }
-
-        if (s.length() < p.length() || s.length() == 0) {
-            return ans;
-        }
-
-        int begin = 0, end = 0, wordSize = p.length();
-        int counter = table.size();
-
-        while (end < s.length()) {
-            char endChar = s.charAt(end);
-
-            if (table.containsKey(endChar)) {
-                table.put(endChar, table.get(endChar) - 1);
-                if (table.get(endChar) == 0) counter--;
+        int left =0;
+        int counter = map.size();
+        ArrayList<Integer> ans = new ArrayList<>(); 
+        for(int right =0; right<s.length(); right++) {
+            char rightSide = s.charAt(right);
+            if(map.containsKey(rightSide)) {
+                map.put(rightSide, map.getOrDefault(rightSide, 0) - 1);
+                if(map.get(rightSide) == 0) {
+                    counter--;
+                }
             }
-
-            end++;
-
-            while (counter == 0) {
-                if (end - begin == wordSize) {
-                    ans.add(begin);
+            while(counter == 0) {
+                if(right - left + 1 == p.length()) {
+                    ans.add(left);
                 }
-
-                char beginChar = s.charAt(begin);
-
-                if (table.containsKey(beginChar)) {
-                    table.put(beginChar, table.get(beginChar) + 1);
-                    if (table.get(beginChar) > 0) counter++;
+                char leftSide = s.charAt(left);
+                if(map.containsKey(leftSide)) {
+                    map.put(leftSide, map.getOrDefault(leftSide, 0) + 1);
+                    if(map.get(leftSide) > 0) {
+                        counter++;
+                    }
                 }
-
-                begin++;
+                left++;
             }
         }
-
         return ans;
     }
 }
