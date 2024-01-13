@@ -1,29 +1,24 @@
 class Solution {
-   public int longestSubstring(String s, int k) {
-    return helper(s.toCharArray(), 0, s.length(), k);
-}
-
-int helper(char[] ch, int start, int end, int k) {
-    if (end - start < k) {
-        return 0;
+    public int longestSubstring(String s, int k) {
+        return longestSub(s, k, 0, s.length() - 1);
     }
     
-    int[] count = new int[26];
-    for (int i = start; i < end; i++) {
-        count[ch[i] - 'a']++;
-    }
-
-    for (int i = start; i < end; i++) {
-        if (count[ch[i] - 'a'] < k) {
-            int j = i + 1;
-            while (j < end && count[ch[j] - 'a'] < k) {
-                j++;
-            }
-            return Math.max(helper(ch, start, i, k), helper(ch, j, end, k));
+    int longestSub(String s, int k, int start, int end) {
+        if(end - start + 1 < k) {
+            return 0;
         }
+        Map<Character, Integer> map = new HashMap<>();
+        for (int i = start; i <= end; i++) {
+            map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
+        }
+        for(int  i = start; i <= end; i++) {
+            char c = s.charAt(i);
+            if(map.get(c) < k) {
+                int left = longestSub(s, k, start, i - 1);
+                int right = longestSub(s, k, i + 1, end);
+                return Math.max(left, right);
+            }
+        }
+        return end - start + 1;
     }
-    
-    return end - start;
-}
-
 }
