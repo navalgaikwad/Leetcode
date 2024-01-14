@@ -1,4 +1,5 @@
 class Solution {
+    //missing parenthesise current size - total length
     public int longestValidParentheses(String s) {
         Stack<Integer> st = new Stack<>();
         int ans =0;
