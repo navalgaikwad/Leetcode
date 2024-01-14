@@ -1,37 +1,28 @@
-import java.util.ArrayList;
-import java.util.List;
-
-public class Solution {
-            // Backtracking helper method.
-        List<String> ipAddresses = new ArrayList<>();
-     java.util.function.Function<String, Boolean> isValid = (octet) -> 
-                !(octet.charAt(0) == '0' && octet.length() > 1) && Integer.parseInt(octet) <= 255;
-
-        void backtrack(String s, List<String> current, int index) {
-            if (current.size() > 4) {
-                return;
-            }
-
-            if (index == s.length() && current.size() == 4) {
-                ipAddresses.add(String.join(".", current));
-                return;
-            }
-
-            for (int i = 1; i <= 3; i++) {
-                if (index + i <= s.length()) {
-                    String octet = s.substring(index, index + i);
-                    if (isValid.apply(octet)) {
-                        current.add(octet);
-                        backtrack(s, current, index + i);
-                        current.remove(current.size() - 1);
-                    }
-                }
-            }
-        }
+class Solution {
+    List<String> result = new ArrayList<>();
     public List<String> restoreIpAddresses(String s) {
+        helper(s, 0, 0, "");
+        return result;
+    }
     
-        // Start the backtracking process.
-        backtrack(s, new ArrayList<>(), 0);
-        return ipAddresses;
+    void helper(String s, int part, int index, String ans) {
+        if(part == 4 || index == s.length()) {
+            if(part == 4 && index == s.length()) {
+                result.add(ans.substring(0, ans.length() - 1));
+                return;
+            }
+            return;
+        }
+        helper(s, part+1, index + 1, ans+s.charAt(index)+".");
+        if(index + 2 <= s.length() && isValid(s.substring(index, index + 2))) {
+           helper(s, part+1, index+2, ans+s.substring(index, index + 2)+"."); 
+        }
+        if(index + 3 <= s.length() && isValid(s.substring(index, index + 3))) {
+           helper(s, part+1, index+3, ans+s.substring(index, index + 3) +".");   
+        }
+    }
+    boolean isValid(String s) {
+        if(s.charAt(0) == '0') return false;
+        return Integer.parseInt(s) <= 255;
     }
 }
