@@ -1,38 +1,40 @@
 class Solution {
-    class Pair{
-        String first;
+    class Pair {
         int level;
-        Pair(String first, int level){
-           this.first = first;
-           this.level = level;
+        String word;
+        Pair(int level, String word) {
+            this.level = level;
+            this.word = word;
         }
     }
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
-        Set<String> set  = new HashSet<>();
-        for(String word: wordList){ //O(n)
+        Set<String> set = new HashSet<>();
+        for(String word : wordList) {
             set.add(word);
         }
-        Queue<Pair> q= new LinkedList<>();
-        q.add(new Pair(beginWord, 1));
-        while(!q.isEmpty()){ 
-            Pair current = q.remove();
-           String first = current.first;
-            int level = current.level;
-            if(endWord.equals(first)){
+        Queue<Pair> q = new LinkedList<>();
+        q.add(new Pair(1, beginWord));
+       
+        while(!q.isEmpty()) {
+            Pair p = q.remove();
+            int level = p.level;
+            String word = p.word;
+            if(word.equals(endWord)) {
                 return level;
             }
-            for(int i=0; i<first.length(); i++){
-                char[] replacement = first.toCharArray();
-                for(char j ='a'; j<='z'; j++){
-                    replacement[i] = j;
-                    String replc = String.valueOf(replacement);
-                    if(set.contains(replc)){
-                        set.remove(replc);
-                        q.add(new Pair(replc, level+1));
-                    }
-                }
-            }
+            
+        for(int i=0; i<word.length(); i++) {
+            char[] c = word.toCharArray();
+             for(char j = 'a'; j<='z';j++) {
+                 c[i] = j;
+                 String replc = String.valueOf(c);
+                 if(set.contains(replc)) {
+                    q.add(new Pair(level+1, replc));
+                    set.remove(replc);
+                 }
+             }
         }
-        return 0;
     }
+        return 0;
+    } 
 }
