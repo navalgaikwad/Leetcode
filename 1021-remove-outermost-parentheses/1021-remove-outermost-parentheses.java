@@ -1,19 +1,17 @@
 class Solution {
-    //same template of valid parenthesies
     public String removeOuterParentheses(String s) {
         Stack<Character> st = new Stack<>();
-        //st.push('\0');
         StringBuilder sb = new StringBuilder();
-        for(int i=0; i<s.length(); i++) {
-            if(s.charAt(i) == '(') {
-                if(!st.isEmpty()) {
-                    sb.append('(');
+        for(int i =0; i<s.length(); i++) {
+            if(s.charAt(i)=='(') {
+                if(st.size()>0) {
+                    sb.append(s.charAt(i));
                 }
-                st.push('(');
+                st.push(s.charAt(i));
             }else {
                 st.pop();
-                if(!st.isEmpty()) {
-                    sb.append(')');
+                if(st.size()>0) {
+                    sb.append(s.charAt(i));
                 }
             }
         }
