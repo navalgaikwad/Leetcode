@@ -1,11 +1,11 @@
 class Solution {
     public int findMinArrowShots(int[][] points) {
-        int count = points.length;
-        Arrays.sort(points, (a, b)->Integer.compare(a[1], b[1]));
+       Arrays.sort(points, (a, b)->Integer.compare(a[1], b[1]));
         int[] prev = points[0];
-        for( int i=1; i < points.length; i++ ) {
+        int count =points.length;
+        for(int i =1; i<points.length; i++) {
             int[] intervals = points[i];
-            if(intervals[0] <= prev[1]) {
+            if(intervals[0]<=prev[1]) {
                 count--;
             }else {
                 prev = intervals;
@@ -14,3 +14,7 @@ class Solution {
         return count;
     }
 }
+//sort start time
+//check if it is falling inside codition
+//if not change interval
+//10,16
