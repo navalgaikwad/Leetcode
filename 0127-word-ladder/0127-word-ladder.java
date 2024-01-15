@@ -1,10 +1,10 @@
 class Solution {
     class Pair {
-        int level;
         String word;
-        Pair(int level, String word) {
-            this.level = level;
+        int level;
+        Pair(String word, int level) {
             this.word = word;
+            this.level = level;
         }
     }
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
@@ -13,28 +13,26 @@ class Solution {
             set.add(word);
         }
         Queue<Pair> q = new LinkedList<>();
-        q.add(new Pair(1, beginWord));
-       
+        q.add(new Pair(beginWord, 1));
         while(!q.isEmpty()) {
-            Pair p = q.remove();
-            int level = p.level;
-            String word = p.word;
+            Pair pair = q.remove();
+            String word = pair.word;
+            int level = pair.level;
             if(word.equals(endWord)) {
                 return level;
             }
             
-        for(int i=0; i<word.length(); i++) {
-            char[] c = word.toCharArray();
-             for(char j = 'a'; j<='z';j++) {
-                 c[i] = j;
-                 String replc = String.valueOf(c);
-                 if(set.contains(replc)) {
-                    q.add(new Pair(level+1, replc));
-                    set.remove(replc);
-                 }
-             }
+            for(int i=0; i<word.length(); i++) {
+                char[] c = word.toCharArray();
+                for(char j ='a'; j<='z'; j++) {
+                    c[i] = j;
+                    if(set.contains(String.valueOf(c))) {
+                        q.add(new Pair(String.valueOf(c), level+1));
+                        set.remove(String.valueOf(c));
+                    }
+                }
+            }
         }
-    }
         return 0;
-    } 
+    }
 }
