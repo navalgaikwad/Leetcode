@@ -1,3 +1,5 @@
+//loved this problem
+//
 class Solution {
     public int minCut(String s) {
         int n = s.length();
@@ -24,7 +26,7 @@ class Solution {
             return dp[i];
         }
         int minCuts = Integer.MAX_VALUE;
-        for(int k = i; k< s.length(); k++) {
+        for(int k = i; k< s.length(); k++) {//Palindrome Checking
             if(isPalindrome(s, i, k)) {
                 int count = helper(s, k + 1, dp);
                 if( k != s.length() - 1 ) {
