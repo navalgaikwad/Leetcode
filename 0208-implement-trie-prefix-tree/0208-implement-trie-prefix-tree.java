@@ -1,11 +1,11 @@
 class Node {
-    char c;
+    Map<Character, Node> children;
     boolean isEnd;
-    HashMap<Character, Node> children;
+    char c;
     Node(char c) {
         this.children = new HashMap<>();
-        this.isEnd = false;
         this.c = c;
+        this.isEnd = false;
     }
 }
 class Trie {
@@ -16,33 +16,36 @@ class Trie {
     
     public void insert(String word) {
         Node curr = root;
-        for(char wrd: word.toCharArray()) {
-            if(!curr.children.containsKey(wrd)) {
-                 curr.children.put(wrd, new Node(wrd));
+        for(char c : word.toCharArray()) {
+            Map<Character, Node> neighbour = curr.children;
+            if(!neighbour.containsKey(c)) {
+                neighbour.put(c, new Node(c));
             }
-           curr = curr.children.get(wrd);
+            curr = neighbour.get(c);
         }
         curr.isEnd = true;
     }
     
     public boolean search(String word) {
-         Node curr = root;
-        for(char wrd: word.toCharArray()) {
-            if(!curr.children.containsKey(wrd)) {
-                 return false;
+        Node curr = root;
+        for(char c : word.toCharArray()) {
+            Map<Character, Node> neighbour = curr.children;
+            if(!neighbour.containsKey(c)) {
+                return false;
             }
-           curr = curr.children.get(wrd);
+            curr = neighbour.get(c);
         }
         return curr.isEnd;
     }
     
     public boolean startsWith(String prefix) {
         Node curr = root;
-        for(char wrd: prefix.toCharArray()) {
-            if(!curr.children.containsKey(wrd)) {
-                 return false;
+        for(char c : prefix.toCharArray()) {
+            Map<Character, Node> neighbour = curr.children;
+            if(!neighbour.containsKey(c)) {
+                return false;
             }
-           curr = curr.children.get(wrd);
+            curr = neighbour.get(c);
         }
         return true;
     }
