@@ -1,6 +1,9 @@
 class Solution {
     //start from first and end
     //
+    //ghiabcdefhelloadamhelloabcdefghi
+    //l =ghi  r = ghi
+    //if equals l == r increamnet count
     public int longestDecomposition(String S) {
         int res = 0, n = S.length();
         String l ="", r ="";
