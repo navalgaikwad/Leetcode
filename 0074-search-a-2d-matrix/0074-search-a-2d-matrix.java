@@ -14,9 +14,6 @@ class Solution {
             }
             Collections.reverse(Arrays.asList(column)); 
         }
-      
-          System.out.print(list);  
-      
         return binarySearch(list, target);
     }
     
@@ -43,7 +40,6 @@ class Solution {
                 } 
               }
             }
-            
         }
         return false;
     }
