@@ -4,16 +4,12 @@ class Solution {
     }
 
     private boolean isValidBST(TreeNode root, long minValue, long maxValue) {
-        if (root == null) {
-            return true;
-        }
-
-        // Check if the current node's value is within the valid range
-        if (root.val <= minValue || root.val >= maxValue) {
+       if(root == null) return true;
+        
+        if(root.val <= minValue || root.val >= maxValue) {
             return false;
         }
-
-        // Recursively check the left and right subtrees
+        
         return isValidBST(root.left, minValue, root.val) && isValidBST(root.right, root.val, maxValue);
     }
 }
