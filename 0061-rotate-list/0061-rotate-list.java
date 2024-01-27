@@ -24,8 +24,8 @@ class Solution {
             temp = temp.next;
             jump--;
         }
-        head = temp.next;
-        temp.next = null;
+        head = temp.next;//4 head
+        temp.next = null;//5
         return head;
     }
 }
