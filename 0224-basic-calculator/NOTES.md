@@ -1,0 +1,1 @@
+number = 10 * number + (int)(c - '0');
