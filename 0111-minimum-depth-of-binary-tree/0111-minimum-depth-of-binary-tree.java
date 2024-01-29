@@ -15,8 +15,8 @@
  */
 class Solution {
     public int minDepth(TreeNode root) {
-        int value = helper(root);
-        return value == Integer.MAX_VALUE ? 0 : value;
+        int vlaue = helper(root);
+        return  vlaue == Integer.MAX_VALUE ? 0 :vlaue;
     }
     int helper(TreeNode root) {
          if(root == null){
@@ -26,9 +26,10 @@ class Solution {
         if(root.left == null && root.right == null){
             return 1;
         }
-        int left = helper(root.left);
+        
+        int left  = helper(root.left);
         int right = helper(root.right);
-        int result = 1 + Math.min(left, right);
-        return result;
+        int min = 1+ Math.min(left, right);
+        return min;
     }
 }
