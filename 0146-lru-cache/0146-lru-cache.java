@@ -75,7 +75,7 @@ class LRUCache {
          //Node temp = head;
          Node prevNode = node.prev;
          Node nextNode = node.next;
-         node.prev.next = nextNode;
+         prevNode.next = nextNode;
          nextNode.prev = prevNode;
     }
     
