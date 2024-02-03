@@ -6,10 +6,9 @@ class RecentCounter {
     
     public int ping(int t) {
         q.add(t);
-        while (!q.isEmpty() && t - q.peek() > 3000) {
+        while(!q.isEmpty() && t- q.peek() >3000) {
             q.poll();
         }
-        //q.add(t);
         return q.size();
     }
 }
