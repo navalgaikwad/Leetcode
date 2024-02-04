@@ -1,26 +1,12 @@
 class Solution {
     public int removeElement(int[] nums, int val) {
-        int s = 0;
-        int e =0;
-        int i=0;
-        while( i < nums.length){
-            if(nums[i]!=val){
-                swap(nums, s, e);
-                s++;
+        int index = 0;
+        for(int i=0; i<nums.length; i++) {
+            if(nums[i]!=val) {
+                nums[index] = nums[i];
+                index++;
             }
-            e++;
-            i++;
-            
         }
-        return s;
+        return index;
     }
-       void swap(int[] nums,  int s, int e){
-            if(s<e){
-                int temp = nums[s];
-                nums[s] = nums[e];
-                nums[e] = temp;
-                s++;
-                e--;
-            }
-        }
 }
