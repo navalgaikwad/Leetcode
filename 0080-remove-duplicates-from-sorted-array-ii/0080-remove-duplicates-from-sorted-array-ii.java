@@ -1,22 +1,17 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
-        int left = 1;
-        int right = 1;
-        int count =1;
-        while(right < nums.length){
-            if(nums[ right ]==nums[right - 1 ]){
-                count ++; // macthining increamnent
-            }else{
-                //if not matching reset it count = 1
-                count = 1;
+        int index = 1;
+        int count = 1;
+        for(int i= 1; i<nums.length; i++) {
+            if(nums[i] == nums[i-1]) {
+                count++;
+            }else {
+                count=1;
             }
-            
-            //swap when there is count <=2
-            if(count <= 2){
-               nums[left++] = nums[right]; 
+            if(count<=2) {
+                nums[index++] = nums[i];
             }
-            right++;
         }
-        return left;
+        return index;
     }
 }
