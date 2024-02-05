@@ -6,11 +6,10 @@ class Solution {
             adj[i] = new ArrayList<>();
         }
         for(int i=0; i<n; i++) {
-            if(manager[i]!=-1) {
+            if(manager[i] != -1) {
                adj[manager[i]].add(i); 
             }
         }
-        
         
         return dfs(adj, headID, informTime);
     }
@@ -31,7 +30,6 @@ class Solution {
             int totalMax = dfs(adj, neighbour, informTime);
             total = Math.max(total, totalMax + informTime[parent]);
         }
-       // maxTime = Math.max(maxTime, time);
         return Math.max(total, informTime[parent]);
     }
 }
