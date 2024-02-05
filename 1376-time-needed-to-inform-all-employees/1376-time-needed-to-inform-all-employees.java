@@ -11,15 +11,27 @@ class Solution {
             }
         }
         
-        dfs(adj, headID, informTime, 0);
-        return maxTime;
+        
+        return dfs(adj, headID, informTime);
     }
     
-    void dfs(ArrayList<Integer> adj[], int parent, int[] informTime, int time) {
+//     void dfs(ArrayList<Integer> adj[], int parent, int[] informTime, int time) {
         
+//         int total = Integer.MIN_VALUE;
+//         for(int neighbour :adj[parent]) {
+//             dfs(adj, neighbour, informTime, time + informTime[parent]);
+//         }
+//         maxTime = Math.max(maxTime, time);
+//     }
+    
+    int dfs(ArrayList<Integer> adj[], int parent, int[] informTime) {
+        
+        int total = Integer.MIN_VALUE;
         for(int neighbour :adj[parent]) {
-            dfs(adj, neighbour, informTime, time + informTime[parent]);
+            int totalMax = dfs(adj, neighbour, informTime);
+            total = Math.max(total, totalMax + informTime[parent]);
         }
-        maxTime = Math.max(maxTime, time);
+       // maxTime = Math.max(maxTime, time);
+        return Math.max(total, informTime[parent]);
     }
 }
