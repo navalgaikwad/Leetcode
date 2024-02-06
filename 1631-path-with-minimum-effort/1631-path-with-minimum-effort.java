@@ -1,54 +1,42 @@
 class Solution {
-    // important learning here
-    //to check for Math.abs(heights[i][j] - heights[i + 1][j]) diff not more than mid
-    //best one
-        int m ;
-        int n;
     public int minimumEffortPath(int[][] heights) {
-         m = heights.length;
-         n = heights[0].length;
-        int left = 0;
-        int right = 0;
-        //find the max value in the 
-        for (int[] row: heights) {
-            for (int num: row) {
-                right = Math.max(right, num);
-            }
-        } 
-         while (left <= right) {
-            int mid = left + (right - left) / 2;
-            if (dfs(heights, 0, 0, mid, new boolean[m][n])) {
-                right = mid - 1;
-            } else {
-                left = mid + 1;
+        int row = heights.length;
+        int col = heights[0].length;
+        int[][] dist = new int[row][col];
+        PriorityQueue<int[]> min = new PriorityQueue<>((a,b)->a[2] - b[2]);
+        min.add(new int[]{0,0,0});
+        for(int i=0; i<row; i++) {
+            for(int j=0; j<col; j++) {
+                dist[i][j] = Integer.MAX_VALUE;
             }
         }
-        
-        return left;
-    }
-    int[][] directions = new int[][]{{1,0}, {0,1}, {-1,0}, {0, -1}};
-    boolean isValid (int i, int j, boolean[][] visited) {
-       
-        return i>=0 && j>=0 && i<m && j <n && !visited[i][j];
-    }
-    //run the dfs
-    boolean dfs(int[][] heights, int i, int j, int mid, boolean[][] visited) {
-        
-        if( i == m -1 && j == n - 1) {
-            return true;
-        }
-        visited[i][j] = true;
-        for(int[] dir : directions){
-            int x = i + dir[0], y = j + dir[1];
-            //verify the direction out of bound
-            if( isValid(x, y, visited) && Math.abs(heights[i][j] - heights[x][y]) <= mid ){
-               if(dfs(heights, x, y, mid, visited)) {
-                return true;
+        dist[0][0] = 0;
+        int[][] dirs= {{0,1}, {1,0}, {0,-1}, {-1, 0}};
+        while(!min.isEmpty()) {
+            int[] current = min.remove();
+            int x = current[0];
+            int y = current[1];
+            int level = current[2];
+            if(level > dist[x][y]) {
+                continue;
             }
-          }
+            if(x == row - 1 && y == col - 1) {
+                return level;
+            }
+            for(int[] dir : dirs) {
+                int i = dir[0] + x;
+                int j = dir[1] + y;
+                if(i>=0 && i<row && j>=0 && j<col) {
+                    int effort = Math.max(level, Math.abs(heights[i][j]-heights[x][y]));
+                    if(effort < dist[i][j]) {
+                        dist[i][j] = effort;
+                        min.add(new int[]{i, j, effort});
+                    }
+                    
+                }
+            }
         }
-        return false;
+        return -1;
     }
-   
-
 }
+
