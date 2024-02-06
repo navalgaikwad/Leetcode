@@ -8,8 +8,7 @@ class Solution {
             adj[c[0]].add(new int[]{c[1], 1});
             adj[c[1]].add(new int[]{c[0], 0});
         }
-        HashSet<Integer> visited = new HashSet<>();
-        return dfs(adj, 0, visited);
+        return dfs(adj, 0, new HashSet<>());
     }
     
     int dfs(ArrayList<int[]> adj[], int parent, HashSet<Integer> visited) {
