@@ -17,9 +17,7 @@ class Solution {
             int x = current[0];
             int y = current[1];
             int level = current[2];
-            // if(level > dist[x][y]) {
-            //     continue;
-            // }
+           
             if(x == row - 1 && y == col - 1) {
                 return level;
             }
