@@ -27,7 +27,7 @@ class Solution {
                 for(int[] neighbour : adj[sc]) {
                     int dest = neighbour[0];
                     int cst = neighbour[1];
-                    if(cost+cst < dist[dest] && stops<=k) {
+                    if(cost+cst < dist[dest]) {
                         dist[dest]=cst+cost;
                         q.add(new int[]{dest, dist[dest], stops+1});
                     }
