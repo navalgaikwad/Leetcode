@@ -13,7 +13,7 @@ class Solution {
         q.add(new int[]{src, 0 , 0});
         dist[src] = 0;
         boolean[] visited = new boolean[n];
-        visited[0] = true;
+        //visited[0] = true;
         //int minCost =Integer.MAX_VALUE;
         while(!q.isEmpty()) {
             
@@ -27,7 +27,7 @@ class Solution {
                 for(int[] neighbour : adj[sc]) {
                     int dest = neighbour[0];
                     int cst = neighbour[1];
-                    if(cost+cst < dist[dest]) {
+                    if(cost+cst < dist[dest] && stops<=k) {
                         dist[dest]=cst+cost;
                         q.add(new int[]{dest, dist[dest], stops+1});
                     }
