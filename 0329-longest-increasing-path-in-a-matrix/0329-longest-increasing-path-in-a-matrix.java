@@ -1,35 +1,32 @@
 class Solution {
     public int longestIncreasingPath(int[][] matrix) {
-        int row = matrix.length;
-        int col =matrix[0].length;
-        int max =0;
-        HashMap<String, Integer> memo = new HashMap<>();
-        for(int i=0; i<row; i++) {
-            for(int j=0; j<col; j++) {
-               int sum = dfs(matrix, i, j, memo, matrix[i][j]-1);
-                max=Math.max(max, sum);
-            }
+        int m =  matrix.length;
+        int n =  matrix[0].length;
+        boolean[][] visited= new boolean[m][n];
+        int max=0;
+        int[][] dp =new int[m][n];
+        for(int i=0; i<m; i++){
+           for(int j=0; j<matrix[i].length; j++){
+               dfs(matrix, i, j, visited, matrix[i][j]-1, dp);
+               max=Math.max(max, dp[i][j]);
+           } 
         }
         return max;
     }
     
-    int dfs(int[][] matrix, int i, int j, HashMap<String, Integer> memo, int num) {
-        int row = matrix.length;
-        int col = matrix[0].length;
-        String key = i+"-"+j;
-        if( i>=row || i<0 || j>=col || j<0 || matrix[i][j] <= num) {
+    int dfs(int[][] matrix, int i, int j, boolean[][] visited, int prev, int[][] dp){
+        if(i <0 || i>=matrix.length || j<0 || j>=matrix[0].length || matrix[i][j]<=prev){
             return 0;
         }
-        if(memo.containsKey(key)) {
-            return memo.get(key);
+        if(dp[i][j]!=0){
+            return dp[i][j];
         }
-        int top = dfs(matrix, i+1, j, memo, matrix[i][j]);
-        int down =dfs(matrix, i-1, j, memo, matrix[i][j]);
-        int right =dfs(matrix, i, j-1, memo, matrix[i][j]);
-        int left =dfs(matrix, i, j+1, memo, matrix[i][j]);
-        int sum = 1+Math.max(top, Math.max(down, Math.max(right, left))); //whenever there is path use this forrmula
-        
-        memo.put(key, sum);
-        return sum;
+        //visited[i][j]=true;
+        int top = dfs(matrix, i+1, j, visited, matrix[i][j], dp);
+        int bottom = dfs(matrix, i-1, j, visited, matrix[i][j], dp);
+        int left = dfs(matrix, i, j-1, visited, matrix[i][j], dp);
+        int right = dfs(matrix, i, j+1, visited, matrix[i][j], dp);
+        dp[i][j]=1+Math.max(Math.max(top,  bottom), Math.max(left, right));
+        return dp[i][j];
     }
 }
