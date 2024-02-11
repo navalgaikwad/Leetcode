@@ -14,28 +14,25 @@
  * }
  */
 class Solution {
-    class Node{
-        int include;
-        int exclude;
-        Node(int include, int exclude){
-            this.include=include;
-            this.exclude=exclude;
-        }
-    }
     public int rob(TreeNode root) {
-        Node node = dfs(root);
-        return Math.max(node.include, node.exclude);
+        return Math.max(robHouses(root), root.val);
     }
-    
-    Node dfs(TreeNode root) {
+
+    // return non adjacent values
+    // update each root with values that represents the max value till that root possible if the root house is also robbed
+    private int robHouses(TreeNode root) {
         if(root == null) {
-            return new Node(0, 0);
+            return 0;
         }
-        Node left = dfs(root.left);
-        Node right = dfs(root.right);
-        
-        int leftSide = root.val + left.exclude + right.exclude;
-        int rightSide =  Math.max(left.include, left.exclude) + Math.max(right.include, right.exclude);
-        return new Node(leftSide, rightSide);
+
+        int left = robHouses(root.left);
+        int right = robHouses(root.right);
+
+        int nonAdjacentValues = (root.left != null) ? root.left.val : 0;
+        nonAdjacentValues += (root.right != null) ? root.right.val : 0;
+
+        root.val = Math.max(root.val + left + right, nonAdjacentValues);
+
+        return nonAdjacentValues;
     }
 }
