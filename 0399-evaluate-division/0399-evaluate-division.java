@@ -43,7 +43,7 @@ class Solution {
         if(src.equals(dst)) {
             return 1.0;
         }
-        //double total = -1;
+        double total = -1;
         for(Pair pair: adj.get(src)) {
             String neighbour = pair.c;
             double value = pair.val;
@@ -51,11 +51,12 @@ class Solution {
                 double sum = dfs(adj, neighbour, dst, visited);
                 if(sum != -1) {
                    sum = sum*value; 
-                   return sum;
+                   total = sum;
+                   //return sum;
                 }
                 
             }
         }
-        return -1;
+        return total;
     }
 }
