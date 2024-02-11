@@ -1,29 +1,27 @@
 class Solution {
-    class Node{
-        String node;
-        double weight;
-        Node(String node, double weight){
-        this.node = node;
-        this.weight = weight;
+    class Pair {
+        String c;
+        double val;
+        Pair(String c, double val) {
+            this.c = c;
+            this.val = val;
         }
+    //     @Override
+    // public String toString() {
+    //     return "(" + c + ", " + val + ")";
+    // }
     }
     public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
-       Map<String, List<Node>> adj = new HashMap<>();
+        Map<String, ArrayList<Pair>> adj = new HashMap<>();
         int j =0;
-        for(List<String> equation: equations){
-            if(!adj.containsKey(equation.get(0))){
-              adj.put(equation.get(0), new ArrayList<Node>());  
-            }
-            adj.get(equation.get(0)).add(new Node(equation.get(1), values[j]));
-            
-            if(!adj.containsKey(equation.get(1))){
-              adj.put(equation.get(1), new ArrayList<>());  
-            }
-            adj.get(equation.get(1)).add(new Node(equation.get(0), 1/values[j]));
+        for(List<String>  equation: equations) {
+            adj.putIfAbsent(equation.get(0), new ArrayList<>());
+            adj.putIfAbsent(equation.get(1), new ArrayList<>());
+            adj.get(equation.get(0)).add(new Pair(equation.get(1), values[j]));
+            adj.get(equation.get(1)).add(new Pair(equation.get(0), 1/values[j]));
             j++;
         }
-       // System.out.print(adj);
-        //HashSet<String> visited = new HashSet<>();
+        //System.out.print(adj);
          double[] result = new double[queries.size()];
         for(int i=0; i<queries.size(); i++){
           String node1 =  queries.get(i).get(0);
@@ -37,30 +35,27 @@ class Solution {
             
         }
         return result;
-        //return new double[]{};
+       // return new double[]{};
     }
-
-    //here it is not asked maximum path, just asked product.
-    double dfs(Map<String, List<Node>> adj, String src, String dst, HashSet<String> visited){
+    
+    double dfs(Map<String, ArrayList<Pair>> adj, String src, String dst, HashSet<String> visited) {
         visited.add(src);
-        if(src.equals(dst)){
+        if(src.equals(dst)) {
             return 1.0;
         }
-       double  total =-1;
-        for(Node neighbour: adj.get(src)){
-             String neigb = neighbour.node;
-             double weight = neighbour.weight;
-            if(!visited.contains(neigb)){
+        //double total = -1;
+        for(Pair pair: adj.get(src)) {
+            String neighbour = pair.c;
+            double value = pair.val;
+            if(!visited.contains(neighbour)) {
+                double sum = dfs(adj, neighbour, dst, visited);
+                if(sum != -1) {
+                   sum = sum*value; 
+                   return sum;
+                }
                 
-             //to return multiplication declare total here and return it immediately
-             //do not declare it above and return it is only used to 
-              total = dfs(adj, neigb, dst, visited);
-             if(total != -1){ //check for 
-               total = total * weight; 
-              return total;
-             }
-          }
+            }
         }
-        return total;
+        return -1;
     }
 }
