@@ -1,8 +1,5 @@
-import java.util.ArrayList;
-
 class Solution {
-    int diameter = 0;
-    
+    int diameter =0;
     public int longestPath(int[] parent, String s) {
         int len = parent.length;
         ArrayList<Integer>[] adj = new ArrayList[len];
@@ -15,28 +12,32 @@ class Solution {
             }
         }
         boolean[] visited = new boolean[len];
-        dfs(adj, 0, visited, s);
+        dfs(adj, 0, s, visited);
         return diameter;
     }
-
-    int dfs(ArrayList<Integer>[] adj, int parent, boolean[] visited, String s) {
-        int longestPath1 = 0; int longestPath2 = 0; // Initialize total to 0
+    
+    int dfs(ArrayList<Integer>[] adj, int parent, String s, boolean[] visited ) {
+        int left = 0; int right = 0;
         visited[parent] = true;
-        for (int neighbour : adj[parent]) {
-            if (!visited[neighbour]) {
-                int count = dfs(adj, neighbour, visited, s);
-                
+        for(Integer neighbour : adj[parent]) {
+            if(!visited[neighbour]) {
+                int count = dfs(adj, neighbour, s, visited);
                 if (s.charAt(parent) != s.charAt(neighbour)) {
-                   if(longestPath1 < count) {
-                       longestPath2 = longestPath1;
-                       longestPath1 = count;
-                   }else if(longestPath2 < count) {
-                       longestPath2 = count;
-                   }
+                if(left < count) {
+                    right = left;
+                    left = count;
+                }else if(right< count) {
+                    right = count;
                 }
             }
+          }
         }
-        diameter = Math.max(diameter, longestPath1 + longestPath2 + 1); // Update diameter
-        return longestPath1 + 1;
+        
+        diameter = Math.max(diameter, left + 1 + right);
+        return 1 + left;
     }
+    
 }
+
+//find the daimenter
+//left
