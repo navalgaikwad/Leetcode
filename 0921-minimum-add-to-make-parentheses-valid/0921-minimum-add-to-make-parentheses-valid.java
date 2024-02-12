@@ -17,3 +17,6 @@ class Solution {
         return moves + stack.size();
     }
 }
+//for ( add into the stack
+//if stack is not empty pop the element
+//other wise increment pointer
