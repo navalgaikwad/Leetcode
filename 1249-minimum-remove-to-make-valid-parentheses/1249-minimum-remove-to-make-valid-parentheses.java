@@ -1,27 +1,35 @@
 class Solution {
     public String minRemoveToMakeValid(String s) {
-        char[]  ch = s.toCharArray();
+        //
+        int open=0;
         StringBuilder sb = new StringBuilder();
-        int open =0;
-        for(int i =0; i<ch.length; i++) {
-            if(ch[i]=='('){
+        for(char c : s.toCharArray()) {
+            if(c == '(') {
                 open++;
-            }else if(ch[i] == ')') {
+            }else if(c==')'){
                 if(open == 0) {
                     continue;
                 }
                 open--;
             }
-            sb.append(ch[i]);
+            sb.append(c);
         }
-         StringBuilder st=new StringBuilder();
-        for(int i =sb.length()-1; i>=0; i--) {
+        System.out.print(sb.toString());
+        StringBuilder st=new StringBuilder();
+        int len = sb.length();
+        for(int i = len - 1; i>=0; i--) {
             if(sb.charAt(i) == '(' && open-->0) continue;
-            st.append(sb.charAt(i));
+             st.append(sb.charAt(i));
         }
-        return st.reverse().toString();
+        return  st.reverse().toString();
     }
 }
-//count open brackegts
-//when pop ccheck opn cnt ==0 dont do anything
-//append from end and reverse
+//lee(t(c)o)de)
+//lee(t(c)o)de
+//0
+//a)b(c)d
+//ab(c)d
+//-1
+//))((
+//((
+//2
