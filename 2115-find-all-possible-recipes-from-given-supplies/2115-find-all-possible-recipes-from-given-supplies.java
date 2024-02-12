@@ -33,3 +33,8 @@ class Solution {
         return result;
     }
 }
+//add suppies into set
+//found flag
+//check suplies in the receipes are present if present continue
+//check for ingredient presmt in set if not break make flag false
+//if everythning is okay add to the set and ans
