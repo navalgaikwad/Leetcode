@@ -11,6 +11,7 @@ class Solution {
         for(int k =j; k < nums.length; k++) {
             nums[k] = 0;
         }
+        System.gc();
         
     }
 }
