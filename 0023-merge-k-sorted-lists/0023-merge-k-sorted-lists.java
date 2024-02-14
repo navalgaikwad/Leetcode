@@ -19,15 +19,15 @@ class Solution {
         ListNode dummy = new ListNode(0);
         ListNode current = dummy;
         while(!pq.isEmpty()) {
-            ListNode list = pq.remove();
-            if(list != null) {
-                current.next = new ListNode(list.val);
-                
+            // ListNode list = 
+            // if(list != null) {
+                ListNode list = pq.remove();
+                current.next = list;
                 current = current.next;
                 if(list.next != null) {
                    pq.add(list.next); 
                 }
-            }
+            //}
             
         }
         
