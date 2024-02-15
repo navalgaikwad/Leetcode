@@ -7,10 +7,10 @@ class Solution {
             result[i] = -1;
         }
         for(int[] red : redEdges) {
-            adj[red[0]].add(new int[]{red[1], 0});
+            adj[red[0]].add(new int[]{red[1], 1});
         }
         for(int[] blue : blueEdges) {
-            adj[blue[0]].add(new int[]{blue[1], 1});
+            adj[blue[0]].add(new int[]{blue[1], 0});
         }
         
         boolean[][] visited = new boolean[n][2];
@@ -38,3 +38,8 @@ class Solution {
         return result;
     }
 }
+//dist
+//node
+//color
+//red =0;
+//blue 1
