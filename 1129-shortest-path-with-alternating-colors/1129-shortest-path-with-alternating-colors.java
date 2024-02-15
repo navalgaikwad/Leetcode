@@ -29,7 +29,7 @@ class Solution {
                     if(result[next] == -1) {
                        result[next] = dist + 1; 
                     }
-                    visited[next][colr]=true; //mark it is visited
+                    visited[next][colr] = true; //mark it is visited
                    q.add(new int[]{1+ dist, next, colr });
                     
                 }
