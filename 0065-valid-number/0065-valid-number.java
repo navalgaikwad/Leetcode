@@ -11,20 +11,20 @@ class Solution {
 
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-
-            if (Character.isDigit(c)) {
+            if(Character.isDigit(c)) {
                 digitSeen = true;
-            } else if (c == '+' || c == '-') {
-                if (i > 0 && s.charAt(i - 1) != 'e' && s.charAt(i - 1) != 'E') {
+            }else if(c == '+' || c == '-') {
+                if(i > 0 && s.charAt(i - 1) != 'E' && s.charAt(i - 1) != 'e') {
                     return false;
                 }
-            } else if (c == '.') {
-                if (dotSeen || eSeen) {
+               // eSeen = true;
+            }else if(c == '.') {
+                if(dotSeen || eSeen) {
                     return false;
                 }
                 dotSeen = true;
-            } else if (c == 'e' || c == 'E') {
-                if (eSeen || !digitSeen) {
+            }else if(c == 'E' || c== 'e') {
+                if(eSeen || !digitSeen) {
                     return false;
                 }
                 eSeen = true;
@@ -37,3 +37,6 @@ class Solution {
         return digitSeen;
     }
 }
+//+ || - asel tar pathi mghe e or E shivay dusra kon nko
+//. mg dotSeen true if already bghtla mg false resutun kar
+// e || E eSeen asel alerady return false
