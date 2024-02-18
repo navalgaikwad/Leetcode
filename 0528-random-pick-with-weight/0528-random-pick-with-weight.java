@@ -1,29 +1,35 @@
 class Solution {
-
-    Random random;
-    int[] wSums;
-    
+    Random dom = new Random();
+    int[] wSum;
     public Solution(int[] w) {
-        this.random = new Random();
-        for(int i=1; i<w.length; ++i)
-            w[i] += w[i-1];
-        this.wSums = w;
+        for(int i=1; i<w.length; ++i) {
+            w[i] +=w[i-1];
+        }
+        this.wSum = w;
     }
     
     public int pickIndex() {
-        int len = wSums.length;
-        int idx = random.nextInt(wSums[len-1]) + 1;
-        int left = 0, right = len - 1;
-        // search position 
-        while(left <= right){
-            int mid = left + (right-left)/2;
-            if(wSums[mid] == idx)
+        int left =0;
+        int right = wSum.length -1;
+        int idx = dom.nextInt(wSum[wSum.length - 1]) + 1;
+        
+        while(left <= right) {
+            int mid = left + (right - left)/2;
+            if(idx == wSum[mid]) {
                 return mid;
-            else if(wSums[mid] < idx)
+            }
+            if(idx < wSum[mid]) {
+                right = mid - 1;
+            }else {
                 left = mid + 1;
-            else
-                right = mid -1;
+            }
         }
         return left;
     }
 }
+
+/**
+ * Your Solution object will be instantiated and called as such:
+ * Solution obj = new Solution(w);
+ * int param_1 = obj.pickIndex();
+ */
