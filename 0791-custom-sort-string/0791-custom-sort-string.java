@@ -1,26 +1,26 @@
 class Solution {
     public String customSortString(String order, String s) {
         int[] result = new int[26];
-        for(char c : order.toCharArray()) {
-            result[c - 'a']++;
+        String a ="";
+        String b ="";
+        for(char c: order.toCharArray()) {
+            result[c-'a']++;
         }
         
-        String unorder = "";
-        String orders ="";
-        for(char c: s.toCharArray()) {
-            if(result[c - 'a'] == 0) {
-                unorder+=c;
+        for(char c : s.toCharArray()) {
+            if(result[c-'a']==0) {
+                b+=c;
             }else {
-                result[c - 'a']++;
+                result[c-'a']++;
             }
         }
         
-        for(char c: order.toCharArray()) {
-            while(result[c-'a']>1) {
-                orders+=c;
+        for(char c : order.toCharArray()) {
+            while(result[c-'a'] > 1) {
+                a+=c;
                 result[c-'a']--;
             }
         }
-        return orders+unorder;
+        return a+b;
     }
 }
