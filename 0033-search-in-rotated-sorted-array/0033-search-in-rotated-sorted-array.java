@@ -1,28 +1,29 @@
 class Solution {
     public int search(int[] nums, int target) {
-        return binarySearch(nums, target);
+        return helper(nums, target);
     }
-    int binarySearch(int[] nums, int target) {
-        int start =0;
-        int end = nums.length-1;
-        while(start <= end) {
-            int mid = start + (end - start)/2;
+    int helper(int[] nums, int target) {
+        int left =0;
+        int right =nums.length-1;
+        while(left <= right) {
+            int mid = left + (right - left)/2;
             if(nums[mid] == target) {
                 return mid;
-            }//start mid
-            //end > mid
-            if(nums[start] <= nums[mid]) {
-                if(nums[start] <= target && nums[mid] > target) {
-                    end = mid - 1;
+            }
+            //[4,5,6,7,0,1,2] 0
+            //start < target
+            if(nums[left]<= nums[mid]) {
+                if(nums[left]<=target && nums[mid]>target) {
+                    right = mid - 1;
                 }else {
-                    start = mid + 1;
+                    left = mid +1;
                 }
             }else {
-                if(nums[end] >=nums[mid]) {
-                    if(nums[end] >= target && nums[mid] < target) {
-                        start = mid + 1;
+                if(nums[right]>=nums[mid]) {
+                    if(nums[right]>=target && nums[mid] < target) {
+                        left = mid+1;
                     }else {
-                        end = mid -1;
+                        right = mid -1;
                     }
                 }
             }
