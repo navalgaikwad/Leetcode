@@ -1,24 +1,26 @@
 class Solution {
     public boolean validPalindrome(String s) {
-        int i = 0; int j = s.length() -1;
-        while(i < j) {
-            if(s.charAt(i)!=s.charAt(j)) {
-                return helper(s, i + 1, j) || helper(s, i , j-1) ;
+        int start =0;
+        int end = s.length()-1;
+        while(start < end) {
+            if(s.charAt(start) != s.charAt(end)) {
+                return helper(s, start + 1, end) || helper(s, start, end - 1) ;
             }
-            i++;
-            j--;
+            start++;
+            end--;
         }
         return true;
     }
     
-    boolean helper(String s, int i, int j) {
-        while(i<j) {
-            if(s.charAt(i)!=s.charAt(j)) {
+    boolean helper(String s, int start, int end) {
+        while(start < end) {
+            if(s.charAt(start)!=s.charAt(end)) {
                 return false;
             }
-            i++;
-            j--;
+            start++;
+            end--;
         }
         return true;
     }
 }
+
