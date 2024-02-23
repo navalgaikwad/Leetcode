@@ -8,20 +8,18 @@
  * }
  */
 class Solution {
-    Map<Integer, ArrayList<Integer>> adj = new HashMap<>();
+    Map<Integer, ArrayList<Integer>> map = new HashMap<>();
     void buildTree(TreeNode child, TreeNode parent) {
-        //if child is null
-        //parent is not null
-        //left ani right
-        if(child == null) {
+        if(child==null) {
             return;
         }
-        if(!adj.containsKey(child.val)) {
-            adj.put(child.val, new ArrayList<>());
+        //check for key not present in map
+        if(!map.containsKey(child.val)) {
+            map.put(child.val, new ArrayList<>());
         }
-        if(parent != null) {
-            adj.get(parent.val).add(child.val);
-            adj.get(child.val).add(parent.val);
+        if(parent!=null) {
+            map.get(parent.val).add(child.val);
+            map.get(child.val).add(parent.val);
         }
         buildTree(child.left, child);
         buildTree(child.right, child);
@@ -40,7 +38,7 @@ class Solution {
             if(level == k) {
                ans.add(next); 
             }
-            for(Integer neighbour : adj.get(next)) {
+            for(Integer neighbour : map.get(next)) {
                 if(!visited.contains(neighbour)) {
                     visited.add(neighbour);
                     q.add(new int[]{neighbour, level+1});
