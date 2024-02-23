@@ -1,7 +1,7 @@
 class SeatManager {
-    PriorityQueue<Integer> pq = new PriorityQueue<>();
+    PriorityQueue<Integer> pq = new PriorityQueue();
     public SeatManager(int n) {
-        for(int i =1; i<=n; i++) {
+        for(int i=1; i<=n; i++) {
             pq.add(i);
         }
     }
@@ -11,7 +11,7 @@ class SeatManager {
     }
     
     public void unreserve(int seatNumber) {
-        pq.add(seatNumber);
+         pq.add(seatNumber);
     }
 }
 
