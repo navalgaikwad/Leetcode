@@ -24,6 +24,9 @@ class Solution {
         buildTree(child.left, child);
         buildTree(child.right, child);
     }
+    //check for null
+    //check for child key is not presnet in map
+    //check parent is not null
     public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
         buildTree(root, null);
         Queue<int[]> q = new LinkedList<>();
