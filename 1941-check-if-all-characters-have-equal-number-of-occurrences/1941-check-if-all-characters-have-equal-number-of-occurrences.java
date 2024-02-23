@@ -7,8 +7,8 @@ class Solution {
         
         int freq = map.get(s.charAt(0));
         int len = s.length();
-        for(int i=0; i<len; i++){
-            if(map.get(s.charAt(i))!=freq){
+        for(int i=0; i<len; i++) {
+            if(map.get(s.charAt(i)) != freq){
                 return false;
             }
         }
