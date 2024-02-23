@@ -1,30 +1,26 @@
 class Solution {
-    public int[][] intervalIntersection(int[][] firstList, int[][] secondList) {
+    public int[][] intervalIntersection(int[][] fl, int[][] sl) {
+        int i =0;
+        int j=0;
         List<int[]> result = new ArrayList<>();
-        int i =0; int j=0;
-        while(i < firstList.length && j < secondList.length) {
-            int[] first = firstList[i];
-            int[] second = secondList[j];
-            int a_start = first[0];  int b_start = second[0];
-            int a_end = first[1];    int b_end = second[1];
-            if(a_start <= b_end && b_start<=a_end) {
-                  result.add(new int[]{Math.max(a_start, b_start), Math.min(a_end, b_end)});
+        while( i< fl.length && j < sl.length) {
+            int flStart = fl[i][0];
+            int flEnd = fl[i][1];
+            int slStart = sl[j][0];
+            int slEnd = sl[j][1];
+            
+            if(flStart <=slEnd && slStart<=flEnd) {
+                int max = Math.max(flStart, slStart);
+                int min = Math.min(slEnd, flEnd);
+                result.add(new int[]{max, min});
             }
-            if(a_end <= b_end) {
+            
+            if(flEnd <= slEnd) {
                 i++;
             }else {
                 j++;
             }
         }
-        //return ans.stream().map(innerList -> innerList.stream().mapToInt(Integer::intValue).toArray()).toArray(int[][]::new);
-        //return ans;
-        return result.toArray(new int[result.size()][]);
+       return result.toArray(new int[result.size()][]);
     }
 }
-
-//firstList = [[0,2],[5,10],[13,23],[24,25]], secondList = [[1,5],[8,12],[15,24],[25,26]]
-//a.start < b.end and b.start < a.end
-//max(a.start, b.start), min(a.end, b.end)
-//a.end <=b.end
- //i++;
-//or j++
