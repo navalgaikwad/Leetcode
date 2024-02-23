@@ -1,15 +1,18 @@
 class Solution {
-    public int minSwaps (String s) {
-        int stack_size = 0;
-        for (int i = 0; i < s.length (); i++) {
-            char ch = s.charAt (i);
-            if (ch == '[')
-                stack_size++;
-            else {
-                if (stack_size > 0)
-                    stack_size--;
+    public int minSwaps(String s) {
+        Stack<Character> st = new Stack<>();
+        int moves =0;
+        for(char c : s.toCharArray()) {
+            if(c == '[') {
+                st.push('[');
+            }else {
+                if(!st.isEmpty()) {
+                    st.pop();
+                }else {
+                    moves++;
+                }
             }
         }
-        return (stack_size + 1) / 2;
+        return (moves+1)/2;
     }
 }
