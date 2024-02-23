@@ -12,6 +12,8 @@ class RecentCounter {
         return pq.size();
     }
 }
+// [1,100,3001, 3002]
+// 3002 - 1 > 3000
 
 /**
  * Your RecentCounter object will be instantiated and called as such:
