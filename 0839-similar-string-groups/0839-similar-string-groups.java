@@ -1,20 +1,19 @@
 class Solution {
     public int numSimilarGroups(String[] strs) {
-        int group =0;
         boolean[] visited = new boolean[strs.length];
+        int group=0;
         for(int i=0; i<strs.length; i++) {
             if(!visited[i]) {
                 dfs(strs, i, visited);
                 group++;
             }
+            
         }
         return group;
     }
-    
     void dfs(String[] strs, int parent, boolean[] visited) {
         visited[parent] = true;
         for(int i=0; i<strs.length; i++) {
-            //important is here check parent with all string
             if(!visited[i] && check(strs[i], strs[parent])) {
                 dfs(strs, i, visited);
             }
@@ -22,19 +21,15 @@ class Solution {
     }
     
     boolean check(String a, String b) {
-        int i = 0; 
-        int j = 0;
+        int i=0;
+        int len = a.length();
         int count =0;
-        while(i < a.length() && j < b.length()) {
-            if(a.charAt(i)!=b.charAt(j)) {
+        while(i < len) {
+            if(a.charAt(i)!=b.charAt(i)) {
                 count++;
             }
             i++;
-            j++;
         }
-        return count==0 || count==2;
+        return count==2 || count==0;
     }
 }
-
-//["tars","rats","arts","star"]
-//
