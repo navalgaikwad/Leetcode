@@ -1,36 +1,38 @@
 class Solution {
     public String decodeString(String s) {
-        Stack<Integer> stCount = new Stack<>();
-        Stack<String> result = new Stack<>();
-        int len = s.length();
-        int i = 0;
-        String res = "";
-        while (i < len) {
-            if (Character.isDigit(s.charAt(i))) {
-                int count = 0;
+        Stack<String> st = new Stack<>();
+        Stack<Integer> num = new Stack<>();
+        int i =0;
+        String c = "";
+      
+        while(i < s.length()) {
+            if(Character.isDigit(s.charAt(i))) {
+                int count  = 0;
+               
                 while(Character.isDigit(s.charAt(i))) {
                     count = 10 * count + (s.charAt(i) - '0');
                     i++;
                 }
-                stCount.push(count);
-            } else if (s.charAt(i) == '[') {
-                result.push(res);
-                res = "";
-                i++;
-            } else if (s.charAt(i) == ']') {
-                StringBuilder sb = new StringBuilder(result.pop());
-                int val = stCount.pop();
-                while (val > 0) {
-                    sb.append(res);
-                    val--;
+                num.push(count);
+            }else if(s.charAt(i)=='[') {
+                    st.push(c);
+                    c="";
+                    i++;
+                }else if(s.charAt(i)==']') {
+                    int n = num.pop();
+                    StringBuilder sb = new StringBuilder(st.pop());
+                    while(n > 0) {
+                        sb.append(c);
+                        n--;
+                    }
+                    c = sb.toString();
+                    i++;
+                }else {
+                    c+=s.charAt(i);
+                    i++;
                 }
-                res = sb.toString();
-                i++;
-            } else {
-                res = res + s.charAt(i);
-                i++;
             }
-        }
-        return res;
+            
+        return c;
     }
 }
