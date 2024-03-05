@@ -1,41 +1,38 @@
-//loved this problem
-//
 class Solution {
     public int minCut(String s) {
-        int n = s.length();
-        int[] dp = new int[n+1];
-        Arrays.fill(dp, -1);
-        return helper(s, 0, dp);
+        Integer[] memo = new Integer[s.length()];
+        return helper(s, 0, memo);
     }
-    boolean isPalindrome(String s, int start, int end) {
-        while(start < end) {
-            if(s.charAt(start) != s.charAt(end)) {
+    
+    static boolean palindrome(String s, int i, int j) {
+        while(i < j) {
+            if(s.charAt(i) != s.charAt(j)) {
                 return false;
             }
-            start++;
-            end--;
+            i++;
+            j--;
         }
         return true;
     }
     
-    int helper(String s, int i, int[] dp) {
-        if(i == s.length()) {
-            return 0;
+    int helper(String s, int start, Integer[] memo) {
+        if(start == s.length()) {
+            return -1;
         }
-        if(dp[i] != -1) {
-            return dp[i];
+        if(memo[start] != null) {
+            return memo[start];
         }
-        int minCuts = Integer.MAX_VALUE;
-        for(int k = i; k< s.length(); k++) {//Palindrome Checking
-            if(isPalindrome(s, i, k)) {
-                int count = helper(s, k + 1, dp);
-                if( k != s.length() - 1 ) {
-                    count = count + 1;
+        int minCut = Integer.MAX_VALUE;
+        for(int i = start; i<s.length(); i++) {
+            if(palindrome(s, start, i)) {
+                int count = helper(s, i + 1, memo);
+                int sum = 1 + count;
+                if(minCut == Integer.MAX_VALUE  || sum < minCut) {
+                    minCut = Math.min(minCut, sum);
                 }
-                minCuts = Math.min(minCuts, count);
             }
         }
-        dp[i] = minCuts;
-        return minCuts;
+        memo[start] = minCut;
+        return minCut;
     }
 }
