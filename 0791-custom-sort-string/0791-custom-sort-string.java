@@ -1,26 +1,25 @@
 class Solution {
     public String customSortString(String order, String s) {
-        int[] result = new int[26];
-        String a ="";
-        String b ="";
-        for(char c: order.toCharArray()) {
-            result[c-'a']++;
+        String a = "";
+        String b = "";
+        int[] arr = new int[26];
+        for(char c : order.toCharArray()) {
+            arr[c - 'a']++;
         }
         
         for(char c : s.toCharArray()) {
-            if(result[c-'a']==0) {
-                b+=c;
-            }else {
-                result[c-'a']++;
-            }
-        }
-        
-        for(char c : order.toCharArray()) {
-            while(result[c-'a'] > 1) {
+            if(arr[c - 'a'] == 0) {
                 a+=c;
-                result[c-'a']--;
+            }else {
+                arr[c - 'a']++;
             }
         }
-        return a+b;
+        for(char c : order.toCharArray()) {
+            while(arr[c- 'a']>1) {//here count is 2 because we have traverse it on both order and s
+                b+=c;
+                arr[c- 'a']--;
+            }
+        }
+        return b+a;
     }
 }
