@@ -13,12 +13,6 @@ class Solution {
                 map.get(newWord).add(word);
             }
 		}
-        //System.out.print(map);
-        List<List<String>> result = new ArrayList<>();
-        for(List<String> list: map.values()) {
-            result.add(list);
-        }
-        
-        return result;
+        return new ArrayList(map.values());
     }
 }
