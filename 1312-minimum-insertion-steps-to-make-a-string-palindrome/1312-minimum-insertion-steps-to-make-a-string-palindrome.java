@@ -1,33 +1,31 @@
 class Solution {
     public int minInsertions(String s) {
+        //String rev = "";
         String sb = "";
         for(int i=0;i<s.length(); i++) {
             sb =s.charAt(i)+sb+"";
         }
-        
-        int len = lcs(s, sb, s.length() - 1, s.length()-1, new HashMap<>());
-        return s.length() - len;
+        int len = s.length();
+        Integer[][] memo = new Integer[len][len];
+        int value = helper(s, sb, len-1, len-1, memo);
+        return len- value;
     }
-    
-    int lcs(String s, String t, int i, int j, Map<String, Integer> memo) {
-        String key = i+"-"+j;
-        if(memo.containsKey(key)) {
-            return memo.get(key);
-        }
-        if( i< 0 || j < 0) { //if it less than zero, i made == 0
+    int helper(String s, String rev, int i, int j, Integer[][] memo) {
+        if( i< 0 || j < 0) {
             return 0;
         }
-        if(s.charAt(i)==t.charAt(j)) {
-            return 1 + lcs(s, t, i - 1, j-1, memo);
+        if(memo[i][j] != null) {
+            return memo[i][j];
         }
-        int result = Math.max(lcs(s, t, i - 1, j, memo), lcs(s, t, i, j-1, memo));
-        memo.put(key, result);
-        return result;
+        int total = 0;
+        if(s.charAt(i) == rev.charAt(j)) {
+            total = 1 + helper(s, rev, i - 1, j -1, memo);
+        }else {
+            int top = helper(s, rev, i - 1, j, memo);
+            int left = helper(s, rev, i, j-1, memo);
+            total =Math.max(top, left);
+        }
+        memo[i][j] = total;
+        return total;
     }
 }
-
-//make identify the string is palindrome or not
-//make reverse of string
-//pass it to the lcs
-//when it return value
-// minus it from total len and value
