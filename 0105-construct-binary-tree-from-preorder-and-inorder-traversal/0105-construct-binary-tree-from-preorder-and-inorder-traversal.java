@@ -15,23 +15,22 @@
  */
 class Solution {
     Map<Integer, Integer> map = new HashMap<>();
-    int i=0;
+    int i = 0;
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        for(int i=0; i<inorder.length; i++) {
+        for(int i = 0; i < inorder.length; i++) {
             map.put(inorder[i], i);
         }
-        return buildTree(0, inorder.length - 1, preorder);
+        return buildTree(preorder, 0, preorder.length-1);
     }
-    
-    TreeNode buildTree(int start, int end, int[] preorder) {
+    TreeNode buildTree(int[] preorder, int start, int end) {
         if(start > end) {
             return null;
         }
         int value = preorder[i++];
         int mid = map.get(value);
         TreeNode root = new TreeNode(value);
-        root.left = buildTree(start, mid - 1, preorder);
-        root.right = buildTree(mid+1, end, preorder);
+        root.left = buildTree(preorder, start, mid - 1);
+        root.right = buildTree(preorder, mid + 1, end);
         return root;
     }
 }
