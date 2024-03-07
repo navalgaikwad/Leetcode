@@ -1,43 +1,39 @@
 class Solution {
-    int diameter =0;
+    int diameter = Integer.MIN_VALUE;
     public int longestPath(int[] parent, String s) {
-        int len = parent.length;
-        ArrayList<Integer>[] adj = new ArrayList[len];
-        for (int i = 0; i < len; i++) {
+        int n = s.length();
+        ArrayList<Integer> adj[] = new ArrayList[s.length() + 1];
+        for(int i=0; i < n; i++) {
             adj[i] = new ArrayList<>();
         }
-        for (int i = 0; i < len; i++) {
-            if (parent[i] != -1) {
-                adj[parent[i]].add(i);
+        
+        for(int i=0; i<n; i++) {
+            if(parent[i] != -1) {
+               adj[parent[i]].add(i); 
             }
         }
-        boolean[] visited = new boolean[len];
-        dfs(adj, 0, s, visited);
+        boolean[] visited = new boolean[n];
+        helper(adj, 0, visited, s);
         return diameter;
     }
     
-    int dfs(ArrayList<Integer>[] adj, int parent, String s, boolean[] visited ) {
-        int left = 0; int right = 0;
+    int helper(ArrayList<Integer> adj[], int parent, boolean[] visited, String s) {
+        int firstMax = 0; int secondMax = 0;
         visited[parent] = true;
-        for(Integer neighbour : adj[parent]) {
+        for(Integer neighbour: adj[parent]) {
             if(!visited[neighbour]) {
-                int count = dfs(adj, neighbour, s, visited);
-                if (s.charAt(parent) != s.charAt(neighbour)) {
-                if(left < count) {
-                    right = left;
-                    left = count;
-                }else if(right< count) {
-                    right = count;
+                int count = helper(adj, neighbour, visited, s);
+                if(s.charAt(parent) != s.charAt(neighbour)) {
+                    if(firstMax < count) {
+                        secondMax = firstMax;
+                        firstMax = count;
+                    }else if(secondMax < count) {
+                        secondMax = count;
+                    }
                 }
             }
-          }
         }
-        
-        diameter = Math.max(diameter, left + 1 + right);
-        return 1 + left;
+        diameter = Math.max(diameter, firstMax + secondMax + 1);
+        return firstMax + 1;
     }
-    
 }
-
-//find the daimenter
-//left
