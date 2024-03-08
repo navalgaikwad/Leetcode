@@ -21,8 +21,7 @@ class Solution {
         visited[parent] = true;
         for(Integer neighbour : adj[parent]) {
             if(!visited[neighbour]) {
-                int count =1 + dfs(adj, neighbour, s, visited);
-                //count+=1;
+                int count = dfs(adj, neighbour, s, visited);
                 if (s.charAt(parent) != s.charAt(neighbour)) {
                 if(left < count) {
                     right = left;
@@ -35,7 +34,7 @@ class Solution {
         }
         
         diameter = Math.max(diameter, left + 1 + right);
-        return left;
+        return 1 + left;
     }
     
 }
