@@ -8,7 +8,7 @@ class Solution {
         int len = s.length();
         Integer[][] memo = new Integer[len][len];
         int value = helper(s, sb, len-1, len-1, memo);
-        return len- value;
+        return len - value;
     }
     int helper(String s, String rev, int i, int j, Integer[][] memo) {
         if( i< 0 || j < 0) {
