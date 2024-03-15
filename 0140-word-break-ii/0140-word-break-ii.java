@@ -1,42 +1,59 @@
 class Solution {
     public List<String> wordBreak(String s, List<String> wordDict) {
+      ArrayList<ArrayList<String>> results =  dp(s, wordDict, new HashMap<>());
         
-        List<List<String>> dp[] = new ArrayList[s.length() + 1];
-        List<List<String>> baseList = new ArrayList<>();
-         baseList.add(new ArrayList<String>());
-        dp[0] = baseList;
-        int targetLength = s.length();
-        for(int i=0; i<=targetLength; i++) {
-            if(dp[i] != null) {
-                for(String word :wordDict) {
-                    if(i + word.length() <= targetLength && s.substring(i, i+ word.length()).equals(word)) {
-                        List<List<String>> previousList = dp[i];
-                        List<List<String>> newCombinations = new ArrayList<>();
-                        for(List<String> previous : previousList) {
-                            List<String> newCombination = new ArrayList<>();
-                            newCombination.addAll(previous);
-                            newCombination.add(word);
-                            newCombinations.add(newCombination);
-                        }
-                        if(dp[i+ word.length()] == null) {
-                           dp[i+ word.length()] =  newCombinations;
-                        }else {
-                            dp[i+ word.length()].addAll(newCombinations);
-                        }
-                    } 
+        if (results == null){
+            return new ArrayList<String>();
+        }
+        
+        List<String> answer = new ArrayList<>();
+        
+        for(ArrayList<String> result : results){
+                String joinedString = String.join(" ", result);
+                answer.add(joinedString);                
+
+        }
+        return answer;
+    }
+    
+    
+    ArrayList<ArrayList<String>> dp(String target, List<String> wordDict, HashMap<String, ArrayList<ArrayList<String>>> memo) {
+        if(memo.containsKey(target)) return memo.get(target);
+        
+        if(target.isEmpty()){
+            ArrayList<ArrayList<String>> result = new ArrayList<>();
+            result.add(new ArrayList<>());
+            return result;
+        }
+        
+        ArrayList<ArrayList<String>> allCombinations = null;
+        
+        for(String word :wordDict){
+            
+            if(target.startsWith(word)){
+                
+                ArrayList<ArrayList<String>> combinations = dp(target.substring(word.length()), wordDict, memo);
+                
+                if(combinations != null){
+                    
+                    if (allCombinations == null) {
+                        allCombinations = new ArrayList<>();
+                    }
+                    
+                    ArrayList<ArrayList<String>> newCombinations = new ArrayList<>();
+                    for(ArrayList<String> combination: combinations){
+                        ArrayList<String> newCombination = new ArrayList<String>(combination);
+                        newCombination.add(0, word);
+                        newCombinations.add(newCombination);
+                    }
+                    
+                    allCombinations.addAll(newCombinations);
                 }
             }
         }
-        List<String> currentResult = new ArrayList<>();
-          if(dp[targetLength]==null){
-              return currentResult;
-          }
-         
-        for(List<String> newCombination: dp[targetLength]){
-      
-           currentResult.add(String.join(" ", newCombination));
-     
-        }
-      return currentResult;
+        
+        
+        memo.put(target, allCombinations);
+        return allCombinations;
     }
 }
