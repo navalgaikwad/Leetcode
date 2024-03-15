@@ -1,37 +1,35 @@
 class Solution {
+    List<List<String>> result = new ArrayList<>();
     public List<List<String>> partition(String s) {
-        List<List<String>> result = new ArrayList<>();
-        Boolean[][] memo = new Boolean[s.length()][s.length()];
-        helper(s, 0, memo, result, new ArrayList<>());
+        helper(s, new ArrayList<>(), 0);
         return result;
     }
     
-    void helper(String a, int j, Boolean[][] memo, List<List<String>> result, List<String> runningList) {
-        if(j >= a.length()) {
-            result.add(new ArrayList<>(runningList));
+    void helper(String s, List<String> ans, int index) {
+        if(s.length() == index) {
+            result.add(new ArrayList<>(ans));
             return;
         }
-        for(int i = j; i<a.length(); i++) {
-            if(palindrome(a, j, i, memo)) {
-                runningList.add(a.substring(j, i+1));
-                helper(a, i+1, memo, result, runningList);
-                runningList.remove(runningList.size() - 1);
+        
+        for(int i = index; i <s.length(); i++) {
+            if(isValid(s, index, i)) {
+                ans.add(s.substring(index, i+1));
+                helper(s, ans, i + 1);
+                ans.remove(ans.size()-1);
             }
         }
     }
     
-    boolean palindrome(String s, int i, int j, Boolean[][] memo) {
-        if(i >= j) {
-            return true;
+    
+    
+    boolean isValid(String s, int start, int end) {
+        while(start <= end) {
+            if(s.charAt(start) != s.charAt(end)) {
+                return false;
+            }
+            start++;
+            end--;
         }
-        if(memo[i][j] != null) {
-            return memo[i][j];
-        }
-        if(s.charAt(i) == s.charAt(j)) {
-            memo[i][j] = palindrome(s, i+1, j-1, memo);
-            return memo[i][j];
-        }
-        memo[i][j] = false;
-        return false;
+        return true;
     }
 }
