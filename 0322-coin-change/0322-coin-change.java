@@ -1,19 +1,30 @@
 class Solution {
     public int coinChange(int[] coins, int amount) {
-        long[] dp = new long[amount+1];
-        Arrays.fill(dp , Long.MAX_VALUE);
-        dp[0] = 0;
-        for(int i=0; i<=amount; i++) {
-            if(dp[i]!=Long.MAX_VALUE) {
-                for(int coin : coins) {
-                    int next = i + coin;
-                    if( i <= amount - coin) {
-                        dp[next] = Math.min(dp[next], dp[i] + 1); 
-                    }
+        Integer value =  helper(coins, amount, new HashMap<>());
+        return value == null? -1 : value;
+    }
+    Integer helper(int[] coins, int target, HashMap<Integer, Integer> memo) {
+        if( target == 0) {
+            return 0;
+        }
+        if(target < 0) {
+            return null;
+        }
+        if(memo.containsKey(target)) {
+            return memo.get(target);
+        }
+        Integer min = null;
+        for(int coin : coins) {
+            int remainder = target - coin;
+            Integer coount = helper(coins, remainder, memo);
+            if(coount != null) {
+                int newCount = coount + 1;
+                if(min == null || newCount < min) {
+                    min = newCount;
                 }
             }
-            
         }
-        return (int)dp[amount];
+        memo.put(target, min);
+        return min;
     }
 }
