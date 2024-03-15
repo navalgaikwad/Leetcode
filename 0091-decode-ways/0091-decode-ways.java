@@ -22,6 +22,7 @@ class Solution {
         return count;
     }
 }
+
 //either i can select one or 2
 //if select 1 need to check not 0
 //if select 2 need to check not 0 and not 7
