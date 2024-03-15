@@ -1,23 +1,3 @@
-// class Solution {
-//     public int numDecodings(String s) {
-//         return dfs(s);
-//     }
-    
-//     int dfs(String s) {
-//         if(s.isEmpty()) {
-//             return 1;
-//         }
-//         int count = 0;
-//         if(s.charAt(0) != '0') {
-//             count += dfs(s.substring(1));
-//         }
-//         if(s.length() >= 2 && s.charAt(0) != '0' && Integer.parseInt(s.substring(0, 2)) <= 26) {   
-//             count += dfs(s.substring(2));
-//         }
-//         return count;
-//     }
-// }
-
 class Solution {
     public int numDecodings(String s) {
         Integer[] memo = new Integer[s.length()];
@@ -42,7 +22,6 @@ class Solution {
         return count;
     }
 }
-
 //either i can select one or 2
 //if select 1 need to check not 0
 //if select 2 need to check not 0 and not 7
