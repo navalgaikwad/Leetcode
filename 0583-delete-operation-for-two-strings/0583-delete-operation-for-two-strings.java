@@ -1,27 +1,29 @@
 class Solution {
     public int minDistance(String word1, String word2) {
-        return helper(word1, word2, word1.length() - 1, word2.length()- 1, new HashMap<>());
+        Integer[][] memo = new Integer[word1.length()][word2.length()];
+        return helper(word1.length() - 1, word2.length() - 1, word1, word2, memo);
     }
-    int helper(String word1, String word2, int i, int j, HashMap<String, Integer> memo) {
-         String key = i+"-"+j;
+    
+    int helper(int i, int j, String word1, String word2, Integer[][] memo) {
         if(i < 0) {
-            return j+1;
+            return j + 1;
         }
-        if(j < 0) {
-            return i+1;
+        if( j < 0) {
+            return i + 1;
         }
-        if(memo.containsKey(key)) {
-            return memo.get(key);
+        if(memo[i][j] != null) {
+            return memo[i][j];
         }
         int total = 0;
         if(word1.charAt(i) == word2.charAt(j)) {
-            total = helper(word1, word2, i - 1, j - 1, memo);
-        } else {
-            int one = helper(word1, word2, i, j - 1, memo);
-            int two = helper(word1, word2, i-1, j, memo);
-             total =  1 + Math.min(one, two);
+            return helper(i - 1, j - 1, word1, word2, memo);
+        }else {
+            int one = helper(i - 1, j, word1, word2, memo);
+            int two = helper(i, j - 1, word1, word2, memo);
+            
+            total = 1 + Math.min(one, two);
         }
-        memo.put(key, total);
+        memo[i][j] = total;
         return total;
     }
 }
