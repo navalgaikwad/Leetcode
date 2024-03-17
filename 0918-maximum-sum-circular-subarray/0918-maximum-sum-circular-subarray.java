@@ -4,13 +4,13 @@ class Solution {
         int totalSum = 0;
         for(int i=0; i<nums.length ;i++) {
             totalSum +=nums[i]; 
-            nums[i] = -nums[i];
+            nums[i] = -nums[i];//minus swatashi karnar
         }
         int circular  = totalSum + maxSum(nums);
-        if(circular==0 ) {
+        if(circular == 0 ) {
             return noncyclic;
         }
-        return Math.max(noncyclic, circular);
+        return Math.max(noncyclic, circular); // max of both cyclic and non cyclic
     }
     
     int maxSum(int[] nums) {
