@@ -18,6 +18,12 @@ class Solution {
         return max;
     }
 }
+//sort kar based on length
+//map for saving the count of word
+//run loop on words
+//devide kart raha word 0 to i ani i + 1
+//chek kar map madhey ahe ka, asel atr lonest range updadte kar in max ani map madhye
+//return max
 //  public int longestStrChain(String[] words) {
 //         int max = 1;
 //         Arrays.sort(words, (a,b)->a.length() -b.length());
