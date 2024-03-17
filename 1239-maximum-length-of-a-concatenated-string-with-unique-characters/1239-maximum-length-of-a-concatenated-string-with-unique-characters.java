@@ -22,10 +22,10 @@ class Solution {
         int[] count = new int[26];
         for(int i=0; i<newString.length(); i++) {
             ++count[newString.charAt(i)-'a'];
-            if(count[newString.charAt(i)-'a'] == 2) {
+            if(count[newString.charAt(i)-'a'] == 2) {//char count
                 return false;
             }
-            if(current.contains(newString.charAt(i)+"")) {
+            if(current.contains(newString.charAt(i)+"")) {//Find out if a string contains a sequence of characters: 
                 return false;
             }
         }
