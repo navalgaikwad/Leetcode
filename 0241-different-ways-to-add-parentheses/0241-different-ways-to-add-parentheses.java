@@ -1,28 +1,31 @@
 class Solution {
-    public List<Integer> diffWaysToCompute(String exp) {
-        List<Integer> answer  = new ArrayList<>();
-        for(int i=0; i<exp.length(); i++) {//iterate over string
-            char ch = exp.charAt(i);//take one by one charater
-            if(ch == '-' || ch == '+' || ch == '*') {//check for -,+*
-                List<Integer> left =diffWaysToCompute(exp.substring(0, i));//0 to i
-                List<Integer> right =diffWaysToCompute(exp.substring(i + 1));//i+1
-                for(int m : left) {//iterate over list left
-                    for(int n : right) {{//iterate over list right
-                        if(ch == '-') {//for minus
-                            answer.add(m-n);
-                        }else if(ch == '+') {
-                            answer.add(m+n);
-                        }else {
-                            answer.add(m*n);
+    public List<Integer> diffWaysToCompute(String e) {
+        List<Integer> result = new ArrayList<>();
+        int len = e.length();
+        for(int i =0 ; i<len; i++) {
+            char c = e.charAt(i);
+            if(c == '*' || c == '-' || c == '+') {
+                List<Integer> left = diffWaysToCompute(e.substring(0, i));
+                List<Integer> right = diffWaysToCompute(e.substring(i + 1));
+                for(Integer l : left) {
+                    for(Integer r : right) {
+                        if(c == '*') {
+                           result.add(l*r); 
+                        }else if(c == '+') {
+                           result.add(l+r);  
+                        }else if(c == '-') {
+                           result.add(l-r); 
                         }
                     }
                 }
             }
         }
-    }
-        if(answer.size() == 0) {//
-            answer.add(Integer.valueOf(exp));
+        if(result.size() == 0) {//
+            result.add(Integer.valueOf(e));
         }
-        return answer;
+        return result;
     }
 }
+
+// i will go from 0 to i when there is +, *, -
+// i, to i + 1
