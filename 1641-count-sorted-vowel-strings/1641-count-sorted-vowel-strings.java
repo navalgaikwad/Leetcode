@@ -4,7 +4,15 @@ class Solution {
        // dp[1][1] = 1;
         for(int i = 1; i <= n; i++) {
             for(int j= 1; j <= 5; j++) {
-                dp[i][j] = dp[i][j - 1] + (i-1 > 0 ? dp[i-1][j] : 1); 
+                int left = 0;
+                int right = 1;
+                if( j - 1 > 0) {
+                    left = dp[i][j - 1];
+                }
+                if( i - 1 > 0) {
+                    right = dp[i-1][j];
+                }
+                dp[i][j] = left + right; 
             }
         }
         return dp[n][5];
