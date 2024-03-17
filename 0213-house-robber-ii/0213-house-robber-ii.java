@@ -19,8 +19,9 @@ class Solution {
         if(currentSteps == 0){
             return nums[currentSteps];
         }
-        if(currentSteps == 1){
-            return Math.max(nums[0], nums[1]);
+        if(currentSteps < 0){
+            //return Math.max(nums[0], nums[1]);
+            return 0;
         }
         if(memo.containsKey(currentSteps)) return memo.get(currentSteps);
         
