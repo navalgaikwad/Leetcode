@@ -1,22 +1,16 @@
 class Solution {
     public int minCostClimbingStairs(int[] cost) {
-        return dp(cost, cost.length, new HashMap<Integer, Integer>());
-    }
-    
-    int dp(int[] cost, int currentStep, HashMap<Integer, Integer> memo){
-        if (memo.containsKey(currentStep)){
-            return memo.get(currentStep);
+        int[] dp = new int[cost.length + 1];
+        dp[0] = 0;
+        dp[1] = 0;
+        int costToReachEnd = Integer.MAX_VALUE;
+        for(int i =2; i<=cost.length; i++){
+            int fromLast = dp[i-2] + cost[i-2]; //one step from postion behind
+            int secondLast = dp[i-1] + cost[i-1]; // two step from behind
+            costToReachEnd = Math.min(fromLast, secondLast);
+            dp[i] = costToReachEnd;
+            
         }
-        
-        if(currentStep <= 1){
-            return 0;
-        }
-        
-        int fromLast = dp(cost, currentStep - 1, memo) + cost[currentStep-1];
-        int secondLast = dp(cost, currentStep - 2, memo) + cost[currentStep-2];
-        int currentCost =  Math.min(fromLast, secondLast);
-        
-        memo.put(currentStep, currentCost);
-        return currentCost;
+        return dp[cost.length];
     }
 }
