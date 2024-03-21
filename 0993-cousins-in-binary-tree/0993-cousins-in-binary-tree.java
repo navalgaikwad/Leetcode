@@ -29,13 +29,13 @@ class Solution {
         }
     }
     public boolean isCousins(TreeNode root, int x, int y) {
-        helper(root, x, y);
+        helper(root, 0, x, y, 0);
         if(parentOfX != parentOfY && levelOfX == levelOfY) {
             return true;
         }
         return false;
     }
-    
+ /*   
     void helper(TreeNode root, int x, int y) {
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(root, 0, 0));
@@ -60,6 +60,24 @@ class Solution {
             }
         }
     }
+    */
+    
+    void helper(TreeNode root, int level, int x, int y, int parent) {
+        if( root == null) {
+            return;
+        }
+        if(root.val == x) {
+           parentOfX = parent;
+           levelOfX = level;
+        }
+        if(root.val == y) {
+           parentOfY = parent;
+           levelOfY = level;
+        }
+        helper(root.left, level + 1, x, y, root.val);
+        helper(root.right, level + 1, x, y, root.val);
+    }
+    
 }
 // cousin when they have same dept with diferent parent
 //find the node with dept
