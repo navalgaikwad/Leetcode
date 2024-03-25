@@ -1,35 +1,32 @@
+
 class Solution {
-    private class LargerNumberComparator implements Comparator<String> {
+   private class Largest implements Comparator<String> {
         @Override
         public int compare(String a, String b) {
-            String order1 = a + b;
-            String order2 = b + a;
-           return order2.compareTo(order1);
+            String one = a + b;
+            String two = b + a;
+            return two.compareTo(one);
         }
     }
-
     public String largestNumber(int[] nums) {
-        // Get input integers as strings.
-        String[] asStrs = new String[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            asStrs[i] = String.valueOf(nums[i]);
+        
+       // StringBuilder sb = new StringBuilder();
+        
+        String[] array = new String[nums.length];
+        for(int i=0; i<nums.length; i++) {
+            array[i] = String.valueOf(nums[i]);
         }
-
-        // Sort strings according to custom comparator.
-        Arrays.sort(asStrs, new LargerNumberComparator());
-
-        // If, after being sorted, the largest number is `0`, the entire number
-        // is zero.
-        if (asStrs[0].equals("0")) {
+        Arrays.sort(array, new Largest());
+         if(array[0].equals("0") ) {
             return "0";
         }
-
-        // Build largest number from sorted array.
-        String largestNumberStr = new String();
-        for (String numAsStr : asStrs) {
-            largestNumberStr += numAsStr;
+        
+        StringBuilder sb = new StringBuilder();
+        for(int i =0 ;i <array.length; i++) {
+            sb.append(array[i]);
         }
-
-        return largestNumberStr;
+        
+       // System.out.print(array);
+        return sb.toString();
     }
 }
