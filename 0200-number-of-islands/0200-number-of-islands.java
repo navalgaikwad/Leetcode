@@ -1,4 +1,7 @@
 class Solution {
+ 
+// O(mn) time
+// O(mn) space
     public int numIslands(char[][] grid) {
         int count =0;
         for(int i=0; i<grid.length; i++) {
