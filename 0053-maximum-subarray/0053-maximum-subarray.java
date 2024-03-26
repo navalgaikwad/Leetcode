@@ -12,3 +12,5 @@ class Solution {
         return max;
     }
 }
+//find max while iterating
+//
