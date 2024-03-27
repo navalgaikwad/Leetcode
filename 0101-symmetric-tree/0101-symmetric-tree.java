@@ -19,16 +19,34 @@ class Solution {
     }
     
     boolean helper(TreeNode left, TreeNode right) {
-        if((left == null && right!=null)|| (right==null && left!=null)) {
-            return false;
-        }
         if(left == null && right == null) {
             return true;
         }
-         if(left.val != right.val || right.val != left.val){
+        if((left == null && right!=null) || (right == null && left!=null)) {
             return false;
         }
-        return helper(left.left, right.right) && helper(left.right, right.left);
+        return left.val == right.val && helper(left.right, right.left) &&
+           helper(left.left, right.right);
     }
-    
 }
+
+/*
+negaytive
+root can be an
+left side
+right side
+root.left 
+root.right
+
+//condition
+left
+right
+left.val!=right.val
+retrun false;
+
+left == null && righht == null
+return true
+
+left == null && right!=null || right==null && left!=null return false
+
+*/
