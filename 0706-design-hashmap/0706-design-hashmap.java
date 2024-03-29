@@ -1,5 +1,5 @@
 class MyHashMap{
-        final ListNode[] nodes = new ListNode[10000001];
+        final ListNode[] nodes = new ListNode[1000000];
 
         public void put(int key, int value){
             int i = idx(key);
