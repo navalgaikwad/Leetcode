@@ -1,4 +1,5 @@
 class Solution {
+    //same as unfairness
     public boolean canPartitionKSubsets(int[] nums, int k) {
         int sum = Arrays.stream(nums).sum();
         if(sum%k!=0) {
@@ -19,7 +20,7 @@ class Solution {
             return true;
         }
         
-        for(int i =0; i<k;i++) {
+        for(int i = 0; i < k; i++) {
             if(subSet[i] + nums[index] <=target) {
                 subSet[i] = subSet[i] + nums[index];
                 if(backTracking(nums, subSet, target, index+1, k)){
