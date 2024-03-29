@@ -1,33 +1,26 @@
-import java.lang.Math.*;
 class Solution {
     public int findPairs(int[] nums, int k) {
-        int i=0;
-        int j=1;
-        int m=0;
-        int abs=0;
+        int i = 0;
+        int j = 1;
+        int count = 0;
+        int sum = Integer.MIN_VALUE;
         Arrays.sort(nums);
-        int sum=Integer.MIN_VALUE;
-        while(i<nums.length-1 && j<nums.length){
-            //abs=Math.abs(nums[i]-nums[j]);
-            //System.out.println(abs);
-            if( Math.abs(nums[i] - nums[j])==k && (nums[i]+nums[j]) != sum){
-                  
-                     sum=nums[i]+nums[j];
-                      m++;  
-                    i++; 
-                    j++;      
-            }
-            else if((nums[j]-nums[i])<k){
+        while(i < nums.length && j < nums.length) {
+            if(Math.abs(nums[i] - nums[j]) == k && nums[i] + nums[j] != sum) {
+                sum = nums[i] + nums[j];
+                count++;
+                i++;
                 j++;
             }
-			//else case, when diff is greater than k, increase i by 1
-			else{
+            else if(nums[j] - nums[i] < k) {
+                j++;
+            }else {
                 i++;
             }
-			//check if i and j are not same to aoid duplicates
-            if(i==j) j++;
+             if (i == j) {
+                j++;
             }
-        
-        return m;
+        }
+        return count;
     }
 }
