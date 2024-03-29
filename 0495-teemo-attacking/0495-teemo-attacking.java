@@ -10,9 +10,7 @@ class Solution {
         }else{
            total=total+ timeSeries[i+1]-timeSeries[i];
         }
-    }
-     
-        
+    }   
     return total + duration;
   }
 }
