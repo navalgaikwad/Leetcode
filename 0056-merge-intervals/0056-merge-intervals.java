@@ -1,23 +1,25 @@
 class Solution {
     public int[][] merge(int[][] intervals) {
         LinkedList<int[]> merger = new LinkedList<>();
-        Arrays.sort(intervals, (a, b)-> a[0]-b[0]);
-        merger.add(intervals[0]);
-        for(int i =0; i<intervals.length; i++) {
-            if(!merger.isEmpty()&&intervals[i][0] <= merger.getLast()[1]) {
-                merger.getLast()[1] = Math.max(intervals[i][1], merger.getLast()[1]);
+         Arrays.sort(intervals, (a, b) ->Integer.compare(a[0], b[0]));
+        for(int[] interval :intervals) {
+            if(merger.isEmpty() || merger.getLast()[1] < interval[0]) {
+                merger.add(interval);
             }else {
-                merger.addLast(intervals[i]);
+                merger.getLast()[1] = Math.max(interval[1], merger.getLast()[1]);
             }
         }
-         return merger.toArray(new int[merger.size()][]);
+         return merger.toArray(new int[ merger.size() ][ ]);
     }
 }
 
-/*
-there will be negative no
-they will be sorted
-1 size input
-2 size i
-
-*/
+// LinkedList<int[]> merger = new LinkedList<>();
+// Arrays.sort(intervals, (a,b)->Integer.compare(a[0],b[0]));
+// for(int[] interval :intervals) {
+//     if(merger.isEmpty() || merger.getLast()[1] < interval[0]) {
+//         merger.add(interval);
+//     }else {
+//         merger.getLast()[1] = Math.max(interval[1], merger.getLast()[1]);
+//     }
+// }
+// return merger.toArray(new int[merger.size()][]);
