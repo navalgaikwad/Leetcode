@@ -1,5 +1,5 @@
 class MyHashMap{
-        final ListNode[] nodes = new ListNode[10_000];
+        final ListNode[] nodes = new ListNode[10000001];
 
         public void put(int key, int value){
             int i = idx(key);
@@ -25,7 +25,7 @@ class MyHashMap{
 
         public void remove(int key){
             int i = idx(key);
-            if(nodes[i] != null){
+            if(nodes[i] != null) {
                 ListNode prev = find(nodes[i], key);
                 if(prev.next != null)
                     prev.next = prev.next.next;
