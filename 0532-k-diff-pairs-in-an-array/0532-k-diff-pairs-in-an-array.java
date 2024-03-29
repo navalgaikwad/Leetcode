@@ -24,3 +24,6 @@ class Solution {
         return count;
     }
 }
+//sort
+//two pointer one i =0 j=1
+//sum = for duplicate pair
