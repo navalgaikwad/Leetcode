@@ -33,7 +33,7 @@ class WordDictionary {
     private boolean searchInNode(String word, Node node) { 
         for(int i = 0; i<word.length(); i++) {
             char c = word.charAt(i);
-            if(!node.children.containsKey(c)) {
+            if(!node.children.containsKey(c)) {//. nahi ahe
                 if(c == '.') {
                     for(Node ch : node.children.values()) {
                         if(searchInNode(word.substring(i + 1), ch)) {
