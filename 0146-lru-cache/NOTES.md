@@ -1,3 +1,8 @@
+Node node = map.get(key);
+remove(node);
+insert(node);
+return node.value;
+}
 return -1;
 }
 public void put(int key, int value) {
