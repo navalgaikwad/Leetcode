@@ -16,3 +16,4 @@ class Solution {
         return -1;
     }
 }
+//totalSum - leftSum - nums[i] rightside pay
