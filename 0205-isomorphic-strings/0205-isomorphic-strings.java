@@ -3,18 +3,14 @@ class Solution {
         if(s.length() != t.length()) {
             return false;
         }
-        int[] sArray = new int[200];
-        int[] tArray = new int[200];
-        int i =0;
-        int len = s.length();
-        int j=0;
-        while(i < len) {
-            if(sArray[s.charAt(i)] != tArray[t.charAt(i)]){
+        int[] sCount = new int[200];
+        int[] tCount = new int[200];
+        for(int i=0; i<s.length(); i++) {
+            if(sCount[s.charAt(i)] != tCount[t.charAt(i)]) {
                 return false;
             }
-            sArray[s.charAt(i)] = i+1;
-            tArray[t.charAt(i)] = i+1;
-            i++;
+            sCount[s.charAt(i)] = i + 1;
+            tCount[t.charAt(i)] = i + 1;
         }
         return true;
     }
