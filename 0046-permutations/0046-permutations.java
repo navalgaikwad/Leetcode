@@ -1,11 +1,12 @@
 class Solution {
-    List<List<Integer>> result = new ArrayList<>();
     public List<List<Integer>> permute(int[] nums) {
-        backtracking(nums, new ArrayList<>());
-        return result;
+        Set<List<Integer>> result = new HashSet<>();
+        helper(nums, new ArrayList<>(), result);
+        return new ArrayList<>(result);
     }
     
-    void backtracking(int[] nums, List<Integer> runningList) {
+    void helper(int[] nums, List<Integer> runningList, Set<List<Integer>> result) {
+        
         if(nums.length == runningList.size()) {
             result.add(new ArrayList<>(runningList));
             return;
@@ -13,7 +14,7 @@ class Solution {
         for(int num : nums) {
             if(!runningList.contains(num)) {
                 runningList.add(num);
-                backtracking(nums, runningList);
+                helper(nums, runningList, result);
                 runningList.remove(runningList.size()-1);
             }
         }
