@@ -1,19 +1,17 @@
 class Solution {
     public int pivotIndex(int[] nums) {
-        int totalSum = 0;
-        for (int num : nums) {
-            totalSum += num;
-        }
-        
+        int left = 0;
+        int right = nums.length;
         int leftSum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (leftSum == totalSum - leftSum - nums[i]) {
-                return i;
-            }
-            leftSum += nums[i];
-        }
+        int total = Arrays.stream(nums).sum();
         
+        while(left < right) {
+            if(leftSum == total - leftSum - nums[left]) {
+                return left;
+            }
+            leftSum +=nums[left];
+            left++;
+        }
         return -1;
     }
 }
-//totalSum - leftSum - nums[i] rightside pay
