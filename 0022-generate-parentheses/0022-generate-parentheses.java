@@ -17,3 +17,9 @@ class Solution {
         }
     }
 }
+/*
+The number of nodes in a full binary tree of depth 2n is 2^(2n+1) - 1, which is approximately equal to 4^n.
+
+However, not all paths in the recursion tree are valid parentheses strings (some may violate the balance condition). The number of valid paths is the nth Catalan number, which is asymptotically bounded by 4^n / n^(3/2) or 4^n / sqrt(n).
+O(4^n / sqrt(n))
+*/ 
