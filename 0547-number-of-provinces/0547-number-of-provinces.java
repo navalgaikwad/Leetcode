@@ -1,5 +1,4 @@
 class Solution {
-    int count = 0;
     public int findCircleNum(int[][] isConnected) {
         int n=isConnected.length;
      ArrayList<Integer> [] adj =new ArrayList[n];
@@ -14,25 +13,24 @@ class Solution {
                 }
             }
         }
-        int count=0;
-        boolean[] visited=new boolean[n];
-        for(int i=0;i<n; i++){
-                if(!visited[i]){
-                    dfs(adj, visited, i);
-                    count++;
-                }
-            
+        int count = 0;
+        boolean[] visited = new boolean[n+1];
+        for(int i=0; i<n; i++) {
+            if(!visited[i]) {
+                helper(adj, i, visited);
+                count++;
+            }
         }
         return count;
+        
     }
-    
-    void dfs(ArrayList<Integer> adj[], boolean[] visited, int src){
-        visited[src]=true;
-        for(Integer neighbour: adj[src]){
-            if(!visited[neighbour]){
-                dfs(adj, visited, neighbour);
+        
+    void helper(ArrayList<Integer> [] adj, int parent, boolean[] visited) {
+        visited[parent] = true;
+        for(Integer neighbour: adj[parent]) {
+            if(!visited[neighbour]) {
+                helper(adj, neighbour, visited);
             }
-            
         }
-    }    
+    }
 }
