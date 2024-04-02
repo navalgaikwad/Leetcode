@@ -15,18 +15,17 @@
  */
 class Solution {
     public boolean isValidBST(TreeNode root) {
-        return dfs(root, Long.MIN_VALUE, Long.MAX_VALUE);
+       return helper(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
-    
-    boolean dfs(TreeNode root, long min, long max) {
-        if(root == null) {
+    boolean helper(TreeNode root, long left, long right) {
+         if(root == null) {
             return true;
         }
-        if(min >=root.val   || max<=root.val) {
+        if(root.val <= left || root.val >= right) {
             return false;
         }
-        boolean left = dfs(root.left, min , root.val);
-        boolean right = dfs(root.right, root.val, max);
-        return left && right;
+        boolean leftSide = helper(root.left, left, root.val);
+        boolean rightSide = helper(root.right, root.val, right);
+        return leftSide && rightSide;
     }
 }
