@@ -1,37 +1,37 @@
 class Solution {
-    public boolean canFinish(int n, int[][] prerequisites) {
-       ArrayList<Integer>adj[] = new ArrayList[n];
-       for(int i=0; i<n; i++){
-           adj[i] = new ArrayList<>();
-       }
-       for(int[] prerequisite:prerequisites){
-           adj[prerequisite[1]].add(prerequisite[0]);
-       }
-        Boolean[] visited = new Boolean[n];
-        for(int i=0; i<n; i++){
-            if(!dfs(adj, i, visited)){
-                return false;
-            }
+    public boolean canFinish(int numCourses, int[][] pre) {
+        int len = numCourses;
+        ArrayList<Integer>adj[] = new ArrayList[numCourses + 1];
+        for(int i=0; i <= numCourses; i++) {
+            adj[i] = new ArrayList<>();
+        }
+        for(int[] p : pre) {
+            adj[p[0]].add(p[1]);
+        }
+        int[] visited  = new int[numCourses];
+        for(int i=0; i<numCourses; i++) {
+            //if(visited[i] == 0) {
+                if(!dfs(adj, i, visited)) {
+                    return false;
+                }
+            //}
         }
         return true;
     }
-    
-    boolean dfs(ArrayList<Integer>adj[] , int i,  Boolean[] visited){
-        if(visited[i] != null && visited[i] == false){
+    boolean dfs(ArrayList<Integer>adj[], int parent, int[] visited) {
+        if(visited[parent] == 1) {
             return false;
         }
-        if(visited[i] != null && visited[i] == true){
+        if(visited[parent] == 2) {
             return true;
         }
-        visited[i] = false;
-        
-        for(Integer neighbour: adj[i]){
-            if(!dfs(adj, neighbour, visited)){
+        visited[parent] = 1;
+        for(Integer neighbour : adj[parent]) {
+            if(!dfs(adj, neighbour, visited)) {
                 return false;
             }
         }
-        visited[i] = true;
+        visited[parent] = 2;
         return true;
     }
-   
 }
