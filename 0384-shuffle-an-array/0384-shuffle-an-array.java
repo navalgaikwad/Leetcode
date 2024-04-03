@@ -18,7 +18,7 @@ public class Solution {
     public int[] shuffle() {
         if(nums == null) return null;
         int[] a = nums.clone();
-        for(int j = 1; j < a.length; j++) {
+        for(int j = 0; j < a.length; j++) {
             int i = random.nextInt(j + 1);
             swap(a, i, j);
         }
