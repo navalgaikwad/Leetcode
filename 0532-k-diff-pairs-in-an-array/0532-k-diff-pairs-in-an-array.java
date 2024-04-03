@@ -2,28 +2,29 @@ class Solution {
     public int findPairs(int[] nums, int k) {
         int i = 0;
         int j = 1;
-        int count = 0;
         int sum = Integer.MIN_VALUE;
         Arrays.sort(nums);
+        int count =0;
         while(i < nums.length && j < nums.length) {
-            if(Math.abs(nums[i] - nums[j]) == k && nums[i] + nums[j] != sum) {
+            if(nums[j] - nums[i] == k && nums[i] + nums[j]!=sum) {
                 sum = nums[i] + nums[j];
                 count++;
-                i++;
-                j++;
             }
-            else if(nums[j] - nums[i] < k) {
+            if(nums[j] - nums[i] < k) {
                 j++;
             }else {
                 i++;
             }
-             if (i == j) {
+            if(i == j) {//if on same index
                 j++;
             }
         }
         return count;
     }
 }
-//sort
-//two pointer one i =0 j=1
-//sum = for duplicate pair
+
+/*
+1. to avoid duplicate nums[i]+nums[j]!=sum
+2. if both apear to same index increament j++ 
+
+*/
