@@ -1,30 +1,28 @@
 class Solution {
     public boolean isValidSudoku(char[][] board) {
-        Set<String> rowSet = new HashSet<>();
-        Set<String> colSet = new HashSet<>();
-        Set<String> boxesset = new HashSet<>();
-        int row = board.length;
-        int col = board[0].length;
-       
-            for(int i=0; i< row; i++) {
-                for(int j=0; j<col; j++) {
-                    char value = board[i][j];
-                    int box = (i/3) + (j/3) *3;
-                    if(value != '.') {
-                        
-                        String r = i+"-"+value;
-                        String c = j+"-"+value;
-                        String b = box+"-"+value;
-                        if(rowSet.contains(r) || colSet.contains(c) || boxesset.contains(b)) {
-                            return false;
-                        }
-                        rowSet.add(r);
-                        colSet.add(c);
-                        boxesset.add(b);
+        Set<String> row = new HashSet<>();
+        Set<String>col = new HashSet<>();
+        Set<String>boxes = new HashSet<>();
+        for(int i =0; i < board.length; i++) {
+            for(int j=0; j< board[0].length; j++) {
+                
+                 char value = board[i][j];
+                 int box = (i/3) + (j/3)*3;
+                
+                if(board[i][j] != '.') {
+                    String c = value+"-"+i;
+                    String v = value+"-"+j;
+                    String boxi = value+"-"+box;
+                    if(row.contains(c) || col.contains(v) || boxes.contains(boxi)) {
+                        return false;
                     }
+                        
+                    row.add(c);
+                    col.add(v);
+                    boxes.add(boxi);
                 }
             }
-            
-        return true;
         }
+        return true;
     }
+}
