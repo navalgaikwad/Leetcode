@@ -2,7 +2,7 @@ class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         int len = nums.length;
-        Arrays.sort(nums);
+        Arrays.sort(nums);//sort kartla hava
         for(int i=0; i<nums.length-2; i++) {
             int left = i + 1;
             int right = len - 1;
