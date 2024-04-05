@@ -26,7 +26,7 @@ class Solution {
                     right--;
                 }
             }
-            while(i+1 < len && nums[i] == nums[i + 1]) {
+            while(i < len-1 && nums[i] == nums[i + 1]) {
                 i++;
             }
             //i++;
