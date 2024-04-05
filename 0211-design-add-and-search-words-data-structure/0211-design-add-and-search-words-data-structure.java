@@ -9,45 +9,47 @@ class WordDictionary {
             this.isEnd = false;
         }
     }
-    Node root = new Node('\0');
+    Node root;
     public WordDictionary() {
-        
+        root = new Node('\0');
     }
     
     public void addWord(String word) {
-        Node curr = root;
-        for(char c: word.toCharArray()) {
-            if(!curr.children.containsKey(c)) {
-                curr.children.put(c, new Node(c));
+        Node current = root;
+        for(char c : word.toCharArray()) {
+            if(!current.children.containsKey(c)) {
+                current.children.put(c, new Node(c));
             }
-            curr = curr.children.get(c);
+            current = current.children.get(c);
         }
-        curr.isEnd = true;
-    }
-    
-    public boolean search(String word) {
-         Node curr = root;
-        return searchInNode(word, curr);
+        current.isEnd = true;
     }
     //.ad
-    private boolean searchInNode(String word, Node node) { 
-        for(int i = 0; i<word.length(); i++) {
-            char c = word.charAt(i);
-            if(!node.children.containsKey(c)) {//. nahi ahe
-                if(c == '.') {
-                    for(Node ch : node.children.values()) {
-                        if(searchInNode(word.substring(i + 1), ch)) {
-                            return true;
-                        }
-                    }
+    public boolean search(String word) {
+        Node current = root;
+       return searchInNode(word, current);
+    }
+    
+     private boolean searchInNode(String word, Node node) { 
+      Node current = node;
+        for(int i=0; i<word.length(); i++) {
+            if(word.charAt(i) == '.') {
+                for(Node c : current.children.values()) {
+                    if(searchInNode(word.substring(i + 1), c)) {
+                    return true;
                 }
+              }
+                
+            }
+            if(!current.children.containsKey(word.charAt(i))) {
                 return false;
             }
-            node = node.children.get(c);
+            current = current.children.get(word.charAt(i));
         }
-        return node.isEnd;
-    }
+        return current.isEnd;
+     }
 }
+
 
 /**
  * Your WordDictionary object will be instantiated and called as such:
