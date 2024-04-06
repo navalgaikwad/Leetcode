@@ -9,45 +9,57 @@
  */
 class Solution {
     Map<Integer, ArrayList<Integer>> map = new HashMap<>();
-    void buildTree(TreeNode child, TreeNode parent) {
-        if(child==null) {
+    void build(TreeNode root, TreeNode parent) {
+        if(root == null) {
             return;
         }
-        //check for key not present in map
-        if(!map.containsKey(child.val)) {
-            map.put(child.val, new ArrayList<>());
+        if(!map.containsKey(root.val)) {
+            map.putIfAbsent(root.val, new ArrayList<>());
+            
         }
-        if(parent!=null) {
-            map.get(parent.val).add(child.val);
-            map.get(child.val).add(parent.val);
-        }
-        buildTree(child.left, child);
-        buildTree(child.right, child);
+        if(parent != null) {
+            map.get(root.val).add(parent.val);
+            map.get(parent.val).add(root.val);
+        } 
+        
+        build(root.left, root);
+        build(root.right, root);
     }
-    //check for null
-    //check for child key is not presnet in map
-    //check parent is not null
+    
     public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
-        buildTree(root, null);
-        Queue<int[]> q = new LinkedList<>();
+        build(root, null);
+        
+        Queue<int[]> q= new LinkedList<>();
+        
+        HashSet<Integer> visited = new HashSet<>();
+        
+        List<Integer> ans = new ArrayList<>();
+        
         q.add(new int[]{target.val, 0});
-        Set<Integer> visited = new HashSet<>();
         visited.add(target.val);
-        ArrayList<Integer> ans = new ArrayList<>();
         while(!q.isEmpty()) {
+            
             int[] current = q.remove();
-            int next = current[0];
-            int level = current[1];
-            if(level == k) {
-               ans.add(next); 
-            }
-            for(Integer neighbour : map.get(next)) {
+            int currentValue = current[0];
+            int dist = current[1];
+            
+            if(dist == k) {
+                ans.add(currentValue);
+                continue;
+            } 
+            for(Integer neighbour: map.get(currentValue)) {
                 if(!visited.contains(neighbour)) {
+                    q.add(new int[]{neighbour, dist + 1 });
                     visited.add(neighbour);
-                    q.add(new int[]{neighbour, level+1});
                 }
             }
         }
         return ans;
     }
 }
+/*
+1: 0, 8, 3
+5: 2,6, 3
+
+
+*/
