@@ -1,5 +1,5 @@
 class Solution {
-    class Largest implements Comparator<String> {
+    class largest implements Comparator<String> {
         @Override
         public int compare(String a, String b) {
             String one = a + b;
@@ -8,21 +8,18 @@ class Solution {
         }
     }
     public String largestNumber(int[] nums) {
-        
-        String[] result = new String[nums.length];
-        int i =0;
-        for(int num : nums) {
-            result[i++]=String.valueOf(num);
+        int len = nums.length;
+        String[] arr = new String[len];
+        for(int i =0; i<len; i++) {
+            arr[i] = String.valueOf(nums[i]);
         }
-         
-        Arrays.sort(result, new Largest());
-        if(result[0].equals("0") ) {
+        Arrays.sort(arr, new largest());
+        if(arr[0].equals("0")) {
             return "0";
         }
         StringBuilder sb = new StringBuilder();
-        
-        for(String res : result) {
-            sb.append(res);
+        for(String s : arr) {
+            sb.append(s);
         }
         return sb.toString();
     }
