@@ -1,12 +1,12 @@
 class Solution {
-    int[][] dp;
+    Integer[][] dp;
     public int maximalSquare(char[][] matrix) {
         int row = matrix.length;
         int col = matrix[0].length;
-        dp = new int[row][col];
-        for(int i=0; i<row; i++) {
-            Arrays.fill(dp[i], -1);
-        }
+        dp = new Integer[row][col];
+        // for(int i=0; i<row; i++) {
+        //     Arrays.fill(dp[i], 1);
+        // }
         int ans = Integer.MIN_VALUE;
         for(int i=0; i<row; i++) {
             for(int j=0; j<col; j++) {
@@ -23,7 +23,7 @@ class Solution {
         if(row < 0 || row >= matrix.length || col < 0 || col >= matrix[0].length || matrix[row][col] == '0') {
             return 0;
         }
-        if(dp[row][col] != -1) {
+        if(dp[row][col] != null) {
             return dp[row][col];
         }
         int min = 1 + Math.min(dfs(matrix, row + 1, col), Math.min(dfs(matrix, row, col + 1), 
