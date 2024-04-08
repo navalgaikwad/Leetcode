@@ -9,7 +9,7 @@ class Solution {
         }
         int mid = lo + (hi - lo) / 2;
         int L = solve(nums, lo, mid - 1);
-        int R = solve(nums, mid + 1, hi);
+        int R = solve(nums, mid + 1, hi);// normal binary search
         
         int C = cross(nums, lo, mid, hi);
         return Math.max(L, Math.max(R, C));
@@ -18,7 +18,7 @@ class Solution {
     int cross(int[] nums, int lo, int mid, int hi) {
         int left = 0, maxLeft = 0;
         int right = 0, maxRight = 0;
-        for(int i = mid - 1; i >= lo; i--) {
+        for(int i = mid - 1; i >=lo; i--) {
             left += nums[i];
             maxLeft = Math.max(left, maxLeft);
         }
