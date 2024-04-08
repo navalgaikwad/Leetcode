@@ -1,7 +1,7 @@
 class Solution {
     public boolean isIsomorphic(String s, String t) {
-        int[] sCount = new int[200];
-        int[] tCount = new int[200];
+        int[] sCount = new int[256];
+        int[] tCount = new int[256];
         int len = s.length() - 1;
         //int i =0;
         for(int i=0; i<s.length(); i++) {
