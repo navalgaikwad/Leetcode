@@ -1,33 +1,20 @@
 class Solution {
-     public static List<List<Integer>> minimumAbsDifference(int[] arr) {
-   List<List<Integer>> result = new ArrayList<>();
-   Arrays.sort(arr);
-   int left = 0; 
-   int right = 1;
-   int min = Integer.MAX_VALUE;
-   while (right < arr.length) {
-       int diff = Math.abs(arr[right] - arr[left]);
-       if (diff < min) {
-           // If a smaller difference is found, clear the result list
-           result.clear();
-           min = diff;
-       }
-       if (diff == min) {
-           // Add the pair with the minimum difference to the result list
-           result.add(Arrays.asList(arr[left], arr[right]));
-       }
-       left++;
-       right++;
-   }
-   return result;
+    public List<List<Integer>> minimumAbsDifference(int[] arr) {
+        int min = Integer.MAX_VALUE;
+        List<List<Integer>> result = new ArrayList<>();
+        Arrays.sort(arr);
+        for(int i=0; i < arr.length - 1; i++) {
+            min = Math.min(min, arr[i + 1] - arr[i]);
+        }
+        
+        for(int i=0; i < arr.length - 1; i++) {
+            if(arr[i + 1] - arr[i] == min) {
+                result.add(Arrays.asList(arr[i], arr[i + 1]));
+            }
+            //min = Math.min(min, arr[i + 1] - arr[i]);
+        }
+        
+       // System.out.print(min);
+        return result;
+    }
 }
-
-}
-
-/*
-sort
-find minimum diff
-find the mindiff value
-
-
-*/
