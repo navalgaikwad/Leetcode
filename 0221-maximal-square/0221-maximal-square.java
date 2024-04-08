@@ -1,13 +1,12 @@
 class Solution {
     Integer[][] dp;
     public int maximalSquare(char[][] matrix) {
+        
         int row = matrix.length;
         int col = matrix[0].length;
         dp = new Integer[row][col];
-        // for(int i=0; i<row; i++) {
-        //     Arrays.fill(dp[i], 1);
-        // }
         int ans = Integer.MIN_VALUE;
+        
         for(int i=0; i<row; i++) {
             for(int j=0; j<col; j++) {
                 if(matrix[i][j] == '1') {
