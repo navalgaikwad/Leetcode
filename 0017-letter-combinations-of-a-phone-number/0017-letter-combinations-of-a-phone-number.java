@@ -16,14 +16,15 @@ class Solution {
         return result;
     }
     
-    void backTracking(String digits, String ans, int i) {
-        if( i==digits.length()) {//check foe lebgth
-            result.add(ans);
+    void backTracking(String digits, String ans, int index) {
+        if(index == digits.length()) {
+            result.add(new String(ans));
             return;
         }
-        String value = map.get(digits.charAt(i));
-        for(char c: value.toCharArray()) {
-            backTracking(digits, ans+c, i+1);
+        String value = map.get(digits.charAt(index));
+        for(char c : value.toCharArray()) {
+            backTracking(digits, ans+c, index+1);
         }
     }
+   
 }
