@@ -15,20 +15,19 @@ class Solution {
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(beginWord, 1));
         while(!q.isEmpty()) {
-            Pair current = q.remove();
-            String word = current.word;
-            int level = current.level;
+            Pair pair = q.remove();
+            String word = pair.word;
+            int level = pair.level;
             if(word.equals(endWord)) {
                 return level;
             }
-            
             for(int i =0; i<word.length(); i++) {
-                char[] ch = word.toCharArray();
-                for(char j ='a'; j<='z'; j++) {
-                    ch[i] = j;
-                    if(set.contains(String.valueOf(ch))) {
-                        q.add(new Pair(String.valueOf(ch), level + 1));
-                        set.remove(String.valueOf(ch));
+                char[] wrd = word.toCharArray();
+                for(char c ='a'; c<='z'; c++) {
+                    wrd[i] = c;
+                    if(set.contains(String.valueOf(wrd))) {
+                        q.add(new Pair(String.valueOf(wrd), level + 1));
+                        set.remove(String.valueOf(wrd));
                     }
                 }
             }
