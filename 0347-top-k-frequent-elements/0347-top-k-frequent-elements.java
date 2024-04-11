@@ -4,17 +4,24 @@ class Solution {
         for(int num : nums) {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
-        PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)->map.get(b)- map.get(a));
-        //pq.add(map.getkey());
-        //System.out.print(map.keySet());
-        pq.addAll(map.keySet());
-        int[] ans = new int[k];
-        int i=0;
-        while(k-- > 0) {
-            ans[i++] = pq.remove();
+        ArrayList<Integer> bucket[] = new ArrayList[nums.length + 1];
+        for(int num : map.keySet()) {//vvimp
+            int freq = map.get(num);
+            if(bucket[freq] == null) {
+               bucket[freq] = new ArrayList<>(); 
+            }
+            bucket[freq].add(num);
         }
-        return ans;
+        int[] res = new int[k];
+        int index =0;
+        for(int i = bucket.length-1; i>=0; i--) {
+            if(bucket[i] != null) {
+                for(int val : bucket[i]) {
+                    res[index++] = val;
+                    if(index == k) return res;
+                }
+            }
+        }
+        return res;
     }
-    
-    
 }
