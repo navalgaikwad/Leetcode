@@ -32,15 +32,15 @@ class Solution {
         return val;
     }
     
-    //  int dp2(int[] nums, int start){
-    //     if(start == 1){
+    //  int dp(int[] nums, int start){
+    //     if(start == ){
     //         return nums[start];
     //     }
     //     if(start == 2){
     //         return Math.max(nums[1], nums[2]);
     //     }
-    //     int currentRob = dp2(nums, start - 2) + nums[start - 2];
-    //     int previousRob = dp2(nums, start - 1);
+    //     int currentRob = dp(nums, start - 2) + nums[start - 2];
+    //     int previousRob = dp(nums, start - 1);
     //     return Math.max(currentRob, previousRob);
     // }
 }
