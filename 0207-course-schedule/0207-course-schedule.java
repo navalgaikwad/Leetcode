@@ -6,7 +6,7 @@ class Solution {
             adj[i] = new ArrayList<>();
         }
         for(int[] p : pre) {
-            adj[p[0]].add(p[1]);
+            adj[p[1]].add(p[0]);
         }
         int[] visited  = new int[numCourses];
         for(int i=0; i<numCourses; i++) {
