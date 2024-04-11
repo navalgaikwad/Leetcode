@@ -1,53 +1,42 @@
 class Solution {
-       public int[] findOrder(int numCourses, int[][] pres) {
-         
-        ArrayList<Integer>[]adj=new ArrayList[numCourses];
-        for(int i=0;i<numCourses; i++){
+    Stack<Integer> st = new Stack<>();
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
+        ArrayList<Integer> adj[] = new ArrayList[numCourses];
+        for(int i =0; i<numCourses; i++) {
             adj[i] = new ArrayList<>();
         }
-
-        for(int[] pre: pres){
+        for(int[] pre : prerequisites) {
             adj[pre[1]].add(pre[0]);
         }
-
+        int[] visited = new int[numCourses ];
         int[] ans = new int[numCourses];
-        int[] visited=new int[numCourses];
-        Stack<Integer> stack=new Stack<>();
-        for (int i=0; i< numCourses; i++){
-           if(!dfs(adj, stack, i, visited)){
+       for (int i=0; i< numCourses; i++){
+           if(!dfs(adj, i, visited)){
                  return new int[]{};
            }
         }
-        
         int i = 0;
-        while (!stack.isEmpty()) {
-            ans[i++] = stack.peek();
-            stack.pop();
+        while (!st.isEmpty()) {
+            ans[i++] = st.peek();
+            st.pop();
         }
         return ans;
     }
-    
-  boolean dfs(ArrayList<Integer>[]adj,Stack<Integer> stack, int node, int[] visited){
-        if(visited[node]==1) {
+    boolean dfs(ArrayList<Integer> adj[], int parent, int[] visited) {
+        if(visited[parent] == 1) {
             return false;
-        }
-        if(visited[node]==2){
+        } 
+        if(visited[parent] == 2) {
             return true;
         }
-        visited[node]=1;
-
-        for(int neighbour: adj[node]){
-           
-                if (!dfs(adj, stack, neighbour, visited)){
-                    return false;
-                }
-            
+        visited[parent] = 1;
+        for(Integer neigbhour : adj[parent]) {
+            if(!dfs(adj, neigbhour, visited)) {
+                return false;
+            }
         }
-        stack.push(node);
-        visited[node] = 2;
-
+        visited[parent] = 2;
+        st.push(parent);
         return true;
-
     }
-    
 }
