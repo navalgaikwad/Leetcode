@@ -15,7 +15,7 @@ class Solution {
             return memo[index];
         }
         int count = dfs(s, index + 1, memo);
-        if (index + 1 < s.length() && Integer.parseInt(s.substring(index, index + 2)) <= 26) {//index + 1 < len && index, index + 2 <=26
+        if (index + 2 <= s.length() && Integer.parseInt(s.substring(index, index + 2)) <= 26) {//index + 1 < len && index, index + 2 <=26
             count += dfs(s, index + 2, memo); //add the count
         }
         memo[index] = count;
