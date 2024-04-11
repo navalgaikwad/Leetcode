@@ -1,8 +1,8 @@
 class Solution {
     public boolean canFinish(int numCourses, int[][] pre) {
         int len = numCourses;
-        ArrayList<Integer>adj[] = new ArrayList[numCourses + 1];
-        for(int i=0; i <= numCourses; i++) {
+        ArrayList<Integer>adj[] = new ArrayList[numCourses];
+        for(int i=0; i < numCourses; i++) {
             adj[i] = new ArrayList<>();
         }
         for(int[] p : pre) {
