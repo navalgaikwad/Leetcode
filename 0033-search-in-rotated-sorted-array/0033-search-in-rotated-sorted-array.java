@@ -18,17 +18,17 @@ class Solution {
                 start = mid + 1;
             }
         } else {
-             if(nums[end] >=nums[mid]) {
-            if (target <= nums[end] && target > nums[mid]) {
-                start = mid + 1;
-                
-            } else {
-                end = mid - 1;
+             if(nums[end] >= nums[mid]) {
+                if (target <= nums[end] && target > nums[mid]) {
+                    start = mid + 1;
+
+                } else {
+                    end = mid - 1;
+              }
             }
-             }
         }
     }
 
     return -1;
-}
+  }
 }
