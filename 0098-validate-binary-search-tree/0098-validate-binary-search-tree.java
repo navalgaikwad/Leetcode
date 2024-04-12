@@ -28,3 +28,9 @@ class Solution {
         return helper(root.left, min, root.val) && helper(root.right, root.val, max);
     }
 }
+
+/*
+root = [2,1,3]
+
+
+*/
