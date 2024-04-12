@@ -1,21 +1,39 @@
 class Solution {
     public boolean canJump(int[] nums) {
-        int[] dp = new int[nums.length + 1];
-        Arrays.fill(dp, Integer.MAX_VALUE);
-        dp[0] = nums[0];
-        for(int i =0;i <=nums.length; i++) {
-            if(dp[i] != Integer.MAX_VALUE) {
-                for(int coin =0; coin <=nums[i]; coin++) {
-                    int next = i + coin;
-                    if(next < nums.length) {
-                        dp[next] = Math.min(dp[next], dp[i] + 1);
+        int len = nums.length+1;
+        int[] dp = new int[len];
+        Arrays.fill(dp, -1);
+        dp[0] = 1;
+        for(int i=0; i< nums.length; i++) {
+            if(dp[i] != -1) {
+                for(int j=1; j<=nums[i]; j++) {
+                    int next = j + i;//use j not dp[j] or dp[i]
+                    if(next < len) {
+                        dp[next] = Math.max(dp[next], dp[i] + 1);
                     }
-                    
                 }
             }
         }
-        
-        return dp[nums.length - 1] == Integer.MAX_VALUE ? false : true; 
+         return dp[nums.length - 1] != -1; 
     }
-    
 }
+
+// class Solution {
+//     public boolean canJump(int[] nums) {
+//         int len = nums.length;
+//         int[] dp = new int[len];
+//         Arrays.fill(dp, -1);
+//         dp[0] = 1;
+//         for (int i = 0; i < nums.length; i++) {
+//             if (dp[i] != -1) {
+//                 for (int j = 1; j <= nums[i]; j++) {
+//                     int next = j + i;
+//                     if (next < len) {
+//                         dp[next] = dp[i] + 1;
+//                     }
+//                 }
+//             }
+//         }
+//         return dp[len - 1] != -1;
+//     }
+// }
