@@ -8,7 +8,7 @@ class Solution {
             }
             set.add(nums[i]);
         }
-        System.out.print(set);
+        //System.out.print(set);
         
         for(int i=1; i<=nums.length; i++) {
             if(!set.contains(i)) {
