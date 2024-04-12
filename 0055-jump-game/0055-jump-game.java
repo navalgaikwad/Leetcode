@@ -9,7 +9,7 @@ class Solution {
                 for(int j=1; j<=nums[i]; j++) {
                     int next = j + i;//use j not dp[j] or dp[i]
                     if(next < len) {
-                        dp[next] = Math.max(dp[next], dp[i] + 1);
+                        dp[next] =  dp[i] + 1;
                     }
                 }
             }
