@@ -15,24 +15,19 @@
  */
 class BSTIterator {
     List<Integer> list = new ArrayList<>();
-    int count;
+    int i =0;
     public BSTIterator(TreeNode root) {
         helper(root);
-        count =0;
-        
     }
     
     public int next() {
-        
-        int val = list.get(count);
-        count++;
-        return val;
+        return list.get(i++);
     }
     
     public boolean hasNext() {
-        return count != list.size();
+        return i<list.size();
     }
-   void helper(TreeNode root) {
+    void helper(TreeNode root) {
         if(root == null) {
             return;
         }
