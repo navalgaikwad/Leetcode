@@ -1,36 +1,34 @@
 class Solution {
     public String decodeString(String s) {
-        Stack<Integer> stCount = new Stack<>();
-        Stack<String> result = new Stack<>();
-        int len = s.length();
-        int i = 0;
-        String res = "";
-        while (i < len) {
-            if (Character.isDigit(s.charAt(i))) {
+        Stack<String> st = new Stack<>();
+        Stack<Integer> number = new Stack<>();
+        String buildString = "";
+        StringBuilder result = new StringBuilder();
+        for(int i =0; i<s.length(); i++) {
+            char value = s.charAt(i);
+            if(Character.isDigit(s.charAt(i))) {
                 int count = 0;
                 while(Character.isDigit(s.charAt(i))) {
-                    count = 10 * count + (s.charAt(i) - '0');
+                    count = count * 10 + Character.getNumericValue(s.charAt(i));
                     i++;
                 }
-                stCount.push(count);
-            } else if (s.charAt(i) == '[') {
-                result.push(res);//stack madhye push kar
-                res = "";//empty kar lagech
-                i++;
-            } else if (s.charAt(i) == ']') {
-                StringBuilder sb = new StringBuilder(result.pop());
-                int val = stCount.pop();
-                while (val > 0) {
-                    sb.append(res);
-                    val--;
+              number.push(count);
+              i--;
+             //i++;
+            }else if(value == '[') {
+                st.push(buildString);
+                buildString="";
+            }else if(value == ']') {
+                StringBuilder sb = new StringBuilder(st.pop());
+                int no = number.pop();
+                while(no-- > 0) {
+                    sb.append(buildString);
                 }
-                res = sb.toString();//assign value to res
-                i++;
-            } else {
-                res = res + s.charAt(i);//all character assigning
-                i++;
+                buildString = sb.toString();
+            }else {
+                buildString+=s.charAt(i);
             }
         }
-        return res;
+        return buildString;
     }
 }
