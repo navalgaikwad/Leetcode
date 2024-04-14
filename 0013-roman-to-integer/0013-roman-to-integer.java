@@ -10,20 +10,26 @@ class Solution {
         map.put('M', 1000);
         int prev = 0;
         int total = 0;
-        int len = s.length()-1;
-        //IV
-        int result = 0;
-        for(int i = len; i>=0; i-- ) {
-            char c = s.charAt(i);
-            int amount = map.get(c);
-            if(prev!=0 && amount < prev) {
-                total = total - amount;
+        for(int i=s.length() - 1; i>=0; i--) {
+            int current = map.get(s.charAt(i));
+            if(current < prev) {
+                total = total - current;
             }else {
-                total = total + amount;;
+                total = total + current;
             }
-            prev = amount;
+            prev = current;
         }
         return total;
     }
 }
-//"III"
+
+/*
+I             1
+V             5
+X             10
+L             50
+C             100
+D             500
+M             1000
+
+*/
