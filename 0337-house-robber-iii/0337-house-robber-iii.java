@@ -27,8 +27,8 @@ private int[] robSub(TreeNode root) {
     int[] right = robSub(root.right);
     int[] res = new int[2];
 
-    res[0] = Math.max(left[0], left[1]) + Math.max(right[0], right[1]);
-    res[1] = root.val + left[0] + right[0];
+    res[0] = Math.max(left[0], left[1]) + Math.max(right[0], right[1]);//max of both tree left and right 0: rob 1 not rob
+    res[1] = root.val + left[0] + right[0];//sum of root+left+right
     
     return res;
 }
