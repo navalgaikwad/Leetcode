@@ -14,71 +14,59 @@
  * }
  */
 class Solution {
-    
-    TreeNode findANCES(TreeNode root, int startValue, int destValue) {
-        if(root == null) {
-            return null;
-        }
-        if(root.val == startValue || root.val == destValue) {
+    TreeNode findAncestor(TreeNode root, int startValue, int destValue) {
+        if(root == null || root.val == startValue || root.val == destValue) {
             return root;
         }
-        TreeNode left = findANCES(root.left, startValue, destValue);
-        TreeNode right = findANCES(root.right, startValue, destValue);
-        if(left==null) {
-            return right;
+        TreeNode left = findAncestor(root.left, startValue, destValue);
+        TreeNode right = findAncestor(root.right, startValue, destValue);
+        
+        if(left != null && right != null) {
+            return root;
         }
-        if(right == null) {
-            return left;
-        }
-        return root;
+        return left == null ? right : left;
     }
-    StringBuilder sbleft = new StringBuilder();
-    StringBuilder sbright = new StringBuilder();
+    StringBuilder leftSide = new StringBuilder();
+    StringBuilder rightSide = new StringBuilder();
     
-    boolean helper1(TreeNode root, int s) {
+    boolean helperParent(TreeNode root, int startValue) {
         if(root == null) {
             return false;
         }
-        if(root.val == s) {
+        if(root.val == startValue) {
             return true;
         }
-        boolean left = helper1(root.left, s);
-        boolean right = helper1(root.right, s);
-        
+        boolean left = helperParent(root.left, startValue);
+        boolean right = helperParent(root.right, startValue);
         if(left || right) {
-            sbleft.append("U");
+            leftSide.append("U");
         }
         return left || right;
         
     }
-    
-    boolean helper2(TreeNode root, int s) {
+    boolean helperDestValue(TreeNode root, int destValue) {
         if(root == null) {
             return false;
         }
-        if(root.val == s) {
+        if(root.val == destValue) {
             return true;
         }
-        boolean left = helper2(root.left, s);
-        boolean right = helper2(root.right, s);
-        
+        boolean left = helperDestValue(root.left, destValue);
+        boolean right = helperDestValue(root.right, destValue);
         if(left) {
-            sbright.append("L");
+            rightSide.append("L");
         }
         if(right) {
-           sbright.append("R"); 
+            rightSide.append("R");
         }
         return left || right;
         
     }
-    
-    public String getDirections(TreeNode root, int s, int d) {
-        root =  findANCES(root, s, d);
-        helper1(root, s);
-        helper2(root, d);
-        sbleft.append(sbright.reverse());
-        return sbleft.toString();
+    public String getDirections(TreeNode root, int startValue, int destValue) {
+        root = findAncestor(root, startValue, destValue);
+        helperParent(root, startValue);
+        helperDestValue(root, destValue);
+        leftSide.append(rightSide.reverse());
+        return leftSide.toString();
     }
-    
-    
 }
