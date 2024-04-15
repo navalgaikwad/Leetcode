@@ -47,12 +47,9 @@ class Solution {
         if(head.val != root.val) {
             return false;
         }
-        if(helper(head.next, root.left)) {
-            return true;
-        }
-        if(helper(head.next, root.right)) {
-            return true;
-        }
-        return false;
+        boolean left = helper(head.next, root.left);
+        boolean right = helper(head.next, root.right);
+        
+        return left || right;
     }
 }
