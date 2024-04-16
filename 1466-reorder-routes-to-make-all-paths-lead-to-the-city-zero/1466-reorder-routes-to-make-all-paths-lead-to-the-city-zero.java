@@ -17,9 +17,9 @@ class Solution {
         for(int[] neighbours: adj[parent]) {
             int neighbour = neighbours[0];
             if(!visited.contains(neighbour)) {
-            int cost = neighbours[1];
-            int sum = dfs(adj, neighbour, visited);
-            total = total + cost+sum;  
+                int cost = neighbours[1];
+                total+= cost + dfs(adj, neighbour, visited);
+           
             }
             
         }
