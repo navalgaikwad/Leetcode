@@ -31,25 +31,20 @@ class Solution {
         if(helper(head, root)) {
             return true;
         }
-        
         boolean left = isSubPath(head, root.left);
         boolean right = isSubPath(head, root.right);
         return left || right;
+        
     }
-    
     boolean helper(ListNode head, TreeNode root) {
         if(head == null) {
             return true;
         }
-        if(root == null) {
-            return false;
-        }
-        if(head.val != root.val) {
+        if(root == null || root.val != head.val) {
             return false;
         }
         boolean left = helper(head.next, root.left);
         boolean right = helper(head.next, root.right);
-        
         return left || right;
     }
 }
