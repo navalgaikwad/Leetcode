@@ -1,45 +1,44 @@
-class Solution {
-    int MAX_EDGE_VAL = 1000;
-
-    public int[] findRedundantConnection(int[][] edges) {
-        DSU dsu = new DSU(MAX_EDGE_VAL + 1);
-        for (int[] edge: edges) {
-            if (!dsu.union(edge[0], edge[1])) return edge;
-        }
-        throw new AssertionError();
-    }
-}
-
-class DSU {
-    int[] parent;
+class UnionFind {
+    int[] root;
     int[] rank;
-
-    public DSU(int size) {
-        parent = new int[size];
-        for (int i = 0; i < size; i++) 
-            parent[i] = i;
-        rank = new int[size];
+    UnionFind(int n) {
+        this.root = new int[n];
+        this.rank = new int[n];
+        for(int i=0; i<n; i++) {
+            root[i] = i;
+        }   
     }
-
-    public int find(int x) {
-        if (parent[x] != x) 
-            parent[x] = find(parent[x]);
-        return parent[x];
+    int find(int x) {
+        if(x == root[x]) {
+            return x;
+        }
+        return find(root[x]);
     }
-
-    public boolean union(int x, int y) {
-        int xr = find(x);
-        int yr = find(y);
-        if (xr == yr) {
+    boolean union(int x, int y) {
+        int xHead = find(x);
+        int yHead = find(y);
+        if(xHead == yHead){
             return false;
-        } else if (rank[xr] < rank[yr]) {
-            parent[xr] = yr;
-        } else if (rank[xr] > rank[yr]) {
-            parent[yr] = xr;
-        } else {
-            parent[yr] = xr;
-            rank[xr]++;
+        } 
+        else if(rank[xHead] < rank[yHead]) {
+            root[xHead] = yHead;
+        }else {
+            root[yHead] =xHead;
+            rank[xHead]++;
         }
         return true;
+    }
+}
+class Solution {
+    
+    public int[] findRedundantConnection(int[][] edges) {
+          UnionFind uf =new UnionFind(edges.length+1);
+        for(int[] edge: edges){
+            
+            if(!uf.union(edge[0], edge[1])){
+                return edge;
+            }
+        }
+        return new int[]{};
     }
 }
