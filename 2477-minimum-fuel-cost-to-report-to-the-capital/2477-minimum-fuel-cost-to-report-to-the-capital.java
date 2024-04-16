@@ -24,7 +24,7 @@ class Solution {
             }
         }
          if(parent != 0) {
-        result += Math.ceil((double)total/ (double)seats);
+        result += Math.ceil((double)total/ (double)seats); 
          }
         return total;
     }
