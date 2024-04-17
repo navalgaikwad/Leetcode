@@ -5,10 +5,10 @@ class Solution {
     }
     Integer helper(int[] coins, int target, HashMap<Integer, Integer> memo) {
         if( target == 0) {
-            return 0;
+            return 0;//zero 
         }
         if(target < 0) {
-            return null;
+            return null;//less than 0 asel tar null
         }
         if(memo.containsKey(target)) {
             return memo.get(target);
