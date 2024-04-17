@@ -5,7 +5,7 @@ import java.util.Arrays;
 class Solution {
     public int[][] insert(int[][] intervals, int[] newInterval) {
         ArrayList<int[]> mergedList = new ArrayList<>();
-        //1. if it is at first
+        //1. if it is at first return range
         //2. no overlapping
         //3. update the newIntegervals
         for(int i=0; i<intervals.length; i++) {
