@@ -3,36 +3,25 @@
  * public class ListNode {
  *     int val;
  *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ *     ListNode(int x) { val = x; }
  * }
  */
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        int len =0;
-        
-        ListNode dummy = new ListNode(-1);
+        ListNode dummy = new ListNode(0);
         dummy.next = head;
-        ListNode firstNode = head;
-        while(firstNode != null) {
-            firstNode = firstNode.next;
-            len++;
+        ListNode first = dummy;
+        ListNode second = dummy;
+        // Advances first pointer so that the gap between first and second is n nodes apart
+        for (int i = 1; i <= n + 1; i++) {
+            first = first.next;
         }
-        len = len - n; //5-5 =0 
-        firstNode = dummy;
-        while( len > 0) {
-            firstNode = firstNode.next;
-            len--;
-        } 
-        
-        firstNode.next = firstNode.next.next;
+        // Move first to the end, maintaining the gap
+        while (first != null) {
+            first = first.next;
+            second = second.next;
+        }
+        second.next = second.next.next;
         return dummy.next;
-        
     }
 }
-//find length of the linkedList
-//n%len = len
-//go on 3  next = node.next.next;
-// 3 to 5
-// O(n)
