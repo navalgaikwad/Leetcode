@@ -12,11 +12,11 @@ class Solution {
             for(int col : column) {
                 list.add(matrix[i][col]);
             }
-            Collections.reverse(Arrays.asList(column)); 
+           // Collections.reverse(Arrays.asList(column)); 
         }
         return binarySearch(list, target);
     }
-    
+    //same code of 33. Search in Rotated Sorted Array
     boolean binarySearch(List<Integer> nums, int target) {
         int left = 0;
         int right = nums.size() -1;
