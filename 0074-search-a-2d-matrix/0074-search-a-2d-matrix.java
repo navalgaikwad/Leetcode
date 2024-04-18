@@ -9,8 +9,8 @@ class Solution {
         //int[] nums = new int[matrix.length*matrix.length+2];
         int j =0;
         for(int i=0; i<matrix.length; i++) {
-            for(int col : column) {
-                list.add(matrix[i][col]);
+            for( j=0; j<matrix[0].length; j++) {
+                list.add(matrix[i][j]);
             }
            // Collections.reverse(Arrays.asList(column)); 
         }
