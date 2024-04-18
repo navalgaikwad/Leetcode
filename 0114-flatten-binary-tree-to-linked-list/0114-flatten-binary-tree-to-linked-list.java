@@ -14,16 +14,17 @@
  * }
  */
 class Solution {
-    TreeNode prev =null;
+    TreeNode prev = null;
     public void flatten(TreeNode root) {
-        helper(root);
+        dfs(root);
+        //return prev;
     }
-    void helper(TreeNode root) {
+    void dfs(TreeNode root) {
         if(root == null) {
             return;
         }
-        helper(root.right);
-        helper(root.left);
+        dfs(root.right);
+        dfs(root.left);
         root.right = prev;
         root.left = null;
         prev = root;
