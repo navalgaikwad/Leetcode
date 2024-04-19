@@ -1,34 +1,36 @@
 class Solution {
-    //
     public int getMaximumGold(int[][] grid) {
-        int row = grid.length;
-        int col = grid[0].length;
         int max = 0;
-        for(int i=0; i<row; i++) {
-            for(int j=0; j<col; j++) {
+        //Integer[][] memo = new Integer[grid.length][grid.length];
+        for(int i=0; i<grid.length; i++) {
+            for(int j=0; j<grid[0].length; j++) {
                 if(grid[i][j] != 0) {
-                   max = Math.max(max, dfs(grid, i, j));
+                    max = Math.max(max, helper(grid, i, j)); 
                 }
             }
         }
         return max;
     }
     
-    int dfs(int[][] grid, int i, int j) {
-        if(i < 0 || i>=grid.length || j<0 || j>=grid[0].length || grid[i][j] == 0) {
+    int helper(int[][] grid, int i, int j) {
+        if(i < 0 || i >= grid.length || j < 0 || j>=grid[0].length || grid[i][j] == 0) {
             return 0;
         }
-          int current = grid[i][j];
-          grid[i][j] = 0; // Mark the current cell as visited
-       
-       
-        int top = dfs(grid, i+1, j);
-        int right = dfs(grid, i, j+1);
-        int left = dfs(grid, i, j-1);
-        int down = dfs(grid, i-1, j);
+        int value = grid[i][j];
+        grid[i][j] = 0;
+//         if(memo[i][j] != null) {
+//             return memo[i][j];
+//         }
+      
         
-        grid[i][j] = current;
-        int sum = grid[i][j] + Math.max(top, Math.max(right, Math.max(left, down)));
-        return sum;
+        int top = helper(grid, i - 1, j);
+        int right = helper(grid, i, j + 1);
+        int bottom = helper(grid, i + 1, j);
+        int left = helper(grid, i, j - 1);
+        
+        grid[i][j] = value;
+        int max = grid[i][j] + Math.max(top, Math.max(left, Math.max(right, bottom)));
+       // memo[i][j] = max;
+        return max;
     }
 }
