@@ -4,7 +4,7 @@ class Solution {
         List<Integer> rows = new ArrayList<>();
         for(int i=0; i<numRows; i++) {
             rows.add(0, 1);
-            for(int j =1; j<rows.size()-1; j++) {
+            for(int j =1; j<rows.size()-1; j++) {//start from 1
                 rows.set(j, rows.get(j) + rows.get(j+1));
             }
             allrows.add(new ArrayList<>(rows));
