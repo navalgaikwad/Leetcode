@@ -1,40 +1,35 @@
 class Solution {
     public int orangesRotting(int[][] grid) {
-         if(grid == null || grid.length == 0) return 0;
-        int m = grid.length;
-        int n = grid[0].length;
         Queue<int[]> q = new LinkedList<>();
-        int countFresh = 0;
-        for(int i=0; i <m; i++) {
-            for(int j=0; j<n; j++) {
+        int fresh = 0;
+        for(int i=0; i<grid.length; i++) {
+            for(int j=0; j<grid[0].length; j++) {
                 if(grid[i][j] == 2) {
-                    q.add(new int[]{i, j});
+                    q.add(new int[]{i, j, 0});
                 }else if(grid[i][j] == 1) {
-                    countFresh++;
+                    fresh++;
                 }
             }
         }
-        if(countFresh == 0) return 0;
-        int count =0;
-        int[][] dir = {{0,1}, {1,0}, {-1,0}, {0,-1}};
+        
+        int max = 0;
+        int[][] dirs = {{0,1}, {1,0}, {-1,0}, {0,-1}};
         while(!q.isEmpty()) {
-            ++count;
-            int size = q.size();
-            
-            for(int i=0; i<size; i++) {
-                int[] current = q.remove();
-                for(int[] d: dir) {
-                    int x = current[0] + d[0];
-                    int y = current[1] + d[1];
-                    
-                    if(x >=0 && x<grid.length && y>=0 && y<grid[0].length &&grid[x][y] != 0 && grid[x][y]!=2) {
-                        grid[x][y] = 2;
-                        q.add(new int[]{x, y});
-                        countFresh--;
-                    }
+            int[] current = q.remove();
+            int i = current[0];
+            int j = current[1];
+            int count = current[2];
+            max = Math.max(max, count);
+            for(int[] dir : dirs) {
+                int x = i + dir[0];
+                int y = j + dir[1];
+                if(x >= 0 && x< grid.length && y >= 0 && y < grid[0].length && grid[x][y]!=2 && grid[x][y] != 0) {
+                    grid[x][y] = 2;
+                    q.add(new int[]{x, y, count+1});
+                    fresh--;
                 }
             }
         }
-        return countFresh == 0 ? count-1 : -1;
+        return fresh == 0? max: -1;
     }
 }
