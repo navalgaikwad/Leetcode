@@ -1,22 +1,36 @@
 class Solution {
-      public boolean canPartition(int[] nums) {
-          int sum = Arrays.stream(nums).sum();
-          if(sum%2 != 0) {
-              return false;
-          }
-          sum /= 2;
-          boolean[] dp = new boolean[sum + 1];
-          dp[0] = true;
-          for(int i=0; i<nums.length; i++) {
-              for(int j = sum; j>=nums[i]; j--) {
-                  boolean notTake = dp[j - nums[i]];
-                  boolean take = dp[j];
-                  
-                  dp[j] =  take || notTake; 
-              }
-          }
-          return dp[sum];
+    public boolean canPartition(int[] nums) {
+
+        int sum = 0;
+        for(int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+        }
+
+        if(sum %2 != 0) return false; //odd sum will not yield two partition
+
+        //target sum in each partition
+        int target = sum/2;
+
+        //initialize with zero
+        Set<Integer> set = new HashSet<>();
+        set.add(0);
+
+        for(int n : nums) {
+            Set<Integer> sumsToCurrentNum = new HashSet<>();
+
+            for(int s : set) {
+
+                if(s + n == target) return true;
+                if(s + n < target) sumsToCurrentNum.add(s+n);
+            }
+
+            //collect the current sums to parent set
+            set.addAll(sumsToCurrentNum);
+        }
+
+        return false;
     }
+}
     //find total sum
     // if not even return false
     //define dp of sum+1 of boolean type
@@ -37,4 +51,3 @@ class Solution {
     //     }
     //     return table[target];
     // }
-}
