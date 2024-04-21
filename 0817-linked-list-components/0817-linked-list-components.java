@@ -27,7 +27,7 @@ class Solution {
             if(found) {
                 count++;
             }
-            head = curr == null ? curr : curr.next;
+            head = curr == null ? null : curr.next;
         }
         
         return count;
