@@ -1,17 +1,20 @@
 class Solution {
     public int maxDepth(String s) {
-        int currDept = 0;
-        int maxDept =0;
-        for(char c: s.toCharArray()) {
-            if(c == '(') {
-                currDept++;
-                maxDept = Math.max(maxDept, currDept);
-            }else {
-                if(c == ')') {
-                   currDept--; 
-                }
+        Map<Integer, Integer> map = new TreeMap<>();
+        for(int i=0; i < s.length(); i++) {
+            if(s.charAt(i) == '(') {
+                map.put(i, 1);
+            }else if(s.charAt(i) == ')'){
+                map.put(i, -1);
             }
         }
-        return maxDept;
+        int sum = 0;
+        int max = 0;
+        System.out.print(map);
+        for(Integer values : map.values()) {
+            sum+=values;
+            max= Math.max(max, sum);
+        }
+        return max;
     }
 }
