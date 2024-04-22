@@ -1,15 +1,17 @@
 class Solution {
     public int longestPalindrome(String s) {
-        int[] counts = new int[200];
-        for(char c :s.toCharArray()) {
-            counts[c]++;
+        int oddNo = -1;
+        int[] counts = new int[128];
+        for(int i=0; i<s.length(); i++) {
+            counts[s.charAt(i)]++;
         }
-        int oddCount = -1;
         for(int count: counts) {
             if(count%2!=0) {
-                oddCount++;
+                oddNo++;
             }
         }
-        return oddCount > 0 ? s.length() - oddCount : s.length();
+        return oddNo> 0? s.length() - oddNo : s.length();
     }
 }
+//abccccdd
+//odd - len = 
