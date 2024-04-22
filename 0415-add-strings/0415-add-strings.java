@@ -11,7 +11,7 @@
             int digit2 = (j >= 0) ? num2.charAt(j) - '0' : 0;
             int sum = digit1 + digit2 + pos[k];
             pos[k] = sum % 10;
-            pos[k - 1] += sum / 10;
+            pos[k - 1] += sum / 10;//carry
             i--;
             j--;
             k--;
