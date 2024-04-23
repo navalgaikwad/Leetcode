@@ -1,21 +1,48 @@
 class Solution {
     public int lengthOfLongestSubstring(String s) {
         Map<Character, Integer> map = new HashMap<>();
-        int left =0;
-        int length = 0;
-        for(int right =0; right < s.length(); right++) {
-            char rightChar = s.charAt(right);
-            map.put(rightChar, map.getOrDefault(rightChar, 0) + 1);
-            while(map.get(rightChar) > 1) {
-                char leftChar = s.charAt(left);
-                map.put(leftChar, map.getOrDefault(leftChar, 0) - 1);
-                if(map.get(leftChar) == 0) {
-                    map.remove(leftChar);
+        
+        int leftIndex = 0;
+        int lengthOfWindow = 0;
+        
+        for(int rightIndex = 0; rightIndex <s.length(); rightIndex++) {
+            
+            char rightSideChar = s.charAt(rightIndex);//b
+            map.put(rightSideChar, map.getOrDefault(rightSideChar, 0) + 1);//b -2
+            
+            while(map.get(rightSideChar) > 1) {
+                char leftSideChar = s.charAt(leftIndex);//b 
+                
+                map.put(leftSideChar, map.getOrDefault(leftSideChar, 0) - 1);//b-1
+                
+                if(map.get(leftSideChar) == 0) {
+                    map.remove(leftSideChar);
                 }
-                left++;
+                leftIndex++;
             }
-            length = Math.max(length, right - left + 1);
+            lengthOfWindow  =Math.max(lengthOfWindow, rightIndex - leftIndex + 1);//1
         }
-        return length;
+        
+        return lengthOfWindow;
     }
 }
+
+/*
+"abcc abcbb"
+        l r
+
+"bbbbb"
+
+
+"pwwkew"
+
+a - 1 1
+b - 1 2
+c - 1 3
+l c
+a - 0
+b -1
+c - 1
+
+
+*/
