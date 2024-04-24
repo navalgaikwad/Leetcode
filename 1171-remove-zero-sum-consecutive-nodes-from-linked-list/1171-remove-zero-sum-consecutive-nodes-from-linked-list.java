@@ -10,20 +10,22 @@
  */
 class Solution {
     public ListNode removeZeroSumSublists(ListNode head) {
-        ListNode front = new ListNode(0, head);
-        ListNode start = front; //0
+        ListNode current = new ListNode(0, head);
+        ListNode start = current;
+        
         while(start != null) {
-            ListNode end = start.next;//1
-            int prefix = 0;
-            while(end != null){
-                prefix+=end.val;
-                if(prefix == 0) {
+            ListNode end = start.next;
+            int sum =0;
+             while(end != null){
+                
+                sum+=end.val;
+                if(sum == 0) {
                     start.next = end.next;
                 }
                 end = end.next;
             }
             start = start.next;
         }
-        return front.next;
+        return current.next;
     }
 }
