@@ -10,24 +10,25 @@
  */
 class Solution {
      public ListNode removeNthFromEnd(ListNode head, int n) {
-         //[1,2,3,4,5] n=5
-         //         c
-        ListNode current = head;//5
-         for(int i=0; i < n; i++) {
-             current = current.next;
-         }
-         ListNode slow = head;//1
-         ListNode fast = current;//5
-         ListNode previous = null;//1
-         while(fast != null) {
-             previous = slow;
-             slow = slow.next;
-             fast = fast.next;
-         }
-         if(previous == null) {
-             return head.next;
-         }
-         previous.next = slow.next;
-         return head;
+    
+    ListNode start = new ListNode(0);
+    start.next = head;
+         
+    ListNode slow = start, fast = start;
+    
+    
+    //Move fast in front so that the gap between slow and fast becomes n
+    for(int i=0; i<=n; i++)   {
+        fast = fast.next;
     }
+        // System.out.print(fast.val);
+    //Move fast to the end, maintaining the gap
+    while(fast != null) {
+        slow = slow.next;
+        fast = fast.next;
+    }
+    //Skip the desired node
+    slow.next = slow.next.next;
+    return start.next;
+}
 }
