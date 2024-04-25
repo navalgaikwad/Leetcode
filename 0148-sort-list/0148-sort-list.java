@@ -10,26 +10,24 @@
  */
 class Solution {
     public ListNode sortList(ListNode head) {
-        return sort(head);
-        
-    }
-    
-    ListNode sort(ListNode head) {
-        if(head == null || head.next == null) {
+        if(head == null || head.next == null) {//vimp
             return head;
         }
-        ListNode middle = middle(head);
-        ListNode nextNodeOfMiddle = middle.next;
-        middle.next = null;
-        ListNode left = sort(head);
-        ListNode right = sort(nextNodeOfMiddle);
+        ListNode dummy = head;
         
-        return mergerList(left, right);
+        ListNode temp = middle(dummy);
+        ListNode next = temp.next;
+        temp.next = null;
+        
+        ListNode left= sortList(head);
+        ListNode right= sortList(next);
+        
+        return merge(left, right);
     }
     
-    ListNode middle(ListNode head) {
-        ListNode slow = head;
-        ListNode fast = head;
+    ListNode middle(ListNode node) {
+        ListNode slow = node;
+        ListNode fast = node;
         ListNode prev = null;
         while(fast!=null && fast.next!=null) {
             prev = slow;
@@ -39,20 +37,20 @@ class Solution {
         return prev;
     }
     
-    ListNode mergerList(ListNode low, ListNode high) {
-        ListNode root = new ListNode(-1);
-        ListNode tmp = root;
-        while(low != null && high != null) {
-            if(low.val < high.val) {
-                tmp.next = low;
-                low = low.next;
+    ListNode merge(ListNode left, ListNode right) {
+        ListNode dummy = new ListNode(0);
+        ListNode temp = dummy;
+        while(left != null && right != null) {
+            if(left.val < right.val) {
+                temp.next = left;
+                left = left.next;
             }else {
-                tmp.next = high;
-                high = high.next;
+                temp.next = right;
+                right = right.next;
             }
-            tmp= tmp.next;
+            temp = temp.next;
         }
-        tmp.next = (low == null) ? high : low;
-        return root.next;
+        temp.next = left == null ? right :left; 
+        return dummy.next;
     }
 }
