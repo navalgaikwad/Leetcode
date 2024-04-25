@@ -4,7 +4,7 @@ class Solution {
         for(char c: word.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
-        if(map.size() == 1 || word.length() == map.size()) {
+        if(map.size() == 1 || word.length() == map.size()) {//Zz
             return true;
         }
         Map<Integer, Integer> freMap = new HashMap<>();
@@ -13,7 +13,7 @@ class Solution {
             freMap.put(w, freMap.getOrDefault(w, 0) + 1);
         }
         
-        if (freMap.size() != 2) {
+        if (freMap.size() != 2) {//only 2  asyla hava, te nasel tar error yeto
             return false;
         }
         int maxCount = Collections.max(freMap.keySet());
