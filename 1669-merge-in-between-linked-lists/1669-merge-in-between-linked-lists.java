@@ -14,10 +14,13 @@ class Solution {
         for(int i=1; i<a; i++) {
             left = left.next;
         }
+        System.out.print(left.val);
         ListNode middle = left;
         for(int i=a; i<=b; i++) {
             middle = middle.next;
+            //System.out.print(i);
         }
+       // System.out.print(middle.val);
         left.next = list2;
         while(list2.next != null) {
             list2 = list2.next;
