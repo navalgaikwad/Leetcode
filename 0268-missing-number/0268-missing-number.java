@@ -1,18 +1,16 @@
 class Solution {
     public int missingNumber(int[] nums) {
-        int sum =0;
-        for(int num: nums){
-            sum=sum + num;
+        Set<Integer> set = new HashSet<>();
+        for(int i=0; i<nums.length; i++) {
+            if(nums[i] >=0 && nums[i] < nums.length) {
+                set.add(nums[i]);
+            }
         }
-        int n = nums.length;
-        n = n*(n+1)/2;
-        
-        return  n - sum ;
-    } 
+        for(int i=0; i<nums.length; i++) {
+            if( !set.contains(i) ) {
+                return i;
+            }
+        }
+        return nums.length;
+    }
 }
-//1^1 =0 
-//2^2 =0
-//missing no : m^i^num
-//3^0^3^1^0^2^1
-//0^2
-//2
