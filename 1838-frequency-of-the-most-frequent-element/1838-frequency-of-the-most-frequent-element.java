@@ -9,7 +9,7 @@ class Solution {
             int target = nums[right];
             curr += target;
             
-            while ((right - left + 1) * (long)target - curr > k) {
+            while (((right - left + 1) * (long)target)  > k + curr) {
                 curr -= nums[left];
                 left++;
             }
