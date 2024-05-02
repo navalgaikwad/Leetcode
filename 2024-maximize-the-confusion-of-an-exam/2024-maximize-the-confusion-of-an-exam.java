@@ -1,20 +1,15 @@
 class Solution {
-    public int maxConsecutiveAnswers(String answerKey, int k) {
-       int ans = 0;
-        int max_count = 0;
-        int[] count = new int[2];
-        for(int l = 0,r=0;r<answerKey.length();r++)
-        {
-            max_count = Math.max(max_count,++count[answerKey.charAt(r) == 'T' ? 1: 0]);
-            while(r-l+1 - max_count > k)
-            {
-                --count[answerKey.charAt(l++) == 'T'? 1 : 0];
-            }
-            ans = Math.max(ans,r-l+1);
+    private int count(String s, int k, char c) {
+        int N = s.length(), cnt = 0, i = 0, j = 0;
+        for (; j < N; ++j) {
+            cnt += s.charAt(j) == c ? 1 : 0;
+            if (cnt > k) cnt -= s.charAt(i++) == c ? 1 : 0;
         }
-        return ans;
-   // end-s+1-maxFreq>k
+        return j - i;
+    }
+
+    public int maxConsecutiveAnswers(String s, int k) {
+        return Math.max(count(s, k, 'T'), count(s, k, 'F'));
     }
 }
-
-    
+//find for both T and F
