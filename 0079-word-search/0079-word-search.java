@@ -1,34 +1,32 @@
 class Solution {
     public boolean exist(char[][] board, String word) {
-        int m = board.length;
-        int n = board[0].length;
-        for(int i=0; i<m; i++) {
-            for(int j=0; j<n; j++) {
+        for(int i=0; i<board.length; i++) {
+            for(int j =0; j<board[0].length; j++) {
                 if(board[i][j] == word.charAt(0)) {
-                    if(helper(board, word, 0, i, j)) {
-                        return true;
-                    }
+                    if(dfs(board, word, i, j, 0)) return true;
                 }
             }
         }
         return false;
     }
     
-    boolean helper(char[][] board, String word, int index, int i, int j) {
-        if(word.length() == index) {
+    boolean dfs(char[][] board, String word, int row, int col, int wordIndex) {
+         if(wordIndex == word.length()) {
             return true;
         }
-        if(i <0 || i>= board.length || j<0 || j>=board[0].length || board[i][j]!=word.charAt(index) || board[i][j]=='$') {
+        
+        if( row >= board.length   || row < 0 || col >= board[0].length || col< 0 || board[row][col] != word.charAt(wordIndex) ||
+          board[row][col] == '$') {
             return false;
         }
-        char c = board[i][j];
-        board[i][j] = '$';
-        boolean up = helper(board, word, index+1, i+1, j);
-        boolean left = helper(board, word, index+1, i-1, j);
-        boolean right = helper(board, word, index+1, i, j+1);
-        boolean down = helper(board, word, index+1, i, j-1);
-        board[i][j] = c;
-        
-        return up||left||right||down;
+       
+        char temp = board[row][col];
+        board[row][col] = '$';
+        boolean left = dfs(board, word, row + 1, col, wordIndex + 1);
+        boolean rigth = dfs(board, word, row, col + 1, wordIndex + 1);
+        boolean up = dfs(board, word, row - 1, col, wordIndex + 1);
+        boolean down = dfs(board, word, row, col - 1, wordIndex + 1);
+        board[row][col] = temp;
+        return left || rigth || up || down;
     }
 }
