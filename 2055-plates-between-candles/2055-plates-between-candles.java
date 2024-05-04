@@ -1,46 +1,46 @@
 class Solution {
     public int[] platesBetweenCandles(String s, int[][] queries) {
-        int len = s.length();
-        int[] plates = new int[len];
-        int[] leftSideCandles = new int[len];
-        int[] rightSideCandles = new int[len];
+        int length = s.length();
+        int[] plate = new int[length];
+        int[] leftSide = new int[length];
+        int[] rightSide = new int[length];
+        
         int count = 0;
-        for(int i=0; i<len; i++) {
+        //count plates
+        for(int i=0; i<length; i++) {
             if(s.charAt(i) == '*') {
-                 count++;
+                count++;
             }
-            plates[i] = count;
+            plate[i] = count;
         }
-        
+        //now catch the index
         count = -1;
-        for(int i=0; i<len; i++) {
+        for(int i=0; i<length; i++) {
             if(s.charAt(i) == '|') {
-                 count = i;
+                count = i;
             }
-            rightSideCandles[i] = count;
+            rightSide[i] = count;
         }
-        
         count = -1;
-        for(int i=len - 1; i>=0; i--) {
+        for(int i = length-1; i >= 0; i--) {
             if(s.charAt(i) == '|') {
-                 count = i;
+                count = i;
             }
-            leftSideCandles[i] = count;
+            leftSide[i] = count;
         }
         
         int[] result = new int[queries.length];
-        int k =0;
-        for(int[] query : queries) {
-            int left = leftSideCandles[query[0]];
-            int right = rightSideCandles[query[1]];
+        int i =0;
+        for(int[] querie:queries) {
+            int left = leftSide[querie[0]];
+            int right = rightSide[querie[1]];
             
-             if(left != -1 && right != -1 && left < right) {
-               result[k++] = Math.abs(plates[right] - plates[left]);
+            if(left !=-1 && right !=-1 && left < right) {
+                result[i++] = Math.abs(plate[right] - plate[left]);
             }else {
-               result[k++] = 0;
+                result[i++] = 0;
             }
         }
-        
         return result;
     }
 }
