@@ -1,31 +1,17 @@
-import java.util.*;
-
 class Solution {
     public int[][] kClosest(int[][] points, int k) {
-        // Initialize a priority queue with a custom comparator
-        //sort b-a highest first
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) ->
-            (b[0] * b[0] + b[1] * b[1]) - (a[0] * a[0] + a[1] * a[1]));
-
-        // Add points to the priority queue
-        //pq highest first
-        for (int[] point : points) {
-            pq.offer(point);
-            // Remove the farthest point if the size of the priority queue exceeds k
-            if (pq.size() > k) {
-                pq.poll();
+        (b[0] * b[0] + b[1] *b[1]) - (a[0] * a[0] + a[1] *a[1]) );
+        for(int[] point : points) {
+            pq.add(point);
+            if(pq.size() > k) {
+                pq.remove();
             }
         }
-
-        //add in the queue
-        // Create an array to store the k closest points
-        int[][] result = new int[k][2];
-        int i = 0;
-        // Extract points from the priority queue
-        while (!pq.isEmpty()) {
-            result[i++] = pq.poll();
+        int[][] ans = new int[k][2];
+        for(int i =0; i<k; i++) {
+            ans[i] = pq.remove();
         }
-
-        return result;
+        return  ans;
     }
 }
