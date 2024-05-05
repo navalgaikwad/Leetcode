@@ -6,19 +6,19 @@ class MedianFinder {
     }
     
     public void addNum(int num) {
-        if(max.isEmpty() || (double)num <= max.peek()) {
-            max.add((double)num);
+        if(max.isEmpty() || num <= max.peek()) {
+            max.add((double)num);//1,3
         }else {
-            min.add((double)num);
+            min.add((double)num);//2
         }
-        if(max.size() > min.size()+1) {
+         if(max.size() > min.size()+1) {
             min.add(max.remove());
-        }else if(max.size() < min.size()) {
+        }else if(max.size() < min.size()){
             max.add(min.remove());
         }
     }
     
-    public double findMedian() {
+     public double findMedian() {
         int s1 = max.size();
         int s2 = min.size();
         if(s1 == s2) {
@@ -36,4 +36,15 @@ class MedianFinder {
  * MedianFinder obj = new MedianFinder();
  * obj.addNum(num);
  * double param_2 = obj.findMedian();
+ 
+ if(max.isEmpty() || (double)num <= max.peek()) {
+            max.add((double)num);
+        }else {
+            min.add((double)num);
+        }
+        if(max.size() > min.size()+1) {
+            min.add(max.remove());
+        }else if(max.size() < min.size()) {
+            max.add(min.remove());
+        }
  */
