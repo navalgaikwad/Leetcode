@@ -8,7 +8,7 @@ class Solution {
                 pq.remove();
             }
         }
-        int[][] ans = new int[k][2];
+        int[][] ans = new int[k][];
         for(int i =0; i<k; i++) {
             ans[i] = pq.remove();
         }
