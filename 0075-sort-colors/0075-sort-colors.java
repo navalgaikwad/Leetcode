@@ -1,16 +1,20 @@
 class Solution {
-    public void sortColors(int[] nums) {
-        int[] count = new int[3];
-        for(int i=0; i < nums.length; i++) {
-            count[nums[i]]++;
+   public void sortColors(int[] nums) {
+    // 1-pass
+    int p1 = 0, p2 = nums.length - 1, index = 0;
+    while (index <= p2) {
+        if (nums[index] == 0) {
+            nums[index] = nums[p1];
+            nums[p1] = 0;
+            p1++;
         }
-        int j =0;
-        for(int i =0; i < count.length; i++) {
-            int value = count[i];
-            while(value > 0) {
-                nums[j++] = i;
-                value--;
-            }
+        if (nums[index] == 2) {
+            nums[index] = nums[p2];
+            nums[p2] = 2;
+            p2--;
+            index--;
         }
+        index++;
     }
+}
 }
