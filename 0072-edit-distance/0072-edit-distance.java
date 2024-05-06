@@ -1,10 +1,11 @@
 class Solution {
     public int minDistance(String word1, String word2) {
-        return helper(word1.length()-1, word2.length()-1, word1, word2, new HashMap<>());
+        return findDistance(word1, word2, word1.length()-1, word2.length()-1, new HashMap<>());
     }
-    int helper(int i, int j, String word1, String word2, HashMap<String, Integer> memo) {
+    
+    int findDistance(String word1, String word2, int i, int j, Map<String, Integer> memo) {
         String key = i+"-"+j;
-        if(i < 0) {
+        if( i < 0) {
             return j + 1;
         }
         if(j < 0) {
@@ -15,12 +16,12 @@ class Solution {
         }
         int total = 0;
         if(word1.charAt(i) == word2.charAt(j)) {
-            total = helper(i-1, j-1, word1, word2, memo);
+            total = findDistance(word1, word2, i - 1, j - 1, memo);
         }else {
-            int insert = helper(i-1, j, word1, word2, memo);
-            int delete = helper(i, j-1, word1, word2, memo);
-            int replace = helper(i-1, j-1, word1, word2, memo);
-            total =1+ Math.min(insert, Math.min(delete, replace));
+            int insert = findDistance(word1, word2, i - 1, j, memo);
+            int delete = findDistance(word1, word2, i, j - 1, memo);
+            int replace = findDistance(word1, word2, i - 1, j - 1, memo);
+            total = 1+ Math.min(insert, Math.min(delete, replace));
         }
         memo.put(key, total);
         return total;
