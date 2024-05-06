@@ -17,13 +17,13 @@ public class Solution {
         while( i < j ) {
             if(!set.contains(charArray[i])) {
                 i++;
-                continue;
+                //continue;
             }
-             if(!set.contains(charArray[j])) {
+             else if(!set.contains(charArray[j])) {
                 j--;
-                continue;
+               // continue;
             }
-            {
+            else {
             
             char temp = charArray[i];
             charArray[i] = charArray[j];
