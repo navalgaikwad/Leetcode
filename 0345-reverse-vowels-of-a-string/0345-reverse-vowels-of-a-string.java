@@ -1,6 +1,5 @@
 public class Solution {
     public String reverseVowels(String s) {
-        char[] list=s.toCharArray();
         Set<Character> set=new HashSet<>();
         set.add('a');
         set.add('e');
@@ -12,21 +11,27 @@ public class Solution {
         set.add('I');
         set.add('O');
         set.add('U');
-        for (int i=0, j=list.length-1; i<j; ) {
-            if (!set.contains(list[i])) {
+        char[] charArray = s.toCharArray();
+        int i=0;
+        int j = s.length() - 1;
+        while( i < j ) {
+            if(!set.contains(charArray[i])) {
                 i++;
                 continue;
             }
-            if (!set.contains(list[j])) {
+             if(!set.contains(charArray[j])) {
                 j--;
                 continue;
             }
-            char temp=list[i];
-            list[i]=list[j];
-            list[j]=temp;
-            i++;
-            j--;
+            {
+            
+            char temp = charArray[i];
+            charArray[i] = charArray[j];
+            charArray[j] = temp;
+            i++;  // Move i forward
+            j--;  // Move j backward
+            }
         }
-        return String.valueOf(list);
+        return String.valueOf(charArray);
     }
 }
