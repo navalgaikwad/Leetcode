@@ -6,12 +6,12 @@ class Solution {
             if(c == '(') {
                 low++;
                 high++;
-            } else if(c == ')') {
+            }else if(c == ')') {
                 if(low > 0) {
                     low--;
                 }
                 high--;
-            } else { // '*'
+            }else {
                 if(low > 0) {
                     low--;
                 }
