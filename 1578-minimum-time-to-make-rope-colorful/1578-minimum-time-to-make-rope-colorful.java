@@ -4,7 +4,7 @@ class Solution {
         int left =0;
         for(int right=1; right< colors.length(); right++) {
             if(colors.charAt(left) == colors.charAt(right)) {
-                if(neededTime[left] <= neededTime[right]) {
+                if(neededTime[left] < neededTime[right]) {
                     needTime+=neededTime[left];
                     left = right;
                 }else {
