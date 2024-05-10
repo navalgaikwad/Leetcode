@@ -1,34 +1,36 @@
 class Solution {
     public String decodeString(String s) {
         Stack<String> st = new Stack<>();
-        Stack<Integer> number = new Stack<>();
-        String buildString = "";
-        StringBuilder result = new StringBuilder();
-        for(int i =0; i<s.length(); i++) {
-            char value = s.charAt(i);
+        Stack<Integer> numberStack = new Stack<>();
+        
+        String ans = "";
+        for(int i=0; i<s.length(); i++) {
+            char c = s.charAt(i);
+            int number = 0;
             if(Character.isDigit(s.charAt(i))) {
-                int count = 0;
                 while(Character.isDigit(s.charAt(i))) {
-                    count = count * 10 + Character.getNumericValue(s.charAt(i));
+                    number =number *10 + Character.getNumericValue(s.charAt(i));
                     i++;
-                }
-              number.push(count);
-              i--;
-             //i++;
-            }else if(value == '[') {
-                st.push(buildString);
-                buildString="";
-            }else if(value == ']') {
+                 }
+                i--;
+                numberStack.push(number);
+            }else if(c == '[') {
+                st.push(ans);
+                ans = "";
+            }else if(c == ']') {
                 StringBuilder sb = new StringBuilder(st.pop());
-                int no = number.pop();
-                while(no-- > 0) {
-                    sb.append(buildString);
+                int value = numberStack.pop();
+                while(value > 0) {
+                    sb.append(ans);
+                    value--;
                 }
-                buildString = sb.toString();
-            }else {
-                buildString+=s.charAt(i);
+                ans = sb.toString();
+            } else {
+                ans+=s.charAt(i);
             }
+           
+            
         }
-        return buildString;
+        return ans;
     }
 }
