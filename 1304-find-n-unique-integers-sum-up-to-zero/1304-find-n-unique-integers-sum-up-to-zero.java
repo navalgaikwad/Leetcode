@@ -1,18 +1,10 @@
-
 class Solution {
     public int[] sumZero(int n) {
-        int[] result = new int[n];
-        for (int i = 0; i < n - 1; i += 2) {
-            result[i] = i + 1;
-            result[i + 1] = -(i + 1);
+        int[] array = new int[n];
+        for(int i=0; i<n - 1; i+=2) {
+            array[i] = (i + 1);
+            array[i+1] = -(i + 1);
         }
-        return result;
+        return array;
     }
-    
 }
-
-/*
-i = i+1
-i+1 = -(i+1)
-
-*/
