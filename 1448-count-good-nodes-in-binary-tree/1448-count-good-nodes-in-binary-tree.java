@@ -14,21 +14,19 @@
  * }
  */
 class Solution {
-    //int min = Integer.MIN_VALUE;
     int count =0;
     public int goodNodes(TreeNode root) {
         helper(root, Integer.MIN_VALUE);
         return count;
     }
-     void helper(TreeNode root, int prev) {
-         if(root == null) {
-             return;
-         }
-         if(root.val >= prev) {
-             count++;
-             prev = root.val;
-         }
-         helper(root.left, prev);
-         helper(root.right, prev);
-     }
+    
+    void helper(TreeNode root, int prev) {
+        if(root == null) return;
+        if(root.val >= prev) {
+            prev = root.val;
+            count++;
+        }
+        helper(root.left, prev);
+        helper(root.right, prev);
+    }
 }
