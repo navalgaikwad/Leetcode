@@ -1,20 +1,20 @@
 class Solution {
     public int minCost(String colors, int[] neededTime) {
-        int left = 0;
-        int result = 0;
-        for(int right = 1; right < colors.length(); right++) {
-            char c = colors.charAt(right);
-            if(c ==  colors.charAt(left)) {
-                if(neededTime[left] < neededTime[right]) {
-                    result+=neededTime[left];
+        int needTime =0;
+        int left =0;
+        for(int right=1; right< colors.length(); right++) {
+            if(colors.charAt(left) == colors.charAt(right)) {
+                if(neededTime[left] <= neededTime[right]) {
+                    needTime+=neededTime[left];
                     left = right;
                 }else {
-                    result+=neededTime[right];
+                    needTime+=neededTime[right];
                 }
-            }else {
+            }
+            else {
                 left = right;
             }
         }
-        return result;
+        return needTime;
     }
 }
