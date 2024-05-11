@@ -21,19 +21,18 @@ class Solution {
         first.val = second.val;
         second.val = temp;
     }
-    
-    void dfs(TreeNode root) {
-        if(root == null) {
-            return;
-        }
-        dfs(root.left);
-        if(prev!=null && root.val < prev.val) {
-            if(first == null) {
-                first = prev;
-            }
-            second = root;
-        }
-        prev = root;
-        dfs(root.right);
-    }
+     void dfs(TreeNode root) {
+         if(root == null) return;
+         
+         dfs(root.left);
+         if(prev != null && root.val < prev.val) {
+             if(first == null) {
+                 first = prev;
+             }
+             second = root;
+         }
+         
+         prev = root;
+         dfs(root.right);
+     }
 }
