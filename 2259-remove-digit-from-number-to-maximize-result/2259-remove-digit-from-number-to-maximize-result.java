@@ -5,8 +5,7 @@ class Solution {
             if(number.charAt(i) > number.charAt(i-1)) {
                 return number.substring(0 , i -1) + number.substring(i);
             }
-          }
-            
+          }  
         }
         int index = number.lastIndexOf(digit);
         return number.substring(0, index) + number.substring(index + 1);
