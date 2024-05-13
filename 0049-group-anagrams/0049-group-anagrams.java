@@ -1,5 +1,6 @@
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
+        //O(m*n)
         Map<String, ArrayList<String>> map = new HashMap<>();
         for(String str : strs) {
             char[] charArray = new char[26];
