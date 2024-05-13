@@ -10,8 +10,8 @@ class ParkingSystem {
     public boolean addCar(int carType) {
 
         // If space is available, allocate and return True
-        if (this.empty[carType - 1] > 0) {
-            this.empty[carType - 1]--;
+        if (this.empty[carType-1] > 0) {
+            this.empty[carType-1]--;
             return true;
         }
 
