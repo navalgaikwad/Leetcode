@@ -1,23 +1,21 @@
 class ParkingSystem {
-    Map<Integer, Integer> map = new HashMap<>();
+
+    // Number of empty slots for each type of car
+    int[] empty;
+
     public ParkingSystem(int big, int medium, int small) {
-        map.put(1, big);
-        map.put(2, medium);
-        map.put(3, small);
+        this.empty = new int[]{big, medium, small};
     }
-    
+
     public boolean addCar(int carType) {
-        if(map.get(carType)==0){
-            return false;
+
+        // If space is available, allocate and return True
+        if (this.empty[carType - 1] > 0) {
+            this.empty[carType - 1]--;
+            return true;
         }
-        map.put(carType, map.getOrDefault(carType, 0) - 1);
-        
-        return true;
+
+        // Else, return False
+        return false;
     }
 }
-
-/**
- * Your ParkingSystem object will be instantiated and called as such:
- * ParkingSystem obj = new ParkingSystem(big, medium, small);
- * boolean param_1 = obj.addCar(carType);
- */
