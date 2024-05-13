@@ -1,44 +1,42 @@
 class Solution {
     public int[] platesBetweenCandles(String s, int[][] queries) {
-        int length = s.length();
-        int[] plate = new int[length];
-        int[] leftSide = new int[length];
-        int[] rightSide = new int[length];
+        int len = s.length();
+        int[] leftSideCandles = new int[len];
+        int[] rightSideCandles = new int[len];
+        int[] plates = new int[len];
         
-        int count = 0;
-        //count plates
-        for(int i=0; i<length; i++) {
-            if(s.charAt(i) == '*') {
+        int count =0;
+        int index =0;
+        for(char c : s.toCharArray()) {
+            if(c == '*') {
                 count++;
             }
-            plate[i] = count;
+            plates[index++] = count;
         }
-        //now catch the index
-        count = -1;
-        for(int i=0; i<length; i++) {
+        count =-1;
+        for(int i=len-1; i>=0; i--) {
             if(s.charAt(i) == '|') {
                 count = i;
             }
-            rightSide[i] = count;
+            leftSideCandles[i] = count;//start from end
         }
-        count = -1;
-        for(int i = length-1; i >= 0; i--) {
+        count =-1;
+        for(int i=0; i <len; i++) {
             if(s.charAt(i) == '|') {
                 count = i;
             }
-            leftSide[i] = count;
+            rightSideCandles[i] = count;//start from right
         }
-        
         int[] result = new int[queries.length];
-        int i =0;
-        for(int[] querie:queries) {
-            int left = leftSide[querie[0]];
-            int right = rightSide[querie[1]];
+        index =0;
+        for(int[] querie : queries) {
             
-            if(left !=-1 && right !=-1 && left < right) {
-                result[i++] = Math.abs(plate[right] - plate[left]);
+            int left = leftSideCandles[querie[0]];
+            int right = rightSideCandles[querie[1]];
+            if(left != -1 && right != -1 && left < right) {
+                result[index++] =  Math.abs(plates[right] - plates[left]);
             }else {
-                result[i++] = 0;
+                result[index++] = 0;
             }
         }
         return result;
