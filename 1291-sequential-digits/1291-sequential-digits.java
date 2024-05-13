@@ -14,3 +14,4 @@ class Solution {
         return res;
     }
 }
+// O(log(high)).
