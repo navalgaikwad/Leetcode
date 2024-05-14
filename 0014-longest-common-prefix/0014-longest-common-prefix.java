@@ -19,7 +19,6 @@ class Solution {
                 }
             }
             sb.append(smallest.charAt(i));
-        
         }
        return sb.isEmpty()? "" : sb.toString();
         //return "";
