@@ -9,7 +9,7 @@ class Solution {
             
             map.put(rightSideChar, map.getOrDefault(rightSideChar, 0) + 1);
             frequency = Math.max(frequency, map.get(rightSideChar));
-            int replacement = (right - leftSide + 1) - frequency;
+            int replacement = (right - leftSide + 1) -  frequency;
             
             if(replacement > k) {
                 char leftSideChar = s.charAt(leftSide);
