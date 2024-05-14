@@ -24,3 +24,9 @@ class Solution {
         return low == 0;
     }
 }
+
+/*
+In this code, low and high are used to keep track of the minimum and maximum possible number of open parentheses that 
+could be formed by the string processed so far. 
+ By incrementing high, we are essentially saying that the '*' could be part of a valid open parenthesis sequence or an empty string, so we are allowing for more open parentheses.
+*/
