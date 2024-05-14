@@ -7,7 +7,7 @@ class Solution {
                 if(!s.isEmpty()) {
                     s.pop();
                 }
-            }else if( !a.equals(".") && !a.isEmpty()) {
+            }else if( !a.equals(".") && !a.isEmpty()) {//.ani empty
                 s.push(a);
             }
         }
