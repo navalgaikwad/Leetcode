@@ -5,6 +5,7 @@ class Solution {
             return false;
         }
         Map<Character, String> map = new HashMap<>();
+        Set<String> set = new HashSet();
         for(int i=0; i<arr.length; i++) {
             char character = pattern.charAt(i);
             String word = arr[i];
@@ -14,10 +15,11 @@ class Solution {
                     return false;
                 }
             }else {
-                if(map.containsValue(word)) {
+                if(set.contains(word)) {
                     return false;
                 }
                 map.put(character, word);
+                set.add(word);
             }
         }
         return true;
