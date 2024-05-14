@@ -18,7 +18,9 @@ class Solution {
             int i = current[0];
             int j = current[1];
             int count = current[2];
+            
             max = Math.max(max, count);
+            
             for(int[] dir:dirs) {
                 int x = i + dir[0];
                 int y = j + dir[1];
