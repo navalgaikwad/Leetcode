@@ -1,27 +1,26 @@
 class Solution {
-    public boolean wordPattern(String pattern, String s) {
-        String[] arr = s.split(" ");
-        if(pattern.length() != arr.length) {
-            return false;
-        }
+    public boolean wordPattern(String patterns, String s) {
         Map<Character, String> map = new HashMap<>();
-        Set<String> set = new HashSet();
-        for(int i=0; i<arr.length; i++) {
-            char character = pattern.charAt(i);
-            String word = arr[i];
-            if(map.containsKey(character)) {
-                String value = map.get(character);
-                if(!value.equals(word)) {
+        String[] arrays = s.split(" ");
+        
+        if(arrays.length != patterns.length())  return false;
+        
+        for(int i=0; i<arrays.length; i++) {
+            char pattern = patterns.charAt(i);
+            String word = arrays[i];
+            if(map.containsKey(pattern)) {
+                String value = map.get(pattern);
+                if(!word.equals(value)) {
                     return false;
                 }
             }else {
-                if(set.contains(word)) {
+                if(map.containsValue(word)) {
                     return false;
                 }
-                map.put(character, word);
-                set.add(word);
+                map.put(pattern, word);
             }
         }
         return true;
     }
 }
+
