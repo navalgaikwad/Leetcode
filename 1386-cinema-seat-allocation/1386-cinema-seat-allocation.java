@@ -1,33 +1,28 @@
 class Solution {
     public int maxNumberOfFamilies(int n, int[][] reservedSeats) {
-        int result = 0;
-        Map<Integer, List<Integer>> seatAllocation = new HashMap<>();
-        for(int[] reservedSeat : reservedSeats) {
-            if(seatAllocation.containsKey(reservedSeat[0])) {
-                seatAllocation.get(reservedSeat[0]).add(reservedSeat[1]);
-            }else {
-                seatAllocation.put(reservedSeat[0],  new ArrayList<>());
-                seatAllocation.get(reservedSeat[0]).add(reservedSeat[1]);
+        Map<Integer, ArrayList<Integer>> map = new HashMap<>();
+        
+        for(int[] reservedSeat: reservedSeats) {
+            if(!map.containsKey(reservedSeat[0])) {
+                map.put(reservedSeat[0], new ArrayList<>());
             }
+            map.get(reservedSeat[0]).add(reservedSeat[1]);
         }
         
-       // System.out.print(seatAllocation);
-         result = (n - seatAllocation.size())*2;
-        for(List<Integer> rowToSeat:seatAllocation.values()) {
+        int result = (n - map.size()) * 2;
+        
+        for(List<Integer> rowToSeat:map.values()) {
             boolean flag = false;
-            if(!rowToSeat.contains(2)&& !rowToSeat.contains(3) 
-               && !rowToSeat.contains(4) && !rowToSeat.contains(5)) {
-                result++;
+            if(!rowToSeat.contains(2)&& !rowToSeat.contains(3) && !rowToSeat.contains(4) && !rowToSeat.contains(5)) {
                 flag = true;
-            }
-            if(!rowToSeat.contains(6)&& !rowToSeat.contains(7) 
-               && !rowToSeat.contains(8) && !rowToSeat.contains(9)) {
                 result++;
+            } 
+            if(!rowToSeat.contains(6)&& !rowToSeat.contains(7) && !rowToSeat.contains(8) && !rowToSeat.contains(9)) {
                 flag = true;
+                result++;
             }
             if(!flag) {
-               if(!rowToSeat.contains(4)&& !rowToSeat.contains(5) 
-                  && !rowToSeat.contains(6) && !rowToSeat.contains(7)) {
+               if(!rowToSeat.contains(4)&& !rowToSeat.contains(5) && !rowToSeat.contains(6) && !rowToSeat.contains(7)) {
                    result++;
                } 
             }
