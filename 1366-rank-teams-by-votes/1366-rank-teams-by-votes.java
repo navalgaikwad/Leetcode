@@ -8,7 +8,7 @@ class Solution {
                 map.get(vote.charAt(i))[i]++;
             }
         }
-        //System.out.print(map);
+        System.out.print(map);
         List<Character> listOfVotes = new ArrayList<>(map.keySet());
         Collections.sort(listOfVotes, (a, b) -> {
             for(int i=0; i<col; i++) {
