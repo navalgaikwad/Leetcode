@@ -27,3 +27,5 @@ class Solution {
         return left || right || top || bottom;
     }
 }
+//Therefore, the overall time complexity is O(N * M * 4^L).
+//O(L)
