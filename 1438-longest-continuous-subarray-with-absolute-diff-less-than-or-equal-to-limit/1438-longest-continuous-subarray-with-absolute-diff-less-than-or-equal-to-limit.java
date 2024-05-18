@@ -1,37 +1,30 @@
 class Solution {
-   public int longestSubarray(int[] nums, int limit) {
-        Deque<Integer> maxQ = new LinkedList<>();
-        Deque<Integer> minQ = new LinkedList<>();
-        
-        int start = 0;
-        int size = 0;
-        
-        for (int end = 0; end < nums.length; end++) {
-            
-            while (!maxQ.isEmpty() && maxQ.peekLast() < nums[end]) {
-                maxQ.pollLast();
-            } 
-            
-            while (!minQ.isEmpty() && minQ.peekLast() > nums[end]) {
-                minQ.pollLast();
+    public int longestSubarray(int[] nums, int limit) {
+        Deque<Integer> maxq = new LinkedList<>();
+        Deque<Integer> minq = new LinkedList<>();
+        int len =0;
+        int j = 0;
+        for(int i=0; i<nums.length; i++) {
+            while(!maxq.isEmpty() && maxq.getLast() < nums[i]) {
+                maxq.removeLast();
+            }
+            while(!minq.isEmpty() && minq.getLast() > nums[i]) {
+                minq.removeLast();
             }
             
-            maxQ.addLast(nums[end]);
-            minQ.addLast(nums[end]);
-            
-            if (maxQ.peekFirst() - minQ.peekFirst() > limit) {
-                if (nums[start] == maxQ.peekFirst()) {
-                    maxQ.pollFirst();
+            maxq.add(nums[i]);
+            minq.add(nums[i]);
+            if(maxq.peekFirst() - minq.peekFirst() > limit) {
+                if(nums[j] == maxq.peekFirst()) {
+                    maxq.removeFirst();
                 }
-                if (nums[start] == minQ.peekFirst()) {
-                    minQ.pollFirst();
+                if(nums[j] == minq.peekFirst()) {
+                    minq.removeFirst();
                 }
-                start++;
+                j++;
             }
-            
-            size = Math.max(size, end - start + 1);
+            len = Math.max(len, i - j + 1);
         }
-        
-        return size;
+        return len;
     }
 }
