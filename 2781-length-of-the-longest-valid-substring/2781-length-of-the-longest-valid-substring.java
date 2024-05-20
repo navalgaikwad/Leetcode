@@ -6,7 +6,7 @@ class Solution {
         for(int right =0; right<word.length(); right++) {
             for(int k = right; k>=Math.max(left, right - 9); k--) {
                 if(set.contains(word.substring(k, right+1))) {
-                    left= k+1;//move ahead
+                    left= k+1;//move ahead that much of k
                     break;
                 }
             }
