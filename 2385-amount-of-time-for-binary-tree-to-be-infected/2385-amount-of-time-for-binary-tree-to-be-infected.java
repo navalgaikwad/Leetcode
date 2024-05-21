@@ -14,32 +14,44 @@
  * }
  */
 class Solution {
-    private int maxDistance = 0;
-    public int amountOfTime(TreeNode root, int start) {
-        traverse(root, start);
-        return maxDistance;
+    Map<Integer, ArrayList<Integer>> adj = new HashMap<>();
+    void buildAdjList(TreeNode children, TreeNode parent) {
+        if(children == null) {
+            return;
+        }
+        
+        if(!adj.containsKey(children.val)) {
+            adj.putIfAbsent(children.val, new ArrayList<>());
+        }
+        
+        if(parent != null) {
+            adj.get(children.val).add(parent.val);
+            adj.get(parent.val).add(children.val);
+        }
+        buildAdjList(children.left, children);
+        buildAdjList(children.right, children);
     }
-
-    public int traverse(TreeNode root, int start) {
-        int depth = 0;
-        if (root == null) {
-            return depth;
+    public int amountOfTime(TreeNode root, int start) {
+        buildAdjList(root, null);
+        System.out.print(adj);
+        Queue<int[]> q = new LinkedList<>();
+        Set<Integer> visited = new HashSet<>();
+        q.add(new int[]{start, 0});
+        visited.add(start);
+        int maxTime = 0;
+      
+        while(!q.isEmpty()) {
+            int[] current = q.remove();
+            int parent = current[0];
+            int time = current[1];
+            maxTime = Math.max(maxTime, time);
+            for(Integer neighbour: adj.get(parent)) {
+                if(!visited.contains(neighbour)) {
+                    visited.add(neighbour);
+                    q.add(new int[]{neighbour, time + 1});
+                }
+            }
         }
-
-        int leftDepth = traverse(root.left, start);
-        int rightDepth = traverse(root.right, start);
-
-        if (root.val == start) {
-            maxDistance = Math.max(leftDepth, rightDepth);
-            depth = -1;
-        } else if (leftDepth >= 0 && rightDepth >= 0) {
-            depth = Math.max(leftDepth, rightDepth) + 1;
-        } else {
-            int distance = Math.abs(leftDepth) + Math.abs(rightDepth);
-            maxDistance = Math.max(maxDistance, distance);
-            depth = Math.min(leftDepth, rightDepth) - 1;
-        }
-
-        return depth;
+        return maxTime;
     }
 }
