@@ -16,7 +16,7 @@ class Solution {
         }
         return left;
     }
-    
+    //time to reach capital same alike
     int heleper(int[] piles, int k) {
         int count =0;
         for(int i =0; i<piles.length; i++) {
