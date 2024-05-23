@@ -1,27 +1,24 @@
 class Solution {
     public int minPathSum(int[][] grid) {
-        int m = grid.length;
-        int n = grid[0].length;
-        int[][] dp = new int[m+1][n+1];
-        dp[0][0] = grid[0][0];
-        for(int i=0; i<m; i++) {
-            for(int j=0; j<n; j++) {
-                
-                if(i-1>=0 || j-1>=0) {
-                    
-                int down = Integer.MAX_VALUE;
-                int right = Integer.MAX_VALUE;
-                if(i - 1 >= 0) {
-                    down = dp[i-1][j];
-                }
-                if(j - 1 >= 0) {
-                    right = dp[i][j-1];
-                }
-                
-                dp[i][j] = grid[i][j] + Math.min(down, right);
-            }
-          }
+        return helper(grid.length-1, grid[0].length-1, grid, new HashMap<>());
+    }
+    
+    int helper(int i, int j, int[][] grid, HashMap<String, Integer> memo) {
+        String key = i+"-"+j;
+        if( i== 0 && j ==0) {
+            return grid[i][j];
         }
-        return dp[m-1][n-1];
+        if(i < 0 || j < 0) {
+            return Integer.MAX_VALUE;
+        }
+        if(memo.containsKey(key)) {
+            return memo.get(key);
+        }
+        int one = helper(i-1, j, grid, memo);
+        int two = helper(i, j-1, grid, memo);
+        
+        int total  = grid[i][j] + Math.min(one, two);
+        memo.put(key, total);
+        return total;
     }
 }
