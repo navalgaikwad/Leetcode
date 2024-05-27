@@ -18,3 +18,9 @@ class Solution {
         return result;
     }
 }
+
+//find the last elemnt of the character
+//find max from map take it in max
+// check for max == right
+// thn update left = right +1
+//then update length
