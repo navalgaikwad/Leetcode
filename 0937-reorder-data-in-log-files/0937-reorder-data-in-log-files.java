@@ -1,7 +1,7 @@
 class Solution {
     public String[] reorderLogFiles(String[] logs) {
         Arrays.sort(logs, (a,b)->{
-            int indexA = a.indexOf(" ") + 1;
+            int indexA = a.indexOf(" ") + 1;//
             int indexB = b.indexOf(" ") + 1;
             
             boolean aIsLetter = Character.isLetter(a.charAt(indexA));//check for letter
