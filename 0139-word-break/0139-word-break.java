@@ -11,10 +11,9 @@ class Solution {
         }
         boolean flag = false;
         for(String word : wordDict) {
-            if(s.startsWith(word)) {
-                String remainder = s.substring(word.length());
-                if(helper(remainder, wordDict, memo)) {
-                   
+            boolean remainder = s.startsWith(word);
+            if(remainder) {
+                if(helper(s.substring(word.length()), wordDict, memo)) {
                     flag = true;
                 }
             }
@@ -22,7 +21,4 @@ class Solution {
         memo.put(s, flag);
         return flag;
     }
-
 }
-
-// O(n * k * l)
