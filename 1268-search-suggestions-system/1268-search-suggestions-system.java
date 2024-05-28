@@ -3,15 +3,18 @@ class Solution {
         Map<Character, TrieNode> children;
         ArrayList<String> suggestion;
         TrieNode() {
-            children = new HashMap<>();
-            suggestion = new ArrayList<>();
+            this.children = new HashMap<>();
+            this.suggestion = new ArrayList<>();
         }
     }
+    
     public List<List<String>> suggestedProducts(String[] products, String searchWord) {
+        
         TrieNode root = new TrieNode();
+        
         for(String product: products) {
             TrieNode node = root;
-            for(char c  : product.toCharArray()) {
+            for(char c :  product.toCharArray()) {
                 if(!node.children.containsKey(c)) {
                     node.children.put(c, new TrieNode());
                 }
@@ -23,13 +26,13 @@ class Solution {
                 }
             }
         }
-         List<List<String>> ans = new ArrayList<>();
-       TrieNode node = root;
-        for(char c :  searchWord.toCharArray()) {
-          if(node.children.containsKey(c)) {
-              node = node.children.get(c);
-              ans.add(node.suggestion);
-          }else {
+        List<List<String>> ans = new ArrayList<>();
+        TrieNode node = root;
+        for(char c : searchWord.toCharArray()) {
+            if(node.children.containsKey(c)) {
+                node = node.children.get(c);
+                ans.add(node.suggestion);
+            }else {
               node.children = new HashMap<>();
               ans.add(new ArrayList<String>());
           }
