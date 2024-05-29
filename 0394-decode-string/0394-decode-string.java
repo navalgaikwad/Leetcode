@@ -16,10 +16,11 @@ class Solution {
                 }
                 i--;
                 numberStack.push(number);
-                number = 0;
+               
             }else if(c == '[') {
                 characterStack.push(ans);
                 ans = "";
+                number = 0;
             }else if(c == ']') {
                 StringBuilder sb = new StringBuilder(characterStack.pop());
                 int value = numberStack.pop();
