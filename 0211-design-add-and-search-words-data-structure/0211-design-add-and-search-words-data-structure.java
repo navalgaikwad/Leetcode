@@ -34,7 +34,7 @@ class WordDictionary {
       Node current = node;
         for(int i=0; i<word.length(); i++) {
             if(word.charAt(i) == '.') {
-                for(Node c : current.children.values()) {
+                for(Node c : current.children.values()) {//vvimp loop from map
                     if(searchInNode(word.substring(i + 1), c)) {
                     return true;
                 }
