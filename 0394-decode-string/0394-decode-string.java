@@ -1,36 +1,41 @@
 class Solution {
     public String decodeString(String s) {
-        Stack<String> st = new Stack<>();
+        Stack<String> characterStack = new Stack<>();
         Stack<Integer> numberStack = new Stack<>();
-        
+        int i =0;
+        int number = 0;
         String ans = "";
-        for(int i=0; i<s.length(); i++) {
+        String result = "";
+        for(;i < s.length(); i++) {
             char c = s.charAt(i);
-            int number = 0;
-            if(Character.isDigit(s.charAt(i))) {
-                while(Character.isDigit(s.charAt(i))) {
-                    number =number *10 + Character.getNumericValue(s.charAt(i));
+            
+            if(Character.isDigit(c)) {
+                while( i < s.length() && Character.isDigit(s.charAt(i))) {
+                    number = (number * 10) + s.charAt(i) - '0';
                     i++;
-                 }
+                }
                 i--;
                 numberStack.push(number);
+                number = 0;
             }else if(c == '[') {
-                st.push(ans);
+                characterStack.push(ans);
                 ans = "";
             }else if(c == ']') {
-                StringBuilder sb = new StringBuilder(st.pop());
+                StringBuilder sb = new StringBuilder(characterStack.pop());
                 int value = numberStack.pop();
                 while(value > 0) {
                     sb.append(ans);
                     value--;
                 }
-                ans = sb.toString();
-            } else {
+                ans =sb.toString();
+            }else {
                 ans+=s.charAt(i);
+                //i++;
             }
-           
             
         }
+       // System.out.print(ans);
         return ans;
     }
 }
+
