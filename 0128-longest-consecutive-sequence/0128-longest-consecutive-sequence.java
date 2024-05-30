@@ -13,7 +13,7 @@ class Solution {
                 //set.add(num[i]);
                 int currentStreak = 1;
                 int value = nums[i] + 1;
-                while(i < nums.length && set.contains(value)) {
+                while(set.contains(value)) {
                     value = value + 1;
                     currentStreak++;
                 }
