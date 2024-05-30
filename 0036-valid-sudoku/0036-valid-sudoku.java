@@ -7,7 +7,7 @@ class Solution {
                  char value = board[i][j];
                  int box = (i/3) + (j/3)*3;
                 
-                if(board[i][j] != '.') {
+                if(value != '.') {
                     String r = value+"r"+i;
                     String c = value+"c"+j;
                     String boxi = value+"b"+box;
