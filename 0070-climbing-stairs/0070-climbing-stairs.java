@@ -9,8 +9,11 @@ class Solution {
         return helper(n-1, new HashMap<>());
     }
     int helper(int i, HashMap<Integer, Integer> memo) {
-        if( i == 0 || i < 0) {
+        if( i == -1) {
             return 1;
+        }
+        if(i < -1) {
+            return 0;
         }
         if(memo.containsKey(i)) {
             return memo.get(i);
