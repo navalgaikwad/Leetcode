@@ -23,6 +23,7 @@ class Solution {
             return memo[start];
         }
         int minCut = Integer.MAX_VALUE;
+        //duplicate allowed ahe mhnun i =index and recursion madhye i  +1
         for(int i = start; i<s.length(); i++) {
             if(palindrome(s, start, i)) {
                 int count = helper(s, i + 1, memo);
