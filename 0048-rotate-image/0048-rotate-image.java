@@ -1,37 +1,30 @@
 class Solution {
-    /*
-    [[1,2,3],
-    [4,5,6],
-    [7,8,9]]
-    
-    
-    [7,8,9]
-    [4,5,6]
-    [1,2,3]
-    
-    7,4,1
-    8,5,2
-    9,6,3
-    
-[[7,4,1],
-[8,5,6],
-[9,2,3]]
-    
-    */
     public void rotate(int[][] matrix) {
-        int len = matrix.length-1;
-        for(int i =0; i<=len/2; i++) {
-            int[] value = matrix[len - i];
-            matrix[len - i] = matrix[i];
-            matrix[i] = value;
+        int len = matrix.length;
+        for(int i=0; i<len/2; i++) {
+            int[] tmp = matrix[i];
+            matrix[i] = matrix[len - i - 1];
+            matrix[len - i - 1]= tmp;
         }
-        //System.out.print(matrix[0][0]);
-        for(int i = 0; i<matrix.length; i++) {
-            for(int j=i+1; j<matrix[0].length; j++) {
-                int value = matrix[j][i];
+        
+        for(int i=0; i<matrix.length; i++) {
+            for(int j = i + 1; j<matrix[0].length; j++) {
+                int tmp = matrix[j][i];
                 matrix[j][i] = matrix[i][j];
-                matrix[i][j] = value;
+                matrix[i][j] = tmp; 
             }
         }
     }
 }
+//matrix = [[1,2,3],[4,5,6],[7,8,9]]
+
+/*
+[[1,2,3],
+[4,5,6],
+[7,8,9]]
+
+khalach warti ghe
+mg 0 ani 1 pasun start kar
+
+
+*/
