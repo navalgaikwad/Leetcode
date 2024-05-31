@@ -1,25 +1,35 @@
 class Solution {
-    class Largest implements Comparator<String> {
+    private class LargerNumberComparator implements Comparator<String> {
         @Override
         public int compare(String a, String b) {
-            String one = a + b;
-            String two = b + a;
-            return two.compareTo(one);
+            String order1 = a + b;
+            String order2 = b + a;
+           return order2.compareTo(order1);
         }
     }
+
     public String largestNumber(int[] nums) {
-        String[] arr = new String[nums.length];
-        for(int i=0; i<nums.length; i++) {
-            arr[i] = String.valueOf(nums[i]);
+        // Get input integers as strings.
+        String[] asStrs = new String[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            asStrs[i] = String.valueOf(nums[i]);
         }
-        Arrays.sort(arr, new Largest());
-        if(arr[0].equals("0")) {
+
+        // Sort strings according to custom comparator.
+        Arrays.sort(asStrs, new LargerNumberComparator());
+
+        // If, after being sorted, the largest number is `0`, the entire number
+        // is zero.
+        if (asStrs[0].equals("0")) {
             return "0";
         }
-        StringBuilder sb = new StringBuilder();
-        for(String ar : arr) {
-            sb.append(ar);
+
+        // Build largest number from sorted array.
+        String largestNumberStr = new String();
+        for (String numAsStr : asStrs) {
+            largestNumberStr += numAsStr;
         }
-        return sb.toString();
+
+        return largestNumberStr;
     }
 }
