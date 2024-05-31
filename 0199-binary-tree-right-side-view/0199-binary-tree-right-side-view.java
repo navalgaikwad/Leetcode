@@ -14,22 +14,20 @@
  * }
  */
 class Solution {
-    int i=0;
     List<Integer> result = new ArrayList<>();
     public List<Integer> rightSideView(TreeNode root) {
-        dfs(root, 0);
+        helper(root, 0);
         return result;
     }
     
-    void dfs(TreeNode root, int level) {
+    void helper(TreeNode root, int level) {
         if(root == null) {
-            return;
+           return;
         }
-        if(result.size()==level) {
+        if(result.size() == level){
             result.add(root.val);
-            i++;
         }
-        dfs(root.right, level+1);
-        dfs(root.left, level+1);
+        helper(root.right, level+1);
+        helper(root.left, level+1);
     }
 }
