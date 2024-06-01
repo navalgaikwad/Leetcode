@@ -14,9 +14,9 @@ class Solution {
             return;
         }
         for (int i = startIndex; i < nums.length; i++) {
-            if (nums[i] > target) {
-                return;
-            }
+            // if (nums[i] > target) {
+            //     return;
+            // }
             path.add(nums[i]);
             helper(nums, target - nums[i], i + 1, path, res, k);
             path.remove(path.size() - 1);
