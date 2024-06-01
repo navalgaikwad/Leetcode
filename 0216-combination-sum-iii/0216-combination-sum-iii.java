@@ -1,25 +1,25 @@
 class Solution {
+     List<List<Integer>> result = new ArrayList<>();
     public List<List<Integer>> combinationSum3(int k, int n) {
-        List<List<Integer>> res = new ArrayList<>();
-        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        List<Integer> path = new ArrayList<>();
-        helper(nums, n, 0, path, res, k);
-        return res;
+        List<Integer> nums = new ArrayList<>();
+        nums.add(1);nums.add(2); nums.add(3);nums.add(4);nums.add(5);
+        nums.add(6);nums.add(7); nums.add(8);nums.add(9);
+        helper(nums, k , 0, new ArrayList<>(), n);
+        return result;
     }
-    private void helper(int[] nums, int target, int startIndex, List<Integer> path, List<List<Integer>> res, int k) {
-        if (path.size() == k) {
-            if (target == 0) {
-                res.add(new ArrayList<Integer>(path));
+    
+    void helper(List<Integer> numbers, int k, int index, List<Integer> runningList, int target) {
+        if(runningList.size() == k) {
+            if(target == 0) {
+                result.add(new ArrayList<>(runningList));
+                return;
             }
             return;
         }
-        for (int i = startIndex; i < nums.length; i++) {
-            // if (nums[i] > target) {
-            //     return;
-            // }
-            path.add(nums[i]);
-            helper(nums, target - nums[i], i + 1, path, res, k);
-            path.remove(path.size() - 1);
+        for(int i= index; i< numbers.size(); i++) {
+            runningList.add(numbers.get(i));
+            helper(numbers, k, i  + 1, runningList, target - numbers.get(i));
+            runningList.remove(runningList.size() - 1);
         }
     }
 }
