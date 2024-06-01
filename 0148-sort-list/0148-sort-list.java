@@ -19,10 +19,10 @@ class Solution {
         ListNode next = temp.next;
         temp.next = null;
         
-        ListNode left= sortList(head);
-        ListNode right= sortList(next);
+        ListNode left= sortList(head);//start
+        ListNode right= sortList(next);//middle
         
-        return merge(left, right);
+        return merge(left, right);//merge
     }
     
     ListNode middle(ListNode node) {
