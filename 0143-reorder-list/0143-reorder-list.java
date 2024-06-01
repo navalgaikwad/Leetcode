@@ -19,13 +19,14 @@ class Solution {
         ListNode first = head;
         ListNode tmp;
         while(second.next != null) {
-            tmp = first.next;
+            tmp = first.next;//2
             first.next = second;
-            first = tmp;
+            first = tmp;//2,3,4
             
             tmp = second.next;
             second.next = first;
             second = tmp;
+            
         }
     }
     
