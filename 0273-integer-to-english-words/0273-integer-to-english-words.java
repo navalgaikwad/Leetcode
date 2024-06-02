@@ -12,15 +12,15 @@ class Solution {
     
     private String helper(int num) {
         StringBuilder sb=new StringBuilder();
-        if (num >= 1000000000) {
+        if (num >= 1000000000) { //9
             sb.append(helper(num / 1000000000)).append(" Billion ").append( helper(num % 1000000000));
-        } else if  (num >= 1000000) {
+        } else if  (num >= 1000000) {//6
             sb.append(helper(num / 1000000)).append(" Million ").append( helper(num % 1000000));
-        }else if (num >= 1000) {
+        }else if (num >= 1000) {//3
             sb.append(helper(num / 1000)).append(" Thousand ").append( helper(num % 1000));
-        }else if (num >= 100) {
+        }else if (num >= 100) {//2
             sb.append(helper(num / 100)).append(" Hundred ").append( helper(num % 100));
-        }else if (num >= 20) {
+        }else if (num >= 20) {//20
             sb.append(tens[num / 10]).append(" ").append( helper(num % 10));
         } else {
             sb.append(ones[num]);
