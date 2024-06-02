@@ -9,50 +9,38 @@
  * }
  */
 class Solution {
+   
     public boolean isPalindrome(ListNode head) {
-        if (head == null || head.next == null) {
-            return true;
-        }
-
-        // Find the middle node
-        ListNode slow = head, fast = head;
-        ListNode prev = null;
-        while (fast != null && fast.next != null) {
-            prev = slow;
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-
-        // If the length of the linked list is odd, move the slow pointer one step ahead
-        if (fast != null) {
-            slow = slow.next;
-        }
-
-        // Reverse the second half of the linked list
-        prev.next = null;
-        ListNode secondHalf = reverse(slow);
-
-        // Compare the first half with the reversed second half
-        ListNode firstHalf = head;
-        while (secondHalf != null) {
-            if (firstHalf.val != secondHalf.val) {
-                return false;
-            }
-            firstHalf = firstHalf.next;
-            secondHalf = secondHalf.next;
-        }
-
-        return true;
+    ListNode fast = head, slow = head;
+    while (fast != null && fast.next != null) {
+        fast = fast.next.next;
+        slow = slow.next;
     }
+        
+    if (fast != null) { // odd nodes: let right half smaller
+        slow = slow.next;
+    }
+        
+    slow = reverse(slow);
+    fast = head;
+    
+    while (slow != null) {
+        if (fast.val != slow.val) {
+            return false;
+        }
+        fast = fast.next;
+        slow = slow.next;
+    }
+    return true;
+}
 
-    private ListNode reverse(ListNode head) {
+public ListNode reverse(ListNode head) {
         ListNode prev = null;
-        ListNode curr = head;
-        while (curr != null) {
-            ListNode nextNode = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = nextNode;
+        while (head != null) {
+            ListNode next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
         }
         return prev;
     }
