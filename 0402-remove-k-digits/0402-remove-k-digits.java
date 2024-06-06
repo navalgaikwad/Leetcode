@@ -9,7 +9,7 @@ class Solution {
             }
             stack.push(c);     
         }
-        System.out.print(stack);
+        //System.out.print(stack);
         while(!stack.isEmpty() && stack.peekLast()=='0'){
             stack.pollLast();
         }
