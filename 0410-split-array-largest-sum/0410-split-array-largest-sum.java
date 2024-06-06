@@ -7,9 +7,19 @@ class Solution {
         int ans = 0;
         while(left <= right) {
             int mid = left + (right - left)/2;
-            if(check(nums, k, mid)) {
+            
+            int sum = 0;
+            int count =1;
+            for(int i=0; i<nums.length; i++) {
+                sum = sum + nums[i];
+                if(sum > mid) {
+                    count++;
+                    sum = nums[i];
+                }
+            }
+            if(count<=k) {
                 ans = mid;
-                right = mid - 1;
+                right = mid -1;
             }else {
                 left = mid + 1;
             }
@@ -17,17 +27,4 @@ class Solution {
         return ans;
     }
     
-    
-    boolean check(int[] nums, int k, int mid) {
-        int sum = 0;
-        int count =1;
-        for(int i=0; i<nums.length; i++) {
-            sum = sum + nums[i];
-            if(sum > mid) {
-                count++;
-                sum = nums[i];
-            }
-        }
-        return count<=k;
-    }
 }
