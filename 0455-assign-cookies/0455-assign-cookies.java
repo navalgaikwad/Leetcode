@@ -7,14 +7,13 @@ class Solution {
         int left = 0;
         int right = 0;
         int count = 0;
-        while(left <g.length && right<s.length) {
-            if(s[right]>=g[left]) {
-                count++;
-                left++;
-            }
-            
-            right++;
-        }
+       while(left < g.length && right < s.length) {
+           if(s[right] >= g[left]) {
+               count++;
+               left++;
+           }
+           right++;
+       }
         return count;
     }
 }
