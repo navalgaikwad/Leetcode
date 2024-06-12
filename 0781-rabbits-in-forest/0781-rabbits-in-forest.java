@@ -11,7 +11,7 @@ class Solution {
             }else {
                 counts.put(ans, counts.get(ans) + 1);
                 if(counts.get(ans) > ans) {
-                   counts.put(ans, 0); 
+                   counts.put(ans, 0); //make it zero
                 }
             }
         }
