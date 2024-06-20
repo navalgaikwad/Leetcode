@@ -1,7 +1,7 @@
 class Solution {
     public double[] medianSlidingWindow(int[] nums, int k) {
-        TreeSet<Integer> minSet = new TreeSet<>((a, b) -> nums[a] == nums[b] ? a - b : Integer.compare(nums[a], nums[b]));
-        TreeSet<Integer> maxSet = new TreeSet<>((a, b) -> nums[a] == nums[b] ? a - b : Integer.compare(nums[a], nums[b]));
+        TreeSet<Integer> minSet = new TreeSet<>((a, b) -> nums[a] == nums[b] ? a - b : Integer.compare(nums[a], nums[b]));//asending
+        TreeSet<Integer> maxSet = new TreeSet<>((a, b) -> nums[a] == nums[b] ? a - b : Integer.compare(nums[a], nums[b]));//descending
         double[] medians = new double[nums.length - k + 1];
         for (int i = 0; i < nums.length; i++) {
             if (minSet.size() <= maxSet.size()) {
