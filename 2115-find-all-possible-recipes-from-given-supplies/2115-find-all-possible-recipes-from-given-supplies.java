@@ -9,13 +9,13 @@ class Solution {
         while(found) {
             found = false;
             for(int i=0; i<recipes.length; i++) {
-                if(set.contains(recipes[i])) {
+                if(set.contains(recipes[i])) {//check set in recipes
                     continue;
                 }
-                List<String>ingredient=  ingredients.get(i);
+                List<String>ingredient =  ingredients.get(i);
                 boolean flag = true;
                 for(String ingred :ingredient) {
-                    if(!set.contains(ingred)) {
+                    if(!set.contains(ingred)) {//check set in ingredident
                         flag = false;
                         break;
                     }
