@@ -1,6 +1,6 @@
 class BrowserHistory {
     TreeMap<Integer, String> map = new TreeMap<>();
-    int ptr = 0;
+    int ptr =0;
     public BrowserHistory(String homepage) {
         map.put(ptr, homepage);
     }
@@ -8,7 +8,7 @@ class BrowserHistory {
     public void visit(String url) {
         ptr++;
         map.put(ptr, url);
-        map.tailMap(ptr + 1).clear();
+        map.tailMap(ptr+1).clear();
     }
     
     public String back(int steps) {
@@ -17,7 +17,7 @@ class BrowserHistory {
     }
     
     public String forward(int steps) {
-         ptr = Math.min(ptr + steps, map.lastKey());
+        ptr = Math.min(ptr + steps, map.lastKey());
         return map.get(ptr);
     }
 }
