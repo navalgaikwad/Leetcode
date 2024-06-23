@@ -34,7 +34,7 @@ class Solution {
             }
             
         }
-        diameter = Math.max(first+second+1, diameter);
+        diameter = Math.max(first + second + 1, diameter);
         return 1 + first;
     }
 }
