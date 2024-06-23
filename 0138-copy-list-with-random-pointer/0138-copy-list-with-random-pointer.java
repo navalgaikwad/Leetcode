@@ -14,27 +14,21 @@ class Node {
 */
 
 class Solution {
-public Node copyRandomList(Node head) {
-
-    // HashMap which holds old nodes as keys and new nodes as its values. 
-    HashMap<Node, Node> map = new HashMap<Node, Node>();
-    
-    //copy list nodes into hash table
-    Node p = head;
-    while(p != null){
-        map.put(p, new Node(p.val));
-        p = p.next;
+    public Node copyRandomList(Node head) {
+        Map<Node, Node> map = new HashMap<>();
+        Node p = head;
+        while(p!=null) {
+            map.put(p, new Node(p.val));
+            p = p.next;
+        }
+        
+        p = head;
+        while(p!=null) {
+            map.get(p).next = map.get(p.next);
+            map.get(p).random = map.get(p.random);
+             p = p.next;
+        }
+        
+        return map.get(head);
     }
-    
-    //deep copy using hash table
-    Node q = head;
-    while(q != null){
-        map.get(q).next = map.get(q.next);
-        map.get(q).random = map.get(q.random);
-        q = q.next;
-    }
-    
-    //return new head
-    return map.get(head);
-}
 }
