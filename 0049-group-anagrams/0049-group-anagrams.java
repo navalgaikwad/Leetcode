@@ -8,9 +8,8 @@ class Solution {
             for(char c: str.toCharArray()) {
                 charArray[c -'a']++;
             }
-            if(!map.containsKey(String.valueOf(charArray))) {
-                map.put(String.valueOf(charArray), new ArrayList<>());
-            }
+           
+            map.putIfAbsent(String.valueOf(charArray), new ArrayList<>());
             map.get(String.valueOf(charArray)).add(str);
         }
         return new ArrayList<>(map.values());
