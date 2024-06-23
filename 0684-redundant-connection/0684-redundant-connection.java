@@ -1,44 +1,45 @@
-class UnionFind {
-    int[] root;
-    int[] rank;
-    UnionFind(int n) {
-        this.root = new int[n];
-        this.rank = new int[n];
-        for(int i=0; i<n; i++) {
-            root[i] = i;
-        }   
-    }
-    int find(int x) {
-        if(x == root[x]) {
-            return x;
+class Solution {
+    int MAX_EDGE_VAL = 1000;
+
+    public int[] findRedundantConnection(int[][] edges) {
+        DSU dsu = new DSU(MAX_EDGE_VAL + 1);
+        for (int[] edge: edges) {
+            if (!dsu.union(edge[0], edge[1])) return edge;
         }
-        return find(root[x]);
-    }
-    boolean union(int x, int y) {
-        int xHead = find(x);
-        int yHead = find(y);
-        if(xHead == yHead){
-            return false;
-        } 
-        else if(rank[xHead] < rank[yHead]) {
-            root[xHead] = yHead;
-        }else {
-            root[yHead] =xHead;
-            rank[xHead]++;
-        }
-        return true;
+        throw new AssertionError();
     }
 }
-class Solution {
-    
-    public int[] findRedundantConnection(int[][] edges) {
-          UnionFind uf =new UnionFind(edges.length+1);
-        for(int[] edge: edges){
-            
-            if(!uf.union(edge[0], edge[1])){
-                return edge;
-            }
+
+class DSU {
+    int[] parent;
+    int[] rank;
+
+    public DSU(int size) {
+        parent = new int[size];
+        for (int i = 0; i < size; i++) 
+            parent[i] = i;
+        rank = new int[size];
+    }
+
+    public int find(int x) {
+        if (parent[x] != x) 
+            parent[x] = find(parent[x]);
+        return parent[x];
+    }
+
+    public boolean union(int x, int y) {
+        int xr = find(x);
+        int yr = find(y);
+        if (xr == yr) {
+            return false;
+        } else if (rank[xr] < rank[yr]) {
+            parent[xr] = yr;
+        } else if (rank[xr] > rank[yr]) {
+            parent[yr] = xr;
+        } else {
+            parent[yr] = xr;
+            rank[xr]++;
         }
-        return new int[]{};
+        return true;
     }
 }
