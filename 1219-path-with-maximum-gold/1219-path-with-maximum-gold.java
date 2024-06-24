@@ -18,11 +18,7 @@ class Solution {
         }
         int value = grid[i][j];
         grid[i][j] = 0;
-//         if(memo[i][j] != null) {
-//             return memo[i][j];
-//         }
-      
-        
+
         int top = helper(grid, i - 1, j);
         int right = helper(grid, i, j + 1);
         int bottom = helper(grid, i + 1, j);
@@ -30,7 +26,6 @@ class Solution {
         
         grid[i][j] = value;
         int max = grid[i][j] + Math.max(top, Math.max(left, Math.max(right, bottom)));
-       // memo[i][j] = max;
         return max;
     }
 }
