@@ -1,19 +1,18 @@
 class Solution {
-    
-    int helper(int totalCandies, int limit, int children) {
-        if(totalCandies == 0) {
+    int helper(int n, int limit, int people) {
+        if(n == 0) {
             return 1;
         }
-        if( children == 0) {
+        if( limit == 0 || people ==0) {
             return 0;
         }
-        int ways =0;
-        for(int i =0; i<=Math.min(limit, totalCandies); i++) {
-            ways += helper(totalCandies - i, limit, children - 1);
+        
+        int way =0;
+        for(int i=0; i<=Math.min(limit, n); ++i) {
+            way+=helper(n - i, limit, people -1);
         }
-        return ways;
+        return way;
     }
-    
     
     public int distributeCandies(int n, int limit) {
         return helper(n, limit, 3);
