@@ -6,16 +6,16 @@ return max;
 }
 void helper(List<String> arr, String newString, int index) {
 max = Math.max(max, newString.length());
-for(int i = index; i < arr.size(); i++) {
+for(int i=index; i<arr.size(); i++) {
 if(!check(newString, arr.get(i))) {
 continue;
 }
-helper(arr, newString+arr.get(i), i + 1);
+helper(arr, newString + arr.get(i), i + 1);
 }
 }
 boolean check(String s, String newString) {
 int[] count = new int[26];
-for(int i =0; i < newString.length(); i++) {
+for(int i=0; i<newString.length(); i++) {
 ++count[newString.charAt(i) - 'a'];
 if(count[newString.charAt(i) - 'a'] == 2) {
 return false;
