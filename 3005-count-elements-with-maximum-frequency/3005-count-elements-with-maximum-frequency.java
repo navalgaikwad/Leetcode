@@ -1,13 +1,16 @@
 class Solution {
     public int maxFrequencyElements(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
+        //Map<Integer, Integer> map = new HashMap<>();
+        int[] map = new int[101];
         int totalCount =0;
         int max = 0;
         for(int num : nums) {
-            map.put(num, map.getOrDefault(num, 0)  + 1);
+            map[num]++;
         }
         PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)->b-a);
-        pq.addAll(map.values());
+        for(int num : map) {
+            pq.add(num);
+        }
         while(!pq.isEmpty()) {
             int num = pq.remove();
             
