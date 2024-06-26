@@ -24,11 +24,11 @@ class Solution {
         int j = 0;
 
         while (i >= 0 && j < n) {
-            if (matrix[i][j] <= target) {
+            if (matrix[i][j] > target) {
+                i--;
+            } else {
                 count += i + 1;
                 j++;
-            } else {
-                i--;
             }
         }
 
