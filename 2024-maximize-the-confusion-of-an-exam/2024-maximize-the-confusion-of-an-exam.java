@@ -7,7 +7,7 @@ class Solution {
             cnt += s.charAt(right) == c ? 1 : 0;
             if (cnt > k) cnt -= s.charAt(left++) == c ? 1 : 0;
         }
-        return right - left;
+        return s.length() - left;
     }
 
     public int maxConsecutiveAnswers(String s, int k) {
