@@ -10,9 +10,7 @@ class SnapshotArray {
     }
     
     public void set(int index, int val) {
-       
-        map[index].put(snap_id, val);
-       
+       map[index].put(snap_id, val);
     }
     
     public int snap() {
