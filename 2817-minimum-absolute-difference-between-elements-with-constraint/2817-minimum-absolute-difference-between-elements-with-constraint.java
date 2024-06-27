@@ -10,4 +10,4 @@ class Solution {
     }
     return ans;
 }
-}
+}//O(n-x)logx
