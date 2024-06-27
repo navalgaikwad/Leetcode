@@ -1,11 +1,13 @@
 class Solution {
     private int count(String s, int k, char c) {
-        int N = s.length(), cnt = 0, i = 0, j = 0;
-        for (; j < N; ++j) {
-            cnt += s.charAt(j) == c ? 1 : 0;
-            if (cnt > k) cnt -= s.charAt(i++) == c ? 1 : 0;
+        int N = s.length(), cnt = 0;
+        int left = 0;
+        int right = 0;
+        for (; right < N; ++right) {
+            cnt += s.charAt(right) == c ? 1 : 0;
+            if (cnt > k) cnt -= s.charAt(left++) == c ? 1 : 0;
         }
-        return j - i;
+        return right - left;
     }
 
     public int maxConsecutiveAnswers(String s, int k) {
