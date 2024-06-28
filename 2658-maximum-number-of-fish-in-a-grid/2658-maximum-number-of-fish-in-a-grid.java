@@ -1,30 +1,38 @@
 class Solution {
-    
-    int total = 0;
-    int max = 0;
+    int total =0;
+    int max=0;
     public int findMaxFish(int[][] grid) {
-        for(int i=0; i<grid.length; i++) {
-            for(int j=0; j<grid[0].length; j++) {
-                if(grid[i][j]!=0) {
-                    max = dfs(grid, i, j);
-                    total = Math.max(total, max);
+       int len = grid.length;
+        for(int i=0;i<len; i++){
+            for(int j=0;j<grid[0].length;j++){
+               
+                if(grid[i][j]!=0){
+                    
+                    
+                   // System.out.print(total);
+                    max =0;
+                    dfs(i, j, grid);
                 }
+                 total=Math.max(total, max);
             }
         }
-        return total;
+      return total;
     }
     
-    int dfs(int[][] grid, int i, int j) {
-        if(i <0 || i>=grid.length || j>=grid[0].length || j<0 || grid[i][j]==0) {
-            return 0 ;
+    void dfs(int i, int j, int[][] grid){
+        if(i<0 || i>=grid.length || j<0 || j>=grid[0].length || grid[i][j]==0){
+            return;
         }
-        int temp = grid[i][j];
-        grid[i][j] = 0;
-        temp +=dfs(grid, i + 1, j);
-        temp +=dfs(grid, i, j + 1);
-        temp +=dfs(grid, i, j - 1);
-        temp +=dfs(grid, i - 1, j);
-       
-        return temp;
+        max=max+grid[i][j];
+        grid[i][j]=0;
+        
+        dfs(i, j+1, grid);
+        dfs(i, j-1, grid);
+        dfs(i+1, j, grid);
+        dfs(i-1, j, grid);
+        
+        
+        //grid[i][j] = temp;
+        
     }
 }
