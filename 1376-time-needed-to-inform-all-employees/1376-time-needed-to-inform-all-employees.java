@@ -14,13 +14,13 @@ class Solution {
     }
     int helper(ArrayList<Integer> adj[], int parent, int[] informTime, boolean[] visited) {
         visited[parent] = true;
-        int total = Integer.MIN_VALUE;
+        int total = 0;
         for(Integer neighbour : adj[parent]) {
             if(!visited[neighbour]) {
                 int totalChildTime = helper(adj, neighbour, informTime, visited);
                 total = Math.max(total, totalChildTime + informTime[parent]);
             }
         }
-        return Math.max(total, informTime[parent]);
+        return total;
     }
 }
