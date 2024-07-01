@@ -8,7 +8,7 @@ class Solution {
             for(int j=0; j< n; j++) {
                 if(obstacleGrid[i][j] == 1) {
                     dp[i][j] = 0;
-                }else {
+                } else {
                     if(i -1  >= 0){
                         dp[i][j] += dp[i-1][j] ;
                     }
