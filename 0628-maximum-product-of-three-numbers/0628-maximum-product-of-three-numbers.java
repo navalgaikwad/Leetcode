@@ -1,30 +1,33 @@
 class Solution {
     public int maximumProduct(int[] nums) {
-        int min1, min2, max1, max2, max3;
-        min1 = min2 = Integer.MAX_VALUE;
-        max1 = max2 = max3 = Integer.MIN_VALUE;
-        for(int i = 0; i < nums.length; i++){
-            if(max1 < nums[i]){
-                max3 = max2;
-                max2 = max1;
-                max1 = nums[i];
-            }else if(max2 < nums[i]){
-                max3 = max2;
-                max2 = nums[i];
-            }else if(max3 < nums[i]){
-                max3 = nums[i];
-            }
-            
-
-            if(min1 > nums[i]){
-                min2 = min1;
-                min1 = nums[i];
-            }else if(min2 > nums[i]){
-                min2 = nums[i];
-            }
-            
-        }
-        
-        return Math.max(max1 * max2 * max3 , min1 * min2 * max1);
+        Arrays.sort(nums);
+        int len = nums.length;
+        int positive = nums[len-1] * nums[len-2] * nums[len-3];
+        int negative = nums[0] * nums[1] * nums[len-1];
+        return positive > negative ? positive : negative;
     }
 }
+
+//  public int maximumProduct(int[] nums) {
+//         int max1 = Integer.MIN_VALUE, max2 = Integer.MIN_VALUE, max3 = Integer.MIN_VALUE, min1 = Integer.MAX_VALUE, min2 = Integer.MAX_VALUE;
+//         for (int n : nums) {
+//             if (n > max1) {
+//                 max3 = max2;
+//                 max2 = max1;
+//                 max1 = n;
+//             } else if (n > max2) {
+//                 max3 = max2;
+//                 max2 = n;
+//             } else if (n > max3) {
+//                 max3 = n;
+//             }
+
+//             if (n < min1) {
+//                 min2 = min1;
+//                 min1 = n;
+//             } else if (n < min2) {
+//                 min2 = n;
+//             }
+//         }
+//         return Math.max(max1*max2*max3, max1*min1*min2);
+//     }
