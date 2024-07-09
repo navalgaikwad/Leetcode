@@ -11,6 +11,12 @@ class Solution {
     }
 
     public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
+        /*
+        adjecny list
+        set
+        distance as seen map
+        as as word ladder
+        */
         Set<String> set = new HashSet<>(wordList);
         List<List<String>> result = new ArrayList<>();
         if (!set.contains(endWord)) return result;
@@ -18,7 +24,7 @@ class Solution {
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(beginWord, 1));
         Map<String, List<String>> adjList = new HashMap<>();
-        Map<String, Integer> distance = new HashMap<>();
+        Map<String, Integer> distance = new HashMap<>(); //same as queue
         
         for (String word : wordList) {
             adjList.put(word, new ArrayList<>());
@@ -38,11 +44,11 @@ class Solution {
                     wrd[i] = c;
                     String nextWord = String.valueOf(wrd);
                     if (set.contains(nextWord) && (!distance.containsKey(nextWord) || distance.get(nextWord) == level + 1)) {
-                        if (!distance.containsKey(nextWord)) {
+                        if (!distance.containsKey(nextWord)) {//not visited asel tar tak nahitar noko taku
                             q.add(new Pair(nextWord, level + 1));
-                            distance.put(nextWord, level + 1);
+                            distance.put(nextWord, level + 1);//for seen same as queueu
                         }
-                        adjList.get(nextWord).add(word);
+                        adjList.get(nextWord).add(word);//add in adj list
                     }
                 }
             }
@@ -60,7 +66,7 @@ class Solution {
             runningList.remove(0);
             return;
         }
-        runningList.add(0, endWord);
+        runningList.add(0, endWord);//enter end word
         for (String prevWord : adjList.get(endWord)) {
             backtrack(result, runningList, beginWord, prevWord, adjList);
         }
