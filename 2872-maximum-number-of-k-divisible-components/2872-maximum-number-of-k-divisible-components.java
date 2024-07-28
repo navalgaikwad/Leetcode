@@ -1,29 +1,28 @@
 class Solution {
+    int result = 0;
     public int maxKDivisibleComponents(int n, int[][] edges, int[] values, int k) {
-        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            adj.add(new ArrayList<>());
+        ArrayList<Integer> adj[] = new ArrayList[n];
+        for(int i=0; i<n; i++) {
+            adj[i] = new ArrayList<>();
         }
-        for (int[] edge : edges) {
-            adj.get(edge[0]).add(edge[1]);
-            adj.get(edge[1]).add(edge[0]);
+        for(int[] edge : edges) {
+            adj[edge[0]].add(edge[1]);
+            adj[edge[1]].add(edge[0]);
         }
-
-        int[] ans = new int[1]; 
-        dfs(0, -1, ans, adj, values, k); // 0=node, -1=parent
-        return ans[0]; 
+        boolean[] visited = new boolean[n];
+        dfs(adj, visited, 0, values, k);
+        return result;
     }
-
-    long dfs(int node, int parent, int[] ans, ArrayList<ArrayList<Integer>> adj, int[] values, int k) {
-        long sum = values[node];
-
-        for (Integer neighbour : adj.get(node)) {
-            if (neighbour != parent) {
-                sum += dfs(neighbour, node, ans, adj, values, k);
+    long dfs(ArrayList<Integer> adj[], boolean[] visited, int start, int[] values, int k) {
+        visited[start] = true;
+        long sum = values[start];
+        for(Integer neighbour : adj[start]) {
+            if(!visited[neighbour]) {
+                sum += dfs(adj, visited, neighbour, values, k);
             }
         }
-        if (sum % k == 0) {
-            ans[0]++; // Update ans using the array
+        if(sum%k == 0) {
+            result++;
             return 0;
         }
         return sum;
