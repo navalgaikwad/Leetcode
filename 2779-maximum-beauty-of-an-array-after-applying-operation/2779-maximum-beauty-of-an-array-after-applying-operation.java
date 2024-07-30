@@ -19,3 +19,11 @@ class Solution {
         return ans;
     }
 }
+
+/*
+[4,6,1,2], k = 2
+1,2,4,6
+
+
+
+*/
