@@ -16,27 +16,24 @@
 class Solution {
     public List<List<Integer>> closestNodes(TreeNode root, List<Integer> queries) {
         TreeSet<Integer> set = new TreeSet<>();
-        goDFS(root, set);
-        List<List<Integer>> res = new ArrayList<>(queries.size());
-        for (int q : queries) {
-            List<Integer> l = new ArrayList<>();
-            Integer min = set.floor(q);//backward, 
-                Integer max = set.ceiling(q);//forward
-            min = min == null ? -1 : min;
-            max = max == null ? -1 : max;
-            l.add(min);
-            l.add(max);
-            res.add(l);
+        List<List<Integer>> result = new ArrayList<>();
+        dfs(root, set);
+        
+        for(Integer query:queries) {
+            List<Integer> list = new ArrayList<>();
+            Integer min = set.floor(query);
+            Integer max = set.ceiling(query);
+            list.add(min == null ? -1 : min);
+            list.add(max == null ? -1 : max);
+            result.add(list);
         }
-        return res;
+        return result;
     }
-
-    private void goDFS(TreeNode node, TreeSet<Integer> set) {
-        if (node == null) return;
-
-        set.add(node.val);
-
-        goDFS(node.left, set);
-        goDFS(node.right, set);
+    
+    void dfs(TreeNode root, TreeSet<Integer> set) {
+        if(root == null) return;
+        dfs(root.left, set);
+        set.add(root.val);
+        dfs(root.right, set);
     }
 }
