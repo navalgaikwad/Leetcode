@@ -1,35 +1,35 @@
 class Solution {
-    public boolean canChange(String s, String t) {
-        int n = s.length();
-        int i = 0, j = 0;
-
-        while (i < n && j < n) {
-            // Skip underscores in both strings
-            while (i < n && s.charAt(i) == '_') i++;
-            while (j < n && t.charAt(j) == '_') j++;
-
-            // If both pointers reached the end, strings are equivalent
-            if (i == n && j == n) return true;
-            // If one pointer reached the end but the other didn't, not equivalent
-            if (i == n || j == n) return false;
-
-            // Check if characters at the current pointers are different
-            if (s.charAt(i) != t.charAt(j)) return false;
-
-            // Check if 'L' is moving to the left and 'R' is moving to the right
-            if (s.charAt(i) == 'L' && i < j) return false;
-            if (s.charAt(i) == 'R' && i > j) return false;
-
-            // Move both pointers forward
+    public boolean canChange(String start, String target) {
+        int i =0;
+        int j =0;
+        int m = start.length() ;
+        int n = target.length();
+        while( i<start.length() && j < target.length()) {
+            while(i < n &&start.charAt(i) == '_') {
+                i++;
+            }
+            while(j < n && target.charAt(j) == '_') {
+                j++;
+            }
+            if( i == m && j == n) {
+                return true;
+            }
+            if( i == m || j == n) {
+                return false;
+            }
+            if (start.charAt(i) != target.charAt(j)) return false;
+            if(start.charAt(i) == 'L' && i < j) {
+                return false;
+            }
+             if(start.charAt(i) == 'R' && i > j) {
+                return false;
+            }
             i++;
             j++;
         }
-
-        // Skip any remaining underscores
-        while (i < n && s.charAt(i) == '_') i++;
-        while (j < n && t.charAt(j) == '_') j++;
-
-        // Both pointers should reach the end for strings to be equivalent
-        return i == n && j == n;
+        while (i < n && start.charAt(i) == '_') i++;
+        while (j < n && target.charAt(j) == '_') j++;
+        
+        return i == m && j == n;
     }
 }
