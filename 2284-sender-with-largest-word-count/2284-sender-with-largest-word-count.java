@@ -13,15 +13,6 @@ public class Solution {
         void addWords(int count) {
             this.countOfWord += count;
         }
-
-        @Override
-        public String toString() {
-            return "Pair{" +
-                    "sender='" + sender + '\'' +
-                    ", countOfWord=" + countOfWord +
-                    ", largestName=" + largestName +
-                    '}';
-        }
     }
 
     public String largestWordCount(String[] messages, String[] senders) {
