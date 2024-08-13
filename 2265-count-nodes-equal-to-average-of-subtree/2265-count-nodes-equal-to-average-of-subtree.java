@@ -14,7 +14,7 @@
  * }
  */
 class Solution {
-    int count =0;
+    int result =0;
     class Pair {
         int value;
         int count;
@@ -25,7 +25,7 @@ class Solution {
     }
     public int averageOfSubtree(TreeNode root) {
         dfs(root);
-        return count;
+        return result;
     }
     
     Pair dfs(TreeNode root) {
@@ -35,12 +35,12 @@ class Solution {
         Pair left = dfs(root.left);
         Pair right = dfs(root.right);
         
-        int value = left.value + right.value + root.val;
+        int values = left.value + right.value + root.val;
         int totalCount = left.count + right.count + 1;
-        int average = (value / totalCount);
+        int average = (values / totalCount);
         if(average == root.val) {
-           count++; 
+           result++; 
         }
-        return new Pair(value, totalCount);
+        return new Pair(values, totalCount);
     }
 }
