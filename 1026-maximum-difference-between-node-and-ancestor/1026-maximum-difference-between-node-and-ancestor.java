@@ -14,23 +14,24 @@
  * }
  */
 class Solution {
-    
-    int ans;
+    int ans =0;
     public int maxAncestorDiff(TreeNode root) {
-        ans=maxDiff(root,root.val,root.val);
+        helper(root, Integer.MAX_VALUE, Integer.MIN_VALUE);
         return ans;
     }
-    public int maxDiff(TreeNode root,int max,int min){
-       
-        if(root==null){
+    
+    int helper(TreeNode root, int min, int max) {
+        if(root == null) {
             return 0;
         }
-        max = Math.max(max,root.val);
-        min = Math.min(min,root.val);
+        min = Math.min(min, root.val);
+        max = Math.max(max, root.val);
         
-        int leftmax = maxDiff(root.left, max, min);
-        int rightmax = maxDiff(root.right, max, min);
-
-        return Math.max(max-min,Math.max(leftmax,rightmax));
+        int left = helper(root.left, min, max);
+        int right = helper(root.right, min, max);
+        
+        ans = Math.max(ans, max - min);
+        
+        return Math.max(max - min, Math.max(left, right));
     }
 }
