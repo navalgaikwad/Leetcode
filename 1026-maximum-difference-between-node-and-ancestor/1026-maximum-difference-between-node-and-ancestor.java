@@ -16,8 +16,8 @@
 class Solution {
     int ans =0;
     public int maxAncestorDiff(TreeNode root) {
-        helper(root, Integer.MAX_VALUE, Integer.MIN_VALUE);
-        return ans;
+        
+        return helper(root, Integer.MAX_VALUE, Integer.MIN_VALUE);
     }
     
     int helper(TreeNode root, int min, int max) {
@@ -29,8 +29,6 @@ class Solution {
         
         int left = helper(root.left, min, max);
         int right = helper(root.right, min, max);
-        
-        ans = Math.max(ans, max - min);
         
         return Math.max(max - min, Math.max(left, right));
     }
