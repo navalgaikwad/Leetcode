@@ -1,33 +1,30 @@
 class Solution {
     public int maximumSwap(int num) {
-        String value = String.valueOf(num); // Convert the number to a string
-        char[] val = value.toCharArray(); // Convert the string to a character array
-        int n = val.length;
-        
-        // Array to store the index of the largest digit to the right of each digit
-        int[] maxRight = new int[n];
-        int maxIndex = n - 1; // Initialize maxIndex to the last digit
-        
-        // Traverse the number from right to left to find the largest digits to the right
-        for (int i = n - 1; i >= 0; i--) {
-            if (val[i] > val[maxIndex]) {
-                maxIndex = i;
+        // Convert the number to a string
+        String s = Integer.toString(num);
+        char[] chars = s.toCharArray(); // Convert the string to a char array
+
+        int maxPos = chars.length - 1;
+        int bestSrc = -1, bestDest = -1;
+
+        // Traverse the number from right to left
+        for (int i = chars.length - 1; i >= 0; --i) {
+            if (chars[i] > chars[maxPos]) {
+                maxPos = i; // Update the position of the maximum digit
+            } else if (chars[i] < chars[maxPos]) {
+                bestSrc = maxPos;  // Store the position of the larger digit
+                bestDest = i;      // Store the position of the smaller digit
             }
-            maxRight[i] = maxIndex;
         }
 
-        // Traverse the number from left to right to find the first place to swap
-        for (int i = 0; i < n; i++) {
-            // If there is a larger digit to the right, swap it with the current digit
-            if (val[i] != val[maxRight[i]]) {
-                char temp = val[i];
-                val[i] = val[maxRight[i]];
-                val[maxRight[i]] = temp;
-                break; // Only one swap is allowed
-            }
+        // If there's a beneficial swap, perform it
+        if (bestSrc != -1) {
+            char temp = chars[bestSrc];
+            chars[bestSrc] = chars[bestDest];
+            chars[bestDest] = temp;
         }
 
         // Convert the modified char array back to an integer
-        return Integer.parseInt(new String(val));
+        return Integer.parseInt(new String(chars));
     }
 }
