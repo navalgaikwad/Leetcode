@@ -6,9 +6,8 @@ class Solution {
             int val = mat[0][j];
             count = 0;
             for (int i = 1; i < m; i++) {
-                if (!check(val, mat[i])) 
-                    break;
-                count+=1;
+                if (check(val, mat[i])) 
+                     count+=1;
             }
             if (count == m-1)
                 return val;
