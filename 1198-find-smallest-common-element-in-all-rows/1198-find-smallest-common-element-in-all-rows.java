@@ -20,12 +20,13 @@ class Solution {
         int l = 0, r = arr.length, mid = 0;
         while (l<r) {
             mid = l + (r - l)/2;
-            if (val <= arr[mid]) {
+            if(val == arr[mid]) return true; 
+            if (val < arr[mid]) {
                 r = mid;
             } else {
                 l = mid+1;
             }
         } 
-        return l<arr.length && val == arr[l];
+        return false;
     }
 }
