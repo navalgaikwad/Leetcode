@@ -6,9 +6,9 @@ class Solution {
         map.put(0, 0);
         int prefixSum =0;
         while(i < n) {
-            prefixSum = (prefixSum + nums[i])%k;
+            prefixSum = (prefixSum + nums[i])%k; //its length is at least two (prefixSum + nums[i]) and
             if(map.containsKey(prefixSum)) {
-                if(i + 1 - map.get(prefixSum) >=2) {
+                if(i + 1 - map.get(prefixSum) >=2) { //checked len greater than 2 
                     return true;
                 }
             }else {
@@ -19,3 +19,8 @@ class Solution {
         return false;
     }
 }
+
+/*
+the sum of the elements of the subarray is a multiple of k.
+(prefixSum + nums[i])%k
+*/
