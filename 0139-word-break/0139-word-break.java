@@ -11,14 +11,13 @@ class Solution {
         }
         boolean flag = false;
         for(String word : wordDict) {
-            boolean remainder = s.startsWith(word);
-            if(remainder) {
+            if(s.startsWith(word)) {
                 if(helper(s.substring(word.length()), wordDict, memo)) {
                     flag = true;
                 }
             }
         }
         memo.put(s, flag);
-        return flag;
+        return memo.get(s);
     }
 }
