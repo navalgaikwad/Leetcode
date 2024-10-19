@@ -1,30 +1,30 @@
 class Solution {
    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-      List<List<Integer>> res = new ArrayList<>();
-if (root == null) return res;
-Queue<TreeNode> queue = new LinkedList<>();
-queue.add(root);
-boolean zigzag = false;
-while (!queue.isEmpty()) {
-    List<Integer> level = new ArrayList<>();
-    int cnt = queue.size();
-    for (int i = 0; i < cnt; i++) {
-        TreeNode node = queue.poll();
-        if(zigzag){
-            level.add(0, node.val); // add at front  2 1
-        }else{
-           level.add(node.val);  //normal add at back 1 2
+        List<List<Integer>> res = new ArrayList<>();
+        if (root == null) return res;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        boolean zigzag = false;
+        while (!queue.isEmpty()) {
+            List<Integer> level = new ArrayList<>();
+            int cnt = queue.size();
+            for (int i = 0; i < cnt; i++) {
+                TreeNode node = queue.poll();
+                if(zigzag){
+                    level.add(0, node.val); // add at front  2 1
+                }else{
+                   level.add(node.val);  //normal add at back 1 2
+                }
+                if (node.left != null) {
+                    queue.add(node.left);
+                }
+                if (node.right != null) {
+                    queue.add(node.right);
+                }
+            }
+            res.add(level);
+            zigzag = !zigzag;
         }
-        if (node.left != null) {
-            queue.add(node.left);
-        }
-        if (node.right != null) {
-            queue.add(node.right);
-        }
-    }
-    res.add(level);
-    zigzag = !zigzag;
-}
-return res;
+        return res;
     }
 }
