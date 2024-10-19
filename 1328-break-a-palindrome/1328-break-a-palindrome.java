@@ -1,18 +1,19 @@
 class Solution {
-    public String breakPalindrome(String p) {
-        if(p.length() <= 1) return "";
-        int left = 0; int right = p.length()-1;
-        char[] c = p.toCharArray();
+    public String breakPalindrome(String palindrome) {
+        if(palindrome.length() <= 1) return "";
+        char[] palindromeArrray = palindrome.toCharArray();
+        int left = 0;
+        int right = palindrome.length()-1;
         while(left < right) {
-            if(c[left]!='a') {
-                c[left] = 'a';
-                return String.valueOf(c);
+            if(palindromeArrray[left]!='a') {
+                palindromeArrray[left] = 'a';
+                return String.valueOf(palindromeArrray);
             }else {
                 left++;
                 right--;
             }
         }
-        c[p.length()-1] = 'b';
-        return String.valueOf(c);
+        palindromeArrray[palindrome.length()-1] = 'b';
+        return String.valueOf(palindromeArrray);
     }
 }
