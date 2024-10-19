@@ -27,3 +27,6 @@ class Solution {
         return left || right || up || down;
     }
 }
+
+//O(m∗n∗4L)
+//O(L)
