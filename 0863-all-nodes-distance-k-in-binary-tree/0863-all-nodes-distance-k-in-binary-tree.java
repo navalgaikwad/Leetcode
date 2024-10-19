@@ -8,43 +8,39 @@
  * }
  */
 class Solution {
-    Map<Integer, ArrayList<Integer>> map = new HashMap<>();
-    void buildTree(TreeNode child, TreeNode parent) {
-        if(child==null) {
+    Map<Integer, ArrayList<Integer>> adj = new HashMap<>();
+    void helper(TreeNode parent, TreeNode child) {
+        if(child == null) {
             return;
         }
-        //check for key not present in map
-        if(!map.containsKey(child.val)) {
-            map.put(child.val, new ArrayList<>());
+        if(!adj.containsKey(child.val)) {
+            adj.put(child.val, new ArrayList<>());
         }
         if(parent!=null) {
-            map.get(parent.val).add(child.val);
-            map.get(child.val).add(parent.val);
+            adj.get(parent.val).add(child.val);
+            adj.get(child.val).add(parent.val);
         }
-        buildTree(child.left, child);
-        buildTree(child.right, child);
+        helper(child, child.left);
+        helper(child, child.right);
     }
-    //check for null
-    //check for child key is not presnet in map
-    //check parent is not null
     public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
-        buildTree(root, null);
-        Queue<int[]> q = new LinkedList<>();
-        q.add(new int[]{target.val, 0});
-        Set<Integer> visited = new HashSet<>();
-        visited.add(target.val);
+        helper(null, root);
+        Queue<int[]> queue = new LinkedList<>();
+        Set<Integer> set = new HashSet<>();
+        set.add(target.val);
+        queue.add(new int[]{target.val, 0});
         ArrayList<Integer> ans = new ArrayList<>();
-        while(!q.isEmpty()) {
-            int[] current = q.remove();
-            int next = current[0];
-            int level = current[1];
+        while(!queue.isEmpty()) {
+            int[] array = queue.remove();
+            int current = array[0];
+            int level = array[1];
             if(level == k) {
-               ans.add(next); 
+                ans.add(current);
             }
-            for(Integer neighbour : map.get(next)) {
-                if(!visited.contains(neighbour)) {
-                    visited.add(neighbour);
-                    q.add(new int[]{neighbour, level+1});
+            for(Integer neighbours: adj.get(current)) {
+                if(!set.contains(neighbours) && level <= k) {
+                    set.add(neighbours);
+                    queue.add(new int[]{neighbours, level + 1});
                 }
             }
         }
