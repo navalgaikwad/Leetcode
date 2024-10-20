@@ -4,18 +4,17 @@ class Solution {
             return false;
         }
         int[] sArray = new int[26];
-        for(int i = 0; i<s.length(); i++) {
-            sArray[s.charAt(i)- 'a']++;
-        }
+       
         
-        for(int tA : t.toCharArray()) {
-            if(sArray[tA - 'a'] == 0) {
+        for(char c : s.toCharArray()) {
+            sArray[c-'a']++;
+        }
+        for(char c : t.toCharArray()) {
+            if(sArray[c-'a'] == 0) {
                 return false;
             }
-            sArray[tA - 'a']--;
+            sArray[c-'a']--;
         }
-        
         return true;
     }
-    
 }
