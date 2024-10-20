@@ -13,6 +13,6 @@ class Solution {
         }
 
         // Append the first word to the output (without trailing space)
-        return out + str[0];
+        return out + str[0];//manually update kar
     }
 }
