@@ -17,6 +17,7 @@ class Solution {
             curr = curr.next;
             count++;
         }
+        
         if(count == k) {
             curr = reverseKGroup(curr, k);
             while(count-- > 0) {
