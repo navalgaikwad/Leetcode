@@ -1,31 +1,37 @@
 class Solution {
     public int calculate(String s) {
-        Stack<Integer> stack = new Stack<>();
-        int number = 0;
+       // Stack<Character> stSign = new Stack<>();
+        Stack<Integer> stNumber = new Stack<>(); //integer array
         char sign = '+';
+        int number =0;
         for(int i=0; i<s.length(); i++) {
             if(Character.isDigit(s.charAt(i))) {
-                number = number * 10 + (s.charAt(i) - '0');
-                //i++;
+                
+                //while(Character.isDigit(s.charAt(i)) && i < s.length()) {
+                    number =number*10 +( s.charAt(i) - '0');
+                    //i++;
+               // }
+               
             }
-            
-            if(!Character.isDigit(s.charAt(i)) && !Character.isWhitespace(s.charAt(i)) || i == s.length()-1) {
+            char c = s.charAt(i);
+            if((!Character.isWhitespace(c)&& !Character.isDigit(c))|| i == s.length() -1) {
                 if(sign == '+') {
-                    stack.push(number);
+                    stNumber.push(number);
                 }else if(sign == '-') {
-                    stack.push(-number);
+                    stNumber.push(-number);
                 }else if(sign == '*') {
-                    stack.push(stack.pop() * number);
+                    stNumber.push(stNumber.pop() * number);
                 }else if(sign == '/') {
-                    stack.push(stack.pop() / number);
+                    stNumber.push(stNumber.pop() / number);
                 }
+                sign = c;
                 number = 0;
-                sign = s.charAt(i);
             }
         }
+        
         int result = 0;
-        while(!stack.isEmpty()) {
-            result+=stack.pop();
+        while(!stNumber.isEmpty()) {
+            result+=stNumber.pop();
         }
         return result;
     }
