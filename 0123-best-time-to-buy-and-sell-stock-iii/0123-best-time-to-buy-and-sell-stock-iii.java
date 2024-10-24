@@ -1,19 +1,16 @@
 class Solution {
     public int maxProfit(int[] prices) {
-        int minPrice1 = Integer. MAX_VALUE, minPrice2 = Integer. MAX_VALUE;
-        int profit1 = 0, profit2 = 0;
-
-        for (int currPrice : prices) {
-            minPrice1 = Math.min(currPrice, minPrice1);
-            profit1 = Math.max(profit1, currPrice - minPrice1);
-
-            minPrice2 = Math.min(minPrice2, currPrice - profit1);
-            profit2 = Math.max(profit2, currPrice - minPrice2);
-
+        int minPrice = Integer.MAX_VALUE;
+        int maxPrice1 = 0;
+        int minPrice2 = Integer.MAX_VALUE;
+        int maxPrice2 = 0;
+        for(int i =0; i<prices.length; i++) {
+            minPrice = Math.min(minPrice, prices[i]);
+            maxPrice1 = Math.max(maxPrice1, prices[i] - minPrice);
+            
+            minPrice2 = Math.min(minPrice2,  prices[i] - maxPrice1);
+            maxPrice2 = Math.max(maxPrice2, prices[i] - minPrice2);
         }
-
-        return profit2;
+        return maxPrice2;
     }
 }
-
-// TC: O(n), SC: O(1)
