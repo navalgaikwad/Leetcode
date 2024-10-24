@@ -5,12 +5,12 @@ class Solution {
         int left = 0;
         Map<Integer, Integer> map = new HashMap<>();
         
-        for (int i = 0; i < nums.length; i++) {
-            map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
-            sum += nums[i];
+        for (int right = 0; right < nums.length; right++) {
+            map.put(nums[right], map.getOrDefault(nums[right], 0) + 1);
+            sum += nums[right];
             
             // If the window exceeds size `k`, shrink the window
-            if (i - left + 1 > k) {
+            if (right - left + 1 > k) {
                 sum -= nums[left];
                 map.put(nums[left], map.get(nums[left]) - 1);
                 if (map.get(nums[left]) == 0) {
@@ -20,7 +20,7 @@ class Solution {
             }
             
             
-            if (i - left + 1 == k && map.size() == k) {
+            if (right - left + 1 == k && map.size() == k) {
                 max = Math.max(max, sum);
             }
         }
