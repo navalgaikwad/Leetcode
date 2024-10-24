@@ -1,50 +1,19 @@
 class Solution {
     public int maxProfit(int[] prices) {
-        int n = prices.length;
-       int[][][] dp = new int[n+1][2][3];
-        for(int i = n - 1; i>=0; i-- ){
-            for(int buy = 0; buy <=1; buy++){
-                for(int cap =1; cap<=2; cap++){
-                    if(dp[i][buy][cap]!=0){
-                        return dp[i][buy][cap];
-                    }
-                    if(buy == 1){
-                        dp[i][buy][cap] =
-                            Math.max( -prices[i] + dp[i + 1][0][cap],
-                                     0 + dp[i + 1][1][cap]); 
-                    }else{
-                     dp[i][buy][cap] =
-                            Math.max( prices[i] + dp[i + 1][1][cap - 1],
-                                     0 + dp[i + 1][0][cap]); 
-                    } 
-                }
-            }
+        int minPrice1 = Integer. MAX_VALUE, minPrice2 = Integer. MAX_VALUE;
+        int profit1 = 0, profit2 = 0;
+
+        for (int currPrice : prices) {
+            minPrice1 = Math.min(currPrice, minPrice1);
+            profit1 = Math.max(profit1, currPrice - minPrice1);
+
+            minPrice2 = Math.min(minPrice2, currPrice - profit1);
+            profit2 = Math.max(profit2, currPrice - minPrice2);
+
         }
-        
-        return dp[0][1][2];
+
+        return profit2;
     }
 }
 
-
-
-
-
-
-//[3,3,5,0,0,3,1,4]
-//[0,-, 2,-,-,0,-, 1]
-//[0,0,2,0,0,0,-,1]
-//[0,0,0,-,-,-,-,-]
-//[0,0,0,0,0,3,1,4]
-//[0,0,0,0,0,3,1,4]
-//[0,0,0,0,0,0,-,-]
-//[0,0,0,0,0,0,0,3]
-//[0,0,0,0,0,0,0,0]
-//[0,0,2,0,0,2,2,5]
-
-//[4, 1,3,1,3]
-//[0, 0, 2,1,3]
-//[0,0,2,0,2]
-
-//[3,3,5,0,0,3,1,4]
-//[0,0,2,0,0,3,1,4]
-//[0,0,2,0,0,]
+// TC: O(n), SC: O(1)
