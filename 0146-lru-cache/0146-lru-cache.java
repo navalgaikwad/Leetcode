@@ -1,22 +1,22 @@
 class LRUCache {
-class Node {
-    int key;
-    int value;
-    Node next;
-    Node prev;
-    Node(int key, int value) {
-        this.key = key;
-        this.value = value;
+    class Node {
+        int key;
+        int value;
+        Node next;
+        Node prev;
+        Node(int key, int value) {
+            this.key = key;
+            this.value = value;
+        }
     }
-}
-    int _capacity =0;
-    Map<Integer, Node> map = new HashMap<>();
     Node head = new Node(0, 0);
     Node tail = new Node(0, 0);
+    Map<Integer, Node> map = new HashMap<>();
+    int capacity =0;
     public LRUCache(int capacity) {
-        _capacity = capacity;
-        head.next= tail;
-        tail.next = head;
+        this.head.next = tail;
+        this.tail.prev = head;
+        this.capacity = capacity;
     }
     
     public int get(int key) {
@@ -25,43 +25,38 @@ class Node {
         }
         Node node = map.get(key);
         remove(node);
-        add(new Node(node.key, node.value));
+        addFront(node);
         return node.value;
     }
     
     public void put(int key, int value) {
-        if(map.containsKey(key)) {
+         if(map.containsKey(key)) {
             Node node = map.get(key);
             remove(node);
         }
-        if(_capacity == map.size()) {
-            remove(tail.prev);
+        if(capacity == map.size()) {
+             remove(tail.prev); 
         }
-        
-        add(new Node(key, value));
+       
+         addFront(new Node(key, value));
     }
     
-    void add(Node node) {//map madhye add kar
+    void addFront(Node node) {
         map.put(node.key, node);
         Node next = head.next;
-        //Node prev = head;
-        
-        head.next = node;
-        node.prev = head;
+        Node prev = head;
         node.next = next;
         next.prev = node;
+        head.next = node;
+        node.prev = prev;
     }
-    
-    void remove(Node node) {//map madhun remove kar
+    void remove(Node node) {
         map.remove(node.key);
-        
         Node next = node.next;
         Node prev = node.prev;
-        
         prev.next = next;
         next.prev = prev;
     }
-    
 }
 
 /**
