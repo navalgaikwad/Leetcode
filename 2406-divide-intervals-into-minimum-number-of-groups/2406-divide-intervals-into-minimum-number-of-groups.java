@@ -1,13 +1,14 @@
 class Solution {
     public int minGroups(int[][] intervals) {
-        Arrays.sort(intervals, (a,b)->a[0] - b[0]);
+        Arrays.sort(intervals,(a,b)->a[0] - b[0]);
         PriorityQueue<Integer> pq = new PriorityQueue<>();
-        for(int i=0; i<intervals.length; i++) {
-            int start = intervals[i][0], end = intervals[i][1];
-            if(!pq.isEmpty() && pq.peek() < start) {
+        int count =0;
+        int endTime =0;
+        for(int[] interval:intervals) {
+            if(!pq.isEmpty() && pq.peek() < interval[0]) {
                 pq.remove();
             }
-            pq.add(end);
+            pq.add( interval[1]);
         }
         return pq.size();
     }
