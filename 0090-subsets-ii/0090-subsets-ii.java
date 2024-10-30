@@ -1,5 +1,5 @@
 class Solution {
-    Set<List<Integer>> result = new HashSet<>();
+     Set<List<Integer>> result = new HashSet<>();
     
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         Arrays.sort(nums); // Sort the array to handle duplicates
@@ -8,16 +8,14 @@ class Solution {
     }
     
     void helper(int[] nums, int index, ArrayList<Integer> runningList) {
-        result.add(new ArrayList<>(runningList)); // Add the current subset
-        
-        for (int i = index; i < nums.length; i++) {
-            // Skip duplicates
-            if (i > index && nums[i] == nums[i - 1]) {
-                continue;
-            }
+        result.add(new ArrayList<>(runningList));
+        for(int i= index; i<nums.length; i++) {
+            // if(i > index && nums[i] == nums[i-1]) {
+            //     break;
+            // }
             runningList.add(nums[i]);
             helper(nums, i + 1, runningList);
-            runningList.remove(runningList.size() - 1); // Backtrack
+            runningList.remove(runningList.size() - 1);
         }
     }
 }
