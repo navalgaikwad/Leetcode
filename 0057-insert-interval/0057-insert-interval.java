@@ -24,6 +24,12 @@ class Solution {
         return mergedList.toArray(new int[mergedList.size()][]);  
     }
 }
+/*
+[[2,5],[6,9]], newInterval = [1,3]
+
+
+
+*/
 // class Solution {
 //     public int[][] insert(int[][] intervals, int[] newInterval) {
 //         for(int[] interval : intervals) {
