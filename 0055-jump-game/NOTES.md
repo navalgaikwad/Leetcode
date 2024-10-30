@@ -1,3 +1,13 @@
+boolean dp(int[] nums, int currentIndex, HashMap<Integer, Boolean> memo){
+if(currentIndex == nums.length -1){
+return true;
+}
+if(memo.containsKey(currentIndex)) return memo.get(currentIndex);
+for(int coin = 1; coin< nums[currentIndex] + 1; coin++){
+int nextStep = coin + currentIndex; // it is same as coin change
+//move to next step
+if(nextStep < nums.length){//check for nextstep is less than array length
+if(dp(nums, nextStep, memo)){
 memo.put(currentIndex, true);
 return true;
 }
@@ -40,10 +50,3 @@ return dp[nums.length - 1] != -1;
 //                     int next = j + i;
 //                     if (next < len) {
 //                         dp[next] = dp[i] + 1;
-//                     }
-//                 }
-//             }
-//         }
-//         return dp[len - 1] != -1;
-//     }
-// }
