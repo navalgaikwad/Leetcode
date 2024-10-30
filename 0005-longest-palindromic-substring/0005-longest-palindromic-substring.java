@@ -38,7 +38,7 @@ class Solution {
             }
         }
         // Print true/false depending on whether a palindrome was found
-        System.out.println(isPalindromeFound);
+       // System.out.println(isPalindromeFound);
         return result;
     }
 }
