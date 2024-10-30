@@ -34,7 +34,7 @@ class LRUCache {
             Node node = map.get(key);
             remove(node);
         }
-        if(capacity == map.size()) {
+        if(capacity == map.size()) {//it should second vvimp
              remove(tail.prev); 
         }
        
