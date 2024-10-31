@@ -17,23 +17,23 @@
  */
 public class NestedIterator implements Iterator<Integer> {
     List<Integer> result = new ArrayList<>();
-    public NestedIterator(List<NestedInteger> nestedList) {
-        helper(nestedList);
-    }
     int index =0;
-    void helper(List<NestedInteger> nestedLists) {
-        for(NestedInteger nestedList: nestedLists) {
-            if(nestedList.isInteger()) {
-                result.add(nestedList.getInteger());
+    public NestedIterator(List<NestedInteger> nestedList) {
+       helper(nestedList);
+    }
+    void helper(List<NestedInteger> nestedList) {
+         for(NestedInteger nI:nestedList) {
+            if(nI.isInteger()) {
+                result.add(nI.getInteger());
             }else {
-               helper(nestedList.getList()); 
+                helper(nI.getList());
             }
         }
     }
-
     @Override
     public Integer next() {
-        return result.get(index++);
+        if(hasNext()) return result.get(index++);
+        return 0;
     }
 
     @Override
