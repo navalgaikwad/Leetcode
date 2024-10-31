@@ -19,12 +19,11 @@ class Solution {
         helper(root, 0);
         return result;
     }
-    
     void helper(TreeNode root, int level) {
         if(root == null) {
-           return;
+            return;
         }
-        if(result.size() == level){
+        if(result.size() == level) {
             result.add(root.val);
         }
         helper(root.right, level+1);
