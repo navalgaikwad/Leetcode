@@ -1,25 +1,21 @@
+import java.util.Arrays;
+
 class Solution {
     public int coinChange(int[] coins, int amount) {
-        Integer value = helper(coins, amount, new HashMap<>()) ;
-        return value== null? -1 : value;
-    }
-    
-    Integer helper(int[] coins, int target, HashMap<Integer, Integer> memo) {
-        if(target == 0) return 0;
-        if(target < 0) return null;
-        if(memo.containsKey(target)) return memo.get(target);
-        Integer min = null;
-        for(int coin : coins) {
-            int remainder = target - coin;
-            Integer count = helper(coins, remainder, memo);
-            if(count != null) {
-                int newCount = count + 1;
-                if(min == null || newCount < min) {
-                    min = newCount;
+        long[] dp = new long[amount + 1];
+        Arrays.fill(dp, Long.MAX_VALUE); // Filling the array with max value instead of -1
+        dp[0] = 0;
+
+        for (int i = 0; i <= amount; i++) {
+            if (dp[i] != Long.MAX_VALUE) {
+                for (int coin : coins) {
+                    if (i <= amount - coin) { // Check for potential overflow
+                        dp[i + coin] = Math.min(dp[i + coin], dp[i] + 1);
+                    }
                 }
             }
         }
-        memo.put(target, min);
-        return min;
+
+        return dp[amount] > amount ? -1 : (int) dp[amount];
     }
 }
