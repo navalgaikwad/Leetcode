@@ -8,11 +8,11 @@ class Solution {
                 size = strs[i].length();
                 smallest = strs[i];
             }
-        }
+        }//o(n)
         int j ;
         //System.out.print(smallest);
-        for(int i =0; i<smallest.length(); i++) {
-            for( j =0; j<strs.length; j++) {
+        for(int i =0; i<smallest.length(); i++) {//(k)
+            for( j =0; j<strs.length; j++) {//n
                 if(smallest.charAt(i) != strs[j].charAt(i)) {
                    
                     return sb.toString();
