@@ -1,17 +1,16 @@
 class Solution {
     public int firstMissingPositive(int[] nums) {
-        int length = nums.length;
-        boolean seen[] = new boolean[length + 1];
-        for(int i=0; i<length; i++) {
-            if(nums[i] > 0 && nums[i] <= length) {
-                seen[nums[i]] = true;
+        Set<Integer> set = new HashSet<>();
+        for(int num : nums) {
+            if(num > 0 && num <= nums.length) {//vvimp
+                set.add(num);
             }
         }
-        for(int i =1; i<=length; i++) {
-            if(!seen[i]) {
+        for(int i=1; i<=nums.length; i++) {//vvimp
+            if(!set.contains(i)) {
                 return i;
             }
         }
-        return length + 1;
+        return nums.length +1;
     }
 }
