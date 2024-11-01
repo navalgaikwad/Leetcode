@@ -9,24 +9,21 @@ class Solution {
         }
         return false;
     }
-    
-    boolean helper(char[][] board, String word, int i, int j, int index) {
-        if(word.length() == index) {
-            return true;
-        }
-        if( i < 0 || i >= board.length || j < 0 || j >=board[0].length || board[i][j] == '$' || word.charAt(index)!= board[i][j]) {
+    boolean helper(char[][] board, String word, int row, int col, int index) {
+         if(index == word.length()) return true;
+        if(row < 0 || row >= board.length || col < 0 || col >= board[0].length || board[row][col]!= word.charAt(index)) {
             return false;
         }
-        char temp = board[i][j];
-        board[i][j] = '$';
-        boolean left = helper(board, word, i + 1, j, index  +1);
-        boolean right = helper(board, word, i, j + 1, index  +1);
-        boolean up = helper(board, word, i - 1, j, index  +1);
-        boolean down = helper(board, word, i , j - 1, index  +1);
-        board[i][j] = temp;
-        return left || right || up || down;
+        
+       
+        
+        char c =  board[row][col];
+        board[row][col] = '$';
+        boolean left = helper(board, word, row+1, col, index+1);
+        boolean right = helper(board, word, row, col+1, index+1);
+        boolean up = helper(board, word, row-1, col, index+1);
+        boolean bottom = helper(board, word, row, col-1, index+1);
+        board[row][col]= c;
+        return left || right || up || bottom;
     }
 }
-
-//O(m∗n∗4L)
-//O(L)
