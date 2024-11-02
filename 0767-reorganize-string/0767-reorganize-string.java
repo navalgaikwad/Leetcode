@@ -10,7 +10,7 @@ class Solution {
          PriorityQueue<Character> pq = new PriorityQueue<>((a,b)->map.get(b) - map.get(a));
          pq.addAll(map.keySet());//a, b
          StringBuilder sb = new StringBuilder();
-         while(pq.size() > 1) {
+         while(pq.size() > 1) {// it should be greater than one
              char value1 = pq.remove();//a
              char value2 = pq.remove();//b
              
