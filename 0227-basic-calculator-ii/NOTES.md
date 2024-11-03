@@ -18,3 +18,15 @@ no.push(-number);
 no.push(no.pop() * number);
 }else if(sign == '/') {
 no.push(no.pop()/number);
+}
+number =0;
+sign = s.charAt(i);
+}
+}
+int result = 0;
+while(!no.isEmpty()) {
+result+=no.pop();
+}
+return result;
+}
+}
