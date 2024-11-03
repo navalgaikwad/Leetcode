@@ -1,31 +1,32 @@
 class Solution {
     public List<String> findItinerary(List<List<String>> tickets) {
-        Map<String, List<String>> adj = new HashMap<>();
-        for(List<String> neighbours : tickets) {
-            String src = neighbours.get(0);
-            String dst = neighbours.get(1);
-            adj.putIfAbsent(src, new ArrayList<>());
-            adj.get(src).add(dst);
+        // Step 1: Build the adjacency list
+        Map<String, PriorityQueue<String>> adj = new HashMap<>();
+        for (List<String> ticket : tickets) {
+            String src = ticket.get(0);
+            String dst = ticket.get(1);
+            adj.putIfAbsent(src, new PriorityQueue<>());
+            adj.get(src).offer(dst);
         }
         
-        for(List<String> destinations : adj.values()) {
-            Collections.sort(destinations);
-        }
+        List<String> result = new LinkedList<>();
         
-        System.out.print(adj);
-        Stack<String> st = new Stack<>();
-        List<String> result = new ArrayList<>();
-        st.push("JFK");
-        while(!st.isEmpty()) {
-            String current = st.peek();
-            if(!adj.containsKey(current) || adj.get(current).isEmpty()) {
-                result.add(st.pop());
-            } else {
-                st.push(adj.get(current).remove(0));
-            }
-        }
-         // Step 8: Reverse the circuit to get the correct order
-        Collections.reverse(result);
+        // Step 2: Start DFS from "JFK"
+        dfs("JFK", adj, result);
+        
         return result;
+    }
+
+    private void dfs(String airport, Map<String, PriorityQueue<String>> adj, List<String> result) {
+        PriorityQueue<String> destinations = adj.get(airport);
+        
+        // Visit all destinations from the current airport in lexicographical order
+        while (destinations != null && !destinations.isEmpty()) {
+            String next = destinations.poll();
+            dfs(next, adj, result);
+        }
+        
+        // Add airport to the result after visiting all its destinations
+        result.add(0, airport); // Prepend to build the path in reverse order
     }
 }
