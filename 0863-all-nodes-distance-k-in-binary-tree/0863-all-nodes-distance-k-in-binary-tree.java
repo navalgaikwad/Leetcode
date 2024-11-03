@@ -9,41 +9,47 @@
  */
 class Solution {
     Map<Integer, ArrayList<Integer>> adj = new HashMap<>();
-    void helper(TreeNode parent, TreeNode child) {
-        if(child == null) {
-            return;
-        }
-        if(!adj.containsKey(child.val)) {
+    void buildTree(TreeNode child, TreeNode parent) {
+        if(child == null) return;
+        
+        if (!adj.containsKey(child.val)) {
             adj.put(child.val, new ArrayList<>());
         }
-        if(parent!=null) {
+        
+        if(parent != null) {
             adj.get(parent.val).add(child.val);
-            adj.get(child.val).add(parent.val);
+            adj.get(child.val).add((parent.val));
         }
-        helper(child, child.left);
-        helper(child, child.right);
+        buildTree(child.left, child);
+        buildTree(child.right, child);
+        
     }
+    
     public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
-        helper(null, root);
+        buildTree(root, null);
+        List<Integer> result = new ArrayList<>();
         Queue<int[]> queue = new LinkedList<>();
-        Set<Integer> set = new HashSet<>();
-        set.add(target.val);
         queue.add(new int[]{target.val, 0});
-        ArrayList<Integer> ans = new ArrayList<>();
+        HashSet<Integer> visited = new HashSet<>();
+        visited.add(target.val);
+        //List<Integer> result = new ArrayList<>();
         while(!queue.isEmpty()) {
-            int[] array = queue.remove();
-            int current = array[0];
-            int level = array[1];
-            if(level == k) {
-                ans.add(current);
-            }
-            for(Integer neighbours: adj.get(current)) {
-                if(!set.contains(neighbours) && level <= k) {
-                    set.add(neighbours);
-                    queue.add(new int[]{neighbours, level + 1});
+            int size = queue.size();
+           
+                int[] current = queue.remove();
+                int x = current[0];
+                int count = current[1];
+                
+                if(count == k) {
+                    result.add(x);
+                }
+            for(Integer neighbour : adj.get(x)) {
+                if(!visited.contains(neighbour)) {
+                    queue.add(new int[]{neighbour, count+1});
+                    visited.add(neighbour);
                 }
             }
         }
-        return ans;
+        return result;
     }
 }
