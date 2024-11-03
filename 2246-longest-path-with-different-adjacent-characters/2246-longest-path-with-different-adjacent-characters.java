@@ -27,7 +27,7 @@ class Solution {
                     if(firstMax < count) {
                         secondMax = firstMax;
                         firstMax = count;
-                    }else if(secondMax < count) {
+                    } else if(secondMax < count) {
                         secondMax = count;
                     }
                 }
