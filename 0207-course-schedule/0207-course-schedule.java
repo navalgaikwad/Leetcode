@@ -29,7 +29,7 @@ class Solution {
         }
         visited[start] = 1;
         for(Integer neighbour : adj[start]) {
-            if(neighbour!=null && !helper(adj, neighbour, visited)) {
+            if(!helper(adj, neighbour, visited)) {
                 return false;
             }
         }
