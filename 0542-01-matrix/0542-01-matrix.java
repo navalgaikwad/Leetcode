@@ -1,41 +1,44 @@
 class Solution {
+    boolean isValid(int[][] mat, int i, int j) {
+        return i>=0&& i<mat.length&& j>=0&&j<mat[0].length;
+    }
     public int[][] updateMatrix(int[][] mat) {
-        //put all zeros
-        //then traverse all zeros
-        //whenever i find one update with len
+        int m = mat.length;
+        int n = mat[0].length;
+        Set<String> visited = new HashSet<>();
         Queue<int[]> q = new LinkedList<>();
-        for(int i=0; i<mat.length; i++) {
-            for(int j=0; j<mat[0].length; j++) {
-                if(mat[i][j] == 0) {
+        for(int i=0; i<m; i++) {
+            for(int j =0; j<n; j++) {
+                if(mat[i][j]==0) {
                     q.add(new int[]{i, j, 0});
+                    visited.add(i+"-"+j);
                 }
             }
         }
-        return helper(q, mat);
+        return helper(visited, q, mat);
+        
     }
     
-    int[][] helper(Queue<int[]> q, int[][] mat) {
-        int[][] dirs = {{1,0},{0,1},{-1,0},{0,-1}};
-        HashSet<String> visited = new HashSet<>();
+    int[][] helper(Set<String> visited, Queue<int[]> q, int[][] mat) {
+        int[][] dir = {{1,0}, {0, 1}, {-1, 0}, {0, -1}};
         while(!q.isEmpty()) {
             int[] current = q.remove();
             int i = current[0];
             int j = current[1];
-            int level = current[2];
+            int len = current[2];
             if(mat[i][j]!=0) {
-                mat[i][j] = level;
+              mat[i][j] = len;  
             }
-            
-            for(int[] dir: dirs) {
-                int x = dir[0] + i;
-                int y = dir[1] + j;
-                
-                if(x>=0 && x<mat.length && y>=0 && y<mat[0].length && !visited.contains(x+"-"+y)) {
-                    visited.add(x+"-"+y);
-                    q.add(new int[]{x, y, level+1});
+            for(int[] di : dir) {
+                int xDir = di[0] + i;
+                int yDir = di[1] + j;
+                if(isValid(mat, xDir, yDir) && !visited.contains(xDir+"-"+yDir)) {
+                    q.add(new int[]{xDir, yDir, len+1});
+                    visited.add(xDir+"-"+yDir);
                 }
             }
         }
         return mat;
     }
+    
 }
