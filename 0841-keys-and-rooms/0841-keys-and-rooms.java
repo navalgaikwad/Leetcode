@@ -1,18 +1,20 @@
 class Solution {
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {
-        boolean[] viisted = new boolean[rooms.size()];
-        helper(rooms, 0, viisted);
-        for(boolean viist : viisted) {
-            if(!viist) return false; 
+        boolean[] visited = new boolean[rooms.size()];
+        dfs(rooms, 0, visited);
+        for(boolean visit: visited) {
+            if(!visit) {
+                return false;
+            }
         }
         return true;
     }
     
-    void helper(List<List<Integer>> rooms, int start, boolean[] visited) {
-        visited[start] = true;
-        for(Integer neighbour: rooms.get(start)) {
+    void dfs(List<List<Integer>> rooms, int parent, boolean[] visited) {
+        visited[parent] = true;
+        for(Integer neighbour :rooms.get(parent)) {
             if(!visited[neighbour]) {
-                helper(rooms, neighbour, visited);
+                dfs(rooms, neighbour, visited);
             }
         }
     }
