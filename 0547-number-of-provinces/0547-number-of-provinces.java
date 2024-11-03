@@ -1,42 +1,36 @@
 class Solution {
-   
-     public int findCircleNum(int[][] isConnected) {
+    public int findCircleNum(int[][] isConnected) {
         int n=isConnected.length;
-        //At first we are creating our adjacency list from given adjacency matrix;
-        ArrayList<ArrayList<Integer>>adj=new ArrayList<>();
+     ArrayList<Integer> [] adj =new ArrayList[n];
         for(int i=0;i<n;i++){
-            adj.add(new ArrayList<>());
+            adj[i]=new ArrayList<>();
         }
-
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
-                if(isConnected[i][j]==1 ){
-                    adj.get(i).add(j);
-                    adj.get(j).add(i);
+                if(isConnected[i][j] == 1){
+                    adj[i].add(j);
+                    adj[j].add(i);
                 }
             }
         }
-        
-
-
-        int visited[]=new int[n];
-        int count=0;
-        for(int i=0;i<n;i++){
-            if(visited[i]==0){
+        int count = 0;
+        boolean[] visited = new boolean[n+1];
+        for(int i=0; i<n; i++) {
+            if(!visited[i]) {
+                helper(adj, i, visited);
                 count++;
-                dfs(i,adj,visited);
             }
         }
         return count;
+        
     }
-
-    public void dfs(int i,ArrayList<ArrayList<Integer>>adj,int visited[]){
-        visited[i]=1;
-        for(int e:adj.get(i)){
-            if(visited[e]==0){
-                dfs(e,adj,visited);
+        
+    void helper(ArrayList<Integer> [] adj, int parent, boolean[] visited) {
+        visited[parent] = true;
+        for(Integer neighbour: adj[parent]) {
+            if(!visited[neighbour]) {
+                helper(adj, neighbour, visited);
             }
         }
     }
-    
 }
