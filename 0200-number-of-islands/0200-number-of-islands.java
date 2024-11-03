@@ -1,40 +1,47 @@
-import java.util.LinkedList;
-import java.util.Queue;
-
 class Solution {
-    public int numIslands(char[][] grid) {
-        int count = 0;
-        for (int i = 0; i < grid.length; i++) {
-            for (int j = 0; j < grid[0].length; j++) {
-                if (grid[i][j] == '1') {
-                    bfs(grid, i, j);
-                    count++;
-                }
-            }
-        }
-        return count;
+    
+    private static boolean isValid(char[][] grid, int row, int col) {
+    return (row >= 0) && (row < grid.length) && (col >=0 ) && (col < grid[0].length) && (grid[row][col] == '1');
     }
 
-    void bfs(char[][] grid, int i, int j) {
-        int[] directions = {0, 1, 0, -1, 0};
+    public int numIslands(char[][] grid) {
+       Set<String> visited = new HashSet<>();
+       int count = 0;
+       for(int i=0; i<grid.length; i++){
+           for(int j=0; j<grid[0].length; j++){
+               if(grid[i][j]=='1' && !visited.contains(i+"-"+j)){
+                    visited.add(i + "-" + j);
+                   helper(grid, i, j, visited);
+                   count++;
+               }
+           }
+       }
+        return count;
+    }
+    
+    void helper(char[][] grid, int row, int col, Set<String> visited ){
+         int[][] directions = new int[][]{{1,0}, {0,1}, {-1,0}, {0, -1}};
+        
         Queue<int[]> queue = new LinkedList<>();
-        queue.offer(new int[]{i, j});
-        grid[i][j] = '0'; // mark as visited
-
-        while (!queue.isEmpty()) {
-            int[] cell = queue.poll();
-            int row = cell[0];
-            int col = cell[1];
-
-            for (int d = 0; d < 4; d++) {
-                int newRow = row + directions[d];
-                int newCol = col + directions[d + 1];
-
-                if (newRow >= 0 && newRow < grid.length && newCol >= 0 && newCol < grid[0].length && grid[newRow][newCol] == '1') {
-                    queue.offer(new int[]{newRow, newCol});
-                    grid[newRow][newCol] = '0'; // mark as visited
+       
+        queue.add(new int[]{row, col});
+        while(!queue.isEmpty()){
+            int n = queue.size();
+          
+           // for(int i = 0; i < n; i++){
+                int[] current = queue.remove();  
+               // visited.add(nextRow + "-" + nextCol); adjacency list
+                for(int[] dir: directions){
+                    int nextRow = current[0] + dir[0];
+                    int nextCol = current[1] + dir[1];
+                    if(isValid(grid, nextRow, nextCol) && !visited.contains(nextRow + "-" + nextCol)){
+                         queue.offer(new int[]{nextRow, nextCol});
+                         visited.add(nextRow + "-" + nextCol);//only for grid
+                    }
                 }
-            }
+            //}
+            
         }
+        
     }
 }
