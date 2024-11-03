@@ -7,7 +7,7 @@ class Solution {
             if(dp[i]!=Long.MAX_VALUE) {
                 for(int coin : coins) {
                     if( i <= amount - coin) {
-                        dp[i + coin] = Math.min(dp[i+coin], dp[i] + 1);
+                        dp[i + coin] = Math.min(dp[i + coin], dp[i] + 1);
                     }
                 }
             }
