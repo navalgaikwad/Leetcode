@@ -1,34 +1,43 @@
 class Solution {
+    class Pair {
+        int dest;
+        int weight;
+        Pair(int dest, int weight) {
+            this.dest = dest;
+            this.weight = weight;
+        }
+    }
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
-        ArrayList<int[]> adj[] = new ArrayList[n];
-        int[] dest = new int[n];
+        ArrayList<Pair>adj[] = new ArrayList[n];
+         int[] dest = new int[n];
         for(int i=0; i<n; i++) {
             adj[i] = new ArrayList<>();
             dest[i] = Integer.MAX_VALUE;
         }
-        for(int[] flight :flights) {
-            adj[flight[0]].add(new int[]{flight[1], flight[2]});
+        for(int[] flight: flights) {
+            adj[flight[0]].add(new Pair(flight[1], flight[2]));
         }
-        boolean[] visited = new boolean[n];
         Queue<int[]> q = new LinkedList<>();
         q.add(new int[]{src, 0, 0});
-        
+        int result = -1;
         while(!q.isEmpty()) {
             int[] current = q.remove();
             int sc = current[0];
-            int cost = current[1];
+            int dist = current[1];
             int stop = current[2];
-            for(int[] neighbours: adj[sc]) {
-                int neighbour =  neighbours[0];
-                int cst = neighbours[1];
-                if(cost+cst <dest[neighbour]  && stop<=k) {
-                    dest[neighbour] = cost + cst;
-                   // visited[neighbour] = true;
-                    q.add(new int[]{neighbour, cost+cst, stop + 1});
+            if(stop > k) {
+                continue;
+            }
+            for(Pair neighbour : adj[sc]) {
+                int destination = neighbour.dest;
+                int weight = neighbour.weight;
+                if(dist+weight < dest[destination] && stop <=k) {
+                    dest[destination] = dist+weight;
+                    q.add(new int[]{destination, dist+weight, stop+1});
                 }
             }
         }
-        if(dest[dst] == Integer.MAX_VALUE) {
+         if(dest[dst] == Integer.MAX_VALUE) {
             return -1;
         }
         return dest[dst];
