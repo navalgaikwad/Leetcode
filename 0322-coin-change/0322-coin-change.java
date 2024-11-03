@@ -1,17 +1,20 @@
-class Solution {
-    public int coinChange(int[] coins, int amount) {
-        long[] dp = new long[amount+1];
-        Arrays.fill(dp, Long.MAX_VALUE);
-        dp[0] = 0;
-        for(int i=0; i<=amount; i++) {
-            if(dp[i]!=Long.MAX_VALUE) {
-                for(int coin : coins) {
-                    if( i <= amount - coin) {
-                        dp[i + coin] = Math.min(dp[i + coin], dp[i] + 1);
-                    }
-                }
-            }
+public class Solution {
+  public int coinChange(int[] coins, int amount) {
+    int max = amount + 1;
+    int[] dp = new int[amount + 1];
+    Arrays.fill(dp, max);
+    dp[0] = 0;
+    for (int i = 0; i <= amount; i++) {
+        if(dp[i] != max) {
+            
+        
+      for (int coin : coins) {
+        if ( i <= amount - coin) {
+          dp[i + coin] = Math.min(dp[i] + 1, dp[i + coin] );
         }
-        return dp[amount] > amount ? -1 : (int) dp[amount];
+      }
+        }
     }
+    return dp[amount] > amount ? -1 : dp[amount];
+  }
 }
