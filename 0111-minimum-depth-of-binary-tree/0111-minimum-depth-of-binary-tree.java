@@ -22,12 +22,9 @@ class Solution {
          if(root == null){
             return Integer.MAX_VALUE;
         }
-        
-       
-        
         int left  = helper(root.left);
         int right = helper(root.right);
-         if(root.left == null && root.right == null){
+         if(root.left == null && root.right == null) {
             return 1;
         }
         int min = 1+ Math.min(left, right);
