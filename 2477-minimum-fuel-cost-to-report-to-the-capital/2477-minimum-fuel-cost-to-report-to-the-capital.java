@@ -2,7 +2,9 @@ class Solution {
     long result = 0;
     public long minimumFuelCost(int[][] roads, int seats) {
         int len = roads.length;
+        
         ArrayList<Integer> adj[] = new ArrayList[len+1];
+        
         for(int i=0; i<=len; i++) {
             adj[i] = new ArrayList<>();
         }
