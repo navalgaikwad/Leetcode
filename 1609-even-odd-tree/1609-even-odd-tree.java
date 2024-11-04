@@ -26,33 +26,32 @@ class Solution {
               
               TreeNode current = q.remove();
               int order = current.val;
-              if(!flag){
+              if(!flag){//even
                   if( prev>=order || order%2==0){
                       return false;
                   }
-              }else if(flag){
+              }else if(flag){//odd
                  if(prev<=order || order%2!=0){
                       return false;
                   } 
               }
-              prev = current.val;
+              
               if(current.left != null){
                   q.add(current.left);
               }
               if(current.right!=null){
                   q.add(current.right);
               }
-              
+              prev = current.val;
            }
            
            if(flag){
             prev=Integer.MIN_VALUE;
-        }else{
-            prev=Integer.MAX_VALUE;
-        }
+            }else{
+                prev=Integer.MAX_VALUE;
+            }
        
            flag = !flag;
-         
        }
      return true;
     }
