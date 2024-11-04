@@ -46,9 +46,9 @@ class Solution {
            }
            
            if(flag){
-            prev=Integer.MIN_VALUE;
+            prev = Integer.MIN_VALUE;
             }else{
-                prev=Integer.MAX_VALUE;
+            prev = Integer.MAX_VALUE;
             }
        
            flag = !flag;
