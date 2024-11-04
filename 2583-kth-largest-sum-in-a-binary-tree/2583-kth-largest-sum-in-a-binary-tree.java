@@ -38,7 +38,7 @@ class Solution {
         }
         }
         if(k>pq.size()) return -1;
-        
+       // System.out.print(pq);
        
         return pq.peek();
     }
