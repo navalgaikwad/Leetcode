@@ -10,19 +10,26 @@
  */
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        ListNode first = dummy;
-        ListNode second = dummy;
-        for(int i=0; i<=n; i++) {
-            first = first.next;
+       ListNode dummy = new ListNode(0);
+       dummy.next = head;
+
+    // Step 1: Move `firstNode` n+1 steps ahead to maintain the gap with `secondNode`.
+        ListNode firstNode = dummy;
+        for (int i = 0; i <= n; i++) {
+            if (firstNode == null) return head; // Edge case: n is greater than the length of the list
+            firstNode = firstNode.next;
         }
-        
-        while(first!=null) {
-            first = first.next;
-            second = second.next;
-        }
-        second.next = second.next.next;
-        return dummy.next;
+
+    // Step 2: Move `firstNode` to the end, maintaining the gap with `secondNode`.
+    ListNode secondNode = dummy;
+    while (firstNode != null) {
+        firstNode = firstNode.next;
+        secondNode = secondNode.next;
+    }
+
+    // Step 3: Remove the nth node from the end
+    secondNode.next = secondNode.next.next;
+
+    return dummy.next;
     }
 }
