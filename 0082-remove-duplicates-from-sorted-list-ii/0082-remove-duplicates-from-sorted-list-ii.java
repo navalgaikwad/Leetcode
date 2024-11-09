@@ -21,7 +21,7 @@ class Solution {
                     current = current.next;
                 }
             }
-            if(prev.next != current) {
+            if(prev.next != current) {//check for address they not same
                 prev.next = current.next;
             }else {
                prev = prev.next; 
