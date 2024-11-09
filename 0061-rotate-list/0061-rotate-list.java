@@ -17,15 +17,18 @@ class Solution {
             current = current.next;
             length++;
         }
-        current.next = head;
-        current = head;
-        int jump = length - k%length;
-        while(jump > 1) {
+        current.next = head;//cycle
+        current = head;//head assign kela
+        
+        
+        int jump = length - k%length;//
+        
+        while(jump > 1) {//>1
            current = current.next;
             jump--;
         }
-        head = current.next;
-        current.next = null;
+        head = current.next;//make 4 head
+        current.next = null;//make next 4 is null
         //head = next;
         return head;
     }
