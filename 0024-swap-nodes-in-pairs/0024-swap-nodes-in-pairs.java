@@ -13,15 +13,18 @@ class Solution {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode current = dummy;
-        while(current.next!= null && current.next.next!=null) {
-            ListNode firstNode = current.next;//1
-            ListNode secondNode = current.next.next;//2
+        while(current.next!=null && current.next.next!=null) {
+            ListNode first = current.next;
+            ListNode second = current.next.next;
             
-            firstNode.next = secondNode.next;
-            current.next = secondNode;
-            secondNode.next = firstNode;
+            first.next = second.next;
+            current.next = second;
+            second.next = first;
+            
             current = current.next.next;
         }
         return dummy.next;
     }
+    
+    
 }
