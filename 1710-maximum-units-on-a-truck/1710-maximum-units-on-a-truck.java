@@ -5,10 +5,10 @@ class Solution {
         int result = 0;
         int i =0;
         while(  truckSize > 0 &&i< boxTypes.length) {
-            int noOfUnitPerBox = boxTypes[i][0];
-            int boxToPickSize = Math.min(noOfUnitPerBox, truckSize);
-            result = result + (boxToPickSize * boxTypes[i][1]);
-            truckSize= truckSize - noOfUnitPerBox;
+            int numberOfBoxes = boxTypes[i][0];
+            int units = Math.min(numberOfBoxes, truckSize);
+            result += (units * boxTypes[i][1]);
+            truckSize= truckSize - numberOfBoxes;
             i++;
         }
         return result;
