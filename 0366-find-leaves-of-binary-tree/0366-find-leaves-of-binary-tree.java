@@ -14,7 +14,7 @@
  * }
  */
 class Solution {
-    List<Integer> runningList = new ArrayList<>();
+    List<Integer> runningList;
     List<List<Integer>> result = new ArrayList<>();
     public List<List<Integer>> findLeaves(TreeNode root) {
         while(root != null) {
@@ -26,7 +26,6 @@ class Solution {
             result.add(new ArrayList<>(runningList));
         }
         
-        System.out.print(runningList);
         return result;
     }
     
