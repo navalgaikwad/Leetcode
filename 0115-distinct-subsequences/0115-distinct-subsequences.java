@@ -1,7 +1,7 @@
 class Solution {
     public int numDistinct(String S, String T) {
         int sl = S.length();
-	int tl = T.length();
+	    int tl = T.length();
 	
 	int [] preComb = new int[sl+1];
 	int [] comb = new int[sl+1];
@@ -24,7 +24,7 @@ class Solution {
 		}
 	}
 	
-	return preComb[sl];
+	return comb[sl];
     }
 }
 
