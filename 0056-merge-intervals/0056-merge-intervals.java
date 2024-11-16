@@ -5,7 +5,7 @@ class Solution {
         
         for(int i=0; i<intervals.length; i++) {
             if(!list.isEmpty() && intervals[i][0] <= list.getLast()[1] ) {
-               /// list.getLast()[0] =  Math.min(list.get(i)[0],intervals[i][0] );
+            
                 list.getLast()[1] =  Math.max(list.getLast()[1],intervals[i][1] );
             }else {
                 list.add(intervals[i]);
