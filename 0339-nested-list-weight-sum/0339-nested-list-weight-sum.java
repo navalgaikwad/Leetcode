@@ -27,20 +27,19 @@
  * }
  */
 class Solution {
-    int total = 0;
-    
+    int total =0;
     public int depthSum(List<NestedInteger> nestedList) {
         helper(nestedList, 1);
         return total;
     }
     
-    void helper(List<NestedInteger> nestedList, int level) {
-        for(NestedInteger  nl:nestedList) {
-            if(nl.isInteger()) {
-                total += nl.getInteger() * level;
+    void helper(List<NestedInteger> nestedList, int dept) {
+        for(NestedInteger list: nestedList) {
+            if(list.isInteger()) {
+                total+=(dept * list.getInteger());
             }else {
-                List<NestedInteger> list = nl.getList();
-                helper(list, level + 1);
+                int passDept = dept + 1;
+                helper(list.getList(), passDept);
             }
         }
     }
