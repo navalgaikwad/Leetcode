@@ -24,3 +24,5 @@ class Solution {
         return ans;
     }
 }
+//find min
+//then minus from everyone
