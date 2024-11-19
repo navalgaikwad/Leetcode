@@ -16,7 +16,7 @@
 class Solution {
     Map<Integer, ArrayList<int[]>> map = new TreeMap<>();
     public List<List<Integer>> verticalOrder(TreeNode root) {
-        dfs(root, 0, 0);
+        helper(root, 0, 0);
         List<List<Integer>> result = new ArrayList<>();
         for(ArrayList<int[]> li : map.values()) {
             List<Integer> ans = new ArrayList<Integer>();
@@ -29,15 +29,14 @@ class Solution {
         return result;
     }
     
-    private void dfs(TreeNode root, int dept, int index) {
-        if(root == null) {
-            return;
-        }
-        if(!map.containsKey(index)) {
+    void helper(TreeNode root, int dept, int index) {
+        if(root == null) return;
+        
+       if(!map.containsKey(index)) {
             map.put(index, new ArrayList<>());
         }
-        map.get(index).add(new int[]{dept, root.val});
-        dfs(root.left, dept+1, index - 1);
-        dfs(root.right, dept+1, index + 1);
+         map.get(index).add(new int[]{dept, root.val});
+        helper(root.left, dept + 1, index - 1);
+        helper(root.right, dept + 1, index + 1);
     }
 }
