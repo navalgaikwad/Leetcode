@@ -1,5 +1,6 @@
 class Solution {
-    boolean isValid(String num) {
+    
+       boolean isValid(String num) {
         for(char c : num.toCharArray()) {
             if( c < '0' || c > '9') {
                 return false;
