@@ -16,17 +16,20 @@
 class Solution {
     int prev =0;
     public TreeNode convertBST(TreeNode root) {
-        return dfs(root);
+        return helper(root);
+        
+        
     }
     
-    TreeNode dfs(TreeNode root) {
-        if(root == null) {
-            return null;
-        }
-        root.right =dfs(root.right);
+    
+    TreeNode helper(TreeNode root) {
+        if(root == null) return null;
+        root.right = helper(root.right);
         root.val = root.val + prev;
         prev = root.val;
-        root.left = dfs(root.left);
+        root.left = helper(root.left);
+        
+        
         return root;
     }
 }
