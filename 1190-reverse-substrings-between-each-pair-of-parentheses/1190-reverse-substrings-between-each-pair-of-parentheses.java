@@ -1,25 +1,35 @@
 class Solution {
     public String reverseParentheses(String s) {
-        int begin = 0;
-        int end;
-        for(int i=0; i<s.length(); i++) {
-            if(s.charAt(i) == '(') {
-                begin = i;
-            }else if(s.charAt(i) == ')') {
-                end = i;
-                String temp = s.substring(begin + 1, end);
-                return reverseParentheses(s.substring(0, begin) + reverse(temp) + s.substring(end + 1));
-                    
+        Stack<Integer> stack = new Stack<>();
+        char[] ch = s.toCharArray();
+
+        for (int i = 0; i < s.length(); i++) {
+            if (ch[i] == '(') {
+                stack.push(i);
+            } else if (ch[i] == ')') {
+                int start = stack.pop();
+                reverseString(ch, start + 1, i - 1);
             }
         }
-        return s;
-    }
-    
-    String reverse(String s) {
-        StringBuilder sb = new StringBuilder();
-        for(int i=s.length() - 1; i >=0; i--) {
-            sb.append(s.charAt(i));
+
+        // Build the final string without the parentheses
+        StringBuilder result = new StringBuilder();
+        for (char c : ch) {
+            if (c != '(' && c != ')') {
+                result.append(c);
+            }
         }
-        return sb.toString();
+        return result.toString();
     }
+
+    void reverseString(char[] ch, int start, int end) {
+        while (start < end) {
+            char temp = ch[start];
+            ch[start] = ch[end];
+            ch[end] = temp;
+            start++;
+            end--;
+        }
+    }
+
 }
