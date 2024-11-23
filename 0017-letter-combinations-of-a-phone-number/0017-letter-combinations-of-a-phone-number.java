@@ -2,7 +2,11 @@ class Solution {
     Map<Character, String> map = new HashMap<>();
     List<String> result = new ArrayList<>();
     public List<String> letterCombinations(String digits) {
-        if(digits.length() == 0) return result; 
+        
+         if (digits == null || digits.length() == 0) {
+            return result;
+        }
+
         map.put('2', "abc");
         map.put('3', "def");
         map.put('4', "ghi");
@@ -11,21 +15,21 @@ class Solution {
         map.put('7', "pqrs");
         map.put('8', "tuv");
         map.put('9', "wxyz");
-        dfs(digits, "", 0);
+
+        dfs(digits, "");
         return result;
+        
     }
     
-    void dfs(String digits, String ans, int index) {
-        if(digits.length() == ans.length()) {
+    void dfs(String digits, String ans) {
+        if(digits.isEmpty()) {
             result.add(new String(ans));
             return;
         }
-        String value = map.get(digits.charAt(index));
-        for(char c : value.toCharArray()) {
-            dfs(digits, ans+c, index+1);
+        char number = digits.charAt(0);
+        String value = map.get(number);
+        for(char c: value.toCharArray()) {
+            dfs(digits.substring(1), ans+c);
         }
     }
-    
 }
-
-// O(4^n)
