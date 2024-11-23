@@ -1,18 +1,22 @@
 class Solution {
-    List<List<Integer>> result = new ArrayList<>();
+    List<List<Integer>>  result = new ArrayList<>();
     public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
-       // int 
-        helper(graph, 0, new ArrayList<>(), graph.length - 1);
+        ArrayList<Integer> runingList = new ArrayList<>();
+        runingList.add(0);
+        dfs(graph, 0, graph.length-1, runingList);
         return result;
     }
-    void helper(int[][] graph, int parent, ArrayList<Integer> ans, int target) {
-        ans.add(parent);
-        if(parent == target) {
-            result.add(new ArrayList<>(ans));
+    void dfs(int[][] graph, int strt, int dest, List<Integer> runningList) {
+       
+        if(strt == dest) {
+            result.add(new ArrayList<>(runningList));
             return;
         }
-        for(int neighbour : graph[parent]) {
-            helper(graph, neighbour, new ArrayList<>(ans), target);
+        
+        for(int  neighbour:graph[strt]) {
+            runningList.add(neighbour);
+            dfs(graph, neighbour, dest, runningList);
+            runningList.remove(runningList.size()-1);
         }
     }
 }
