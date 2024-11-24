@@ -4,20 +4,20 @@ class Solution {
         for(int i=0; i<n; i++) {
             adj[i] = new ArrayList<>();
         }
-        for(int[] connection : connections) {
+        for(int[] connection:connections) {
             adj[connection[0]].add(new int[]{connection[1], 1});
             adj[connection[1]].add(new int[]{connection[0], 0});
         }
-        boolean[] visiting = new boolean[n];
-        return helper(adj, 0, visiting);
+        return dfs(adj, 0, -1);
     }
-    int helper(ArrayList<int[]> adj[], int parent, boolean[] visiting) {
-        visiting[parent] = true;
+    
+    int dfs(ArrayList<int[]> adj[], int start, int parent) {
         int total = 0;
-        for(int[] neighbour: adj[parent]) {
-            if(!visiting[neighbour[0]]) {
-                total+=neighbour[1] + helper(adj, neighbour[0], visiting);
+        for(int[] neighbour: adj[start]) {
+            if(neighbour[0]!=parent) {
+                total+=neighbour[1] + dfs(adj, neighbour[0], start);
             }
+            
         }
         return total;
     }
