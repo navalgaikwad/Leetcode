@@ -1,16 +1,16 @@
 class Solution {
     public List<Integer> findSmallestSetOfVertices(int n, List<List<Integer>> edges) {
-        int len = edges.size();
-        int[] indegree = new int[n];
-        for(List<Integer> edge : edges) {
-            indegree[edge.get(1)]++;
+        int[] indirect = new int[n];
+        for(List<Integer> edge: edges) {
+           // indirect[edge.get(0)]++;
+            indirect[edge.get(1)]++;
         }
-        List<Integer> answer = new ArrayList<>();
-        for( int i =0; i< n;i++){
-            if(indegree[i] == 0) {
-               answer.add(i); 
+        List<Integer> result = new ArrayList<>();
+        for(int i=0; i<indirect.length; i++) {
+            if(indirect[i] == 0) {
+                result.add(i);
             }
         }
-        return answer;
+        return result;
     }
 }
