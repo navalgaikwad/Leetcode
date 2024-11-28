@@ -1,23 +1,23 @@
 class Solution {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
-        int m = obstacleGrid.length;
-        int n = obstacleGrid[0].length;
-        int[][] dp = new int[m + 1][n + 1];
-        dp[0][0] =1; 
-        for(int i =0; i < m; i++) {
-            for(int j=0; j< n; j++) {
-                if(obstacleGrid[i][j] == 1) {
-                    dp[i][j] = 0;
-                } else {
-                    if(i -1  >= 0){
-                        dp[i][j] += dp[i-1][j] ;
-                    }
-                    if(j - 1 >= 0){
-                        dp[i][j] += dp[i][j-1];
-                    }
-                }
-            }
+        return dp(obstacleGrid, obstacleGrid.length - 1, obstacleGrid[0].length-1, new HashMap<>());
+    }
+    
+    int dp(int[][] grid, int m, int n, HashMap<String, Integer> memo) {
+        String key = m+"-"+n;
+        if(m == 0 && n == 0 && grid[m][n] == 0) {
+            return 1;
         }
-        return dp[m-1][n-1];
+        if(m < 0 || n < 0 || grid[m][n] == 1) {
+            return 0;
+        }
+        if(memo.containsKey(key)) {
+            return memo.get(key);
+        }
+        int right = dp(grid, m - 1, n, memo);
+        int down = dp(grid, m, n - 1, memo);
+        int answer = right + down;
+        memo.put(key, answer);
+        return  answer;
     }
 }
