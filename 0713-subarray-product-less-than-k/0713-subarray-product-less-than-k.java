@@ -7,7 +7,7 @@ class Solution {
        // Map<Integer, Inetegr> map = new HashMap<>();
         for(int right =0; right < nums.length; right++) {
             product *= nums[right];
-            while(product>=k && left < nums.length) {
+            while(product >=k && left < nums.length) {
                 product/=nums[left];
                 left++;
             }
