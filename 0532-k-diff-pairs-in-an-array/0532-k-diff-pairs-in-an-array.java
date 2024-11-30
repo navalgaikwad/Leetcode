@@ -1,16 +1,15 @@
 class Solution {
     public int findPairs(int[] nums, int k) {
         Arrays.sort(nums);
-        int left =0;
-        int right = 1;
-        int count = 0;
         int sum = Integer.MIN_VALUE;
-        while(left < nums.length && right < nums.length) {
-            if(nums[right] - nums[left] == k && sum!= nums[right] + nums[left]) {
-                sum = nums[right] + nums[left];
+        int left =0, right = 1;
+        int count =0;
+        while(left < nums.length && right< nums.length) {
+            if(nums[right] - nums[left] == k && nums[left] + nums[right]!=sum) {
+                sum = nums[left] + nums[right];
                 count++;
             }
-            if(nums[right] - nums[left] < k) {
+            if(nums[right] - nums[left] < k ) {
                 right++;
             }else {
                 left++;
