@@ -1,9 +1,9 @@
 class Solution {
     public int maximumProduct(int[] nums) {
         Arrays.sort(nums);
-        int len = nums.length - 1;
-        int positive = nums[len-2] * nums[len-1]*nums[len];
-        int negative =  nums[0] * nums[1] * nums[len];
-        return positive > negative ? positive : negative;
+        int n = nums.length-1;
+        int negative = nums[0] * nums[1] * nums[n];
+        int positive = nums[n] * nums[n-1] * nums[n-2];
+        return Math.max(negative, positive);
     }
 }
