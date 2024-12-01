@@ -1,38 +1,35 @@
 class ATM {
-    long[] denoms;
-    long[] notes = new long[5];
+    private final long[] bills;
+    private final long[] atm;
+
     public ATM() {
-      denoms = new long[]{ 20,50,100,200,500 };        // all denomination  
+        this.atm = new long[5];
+        this.bills = new long[] { 20, 50, 100, 200, 500 };
     }
     
     public void deposit(int[] banknotesCount) {
-        for(int i = 0; i < banknotesCount.length; i++){
-			notes[i] += banknotesCount[i]; // add new deposit money to existing
-		}
+        for(int i = 0; i < banknotesCount.length; ++i)
+            this.atm[i] += banknotesCount[i];
     }
     
     public int[] withdraw(int amount) {
-        int[] result = new int[5];
-        for(int i=4; i>=0; i--){ // start from end
-            if(amount>= denoms[i]){
-                // find the quantity required
-                // how will you find it 
-                // amount / and total denomination
-                int count = (int) (amount / denoms[i]);
-                int quantity =(int) Math.min(notes[i], count);
-                amount -= denoms[i] * quantity;
-                result[i] = quantity;
-            }
-           
+        final int[] result = new int[5];
+
+        for(int i = 4; i >= 0 && amount != 0; --i) {
+            result[i] = (int) Math.min(amount / this.bills[i], atm[i]);
+            amount -= result[i] * this.bills[i];
         }
-       // System.out.print(amount); if amount is not zero return -1;
-        if(amount != 0){ return new int[]{-1}; }
-        //update the quantity
-        for(int i = 0; i < 5; i++){  notes[i] -= result[i];  }   
-        
+
+        if(amount != 0)
+            return new int[] { -1 };
+
+        for(int i = 0; i < this.bills.length; ++i)
+            this.atm[i] -= result[i];
+
         return result;
     }
 }
+
 
 /**
  * Your ATM object will be instantiated and called as such:
