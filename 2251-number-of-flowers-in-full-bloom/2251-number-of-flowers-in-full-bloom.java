@@ -1,28 +1,24 @@
 class Solution {
     public int[] fullBloomFlowers(int[][] flowers, int[] people) {
-        int[] sortedPeople = Arrays.copyOf(people, people.length);
-        Arrays.sort(sortedPeople);
-        Arrays.sort(flowers, (a, b) -> Arrays.compare(a, b));
+        int[] copyOfPeople = Arrays.copyOf(people, people.length);
+        Arrays.sort(copyOfPeople);
+        Arrays.sort(flowers, (a,b)->a[0]-b[0]);
+        PriorityQueue<Integer> endTimePq = new PriorityQueue<>();
         Map<Integer, Integer> map = new HashMap<>();
-        PriorityQueue<Integer> endTimeheap = new PriorityQueue();
         int i = 0;
-        
-        for(int person : sortedPeople) {
-            while(i < flowers.length && flowers[i][0] <= person) {//start date is less than person date
-                endTimeheap.add(flowers[i][1]);//add in the queue
+        for(int peopleTime : copyOfPeople) {
+            while( i < flowers.length && flowers[i][0] <= peopleTime) {
+                endTimePq.add(flowers[i][1]);
                 i++;
             }
-            while(!endTimeheap.isEmpty() && endTimeheap.peek() < person) {//
-                endTimeheap.remove();
+            while(!endTimePq.isEmpty() && endTimePq.peek() < peopleTime) {
+                endTimePq.remove();
             }
-            map.put(person, endTimeheap.size());
+            map.put(peopleTime, endTimePq.size());
         }
-        
-        int[] ans = new int[people.length];
-        for (int j = 0; j < people.length; j++) {
-            ans[j] = map.get(people[j]);
+        for(int j=0; j<people.length; j++) {
+            copyOfPeople[j] =map.get( people[j]); 
         }
-        
-        return ans;
+        return copyOfPeople;
     }
 }
