@@ -1,41 +1,42 @@
 class Solution {
     class TrieNode {
-        Map<Character, TrieNode> children;
-        ArrayList<String> suggestion;
+       
+        Map<Character, TrieNode> children = new HashMap<>();
+        ArrayList<String> suggesation = new ArrayList<>();
         TrieNode() {
-            this.children = new HashMap<>();
-            this.suggestion = new ArrayList<>();
+           children = new HashMap<>();
+           suggesation = new ArrayList<>();
         }
     }
     
     public List<List<String>> suggestedProducts(String[] products, String searchWord) {
-        
         TrieNode root = new TrieNode();
         
-        for(String product: products) {
+        for(String product :products) {
             TrieNode node = root;
-            for(char c :  product.toCharArray()) {
+            for(char c: product.toCharArray()) {
                 if(!node.children.containsKey(c)) {
                     node.children.put(c, new TrieNode());
                 }
                 node = node.children.get(c);
-                node.suggestion.add(product);
-                Collections.sort(node.suggestion);
-                if(node.suggestion.size() > 3) {
-                    node.suggestion.remove(node.suggestion.size() - 1);
+                node.suggesation.add(product);
+                Collections.sort(node.suggesation);
+                if(node.suggesation.size() > 3) {
+                    node.suggesation.remove(node.suggesation.size()-1);
                 }
             }
         }
+        
         List<List<String>> ans = new ArrayList<>();
         TrieNode node = root;
         for(char c : searchWord.toCharArray()) {
             if(node.children.containsKey(c)) {
                 node = node.children.get(c);
-                ans.add(node.suggestion);
+                ans.add(node.suggesation);
             }else {
-              node.children = new HashMap<>();
-              ans.add(new ArrayList<String>());
-          }
+                node.children = new HashMap<>();
+                ans.add(new ArrayList<>());
+            }
         }
         return ans;
     }
