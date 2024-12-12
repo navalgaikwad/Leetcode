@@ -9,44 +9,46 @@
  * }
  */
 class Solution {
-    public ListNode[] splitListToParts(ListNode root, int k) {
-        // Create an array of ListNode pointers to store the k parts.
-        ListNode[] parts = new ListNode[k];
+public ListNode[] splitListToParts(ListNode head, int k) {
+    int length = 0;
+    ListNode current = head;
 
-        // Calculate the length of the linked list.
-        int len = 0;
-        ListNode node = root;
-        while (node != null) {
-            len++;
-            node = node.next;
-        }
-
-        // Calculate the minimum guaranteed part size (n) and the number of extra nodes (r).
-        int n = len / k, r = len % k;
-
-        // Reset the pointer to the beginning of the linked list.
-        node = root;
-        ListNode prev = null;
-
-        // Loop through each part.
-        for (int i = 0; node != null && i < k; i++, r--) {
-            // Store the current node as the start of the current part.
-            parts[i] = node;
-
-            // Traverse n + 1 nodes if there are remaining extra nodes (r > 0).
-            // Otherwise, traverse only n nodes.
-            for (int j = 0; j < n + (r > 0 ? 1 : 0); j++) {
-                prev = node;
-                node = node.next;
-            }
-
-            // Disconnect the current part from the rest of the list by setting prev.next to null.
-            if (prev != null) {
-                prev.next = null;
-            }
-        }
-
-        // Return the array of k parts.
-        return parts;
+    // Calculate the total length of the list
+    while (current != null) {
+        current = current.next;
+        length++;
     }
+
+    // Calculate partition size and remainder
+    int partition = length / k;
+    int remainder = length % k;
+
+    ListNode[] result = new ListNode[k];
+    current = head;
+
+    for (int i = 0; i < k; i++) {
+        if (current == null) {
+            result[i] = null; // For empty partitions
+        } else {
+            result[i] = current; // Start of the current partition
+            int currentPartitionSize = partition + (remainder-- > 0 ? 1 : 0);
+
+            // Move current to the end of the current partition
+            for (int j = 1; j < currentPartitionSize; j++) {
+                if (current != null) current = current.next;
+            }
+
+            // Break the current partition and move to the next
+            if (current != null) {
+                ListNode next = current.next;
+                current.next = null;
+                current = next;
+            }
+        }
+    }
+
+    return result;
+}
+
+
 }
