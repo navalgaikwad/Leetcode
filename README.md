@@ -17,6 +17,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0056-merge-intervals](https://github.com/navalgaikwad/Leetcode/tree/master/0056-merge-intervals) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/navalgaikwad/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
+| [1514-minimum-value-to-get-positive-step-by-step-sum](https://github.com/navalgaikwad/Leetcode/tree/master/1514-minimum-value-to-get-positive-step-by-step-sum) |
 ## Hash Table
 |  |
 | ------- |
@@ -39,4 +40,8 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
+## Prefix Sum
+|  |
+| ------- |
+| [1514-minimum-value-to-get-positive-step-by-step-sum](https://github.com/navalgaikwad/Leetcode/tree/master/1514-minimum-value-to-get-positive-step-by-step-sum) |
 <!---LeetCode Topics End-->
