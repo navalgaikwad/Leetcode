@@ -1,42 +1,38 @@
-import java.util.HashMap;
-import java.util.Map;
-
 class Solution {
     public String fractionToDecimal(int numerator, int denominator) {
-        if (numerator == 0) return "0";
-
-        StringBuilder ans = new StringBuilder();
-        if ((numerator < 0 && denominator > 0) || (numerator > 0 && denominator < 0)) {
-    // Signs are different
-    ans.append('-');
-}
-
-
-        long num = Math.abs((long) numerator);
-        long den = Math.abs((long) denominator);
-
-        long q = num / den;
-        long r = num % den;
-        ans.append(q);
-
-        if (r == 0) return ans.toString();
-
-        ans.append('.');
-        Map<Long, Integer> mp = new HashMap<>();
-        while (r != 0) {
-            if (mp.containsKey(r)) {
-                int pos = mp.get(r);
-                ans.insert(pos, '(');
-                ans.append(')');
-                break;
-            } else {
-                mp.put(r, ans.length());
-                r *= 10;
-                q = r / den;
-                r = r % den;
-                ans.append(q);
-            }
+        if(numerator == 0) return "0";
+        StringBuilder sb  =new StringBuilder();
+        if((numerator < 0 && denominator > 0) || (numerator > 0 && denominator < 0)) {
+            sb.append('-');
         }
-        return ans.toString();
+        long num = Math.abs((long)numerator);
+        long demo = Math.abs((long)denominator);
+        
+        long q = num/demo;
+        long r = num%demo;
+
+        sb.append(q);
+
+        if(r == 0) {
+            return sb.toString();
+        }
+          sb.append('.');
+        Map<Long, Integer> map = new HashMap<>();
+        while(r != 0) {
+            if(map.containsKey(r)) {
+                int pos = map.get(r);
+                sb.insert( pos, '(');
+                sb.append(')');
+                break;
+            }else {
+                map.put(r, sb.length());
+                r = r * 10;
+                q = r / demo; //vvimp
+                r = r % demo; //vvimp
+                sb.append(q);
+            }
+
+        }
+        return sb.toString();
     }
 }
