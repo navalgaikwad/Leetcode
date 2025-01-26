@@ -25,6 +25,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/navalgaikwad/Leetcode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
 | [1675-magnetic-force-between-two-balls](https://github.com/navalgaikwad/Leetcode/tree/master/1675-magnetic-force-between-two-balls) |
 | [1798-max-number-of-k-sum-pairs](https://github.com/navalgaikwad/Leetcode/tree/master/1798-max-number-of-k-sum-pairs) |
+| [1886-minimum-limit-of-balls-in-a-bag](https://github.com/navalgaikwad/Leetcode/tree/master/1886-minimum-limit-of-balls-in-a-bag) |
 | [3612-adjacent-increasing-subarrays-detection-i](https://github.com/navalgaikwad/Leetcode/tree/master/3612-adjacent-increasing-subarrays-detection-i) |
 ## Hash Table
 |  |
@@ -84,6 +85,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0892-shortest-subarray-with-sum-at-least-k](https://github.com/navalgaikwad/Leetcode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/navalgaikwad/Leetcode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
 | [1675-magnetic-force-between-two-balls](https://github.com/navalgaikwad/Leetcode/tree/master/1675-magnetic-force-between-two-balls) |
+| [1886-minimum-limit-of-balls-in-a-bag](https://github.com/navalgaikwad/Leetcode/tree/master/1886-minimum-limit-of-balls-in-a-bag) |
 ## Queue
 |  |
 | ------- |
