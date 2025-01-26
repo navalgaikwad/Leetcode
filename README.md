@@ -23,6 +23,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/navalgaikwad/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1514-minimum-value-to-get-positive-step-by-step-sum](https://github.com/navalgaikwad/Leetcode/tree/master/1514-minimum-value-to-get-positive-step-by-step-sum) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/navalgaikwad/Leetcode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
+| [1675-magnetic-force-between-two-balls](https://github.com/navalgaikwad/Leetcode/tree/master/1675-magnetic-force-between-two-balls) |
 | [3612-adjacent-increasing-subarrays-detection-i](https://github.com/navalgaikwad/Leetcode/tree/master/3612-adjacent-increasing-subarrays-detection-i) |
 ## Hash Table
 |  |
@@ -44,6 +45,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0049-group-anagrams](https://github.com/navalgaikwad/Leetcode/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/navalgaikwad/Leetcode/tree/master/0056-merge-intervals) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/navalgaikwad/Leetcode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
+| [1675-magnetic-force-between-two-balls](https://github.com/navalgaikwad/Leetcode/tree/master/1675-magnetic-force-between-two-balls) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -78,6 +80,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0456-132-pattern](https://github.com/navalgaikwad/Leetcode/tree/master/0456-132-pattern) |
 | [0892-shortest-subarray-with-sum-at-least-k](https://github.com/navalgaikwad/Leetcode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/navalgaikwad/Leetcode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
+| [1675-magnetic-force-between-two-balls](https://github.com/navalgaikwad/Leetcode/tree/master/1675-magnetic-force-between-two-balls) |
 ## Queue
 |  |
 | ------- |
