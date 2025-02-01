@@ -9,12 +9,5 @@ class Solution {
         }
         return pq.peek();
     }
-    
-//     int pivotIndex(int[] nums, int start, int end) {
-//         int pivot = nums[end];
-//         while() {
-            
-//         }
-//     }
 }
 
