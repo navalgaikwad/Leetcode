@@ -13,6 +13,7 @@ Collection of LeetCode questions to ace the coding interview!
 ## Array
 |  |
 | ------- |
+| [0015-3sum](https://github.com/navalgaikwad/Leetcode/tree/master/0015-3sum) |
 | [0049-group-anagrams](https://github.com/navalgaikwad/Leetcode/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/navalgaikwad/Leetcode/tree/master/0056-merge-intervals) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/navalgaikwad/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
@@ -60,6 +61,7 @@ Collection of LeetCode questions to ace the coding interview!
 ## Sorting
 |  |
 | ------- |
+| [0015-3sum](https://github.com/navalgaikwad/Leetcode/tree/master/0015-3sum) |
 | [0049-group-anagrams](https://github.com/navalgaikwad/Leetcode/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/navalgaikwad/Leetcode/tree/master/0056-merge-intervals) |
 | [0215-kth-largest-element-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/0215-kth-largest-element-in-an-array) |
@@ -157,6 +159,7 @@ Collection of LeetCode questions to ace the coding interview!
 ## Two Pointers
 |  |
 | ------- |
+| [0015-3sum](https://github.com/navalgaikwad/Leetcode/tree/master/0015-3sum) |
 | [1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence](https://github.com/navalgaikwad/Leetcode/tree/master/1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/navalgaikwad/Leetcode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
 | [1798-max-number-of-k-sum-pairs](https://github.com/navalgaikwad/Leetcode/tree/master/1798-max-number-of-k-sum-pairs) |
