@@ -34,6 +34,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [3594-identify-the-largest-outlier-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/3594-identify-the-largest-outlier-in-an-array) |
 | [3612-adjacent-increasing-subarrays-detection-i](https://github.com/navalgaikwad/Leetcode/tree/master/3612-adjacent-increasing-subarrays-detection-i) |
+| [3656-minimum-number-of-operations-to-make-elements-in-array-distinct](https://github.com/navalgaikwad/Leetcode/tree/master/3656-minimum-number-of-operations-to-make-elements-in-array-distinct) |
 ## Hash Table
 |  |
 | ------- |
@@ -47,6 +48,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1798-max-number-of-k-sum-pairs](https://github.com/navalgaikwad/Leetcode/tree/master/1798-max-number-of-k-sum-pairs) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [3594-identify-the-largest-outlier-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/3594-identify-the-largest-outlier-in-an-array) |
+| [3656-minimum-number-of-operations-to-make-elements-in-array-distinct](https://github.com/navalgaikwad/Leetcode/tree/master/3656-minimum-number-of-operations-to-make-elements-in-array-distinct) |
 ## String
 |  |
 | ------- |
