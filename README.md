@@ -16,6 +16,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0015-3sum](https://github.com/navalgaikwad/Leetcode/tree/master/0015-3sum) |
 | [0049-group-anagrams](https://github.com/navalgaikwad/Leetcode/tree/master/0049-group-anagrams) |
 | [0053-maximum-subarray](https://github.com/navalgaikwad/Leetcode/tree/master/0053-maximum-subarray) |
+| [0054-spiral-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0054-spiral-matrix) |
 | [0056-merge-intervals](https://github.com/navalgaikwad/Leetcode/tree/master/0056-merge-intervals) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/navalgaikwad/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
@@ -167,6 +168,7 @@ Collection of LeetCode questions to ace the coding interview!
 ## Matrix
 |  |
 | ------- |
+| [0054-spiral-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0054-spiral-matrix) |
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/navalgaikwad/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 ## Shortest Path
@@ -211,6 +213,7 @@ Collection of LeetCode questions to ace the coding interview!
 ## Simulation
 |  |
 | ------- |
+| [0054-spiral-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0054-spiral-matrix) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 ## Divide and Conquer
 |  |
