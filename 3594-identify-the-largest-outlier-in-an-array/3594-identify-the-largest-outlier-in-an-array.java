@@ -1,22 +1,18 @@
 class Solution {
-     public int getLargestOutlier(int[] nums) {
-        int ans = Integer.MIN_VALUE, sum = 0;
-        Map<Integer, Integer> freq = new HashMap<>();
-
-        // Calculate the sum and frequency of double the values
-        for (int n : nums) {
-            sum += n;
-            freq.put(n * 2, freq.getOrDefault(n * 2, 0) + 1);
+    public int getLargestOutlier(int[] nums) {
+        int ans = Integer.MIN_VALUE;
+        Map<Integer, Integer> map = new HashMap<>();
+        int sum =0;
+        for(int num : nums ) {
+            sum+=num;
+            map.put(num*2, map.getOrDefault(num*2, 0) + 1);
         }
-
-        // Check for the largest valid outlier
-        for (int n : nums) {
-            int t = sum - n;
-            if (freq.getOrDefault(t, 0) >= 2 || (freq.getOrDefault(t, 0) == 1 && t != n * 2)) {
-                ans = Math.max(ans, n);
+        for(int num : nums) {
+            int t = sum - num;
+            if(map.getOrDefault(t, 0) >=2 || (map.getOrDefault(t, 0) ==1 &&  t != num*2)) {
+                ans = Math.max(ans, num);
             }
         }
-
         return ans;
     }
 }
