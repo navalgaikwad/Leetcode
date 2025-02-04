@@ -117,6 +117,7 @@ Collection of LeetCode questions to ace the coding interview!
 ## Math
 |  |
 | ------- |
+| [0009-palindrome-number](https://github.com/navalgaikwad/Leetcode/tree/master/0009-palindrome-number) |
 | [0166-fraction-to-recurring-decimal](https://github.com/navalgaikwad/Leetcode/tree/master/0166-fraction-to-recurring-decimal) |
 | [0326-power-of-three](https://github.com/navalgaikwad/Leetcode/tree/master/0326-power-of-three) |
 | [1585-the-kth-factor-of-n](https://github.com/navalgaikwad/Leetcode/tree/master/1585-the-kth-factor-of-n) |
