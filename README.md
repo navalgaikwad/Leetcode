@@ -15,6 +15,7 @@ Collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0015-3sum](https://github.com/navalgaikwad/Leetcode/tree/master/0015-3sum) |
 | [0042-trapping-rain-water](https://github.com/navalgaikwad/Leetcode/tree/master/0042-trapping-rain-water) |
+| [0048-rotate-image](https://github.com/navalgaikwad/Leetcode/tree/master/0048-rotate-image) |
 | [0049-group-anagrams](https://github.com/navalgaikwad/Leetcode/tree/master/0049-group-anagrams) |
 | [0053-maximum-subarray](https://github.com/navalgaikwad/Leetcode/tree/master/0053-maximum-subarray) |
 | [0054-spiral-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0054-spiral-matrix) |
@@ -120,6 +121,7 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0009-palindrome-number](https://github.com/navalgaikwad/Leetcode/tree/master/0009-palindrome-number) |
+| [0048-rotate-image](https://github.com/navalgaikwad/Leetcode/tree/master/0048-rotate-image) |
 | [0166-fraction-to-recurring-decimal](https://github.com/navalgaikwad/Leetcode/tree/master/0166-fraction-to-recurring-decimal) |
 | [0326-power-of-three](https://github.com/navalgaikwad/Leetcode/tree/master/0326-power-of-three) |
 | [1585-the-kth-factor-of-n](https://github.com/navalgaikwad/Leetcode/tree/master/1585-the-kth-factor-of-n) |
@@ -177,6 +179,7 @@ Collection of LeetCode questions to ace the coding interview!
 ## Matrix
 |  |
 | ------- |
+| [0048-rotate-image](https://github.com/navalgaikwad/Leetcode/tree/master/0048-rotate-image) |
 | [0054-spiral-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0054-spiral-matrix) |
 | [0212-word-search-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0212-word-search-ii) |
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
