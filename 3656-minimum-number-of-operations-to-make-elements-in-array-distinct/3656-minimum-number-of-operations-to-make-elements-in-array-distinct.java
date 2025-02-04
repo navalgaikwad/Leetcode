@@ -10,3 +10,4 @@ class Solution {
         return 0;
     }
 }
+//find last occurences of repation
