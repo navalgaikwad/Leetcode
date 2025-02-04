@@ -10,7 +10,6 @@ class Solution {
         int ans = -1;
         while(start <= end) {
             int mid = start + (end - start)/2;
-            
             if(nums[mid] == target) {
                 ans = mid;
             }
