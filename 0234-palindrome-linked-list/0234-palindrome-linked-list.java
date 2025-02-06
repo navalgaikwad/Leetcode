@@ -17,7 +17,7 @@ class Solution {
         slow = slow.next;
     }
         
-    if (fast != null) { // odd nodes: let right half smaller
+    if (fast != null) { // odd nodes: let right half smaller fast even asel tar fast null ahe nahi atr odd mg slow one ni move kar
         slow = slow.next;
     }
         
