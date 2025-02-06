@@ -14,21 +14,29 @@
  * }
  */
 class Solution {
-    PriorityQueue<Integer> q = new PriorityQueue<>((a, b)->(b-a));
-    public int kthSmallest(TreeNode root, int k) {
-        helper(root, k);
-        return q.peek();
-    }
-    
-    void helper(TreeNode root, int k) {
-        if(root == null) {
+    int count=0;
+    int ans = 0;
+    public  void helper(TreeNode root,int k)
+    {
+        if(root==null){
+            return ;
+        }
+        helper(root.left,k);
+        
+        count++;
+        if(count == k){
+            ans =  root.val;
             return;
         }
-        helper(root.left, k);
-        q.add(root.val);
-        if(q.size() > k) {
-            q.remove();
-        }
-        helper(root.right, k);
+        helper(root.right,k);
+       
+
+    }
+    
+    public int kthSmallest(TreeNode root, int k) {
+         helper(root,k);
+        return ans;
+        
+
     }
 }
