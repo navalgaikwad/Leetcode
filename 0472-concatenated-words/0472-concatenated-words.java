@@ -8,8 +8,7 @@ class Solution {
         }
         visited[length] = true;
         for (int i = word.length() - (length == 0 ? 1 : 0); i > length; --i) {
-            if (dictionary.contains(word.substring(length, i)) 
-                && dfs(word, i, visited, dictionary)) {
+            if (dictionary.contains(word.substring(length, i)) && dfs(word, i, visited, dictionary)) {
                 return true;
             }
             
