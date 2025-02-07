@@ -32,6 +32,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0274-h-index](https://github.com/navalgaikwad/Leetcode/tree/master/0274-h-index) |
 | [0283-move-zeroes](https://github.com/navalgaikwad/Leetcode/tree/master/0283-move-zeroes) |
 | [0456-132-pattern](https://github.com/navalgaikwad/Leetcode/tree/master/0456-132-pattern) |
+| [0496-next-greater-element-i](https://github.com/navalgaikwad/Leetcode/tree/master/0496-next-greater-element-i) |
 | [0542-01-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0542-01-matrix) |
 | [0560-subarray-sum-equals-k](https://github.com/navalgaikwad/Leetcode/tree/master/0560-subarray-sum-equals-k) |
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
@@ -57,6 +58,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0017-letter-combinations-of-a-phone-number](https://github.com/navalgaikwad/Leetcode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0049-group-anagrams](https://github.com/navalgaikwad/Leetcode/tree/master/0049-group-anagrams) |
 | [0166-fraction-to-recurring-decimal](https://github.com/navalgaikwad/Leetcode/tree/master/0166-fraction-to-recurring-decimal) |
+| [0496-next-greater-element-i](https://github.com/navalgaikwad/Leetcode/tree/master/0496-next-greater-element-i) |
 | [0560-subarray-sum-equals-k](https://github.com/navalgaikwad/Leetcode/tree/master/0560-subarray-sum-equals-k) |
 | [0753-open-the-lock](https://github.com/navalgaikwad/Leetcode/tree/master/0753-open-the-lock) |
 | [0778-reorganize-string](https://github.com/navalgaikwad/Leetcode/tree/master/0778-reorganize-string) |
@@ -176,11 +178,13 @@ Collection of LeetCode questions to ace the coding interview!
 | [0042-trapping-rain-water](https://github.com/navalgaikwad/Leetcode/tree/master/0042-trapping-rain-water) |
 | [0234-palindrome-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/0234-palindrome-linked-list) |
 | [0456-132-pattern](https://github.com/navalgaikwad/Leetcode/tree/master/0456-132-pattern) |
+| [0496-next-greater-element-i](https://github.com/navalgaikwad/Leetcode/tree/master/0496-next-greater-element-i) |
 ## Monotonic Stack
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/navalgaikwad/Leetcode/tree/master/0042-trapping-rain-water) |
 | [0456-132-pattern](https://github.com/navalgaikwad/Leetcode/tree/master/0456-132-pattern) |
+| [0496-next-greater-element-i](https://github.com/navalgaikwad/Leetcode/tree/master/0496-next-greater-element-i) |
 ## Ordered Set
 |  |
 | ------- |
