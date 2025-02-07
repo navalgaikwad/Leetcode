@@ -138,6 +138,7 @@ Collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0542-01-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0542-01-matrix) |
+| [0547-number-of-provinces](https://github.com/navalgaikwad/Leetcode/tree/master/0547-number-of-provinces) |
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
 | [0753-open-the-lock](https://github.com/navalgaikwad/Leetcode/tree/master/0753-open-the-lock) |
 | [1036-rotting-oranges](https://github.com/navalgaikwad/Leetcode/tree/master/1036-rotting-oranges) |
@@ -211,6 +212,7 @@ Collection of LeetCode questions to ace the coding interview!
 ## Graph
 |  |
 | ------- |
+| [0547-number-of-provinces](https://github.com/navalgaikwad/Leetcode/tree/master/0547-number-of-provinces) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/navalgaikwad/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 ## Matrix
 |  |
@@ -295,6 +297,7 @@ Collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0230-kth-smallest-element-in-a-bst) |
+| [0547-number-of-provinces](https://github.com/navalgaikwad/Leetcode/tree/master/0547-number-of-provinces) |
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
 ## Bit Manipulation
 |  |
@@ -327,4 +330,8 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0140-word-break-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0140-word-break-ii) |
+## Union Find
+|  |
+| ------- |
+| [0547-number-of-provinces](https://github.com/navalgaikwad/Leetcode/tree/master/0547-number-of-provinces) |
 <!---LeetCode Topics End-->
