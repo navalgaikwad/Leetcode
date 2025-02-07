@@ -143,6 +143,7 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
+| [0116-populating-next-right-pointers-in-each-node](https://github.com/navalgaikwad/Leetcode/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0542-01-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0542-01-matrix) |
 | [0547-number-of-provinces](https://github.com/navalgaikwad/Leetcode/tree/master/0547-number-of-provinces) |
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
@@ -305,6 +306,7 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
+| [0116-populating-next-right-pointers-in-each-node](https://github.com/navalgaikwad/Leetcode/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0547-number-of-provinces](https://github.com/navalgaikwad/Leetcode/tree/master/0547-number-of-provinces) |
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
@@ -315,12 +317,14 @@ Collection of LeetCode questions to ace the coding interview!
 ## Linked List
 |  |
 | ------- |
+| [0116-populating-next-right-pointers-in-each-node](https://github.com/navalgaikwad/Leetcode/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0234-palindrome-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/0234-palindrome-linked-list) |
 | [2236-maximum-twin-sum-of-a-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/2236-maximum-twin-sum-of-a-linked-list) |
 ## Tree
 |  |
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
+| [0116-populating-next-right-pointers-in-each-node](https://github.com/navalgaikwad/Leetcode/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0230-kth-smallest-element-in-a-bst) |
 ## Binary Search Tree
 |  |
@@ -330,6 +334,7 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
+| [0116-populating-next-right-pointers-in-each-node](https://github.com/navalgaikwad/Leetcode/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0230-kth-smallest-element-in-a-bst) |
 ## Design
 |  |
