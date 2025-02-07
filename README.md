@@ -183,6 +183,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0234-palindrome-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/0234-palindrome-linked-list) |
 | [0456-132-pattern](https://github.com/navalgaikwad/Leetcode/tree/master/0456-132-pattern) |
 | [0496-next-greater-element-i](https://github.com/navalgaikwad/Leetcode/tree/master/0496-next-greater-element-i) |
+| [2236-maximum-twin-sum-of-a-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/2236-maximum-twin-sum-of-a-linked-list) |
 ## Monotonic Stack
 |  |
 | ------- |
@@ -224,6 +225,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence](https://github.com/navalgaikwad/Leetcode/tree/master/1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/navalgaikwad/Leetcode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
 | [1798-max-number-of-k-sum-pairs](https://github.com/navalgaikwad/Leetcode/tree/master/1798-max-number-of-k-sum-pairs) |
+| [2236-maximum-twin-sum-of-a-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/2236-maximum-twin-sum-of-a-linked-list) |
 ## String Matching
 |  |
 | ------- |
@@ -281,6 +283,7 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0234-palindrome-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/0234-palindrome-linked-list) |
+| [2236-maximum-twin-sum-of-a-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/2236-maximum-twin-sum-of-a-linked-list) |
 ## Tree
 |  |
 | ------- |
