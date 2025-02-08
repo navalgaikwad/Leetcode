@@ -33,6 +33,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0198-house-robber](https://github.com/navalgaikwad/Leetcode/tree/master/0198-house-robber) |
 | [0212-word-search-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0212-word-search-ii) |
 | [0215-kth-largest-element-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/0215-kth-largest-element-in-an-array) |
+| [0217-contains-duplicate](https://github.com/navalgaikwad/Leetcode/tree/master/0217-contains-duplicate) |
 | [0238-product-of-array-except-self](https://github.com/navalgaikwad/Leetcode/tree/master/0238-product-of-array-except-self) |
 | [0240-search-a-2d-matrix-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0274-h-index](https://github.com/navalgaikwad/Leetcode/tree/master/0274-h-index) |
@@ -68,6 +69,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0049-group-anagrams](https://github.com/navalgaikwad/Leetcode/tree/master/0049-group-anagrams) |
 | [0140-word-break-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0140-word-break-ii) |
 | [0166-fraction-to-recurring-decimal](https://github.com/navalgaikwad/Leetcode/tree/master/0166-fraction-to-recurring-decimal) |
+| [0217-contains-duplicate](https://github.com/navalgaikwad/Leetcode/tree/master/0217-contains-duplicate) |
 | [0496-next-greater-element-i](https://github.com/navalgaikwad/Leetcode/tree/master/0496-next-greater-element-i) |
 | [0560-subarray-sum-equals-k](https://github.com/navalgaikwad/Leetcode/tree/master/0560-subarray-sum-equals-k) |
 | [0753-open-the-lock](https://github.com/navalgaikwad/Leetcode/tree/master/0753-open-the-lock) |
@@ -105,6 +107,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0049-group-anagrams](https://github.com/navalgaikwad/Leetcode/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/navalgaikwad/Leetcode/tree/master/0056-merge-intervals) |
 | [0215-kth-largest-element-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/0215-kth-largest-element-in-an-array) |
+| [0217-contains-duplicate](https://github.com/navalgaikwad/Leetcode/tree/master/0217-contains-duplicate) |
 | [0274-h-index](https://github.com/navalgaikwad/Leetcode/tree/master/0274-h-index) |
 | [0778-reorganize-string](https://github.com/navalgaikwad/Leetcode/tree/master/0778-reorganize-string) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/navalgaikwad/Leetcode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
