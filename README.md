@@ -29,6 +29,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/navalgaikwad/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0140-word-break-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0140-word-break-ii) |
+| [0150-evaluate-reverse-polish-notation](https://github.com/navalgaikwad/Leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0189-rotate-array](https://github.com/navalgaikwad/Leetcode/tree/master/0189-rotate-array) |
 | [0198-house-robber](https://github.com/navalgaikwad/Leetcode/tree/master/0198-house-robber) |
 | [0212-word-search-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0212-word-search-ii) |
@@ -163,6 +164,7 @@ Collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0009-palindrome-number](https://github.com/navalgaikwad/Leetcode/tree/master/0009-palindrome-number) |
 | [0048-rotate-image](https://github.com/navalgaikwad/Leetcode/tree/master/0048-rotate-image) |
+| [0150-evaluate-reverse-polish-notation](https://github.com/navalgaikwad/Leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0166-fraction-to-recurring-decimal](https://github.com/navalgaikwad/Leetcode/tree/master/0166-fraction-to-recurring-decimal) |
 | [0189-rotate-array](https://github.com/navalgaikwad/Leetcode/tree/master/0189-rotate-array) |
 | [0273-integer-to-english-words](https://github.com/navalgaikwad/Leetcode/tree/master/0273-integer-to-english-words) |
@@ -213,6 +215,7 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/navalgaikwad/Leetcode/tree/master/0042-trapping-rain-water) |
+| [0150-evaluate-reverse-polish-notation](https://github.com/navalgaikwad/Leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0232-implement-queue-using-stacks](https://github.com/navalgaikwad/Leetcode/tree/master/0232-implement-queue-using-stacks) |
 | [0234-palindrome-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/0234-palindrome-linked-list) |
 | [0456-132-pattern](https://github.com/navalgaikwad/Leetcode/tree/master/0456-132-pattern) |
