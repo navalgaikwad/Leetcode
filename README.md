@@ -99,6 +99,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0017-letter-combinations-of-a-phone-number](https://github.com/navalgaikwad/Leetcode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/navalgaikwad/Leetcode/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0049-group-anagrams](https://github.com/navalgaikwad/Leetcode/tree/master/0049-group-anagrams) |
+| [0125-valid-palindrome](https://github.com/navalgaikwad/Leetcode/tree/master/0125-valid-palindrome) |
 | [0140-word-break-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0140-word-break-ii) |
 | [0151-reverse-words-in-a-string](https://github.com/navalgaikwad/Leetcode/tree/master/0151-reverse-words-in-a-string) |
 | [0166-fraction-to-recurring-decimal](https://github.com/navalgaikwad/Leetcode/tree/master/0166-fraction-to-recurring-decimal) |
@@ -282,6 +283,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0042-trapping-rain-water](https://github.com/navalgaikwad/Leetcode/tree/master/0042-trapping-rain-water) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 | [0088-merge-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/0088-merge-sorted-array) |
+| [0125-valid-palindrome](https://github.com/navalgaikwad/Leetcode/tree/master/0125-valid-palindrome) |
 | [0151-reverse-words-in-a-string](https://github.com/navalgaikwad/Leetcode/tree/master/0151-reverse-words-in-a-string) |
 | [0189-rotate-array](https://github.com/navalgaikwad/Leetcode/tree/master/0189-rotate-array) |
 | [0234-palindrome-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/0234-palindrome-linked-list) |
