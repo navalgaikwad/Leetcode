@@ -45,6 +45,7 @@ class LRUCache {
         map.put(node.key, node);
         Node next = head.next;
         Node prev = head;
+        
         node.next = next;
         next.prev = node;
         head.next = node;
