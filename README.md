@@ -41,6 +41,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0240-search-a-2d-matrix-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0274-h-index](https://github.com/navalgaikwad/Leetcode/tree/master/0274-h-index) |
 | [0283-move-zeroes](https://github.com/navalgaikwad/Leetcode/tree/master/0283-move-zeroes) |
+| [0347-top-k-frequent-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0456-132-pattern](https://github.com/navalgaikwad/Leetcode/tree/master/0456-132-pattern) |
 | [0494-target-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0494-target-sum) |
 | [0496-next-greater-element-i](https://github.com/navalgaikwad/Leetcode/tree/master/0496-next-greater-element-i) |
@@ -76,6 +77,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0140-word-break-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0140-word-break-ii) |
 | [0166-fraction-to-recurring-decimal](https://github.com/navalgaikwad/Leetcode/tree/master/0166-fraction-to-recurring-decimal) |
 | [0217-contains-duplicate](https://github.com/navalgaikwad/Leetcode/tree/master/0217-contains-duplicate) |
+| [0347-top-k-frequent-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0496-next-greater-element-i](https://github.com/navalgaikwad/Leetcode/tree/master/0496-next-greater-element-i) |
 | [0560-subarray-sum-equals-k](https://github.com/navalgaikwad/Leetcode/tree/master/0560-subarray-sum-equals-k) |
 | [0753-open-the-lock](https://github.com/navalgaikwad/Leetcode/tree/master/0753-open-the-lock) |
@@ -118,6 +120,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0215-kth-largest-element-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0217-contains-duplicate](https://github.com/navalgaikwad/Leetcode/tree/master/0217-contains-duplicate) |
 | [0274-h-index](https://github.com/navalgaikwad/Leetcode/tree/master/0274-h-index) |
+| [0347-top-k-frequent-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0778-reorganize-string](https://github.com/navalgaikwad/Leetcode/tree/master/0778-reorganize-string) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/navalgaikwad/Leetcode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
 | [1675-magnetic-force-between-two-balls](https://github.com/navalgaikwad/Leetcode/tree/master/1675-magnetic-force-between-two-balls) |
@@ -217,6 +220,7 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0215-kth-largest-element-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/0215-kth-largest-element-in-an-array) |
+| [0347-top-k-frequent-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0778-reorganize-string](https://github.com/navalgaikwad/Leetcode/tree/master/0778-reorganize-string) |
 | [0892-shortest-subarray-with-sum-at-least-k](https://github.com/navalgaikwad/Leetcode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/navalgaikwad/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
@@ -294,6 +298,7 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0274-h-index](https://github.com/navalgaikwad/Leetcode/tree/master/0274-h-index) |
+| [0347-top-k-frequent-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0778-reorganize-string](https://github.com/navalgaikwad/Leetcode/tree/master/0778-reorganize-string) |
 | [1034-subarrays-with-k-different-integers](https://github.com/navalgaikwad/Leetcode/tree/master/1034-subarrays-with-k-different-integers) |
 | [3594-identify-the-largest-outlier-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/3594-identify-the-largest-outlier-in-an-array) |
@@ -331,10 +336,12 @@ Collection of LeetCode questions to ace the coding interview!
 | [0053-maximum-subarray](https://github.com/navalgaikwad/Leetcode/tree/master/0053-maximum-subarray) |
 | [0215-kth-largest-element-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0240-search-a-2d-matrix-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0240-search-a-2d-matrix-ii) |
+| [0347-top-k-frequent-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0347-top-k-frequent-elements) |
 ## Quickselect
 |  |
 | ------- |
 | [0215-kth-largest-element-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/0215-kth-largest-element-in-an-array) |
+| [0347-top-k-frequent-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0347-top-k-frequent-elements) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -393,4 +400,8 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0912-random-pick-with-weight](https://github.com/navalgaikwad/Leetcode/tree/master/0912-random-pick-with-weight) |
+## Bucket Sort
+|  |
+| ------- |
+| [0347-top-k-frequent-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0347-top-k-frequent-elements) |
 <!---LeetCode Topics End-->
