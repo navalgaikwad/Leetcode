@@ -14,7 +14,6 @@ class Solution {
                 map.put(rightChar, map.getOrDefault(rightChar, 0) - 1);
                 if(map.get(rightChar) == 0) {
                     size--;
-                 
                 }
             }
             while(size == 0) {
