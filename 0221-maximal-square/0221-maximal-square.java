@@ -1,30 +1,27 @@
 class Solution {
     public int maximalSquare(char[][] matrix) {
-        int row = matrix.length;
-        int col = matrix[0].length;
-        Integer[][] dp = new Integer[row][col]; 
-        int ans = Integer.MIN_VALUE;
+          if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
+            return 0; // Edge case: empty matrix
+        }
         
-        for(int i=0; i<row; i++) {
-            for(int j=0; j<col; j++) {
-                if(matrix[i][j] == '1') {
-                    int result = helper(matrix, i, j, dp);
-                    ans = Math.max(result, ans);
+        int rows = matrix.length, cols = matrix[0].length;
+        int[][] dp = new int[rows][cols]; // DP array to store square sizes
+        int maxSide = 0;
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (matrix[i][j] == '1') { // Only consider '1' cells
+                    int left = (i > 0) ? dp[i - 1][j] : 0;
+                    int above = (j > 0) ? dp[i][j - 1] : 0;
+                    int diag = (i > 0 && j > 0) ? dp[i - 1][j - 1] : 0;
+
+                    dp[i][j] = Math.min(left, Math.min(above, diag)) + 1;
+                    maxSide = Math.max(maxSide, dp[i][j]);
                 }
             }
         }
-        return ans == Integer.MIN_VALUE ? 0 : ans*ans; 
-    }
-    
-    int helper(char[][] matrix, int row, int col, Integer[][] memo) {
-        if(row < 0 || row >=matrix.length || col < 0 || col>= matrix[0].length || matrix[row][col] == '0') {
-            return 0;
-        }
-        if(memo[row][col]!=null) {
-            return memo[row][col];
-        }
-        int value = 1 + Math.min(helper(matrix, row - 1, col - 1, memo), Math.min(helper(matrix, row - 1, col, memo), helper(matrix, row, col - 1, memo)));
-        memo[row][col] = value;
-        return value;
+        
+        return maxSide * maxSide; // Return the area of the largest square
     }
 }
+
