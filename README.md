@@ -59,6 +59,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0777-toeplitz-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0777-toeplitz-matrix) |
 | [0892-shortest-subarray-with-sum-at-least-k](https://github.com/navalgaikwad/Leetcode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [0912-random-pick-with-weight](https://github.com/navalgaikwad/Leetcode/tree/master/0912-random-pick-with-weight) |
+| [1019-squares-of-a-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/1019-squares-of-a-sorted-array) |
 | [1028-interval-list-intersections](https://github.com/navalgaikwad/Leetcode/tree/master/1028-interval-list-intersections) |
 | [1034-subarrays-with-k-different-integers](https://github.com/navalgaikwad/Leetcode/tree/master/1034-subarrays-with-k-different-integers) |
 | [1036-rotting-oranges](https://github.com/navalgaikwad/Leetcode/tree/master/1036-rotting-oranges) |
@@ -152,6 +153,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0274-h-index](https://github.com/navalgaikwad/Leetcode/tree/master/0274-h-index) |
 | [0347-top-k-frequent-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0778-reorganize-string](https://github.com/navalgaikwad/Leetcode/tree/master/0778-reorganize-string) |
+| [1019-squares-of-a-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/1019-squares-of-a-sorted-array) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/navalgaikwad/Leetcode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
 | [1675-magnetic-force-between-two-balls](https://github.com/navalgaikwad/Leetcode/tree/master/1675-magnetic-force-between-two-balls) |
@@ -345,6 +347,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0392-is-subsequence](https://github.com/navalgaikwad/Leetcode/tree/master/0392-is-subsequence) |
 | [0647-palindromic-substrings](https://github.com/navalgaikwad/Leetcode/tree/master/0647-palindromic-substrings) |
 | [0680-valid-palindrome-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0680-valid-palindrome-ii) |
+| [1019-squares-of-a-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/1019-squares-of-a-sorted-array) |
 | [1028-interval-list-intersections](https://github.com/navalgaikwad/Leetcode/tree/master/1028-interval-list-intersections) |
 | [1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence](https://github.com/navalgaikwad/Leetcode/tree/master/1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/navalgaikwad/Leetcode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
