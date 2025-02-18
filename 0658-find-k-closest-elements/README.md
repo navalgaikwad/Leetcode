@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/find-k-closest-elements/">658. Find K Closest Elements</a></h2><h3>Medium</h3><hr><div><p>Given a <strong>sorted</strong> integer array <code>arr</code>, two integers <code>k</code> and <code>x</code>, return the <code>k</code> closest integers to <code>x</code> in the array. The result should also be sorted in ascending order.</p>
+<h2><a href="https://leetcode.com/problems/find-k-closest-elements">658. Find K Closest Elements</a></h2><h3>Medium</h3><hr><p>Given a <strong>sorted</strong> integer array <code>arr</code>, two integers <code>k</code> and <code>x</code>, return the <code>k</code> closest integers to <code>x</code> in the array. The result should also be sorted in ascending order.</p>
 
 <p>An integer <code>a</code> is closer to <code>x</code> than an integer <code>b</code> if:</p>
 
@@ -33,4 +33,3 @@
 	<li><code>arr</code> is sorted in <strong>ascending</strong> order.</li>
 	<li><code>-10<sup>4</sup> &lt;= arr[i], x &lt;= 10<sup>4</sup></code></li>
 </ul>
-</div>
