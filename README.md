@@ -54,6 +54,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0523-continuous-subarray-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0523-continuous-subarray-sum) |
 | [0542-01-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0542-01-matrix) |
 | [0560-subarray-sum-equals-k](https://github.com/navalgaikwad/Leetcode/tree/master/0560-subarray-sum-equals-k) |
+| [0658-find-k-closest-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0658-find-k-closest-elements) |
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
 | [0753-open-the-lock](https://github.com/navalgaikwad/Leetcode/tree/master/0753-open-the-lock) |
 | [0777-toeplitz-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0777-toeplitz-matrix) |
@@ -152,6 +153,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0217-contains-duplicate](https://github.com/navalgaikwad/Leetcode/tree/master/0217-contains-duplicate) |
 | [0274-h-index](https://github.com/navalgaikwad/Leetcode/tree/master/0274-h-index) |
 | [0347-top-k-frequent-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0347-top-k-frequent-elements) |
+| [0658-find-k-closest-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0658-find-k-closest-elements) |
 | [0778-reorganize-string](https://github.com/navalgaikwad/Leetcode/tree/master/0778-reorganize-string) |
 | [1019-squares-of-a-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/1019-squares-of-a-sorted-array) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
@@ -246,6 +248,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
 | [0240-search-a-2d-matrix-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0456-132-pattern](https://github.com/navalgaikwad/Leetcode/tree/master/0456-132-pattern) |
+| [0658-find-k-closest-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0658-find-k-closest-elements) |
 | [0892-shortest-subarray-with-sum-at-least-k](https://github.com/navalgaikwad/Leetcode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [0912-random-pick-with-weight](https://github.com/navalgaikwad/Leetcode/tree/master/0912-random-pick-with-weight) |
 | [1046-max-consecutive-ones-iii](https://github.com/navalgaikwad/Leetcode/tree/master/1046-max-consecutive-ones-iii) |
@@ -264,6 +267,7 @@ Collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/navalgaikwad/Leetcode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0076-minimum-window-substring](https://github.com/navalgaikwad/Leetcode/tree/master/0076-minimum-window-substring) |
+| [0658-find-k-closest-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0658-find-k-closest-elements) |
 | [0892-shortest-subarray-with-sum-at-least-k](https://github.com/navalgaikwad/Leetcode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [1034-subarrays-with-k-different-integers](https://github.com/navalgaikwad/Leetcode/tree/master/1034-subarrays-with-k-different-integers) |
 | [1046-max-consecutive-ones-iii](https://github.com/navalgaikwad/Leetcode/tree/master/1046-max-consecutive-ones-iii) |
@@ -272,6 +276,7 @@ Collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0215-kth-largest-element-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0347-top-k-frequent-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0347-top-k-frequent-elements) |
+| [0658-find-k-closest-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0658-find-k-closest-elements) |
 | [0778-reorganize-string](https://github.com/navalgaikwad/Leetcode/tree/master/0778-reorganize-string) |
 | [0892-shortest-subarray-with-sum-at-least-k](https://github.com/navalgaikwad/Leetcode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/navalgaikwad/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
@@ -346,6 +351,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0283-move-zeroes](https://github.com/navalgaikwad/Leetcode/tree/master/0283-move-zeroes) |
 | [0392-is-subsequence](https://github.com/navalgaikwad/Leetcode/tree/master/0392-is-subsequence) |
 | [0647-palindromic-substrings](https://github.com/navalgaikwad/Leetcode/tree/master/0647-palindromic-substrings) |
+| [0658-find-k-closest-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0658-find-k-closest-elements) |
 | [0680-valid-palindrome-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0680-valid-palindrome-ii) |
 | [1019-squares-of-a-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/1019-squares-of-a-sorted-array) |
 | [1028-interval-list-intersections](https://github.com/navalgaikwad/Leetcode/tree/master/1028-interval-list-intersections) |
