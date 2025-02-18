@@ -27,6 +27,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0056-merge-intervals](https://github.com/navalgaikwad/Leetcode/tree/master/0056-merge-intervals) |
 | [0057-insert-interval](https://github.com/navalgaikwad/Leetcode/tree/master/0057-insert-interval) |
 | [0078-subsets](https://github.com/navalgaikwad/Leetcode/tree/master/0078-subsets) |
+| [0079-word-search](https://github.com/navalgaikwad/Leetcode/tree/master/0079-word-search) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 | [0088-merge-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/0088-merge-sorted-array) |
 | [0118-pascals-triangle](https://github.com/navalgaikwad/Leetcode/tree/master/0118-pascals-triangle) |
@@ -119,6 +120,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0049-group-anagrams](https://github.com/navalgaikwad/Leetcode/tree/master/0049-group-anagrams) |
 | [0071-simplify-path](https://github.com/navalgaikwad/Leetcode/tree/master/0071-simplify-path) |
 | [0076-minimum-window-substring](https://github.com/navalgaikwad/Leetcode/tree/master/0076-minimum-window-substring) |
+| [0079-word-search](https://github.com/navalgaikwad/Leetcode/tree/master/0079-word-search) |
 | [0125-valid-palindrome](https://github.com/navalgaikwad/Leetcode/tree/master/0125-valid-palindrome) |
 | [0127-word-ladder](https://github.com/navalgaikwad/Leetcode/tree/master/0127-word-ladder) |
 | [0139-word-break](https://github.com/navalgaikwad/Leetcode/tree/master/0139-word-break) |
@@ -320,6 +322,7 @@ Collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0048-rotate-image](https://github.com/navalgaikwad/Leetcode/tree/master/0048-rotate-image) |
 | [0054-spiral-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0054-spiral-matrix) |
+| [0079-word-search](https://github.com/navalgaikwad/Leetcode/tree/master/0079-word-search) |
 | [0200-number-of-islands](https://github.com/navalgaikwad/Leetcode/tree/master/0200-number-of-islands) |
 | [0212-word-search-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0212-word-search-ii) |
 | [0221-maximal-square](https://github.com/navalgaikwad/Leetcode/tree/master/0221-maximal-square) |
@@ -391,6 +394,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0017-letter-combinations-of-a-phone-number](https://github.com/navalgaikwad/Leetcode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0039-combination-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0039-combination-sum) |
 | [0078-subsets](https://github.com/navalgaikwad/Leetcode/tree/master/0078-subsets) |
+| [0079-word-search](https://github.com/navalgaikwad/Leetcode/tree/master/0079-word-search) |
 | [0140-word-break-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0140-word-break-ii) |
 | [0212-word-search-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0212-word-search-ii) |
 | [0494-target-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0494-target-sum) |
@@ -420,6 +424,7 @@ Collection of LeetCode questions to ace the coding interview!
 ## Depth-First Search
 |  |
 | ------- |
+| [0079-word-search](https://github.com/navalgaikwad/Leetcode/tree/master/0079-word-search) |
 | [0101-symmetric-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0101-symmetric-tree) |
 | [0104-maximum-depth-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/navalgaikwad/Leetcode/tree/master/0116-populating-next-right-pointers-in-each-node) |
