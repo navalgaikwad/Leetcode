@@ -26,6 +26,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0054-spiral-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0054-spiral-matrix) |
 | [0056-merge-intervals](https://github.com/navalgaikwad/Leetcode/tree/master/0056-merge-intervals) |
 | [0057-insert-interval](https://github.com/navalgaikwad/Leetcode/tree/master/0057-insert-interval) |
+| [0073-set-matrix-zeroes](https://github.com/navalgaikwad/Leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0078-subsets](https://github.com/navalgaikwad/Leetcode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/navalgaikwad/Leetcode/tree/master/0079-word-search) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
@@ -92,6 +93,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0017-letter-combinations-of-a-phone-number](https://github.com/navalgaikwad/Leetcode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0041-first-missing-positive](https://github.com/navalgaikwad/Leetcode/tree/master/0041-first-missing-positive) |
 | [0049-group-anagrams](https://github.com/navalgaikwad/Leetcode/tree/master/0049-group-anagrams) |
+| [0073-set-matrix-zeroes](https://github.com/navalgaikwad/Leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0076-minimum-window-substring](https://github.com/navalgaikwad/Leetcode/tree/master/0076-minimum-window-substring) |
 | [0127-word-ladder](https://github.com/navalgaikwad/Leetcode/tree/master/0127-word-ladder) |
 | [0139-word-break](https://github.com/navalgaikwad/Leetcode/tree/master/0139-word-break) |
@@ -336,6 +338,7 @@ Collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0048-rotate-image](https://github.com/navalgaikwad/Leetcode/tree/master/0048-rotate-image) |
 | [0054-spiral-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0054-spiral-matrix) |
+| [0073-set-matrix-zeroes](https://github.com/navalgaikwad/Leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0079-word-search](https://github.com/navalgaikwad/Leetcode/tree/master/0079-word-search) |
 | [0200-number-of-islands](https://github.com/navalgaikwad/Leetcode/tree/master/0200-number-of-islands) |
 | [0212-word-search-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0212-word-search-ii) |
