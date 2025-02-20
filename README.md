@@ -60,6 +60,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
 | [0753-open-the-lock](https://github.com/navalgaikwad/Leetcode/tree/master/0753-open-the-lock) |
 | [0777-toeplitz-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0777-toeplitz-matrix) |
+| [0852-friends-of-appropriate-ages](https://github.com/navalgaikwad/Leetcode/tree/master/0852-friends-of-appropriate-ages) |
 | [0892-shortest-subarray-with-sum-at-least-k](https://github.com/navalgaikwad/Leetcode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [0912-random-pick-with-weight](https://github.com/navalgaikwad/Leetcode/tree/master/0912-random-pick-with-weight) |
 | [1019-squares-of-a-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/1019-squares-of-a-sorted-array) |
@@ -164,6 +165,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0658-find-k-closest-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0658-find-k-closest-elements) |
 | [0721-accounts-merge](https://github.com/navalgaikwad/Leetcode/tree/master/0721-accounts-merge) |
 | [0778-reorganize-string](https://github.com/navalgaikwad/Leetcode/tree/master/0778-reorganize-string) |
+| [0852-friends-of-appropriate-ages](https://github.com/navalgaikwad/Leetcode/tree/master/0852-friends-of-appropriate-ages) |
 | [1019-squares-of-a-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/1019-squares-of-a-sorted-array) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1478-maximum-number-of-events-that-can-be-attended](https://github.com/navalgaikwad/Leetcode/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
@@ -261,6 +263,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0240-search-a-2d-matrix-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0456-132-pattern](https://github.com/navalgaikwad/Leetcode/tree/master/0456-132-pattern) |
 | [0658-find-k-closest-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0658-find-k-closest-elements) |
+| [0852-friends-of-appropriate-ages](https://github.com/navalgaikwad/Leetcode/tree/master/0852-friends-of-appropriate-ages) |
 | [0892-shortest-subarray-with-sum-at-least-k](https://github.com/navalgaikwad/Leetcode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [0912-random-pick-with-weight](https://github.com/navalgaikwad/Leetcode/tree/master/0912-random-pick-with-weight) |
 | [1046-max-consecutive-ones-iii](https://github.com/navalgaikwad/Leetcode/tree/master/1046-max-consecutive-ones-iii) |
@@ -368,6 +371,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0647-palindromic-substrings](https://github.com/navalgaikwad/Leetcode/tree/master/0647-palindromic-substrings) |
 | [0658-find-k-closest-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0658-find-k-closest-elements) |
 | [0680-valid-palindrome-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0680-valid-palindrome-ii) |
+| [0852-friends-of-appropriate-ages](https://github.com/navalgaikwad/Leetcode/tree/master/0852-friends-of-appropriate-ages) |
 | [1019-squares-of-a-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/1019-squares-of-a-sorted-array) |
 | [1028-interval-list-intersections](https://github.com/navalgaikwad/Leetcode/tree/master/1028-interval-list-intersections) |
 | [1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence](https://github.com/navalgaikwad/Leetcode/tree/master/1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence) |
