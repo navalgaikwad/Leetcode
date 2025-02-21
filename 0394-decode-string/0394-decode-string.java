@@ -1,36 +1,39 @@
 class Solution {
     public String decodeString(String s) {
-        Stack<Integer> numberStack = new Stack<>();
-        Stack<String> aplhaStack = new Stack<>();
-        
-        int len = s.length();
-        String val ="";
-        for(int i=0; i<len; i++) {
-            char c = s.charAt(i);
+        String result = "";
+        int index =0;
+        Stack<String> st = new Stack<>();
+        Stack<Integer> stnum = new Stack<>();
+        String str = "";
+        while(index < s.length()) {
+            char c = s.charAt(index);
             if(Character.isDigit(c)) {
-                int number =0;
-                while(Character.isDigit(s.charAt(i)) && i < len) {
-                    number =number *10 +( s.charAt(i) - '0');
-                    i++;
+                int number = 0;
+                while(index < s.length() && Character.isDigit(s.charAt(index))) {
+                    number = number * 10 + (s.charAt(index) - '0');
+                    index++;
                 }
-                numberStack.push(number);
-                i--;
-            }else if(c == '[') {
-                aplhaStack.push(val);
-                val = "";
+                stnum.push(number);
+                index--;
+            }else if( c == '[') {
+                st.push(result);
+                result = "";
+               
             }else if(c == ']') {
-                StringBuilder sb = new StringBuilder(aplhaStack.pop());
-                int num = numberStack.pop();
-                while(num > 0) {
-                    sb.append(val);
-                    num--;
+                StringBuilder running = new StringBuilder(st.pop());
+                int value = stnum.pop();
+               // char ch = st.pop();
+                for(int i=0; i<value; i++) {
+                    running.append(result);
                 }
-                
-                val=sb.toString();
+                result = (running.toString());
+
             }else {
-                val+=c;
+                result+=c;
             }
+             index++;
+
         }
-        return val;
+        return result;
     }
 }
