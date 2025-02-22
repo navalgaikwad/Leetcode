@@ -105,6 +105,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0169-majority-element](https://github.com/navalgaikwad/Leetcode/tree/master/0169-majority-element) |
 | [0217-contains-duplicate](https://github.com/navalgaikwad/Leetcode/tree/master/0217-contains-duplicate) |
 | [0347-top-k-frequent-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0347-top-k-frequent-elements) |
+| [0383-ransom-note](https://github.com/navalgaikwad/Leetcode/tree/master/0383-ransom-note) |
 | [0496-next-greater-element-i](https://github.com/navalgaikwad/Leetcode/tree/master/0496-next-greater-element-i) |
 | [0523-continuous-subarray-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0523-continuous-subarray-sum) |
 | [0525-contiguous-array](https://github.com/navalgaikwad/Leetcode/tree/master/0525-contiguous-array) |
@@ -139,6 +140,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0166-fraction-to-recurring-decimal](https://github.com/navalgaikwad/Leetcode/tree/master/0166-fraction-to-recurring-decimal) |
 | [0212-word-search-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0212-word-search-ii) |
 | [0273-integer-to-english-words](https://github.com/navalgaikwad/Leetcode/tree/master/0273-integer-to-english-words) |
+| [0383-ransom-note](https://github.com/navalgaikwad/Leetcode/tree/master/0383-ransom-note) |
 | [0392-is-subsequence](https://github.com/navalgaikwad/Leetcode/tree/master/0392-is-subsequence) |
 | [0394-decode-string](https://github.com/navalgaikwad/Leetcode/tree/master/0394-decode-string) |
 | [0415-add-strings](https://github.com/navalgaikwad/Leetcode/tree/master/0415-add-strings) |
@@ -404,6 +406,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0169-majority-element](https://github.com/navalgaikwad/Leetcode/tree/master/0169-majority-element) |
 | [0274-h-index](https://github.com/navalgaikwad/Leetcode/tree/master/0274-h-index) |
 | [0347-top-k-frequent-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0347-top-k-frequent-elements) |
+| [0383-ransom-note](https://github.com/navalgaikwad/Leetcode/tree/master/0383-ransom-note) |
 | [0778-reorganize-string](https://github.com/navalgaikwad/Leetcode/tree/master/0778-reorganize-string) |
 | [1034-subarrays-with-k-different-integers](https://github.com/navalgaikwad/Leetcode/tree/master/1034-subarrays-with-k-different-integers) |
 | [3594-identify-the-largest-outlier-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/3594-identify-the-largest-outlier-in-an-array) |
