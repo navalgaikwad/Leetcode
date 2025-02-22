@@ -256,6 +256,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0670-maximum-swap](https://github.com/navalgaikwad/Leetcode/tree/master/0670-maximum-swap) |
 | [0912-random-pick-with-weight](https://github.com/navalgaikwad/Leetcode/tree/master/0912-random-pick-with-weight) |
 | [1585-the-kth-factor-of-n](https://github.com/navalgaikwad/Leetcode/tree/master/1585-the-kth-factor-of-n) |
+| [2383-add-two-integers](https://github.com/navalgaikwad/Leetcode/tree/master/2383-add-two-integers) |
 ## Recursion
 |  |
 | ------- |
