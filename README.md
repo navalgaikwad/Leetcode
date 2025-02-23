@@ -467,6 +467,7 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0079-word-search](https://github.com/navalgaikwad/Leetcode/tree/master/0079-word-search) |
+| [0098-validate-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0098-validate-binary-search-tree) |
 | [0101-symmetric-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0101-symmetric-tree) |
 | [0104-maximum-depth-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/navalgaikwad/Leetcode/tree/master/0116-populating-next-right-pointers-in-each-node) |
@@ -501,6 +502,7 @@ Collection of LeetCode questions to ace the coding interview!
 ## Tree
 |  |
 | ------- |
+| [0098-validate-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0098-validate-binary-search-tree) |
 | [0101-symmetric-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0101-symmetric-tree) |
 | [0102-binary-tree-level-order-traversal](https://github.com/navalgaikwad/Leetcode/tree/master/0102-binary-tree-level-order-traversal) |
 | [0104-maximum-depth-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
@@ -518,12 +520,14 @@ Collection of LeetCode questions to ace the coding interview!
 ## Binary Search Tree
 |  |
 | ------- |
+| [0098-validate-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0098-validate-binary-search-tree) |
 | [0173-binary-search-tree-iterator](https://github.com/navalgaikwad/Leetcode/tree/master/0173-binary-search-tree-iterator) |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 ## Binary Tree
 |  |
 | ------- |
+| [0098-validate-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0098-validate-binary-search-tree) |
 | [0101-symmetric-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0101-symmetric-tree) |
 | [0102-binary-tree-level-order-traversal](https://github.com/navalgaikwad/Leetcode/tree/master/0102-binary-tree-level-order-traversal) |
 | [0104-maximum-depth-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
