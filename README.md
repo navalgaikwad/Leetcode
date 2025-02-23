@@ -15,6 +15,7 @@ Collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0001-two-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0001-two-sum) |
 | [0015-3sum](https://github.com/navalgaikwad/Leetcode/tree/master/0015-3sum) |
+| [0016-3sum-closest](https://github.com/navalgaikwad/Leetcode/tree/master/0016-3sum-closest) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
 | [0039-combination-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0039-combination-sum) |
@@ -164,6 +165,7 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0015-3sum](https://github.com/navalgaikwad/Leetcode/tree/master/0015-3sum) |
+| [0016-3sum-closest](https://github.com/navalgaikwad/Leetcode/tree/master/0016-3sum-closest) |
 | [0049-group-anagrams](https://github.com/navalgaikwad/Leetcode/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/navalgaikwad/Leetcode/tree/master/0056-merge-intervals) |
 | [0088-merge-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/0088-merge-sorted-array) |
@@ -376,6 +378,7 @@ Collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/navalgaikwad/Leetcode/tree/master/0005-longest-palindromic-substring) |
 | [0015-3sum](https://github.com/navalgaikwad/Leetcode/tree/master/0015-3sum) |
+| [0016-3sum-closest](https://github.com/navalgaikwad/Leetcode/tree/master/0016-3sum-closest) |
 | [0019-remove-nth-node-from-end-of-list](https://github.com/navalgaikwad/Leetcode/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/navalgaikwad/Leetcode/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
