@@ -193,6 +193,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0022-generate-parentheses](https://github.com/navalgaikwad/Leetcode/tree/master/0022-generate-parentheses) |
 | [0042-trapping-rain-water](https://github.com/navalgaikwad/Leetcode/tree/master/0042-trapping-rain-water) |
 | [0053-maximum-subarray](https://github.com/navalgaikwad/Leetcode/tree/master/0053-maximum-subarray) |
+| [0062-unique-paths](https://github.com/navalgaikwad/Leetcode/tree/master/0062-unique-paths) |
 | [0118-pascals-triangle](https://github.com/navalgaikwad/Leetcode/tree/master/0118-pascals-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/navalgaikwad/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
@@ -254,6 +255,7 @@ Collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0009-palindrome-number](https://github.com/navalgaikwad/Leetcode/tree/master/0009-palindrome-number) |
 | [0048-rotate-image](https://github.com/navalgaikwad/Leetcode/tree/master/0048-rotate-image) |
+| [0062-unique-paths](https://github.com/navalgaikwad/Leetcode/tree/master/0062-unique-paths) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/navalgaikwad/Leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0166-fraction-to-recurring-decimal](https://github.com/navalgaikwad/Leetcode/tree/master/0166-fraction-to-recurring-decimal) |
 | [0189-rotate-array](https://github.com/navalgaikwad/Leetcode/tree/master/0189-rotate-array) |
@@ -590,4 +592,8 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0278-first-bad-version](https://github.com/navalgaikwad/Leetcode/tree/master/0278-first-bad-version) |
+## Combinatorics
+|  |
+| ------- |
+| [0062-unique-paths](https://github.com/navalgaikwad/Leetcode/tree/master/0062-unique-paths) |
 <!---LeetCode Topics End-->
