@@ -121,6 +121,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0778-reorganize-string](https://github.com/navalgaikwad/Leetcode/tree/master/0778-reorganize-string) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1034-subarrays-with-k-different-integers](https://github.com/navalgaikwad/Leetcode/tree/master/1034-subarrays-with-k-different-integers) |
+| [1554-minimum-time-to-collect-all-apples-in-a-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1554-minimum-time-to-collect-all-apples-in-a-tree) |
 | [1798-max-number-of-k-sum-pairs](https://github.com/navalgaikwad/Leetcode/tree/master/1798-max-number-of-k-sum-pairs) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [3594-identify-the-largest-outlier-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/3594-identify-the-largest-outlier-in-an-array) |
@@ -259,6 +260,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1036-rotting-oranges](https://github.com/navalgaikwad/Leetcode/tree/master/1036-rotting-oranges) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/navalgaikwad/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
+| [1554-minimum-time-to-collect-all-apples-in-a-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1554-minimum-time-to-collect-all-apples-in-a-tree) |
 ## Math
 |  |
 | ------- |
@@ -503,6 +505,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0721-accounts-merge](https://github.com/navalgaikwad/Leetcode/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
+| [1554-minimum-time-to-collect-all-apples-in-a-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1554-minimum-time-to-collect-all-apples-in-a-tree) |
 | [2347-count-nodes-equal-to-average-of-subtree](https://github.com/navalgaikwad/Leetcode/tree/master/2347-count-nodes-equal-to-average-of-subtree) |
 ## Bit Manipulation
 |  |
@@ -537,6 +540,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0543-diameter-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0543-diameter-of-binary-tree) |
 | [0998-check-completeness-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0998-check-completeness-of-a-binary-tree) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
+| [1554-minimum-time-to-collect-all-apples-in-a-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1554-minimum-time-to-collect-all-apples-in-a-tree) |
 | [2347-count-nodes-equal-to-average-of-subtree](https://github.com/navalgaikwad/Leetcode/tree/master/2347-count-nodes-equal-to-average-of-subtree) |
 ## Binary Search Tree
 |  |
