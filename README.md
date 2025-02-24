@@ -268,6 +268,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0009-palindrome-number](https://github.com/navalgaikwad/Leetcode/tree/master/0009-palindrome-number) |
 | [0048-rotate-image](https://github.com/navalgaikwad/Leetcode/tree/master/0048-rotate-image) |
 | [0062-unique-paths](https://github.com/navalgaikwad/Leetcode/tree/master/0062-unique-paths) |
+| [0069-sqrtx](https://github.com/navalgaikwad/Leetcode/tree/master/0069-sqrtx) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/navalgaikwad/Leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0166-fraction-to-recurring-decimal](https://github.com/navalgaikwad/Leetcode/tree/master/0166-fraction-to-recurring-decimal) |
 | [0189-rotate-array](https://github.com/navalgaikwad/Leetcode/tree/master/0189-rotate-array) |
@@ -292,6 +293,7 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
+| [0069-sqrtx](https://github.com/navalgaikwad/Leetcode/tree/master/0069-sqrtx) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0240-search-a-2d-matrix-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0278-first-bad-version](https://github.com/navalgaikwad/Leetcode/tree/master/0278-first-bad-version) |
