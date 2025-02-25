@@ -1,26 +1,26 @@
 class Solution {
     public boolean validPalindrome(String s) {
-        int start =0;
-        int end = s.length()-1;
-        while(start < end) {
-            if(s.charAt(start) != s.charAt(end)) {
-                return helper(s, start + 1, end) || helper(s, start, end - 1) ;
+        int st = 0;
+        int e = s.length()-1;
+        while(st < e) {
+            if(s.charAt(st) != s.charAt(e)) {
+                return palindrome(s, st+1, e) || palindrome(s, st, e-1);
             }
-            start++;
-            end--;
+            st++;
+            e--;
         }
         return true;
+        
     }
-    
-    boolean helper(String s, int start, int end) {
-        while(start < end) {
-            if(s.charAt(start)!=s.charAt(end)) {
+
+    boolean palindrome(String st, int s, int e) {
+        while(s<=e) {
+            if(st.charAt(s) != st.charAt(e)) {
                 return false;
             }
-            start++;
-            end--;
+            s++;
+            e--;
         }
         return true;
     }
 }
-
