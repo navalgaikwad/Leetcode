@@ -90,6 +90,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/navalgaikwad/Leetcode/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
 | [2164-two-best-non-overlapping-events](https://github.com/navalgaikwad/Leetcode/tree/master/2164-two-best-non-overlapping-events) |
 | [2165-plates-between-candles](https://github.com/navalgaikwad/Leetcode/tree/master/2165-plates-between-candles) |
+| [2316-count-hills-and-valleys-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/2316-count-hills-and-valleys-in-an-array) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [2691-count-vowel-strings-in-ranges](https://github.com/navalgaikwad/Leetcode/tree/master/2691-count-vowel-strings-in-ranges) |
 | [3594-identify-the-largest-outlier-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/3594-identify-the-largest-outlier-in-an-array) |
