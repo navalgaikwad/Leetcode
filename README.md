@@ -108,6 +108,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0073-set-matrix-zeroes](https://github.com/navalgaikwad/Leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0076-minimum-window-substring](https://github.com/navalgaikwad/Leetcode/tree/master/0076-minimum-window-substring) |
 | [0127-word-ladder](https://github.com/navalgaikwad/Leetcode/tree/master/0127-word-ladder) |
+| [0138-copy-list-with-random-pointer](https://github.com/navalgaikwad/Leetcode/tree/master/0138-copy-list-with-random-pointer) |
 | [0139-word-break](https://github.com/navalgaikwad/Leetcode/tree/master/0139-word-break) |
 | [0140-word-break-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0140-word-break-ii) |
 | [0146-lru-cache](https://github.com/navalgaikwad/Leetcode/tree/master/0146-lru-cache) |
@@ -534,6 +535,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0021-merge-two-sorted-lists](https://github.com/navalgaikwad/Leetcode/tree/master/0021-merge-two-sorted-lists) |
 | [0025-reverse-nodes-in-k-group](https://github.com/navalgaikwad/Leetcode/tree/master/0025-reverse-nodes-in-k-group) |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/navalgaikwad/Leetcode/tree/master/0116-populating-next-right-pointers-in-each-node) |
+| [0138-copy-list-with-random-pointer](https://github.com/navalgaikwad/Leetcode/tree/master/0138-copy-list-with-random-pointer) |
 | [0146-lru-cache](https://github.com/navalgaikwad/Leetcode/tree/master/0146-lru-cache) |
 | [0234-palindrome-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/0234-palindrome-linked-list) |
 | [0328-odd-even-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/0328-odd-even-linked-list) |
