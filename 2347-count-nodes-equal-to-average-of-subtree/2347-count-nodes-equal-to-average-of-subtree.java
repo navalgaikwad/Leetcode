@@ -15,32 +15,22 @@
  */
 class Solution {
     int result =0;
-    class Pair {
-        int value;
-        int count;
-        Pair(int value, int count) {
-            this.value = value;
-            this.count = count;
-        }
-    }
     public int averageOfSubtree(TreeNode root) {
-        dfs(root);
+        helper(root);
         return result;
-    }
-    
-    Pair dfs(TreeNode root) {
-        if(root == null) {
-            return new Pair(0, 0);
-        }
-        Pair left = dfs(root.left);
-        Pair right = dfs(root.right);
         
-        int values = left.value + right.value + root.val;
-        int totalCount = left.count + right.count + 1;
-        int average = (values / totalCount);
+    }
+    int[] helper(TreeNode root) {
+        if(root == null) return new int[]{0, 0};
+        int[] left = helper(root.left);
+        int[] right = helper(root.right);
+        int count = left[0] + right[0] + 1;
+        int number = right[1] + left[1] + root.val;
+        int average = number / count;
         if(average == root.val) {
-           result++; 
+            result++;
         }
-        return new Pair(values, totalCount);
+        return new int[]{count, number};
+
     }
 }
