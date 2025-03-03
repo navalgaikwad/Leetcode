@@ -65,6 +65,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0636-exclusive-time-of-functions](https://github.com/navalgaikwad/Leetcode/tree/master/0636-exclusive-time-of-functions) |
 | [0643-maximum-average-subarray-i](https://github.com/navalgaikwad/Leetcode/tree/master/0643-maximum-average-subarray-i) |
 | [0658-find-k-closest-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0658-find-k-closest-elements) |
+| [0689-maximum-sum-of-3-non-overlapping-subarrays](https://github.com/navalgaikwad/Leetcode/tree/master/0689-maximum-sum-of-3-non-overlapping-subarrays) |
 | [0695-max-area-of-island](https://github.com/navalgaikwad/Leetcode/tree/master/0695-max-area-of-island) |
 | [0721-accounts-merge](https://github.com/navalgaikwad/Leetcode/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
@@ -221,6 +222,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0494-target-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0494-target-sum) |
 | [0542-01-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0542-01-matrix) |
 | [0647-palindromic-substrings](https://github.com/navalgaikwad/Leetcode/tree/master/0647-palindromic-substrings) |
+| [0689-maximum-sum-of-3-non-overlapping-subarrays](https://github.com/navalgaikwad/Leetcode/tree/master/0689-maximum-sum-of-3-non-overlapping-subarrays) |
 | [2164-two-best-non-overlapping-events](https://github.com/navalgaikwad/Leetcode/tree/master/2164-two-best-non-overlapping-events) |
 ## Greedy
 |  |
