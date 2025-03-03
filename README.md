@@ -78,6 +78,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0907-koko-eating-bananas](https://github.com/navalgaikwad/Leetcode/tree/master/0907-koko-eating-bananas) |
 | [0912-random-pick-with-weight](https://github.com/navalgaikwad/Leetcode/tree/master/0912-random-pick-with-weight) |
 | [1019-squares-of-a-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/1019-squares-of-a-sorted-array) |
+| [1022-unique-paths-iii](https://github.com/navalgaikwad/Leetcode/tree/master/1022-unique-paths-iii) |
 | [1028-interval-list-intersections](https://github.com/navalgaikwad/Leetcode/tree/master/1028-interval-list-intersections) |
 | [1034-subarrays-with-k-different-integers](https://github.com/navalgaikwad/Leetcode/tree/master/1034-subarrays-with-k-different-integers) |
 | [1036-rotting-oranges](https://github.com/navalgaikwad/Leetcode/tree/master/1036-rotting-oranges) |
@@ -413,6 +414,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
 | [0777-toeplitz-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0777-toeplitz-matrix) |
 | [0854-making-a-large-island](https://github.com/navalgaikwad/Leetcode/tree/master/0854-making-a-large-island) |
+| [1022-unique-paths-iii](https://github.com/navalgaikwad/Leetcode/tree/master/1022-unique-paths-iii) |
 | [1036-rotting-oranges](https://github.com/navalgaikwad/Leetcode/tree/master/1036-rotting-oranges) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/1171-shortest-path-in-binary-matrix) |
 | [1331-path-with-maximum-gold](https://github.com/navalgaikwad/Leetcode/tree/master/1331-path-with-maximum-gold) |
@@ -487,6 +489,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0140-word-break-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0140-word-break-ii) |
 | [0212-word-search-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0212-word-search-ii) |
 | [0494-target-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0494-target-sum) |
+| [1022-unique-paths-iii](https://github.com/navalgaikwad/Leetcode/tree/master/1022-unique-paths-iii) |
 | [1331-path-with-maximum-gold](https://github.com/navalgaikwad/Leetcode/tree/master/1331-path-with-maximum-gold) |
 ## Number Theory
 |  |
@@ -544,6 +547,7 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0078-subsets](https://github.com/navalgaikwad/Leetcode/tree/master/0078-subsets) |
+| [1022-unique-paths-iii](https://github.com/navalgaikwad/Leetcode/tree/master/1022-unique-paths-iii) |
 ## Linked List
 |  |
 | ------- |
