@@ -28,13 +28,13 @@ class Solution {
         Queue<Node> q = new LinkedList<>();
         q.add(node);
         while(!q.isEmpty()) {
-            Node root = q.remove();
-            for(Node neighbour: root.neighbors) {
-                if(!map.containsKey(neighbour)) {
-                    q.add(neighbour);
-                    map.put(neighbour, new Node(neighbour.val, new ArrayList<>()));
+            Node current = q.remove();
+            for(Node neighbor: current.neighbors) {
+                if(!map.containsKey(neighbor)) {
+                    map.put(neighbor, new Node(neighbor.val, new ArrayList<>()));
+                    q.add(neighbor);
                 }
-                map.get(root).neighbors.add(map.get(neighbour));
+                map.get(current).neighbors.add(map.get(neighbor));
             }
         }
         return map.get(node);
