@@ -127,6 +127,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0523-continuous-subarray-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0523-continuous-subarray-sum) |
 | [0525-contiguous-array](https://github.com/navalgaikwad/Leetcode/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/navalgaikwad/Leetcode/tree/master/0560-subarray-sum-equals-k) |
+| [0653-two-sum-iv-input-is-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0721-accounts-merge](https://github.com/navalgaikwad/Leetcode/tree/master/0721-accounts-merge) |
 | [0753-open-the-lock](https://github.com/navalgaikwad/Leetcode/tree/master/0753-open-the-lock) |
 | [0778-reorganize-string](https://github.com/navalgaikwad/Leetcode/tree/master/0778-reorganize-string) |
@@ -268,6 +269,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0542-01-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0542-01-matrix) |
 | [0547-number-of-provinces](https://github.com/navalgaikwad/Leetcode/tree/master/0547-number-of-provinces) |
+| [0653-two-sum-iv-input-is-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0695-max-area-of-island](https://github.com/navalgaikwad/Leetcode/tree/master/0695-max-area-of-island) |
 | [0721-accounts-merge](https://github.com/navalgaikwad/Leetcode/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
@@ -444,6 +446,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0283-move-zeroes](https://github.com/navalgaikwad/Leetcode/tree/master/0283-move-zeroes) |
 | [0392-is-subsequence](https://github.com/navalgaikwad/Leetcode/tree/master/0392-is-subsequence) |
 | [0647-palindromic-substrings](https://github.com/navalgaikwad/Leetcode/tree/master/0647-palindromic-substrings) |
+| [0653-two-sum-iv-input-is-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0658-find-k-closest-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0658-find-k-closest-elements) |
 | [0680-valid-palindrome-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0680-valid-palindrome-ii) |
 | [0852-friends-of-appropriate-ages](https://github.com/navalgaikwad/Leetcode/tree/master/0852-friends-of-appropriate-ages) |
@@ -537,6 +540,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0543-diameter-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0543-diameter-of-binary-tree) |
 | [0547-number-of-provinces](https://github.com/navalgaikwad/Leetcode/tree/master/0547-number-of-provinces) |
+| [0653-two-sum-iv-input-is-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0695-max-area-of-island](https://github.com/navalgaikwad/Leetcode/tree/master/0695-max-area-of-island) |
 | [0721-accounts-merge](https://github.com/navalgaikwad/Leetcode/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
@@ -579,6 +583,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0543-diameter-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0543-diameter-of-binary-tree) |
+| [0653-two-sum-iv-input-is-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0975-range-sum-of-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0975-range-sum-of-bst) |
 | [0998-check-completeness-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0998-check-completeness-of-a-binary-tree) |
@@ -592,6 +597,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0173-binary-search-tree-iterator](https://github.com/navalgaikwad/Leetcode/tree/master/0173-binary-search-tree-iterator) |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
+| [0653-two-sum-iv-input-is-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0975-range-sum-of-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0975-range-sum-of-bst) |
 ## Binary Tree
 |  |
@@ -608,6 +614,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0543-diameter-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0543-diameter-of-binary-tree) |
+| [0653-two-sum-iv-input-is-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0975-range-sum-of-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0975-range-sum-of-bst) |
 | [0998-check-completeness-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0998-check-completeness-of-a-binary-tree) |
