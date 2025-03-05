@@ -10,18 +10,16 @@ class Solution {
         }
         boolean[] visited = new boolean[n];
         return dfs(adj, 0, visited, hasApple);
-        
     }
-    int dfs(ArrayList<Integer> adj[], int index, boolean[] visited, List<Boolean> hasApple) {
+    int dfs(ArrayList<Integer> adj[], int start,boolean[] visited, List<Boolean> hasApple) {
+        visited[start] = true;
         int total = 0;
-        visited[index] = true;
-        for(Integer neighbour : adj[index]) {
+        for(Integer neighbour : adj[start]) {
             if(!visited[neighbour]) {
-                int count = dfs(adj, neighbour, visited, hasApple);
-                total+=count;
+                total+=dfs(adj, neighbour, visited, hasApple);
             }
         }
-        if(index!=0 && (hasApple.get(index) || total!=0)) {
+        if((start!=0)  && (hasApple.get(start) || total !=0 )) {
             total+=2;
         }
         return total;
