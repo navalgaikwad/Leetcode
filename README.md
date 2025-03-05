@@ -78,6 +78,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0907-koko-eating-bananas](https://github.com/navalgaikwad/Leetcode/tree/master/0907-koko-eating-bananas) |
 | [0912-random-pick-with-weight](https://github.com/navalgaikwad/Leetcode/tree/master/0912-random-pick-with-weight) |
 | [0941-sort-array-by-parity](https://github.com/navalgaikwad/Leetcode/tree/master/0941-sort-array-by-parity) |
+| [0971-shortest-bridge](https://github.com/navalgaikwad/Leetcode/tree/master/0971-shortest-bridge) |
 | [1019-squares-of-a-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/1019-squares-of-a-sorted-array) |
 | [1022-unique-paths-iii](https://github.com/navalgaikwad/Leetcode/tree/master/1022-unique-paths-iii) |
 | [1028-interval-list-intersections](https://github.com/navalgaikwad/Leetcode/tree/master/1028-interval-list-intersections) |
@@ -276,6 +277,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0753-open-the-lock](https://github.com/navalgaikwad/Leetcode/tree/master/0753-open-the-lock) |
 | [0854-making-a-large-island](https://github.com/navalgaikwad/Leetcode/tree/master/0854-making-a-large-island) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
+| [0971-shortest-bridge](https://github.com/navalgaikwad/Leetcode/tree/master/0971-shortest-bridge) |
 | [0998-check-completeness-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0998-check-completeness-of-a-binary-tree) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1036-rotting-oranges](https://github.com/navalgaikwad/Leetcode/tree/master/1036-rotting-oranges) |
@@ -418,6 +420,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
 | [0777-toeplitz-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0777-toeplitz-matrix) |
 | [0854-making-a-large-island](https://github.com/navalgaikwad/Leetcode/tree/master/0854-making-a-large-island) |
+| [0971-shortest-bridge](https://github.com/navalgaikwad/Leetcode/tree/master/0971-shortest-bridge) |
 | [1022-unique-paths-iii](https://github.com/navalgaikwad/Leetcode/tree/master/1022-unique-paths-iii) |
 | [1036-rotting-oranges](https://github.com/navalgaikwad/Leetcode/tree/master/1036-rotting-oranges) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/1171-shortest-path-in-binary-matrix) |
@@ -546,6 +549,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
 | [0854-making-a-large-island](https://github.com/navalgaikwad/Leetcode/tree/master/0854-making-a-large-island) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
+| [0971-shortest-bridge](https://github.com/navalgaikwad/Leetcode/tree/master/0971-shortest-bridge) |
 | [0975-range-sum-of-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0975-range-sum-of-bst) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1554-minimum-time-to-collect-all-apples-in-a-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1554-minimum-time-to-collect-all-apples-in-a-tree) |
