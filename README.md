@@ -91,6 +91,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/navalgaikwad/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1514-minimum-value-to-get-positive-step-by-step-sum](https://github.com/navalgaikwad/Leetcode/tree/master/1514-minimum-value-to-get-positive-step-by-step-sum) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/navalgaikwad/Leetcode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
+| [1646-kth-missing-positive-number](https://github.com/navalgaikwad/Leetcode/tree/master/1646-kth-missing-positive-number) |
 | [1675-magnetic-force-between-two-balls](https://github.com/navalgaikwad/Leetcode/tree/master/1675-magnetic-force-between-two-balls) |
 | [1798-max-number-of-k-sum-pairs](https://github.com/navalgaikwad/Leetcode/tree/master/1798-max-number-of-k-sum-pairs) |
 | [1886-minimum-limit-of-balls-in-a-bag](https://github.com/navalgaikwad/Leetcode/tree/master/1886-minimum-limit-of-balls-in-a-bag) |
@@ -327,6 +328,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0912-random-pick-with-weight](https://github.com/navalgaikwad/Leetcode/tree/master/0912-random-pick-with-weight) |
 | [1046-max-consecutive-ones-iii](https://github.com/navalgaikwad/Leetcode/tree/master/1046-max-consecutive-ones-iii) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/navalgaikwad/Leetcode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
+| [1646-kth-missing-positive-number](https://github.com/navalgaikwad/Leetcode/tree/master/1646-kth-missing-positive-number) |
 | [1675-magnetic-force-between-two-balls](https://github.com/navalgaikwad/Leetcode/tree/master/1675-magnetic-force-between-two-balls) |
 | [1886-minimum-limit-of-balls-in-a-bag](https://github.com/navalgaikwad/Leetcode/tree/master/1886-minimum-limit-of-balls-in-a-bag) |
 | [2164-two-best-non-overlapping-events](https://github.com/navalgaikwad/Leetcode/tree/master/2164-two-best-non-overlapping-events) |
