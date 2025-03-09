@@ -138,6 +138,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1034-subarrays-with-k-different-integers](https://github.com/navalgaikwad/Leetcode/tree/master/1034-subarrays-with-k-different-integers) |
+| [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/navalgaikwad/Leetcode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
 | [1554-minimum-time-to-collect-all-apples-in-a-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1554-minimum-time-to-collect-all-apples-in-a-tree) |
 | [1798-max-number-of-k-sum-pairs](https://github.com/navalgaikwad/Leetcode/tree/master/1798-max-number-of-k-sum-pairs) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
@@ -287,6 +288,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1036-rotting-oranges](https://github.com/navalgaikwad/Leetcode/tree/master/1036-rotting-oranges) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/1171-shortest-path-in-binary-matrix) |
+| [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/navalgaikwad/Leetcode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/navalgaikwad/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1554-minimum-time-to-collect-all-apples-in-a-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1554-minimum-time-to-collect-all-apples-in-a-tree) |
 ## Math
@@ -562,6 +564,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0971-shortest-bridge](https://github.com/navalgaikwad/Leetcode/tree/master/0971-shortest-bridge) |
 | [0975-range-sum-of-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0975-range-sum-of-bst) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
+| [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/navalgaikwad/Leetcode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
 | [1285-balance-a-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1285-balance-a-binary-search-tree) |
 | [1554-minimum-time-to-collect-all-apples-in-a-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1554-minimum-time-to-collect-all-apples-in-a-tree) |
 | [2347-count-nodes-equal-to-average-of-subtree](https://github.com/navalgaikwad/Leetcode/tree/master/2347-count-nodes-equal-to-average-of-subtree) |
@@ -604,6 +607,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0975-range-sum-of-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0975-range-sum-of-bst) |
 | [0998-check-completeness-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0998-check-completeness-of-a-binary-tree) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
+| [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/navalgaikwad/Leetcode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
 | [1285-balance-a-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1285-balance-a-binary-search-tree) |
 | [1554-minimum-time-to-collect-all-apples-in-a-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1554-minimum-time-to-collect-all-apples-in-a-tree) |
 | [2347-count-nodes-equal-to-average-of-subtree](https://github.com/navalgaikwad/Leetcode/tree/master/2347-count-nodes-equal-to-average-of-subtree) |
@@ -638,6 +642,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0975-range-sum-of-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0975-range-sum-of-bst) |
 | [0998-check-completeness-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0998-check-completeness-of-a-binary-tree) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
+| [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/navalgaikwad/Leetcode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
 | [1285-balance-a-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1285-balance-a-binary-search-tree) |
 | [2347-count-nodes-equal-to-average-of-subtree](https://github.com/navalgaikwad/Leetcode/tree/master/2347-count-nodes-equal-to-average-of-subtree) |
 ## Design
