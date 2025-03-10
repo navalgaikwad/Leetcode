@@ -307,6 +307,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0150-evaluate-reverse-polish-notation](https://github.com/navalgaikwad/Leetcode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0166-fraction-to-recurring-decimal](https://github.com/navalgaikwad/Leetcode/tree/master/0166-fraction-to-recurring-decimal) |
 | [0189-rotate-array](https://github.com/navalgaikwad/Leetcode/tree/master/0189-rotate-array) |
+| [0231-power-of-two](https://github.com/navalgaikwad/Leetcode/tree/master/0231-power-of-two) |
 | [0273-integer-to-english-words](https://github.com/navalgaikwad/Leetcode/tree/master/0273-integer-to-english-words) |
 | [0326-power-of-three](https://github.com/navalgaikwad/Leetcode/tree/master/0326-power-of-three) |
 | [0415-add-strings](https://github.com/navalgaikwad/Leetcode/tree/master/0415-add-strings) |
@@ -320,6 +321,7 @@ Collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0021-merge-two-sorted-lists](https://github.com/navalgaikwad/Leetcode/tree/master/0021-merge-two-sorted-lists) |
 | [0025-reverse-nodes-in-k-group](https://github.com/navalgaikwad/Leetcode/tree/master/0025-reverse-nodes-in-k-group) |
+| [0231-power-of-two](https://github.com/navalgaikwad/Leetcode/tree/master/0231-power-of-two) |
 | [0234-palindrome-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/0234-palindrome-linked-list) |
 | [0273-integer-to-english-words](https://github.com/navalgaikwad/Leetcode/tree/master/0273-integer-to-english-words) |
 | [0326-power-of-three](https://github.com/navalgaikwad/Leetcode/tree/master/0326-power-of-three) |
@@ -584,6 +586,7 @@ Collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0078-subsets](https://github.com/navalgaikwad/Leetcode/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0090-subsets-ii) |
+| [0231-power-of-two](https://github.com/navalgaikwad/Leetcode/tree/master/0231-power-of-two) |
 | [1022-unique-paths-iii](https://github.com/navalgaikwad/Leetcode/tree/master/1022-unique-paths-iii) |
 ## Linked List
 |  |
