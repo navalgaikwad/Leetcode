@@ -248,6 +248,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0542-01-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0542-01-matrix) |
 | [0647-palindromic-substrings](https://github.com/navalgaikwad/Leetcode/tree/master/0647-palindromic-substrings) |
 | [0689-maximum-sum-of-3-non-overlapping-subarrays](https://github.com/navalgaikwad/Leetcode/tree/master/0689-maximum-sum-of-3-non-overlapping-subarrays) |
+| [1008-binary-tree-cameras](https://github.com/navalgaikwad/Leetcode/tree/master/1008-binary-tree-cameras) |
 | [1025-minimum-cost-for-tickets](https://github.com/navalgaikwad/Leetcode/tree/master/1025-minimum-cost-for-tickets) |
 | [2164-two-best-non-overlapping-events](https://github.com/navalgaikwad/Leetcode/tree/master/2164-two-best-non-overlapping-events) |
 ## Greedy
@@ -595,6 +596,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0971-shortest-bridge](https://github.com/navalgaikwad/Leetcode/tree/master/0971-shortest-bridge) |
 | [0975-range-sum-of-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0975-range-sum-of-bst) |
+| [1008-binary-tree-cameras](https://github.com/navalgaikwad/Leetcode/tree/master/1008-binary-tree-cameras) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/navalgaikwad/Leetcode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
 | [1285-balance-a-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1285-balance-a-binary-search-tree) |
@@ -642,6 +644,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0975-range-sum-of-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0975-range-sum-of-bst) |
 | [0998-check-completeness-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0998-check-completeness-of-a-binary-tree) |
+| [1008-binary-tree-cameras](https://github.com/navalgaikwad/Leetcode/tree/master/1008-binary-tree-cameras) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/navalgaikwad/Leetcode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
 | [1285-balance-a-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1285-balance-a-binary-search-tree) |
@@ -679,6 +682,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0975-range-sum-of-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0975-range-sum-of-bst) |
 | [0998-check-completeness-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0998-check-completeness-of-a-binary-tree) |
+| [1008-binary-tree-cameras](https://github.com/navalgaikwad/Leetcode/tree/master/1008-binary-tree-cameras) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/navalgaikwad/Leetcode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
 | [1285-balance-a-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1285-balance-a-binary-search-tree) |
