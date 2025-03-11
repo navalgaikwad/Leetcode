@@ -15,6 +15,7 @@ class Solution {
         ListNode current = head;
         ListNode prev = dummy;
         int i=1;
+        
          while(current != null && i < left) {
             prev = current;
             current = current.next;
@@ -24,6 +25,7 @@ class Solution {
         //System.out.print(prev.val);
         ListNode prevStart = prev;//1
         //ListNode nextNode = current;
+        //reverse logiv
         while(current!=null && i <= right) {
             ListNode next= current.next;
             current.next = prev;
@@ -31,8 +33,8 @@ class Solution {
             current = next;
             i++;
         }
-        currentHead.next = current;
-        prevStart.next = prev;
+        currentHead.next = current; //2->5
+        prevStart.next = prev;//1->4
         return dummy.next;
     }
 }
