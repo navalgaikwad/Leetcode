@@ -1,29 +1,26 @@
 class Solution {
-
-    
-   Set<List<Integer>> result = new HashSet<>();
+    List<List<Integer>> result = new ArrayList<>();
 
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
-        Arrays.sort(candidates);  // Sort the array to handle duplicates
-        dfsSum(candidates, target, 0, new ArrayList<>(), 0);
-        return new ArrayList<>(result);
+        Arrays.sort(candidates); 
+        helper(candidates, target, 0, 0, new ArrayList<>());
+        return result;
     }
 
-    void dfsSum(int[] candidates, int target, int sum, ArrayList<Integer> runningList, int index) {
+    void helper(int[] candidates, int target, int index, int sum, ArrayList<Integer> running) {
         if (sum == target) {
-            result.add(new ArrayList<>(runningList));
+            result.add(new ArrayList<>(running));
             return;
         }
 
         for (int i = index; i < candidates.length; i++) {
             if (i > index && candidates[i] == candidates[i - 1]) {
-                // Skip duplicates
                 continue;
             }
             if (sum <= target) {
-                runningList.add(candidates[i]);
-                dfsSum(candidates, target, sum + candidates[i], runningList, i + 1); 
-                runningList.remove(runningList.size() - 1);
+                running.add(candidates[i]);
+                helper(candidates, target, i + 1, sum + candidates[i], running);
+                running.remove(running.size() - 1);
             }
         }
     }
