@@ -406,6 +406,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0621-task-scheduler](https://github.com/navalgaikwad/Leetcode/tree/master/0621-task-scheduler) |
 | [0658-find-k-closest-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0658-find-k-closest-elements) |
 | [0778-reorganize-string](https://github.com/navalgaikwad/Leetcode/tree/master/0778-reorganize-string) |
+| [0789-kth-largest-element-in-a-stream](https://github.com/navalgaikwad/Leetcode/tree/master/0789-kth-largest-element-in-a-stream) |
 | [0892-shortest-subarray-with-sum-at-least-k](https://github.com/navalgaikwad/Leetcode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [1478-maximum-number-of-events-that-can-be-attended](https://github.com/navalgaikwad/Leetcode/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/navalgaikwad/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
@@ -663,6 +664,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0543-diameter-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0572-subtree-of-another-tree) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0653-two-sum-iv-input-is-a-bst) |
+| [0789-kth-largest-element-in-a-stream](https://github.com/navalgaikwad/Leetcode/tree/master/0789-kth-largest-element-in-a-stream) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0975-range-sum-of-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0975-range-sum-of-bst) |
 | [0998-check-completeness-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0998-check-completeness-of-a-binary-tree) |
@@ -680,6 +682,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0230-kth-smallest-element-in-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0653-two-sum-iv-input-is-a-bst) |
+| [0789-kth-largest-element-in-a-stream](https://github.com/navalgaikwad/Leetcode/tree/master/0789-kth-largest-element-in-a-stream) |
 | [0975-range-sum-of-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0975-range-sum-of-bst) |
 | [1285-balance-a-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1285-balance-a-binary-search-tree) |
 ## Binary Tree
@@ -702,6 +705,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0543-diameter-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0572-subtree-of-another-tree) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0653-two-sum-iv-input-is-a-bst) |
+| [0789-kth-largest-element-in-a-stream](https://github.com/navalgaikwad/Leetcode/tree/master/0789-kth-largest-element-in-a-stream) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0975-range-sum-of-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0975-range-sum-of-bst) |
 | [0998-check-completeness-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0998-check-completeness-of-a-binary-tree) |
@@ -718,6 +722,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0211-design-add-and-search-words-data-structure](https://github.com/navalgaikwad/Leetcode/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0232-implement-queue-using-stacks](https://github.com/navalgaikwad/Leetcode/tree/master/0232-implement-queue-using-stacks) |
 | [0303-range-sum-query-immutable](https://github.com/navalgaikwad/Leetcode/tree/master/0303-range-sum-query-immutable) |
+| [0789-kth-largest-element-in-a-stream](https://github.com/navalgaikwad/Leetcode/tree/master/0789-kth-largest-element-in-a-stream) |
 ## Memoization
 |  |
 | ------- |
@@ -769,4 +774,8 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0572-subtree-of-another-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0572-subtree-of-another-tree) |
+## Data Stream
+|  |
+| ------- |
+| [0789-kth-largest-element-in-a-stream](https://github.com/navalgaikwad/Leetcode/tree/master/0789-kth-largest-element-in-a-stream) |
 <!---LeetCode Topics End-->
