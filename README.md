@@ -34,6 +34,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0078-subsets](https://github.com/navalgaikwad/Leetcode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/navalgaikwad/Leetcode/tree/master/0079-word-search) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
+| [0081-search-in-rotated-sorted-array-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0081-search-in-rotated-sorted-array-ii) |
 | [0088-merge-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/0088-merge-sorted-array) |
 | [0090-subsets-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0090-subsets-ii) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/navalgaikwad/Leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
@@ -350,6 +351,7 @@ Collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
 | [0069-sqrtx](https://github.com/navalgaikwad/Leetcode/tree/master/0069-sqrtx) |
+| [0081-search-in-rotated-sorted-array-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0081-search-in-rotated-sorted-array-ii) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0240-search-a-2d-matrix-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0278-first-bad-version](https://github.com/navalgaikwad/Leetcode/tree/master/0278-first-bad-version) |
