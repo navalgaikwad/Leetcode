@@ -155,6 +155,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/navalgaikwad/Leetcode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
 | [1554-minimum-time-to-collect-all-apples-in-a-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1554-minimum-time-to-collect-all-apples-in-a-tree) |
 | [1798-max-number-of-k-sum-pairs](https://github.com/navalgaikwad/Leetcode/tree/master/1798-max-number-of-k-sum-pairs) |
+| [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/navalgaikwad/Leetcode/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [3594-identify-the-largest-outlier-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/3594-identify-the-largest-outlier-in-an-array) |
 | [3656-minimum-number-of-operations-to-make-elements-in-array-distinct](https://github.com/navalgaikwad/Leetcode/tree/master/3656-minimum-number-of-operations-to-make-elements-in-array-distinct) |
@@ -200,6 +201,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence](https://github.com/navalgaikwad/Leetcode/tree/master/1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence) |
 | [1894-merge-strings-alternately](https://github.com/navalgaikwad/Leetcode/tree/master/1894-merge-strings-alternately) |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/navalgaikwad/Leetcode/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
+| [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/navalgaikwad/Leetcode/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
 | [2165-plates-between-candles](https://github.com/navalgaikwad/Leetcode/tree/master/2165-plates-between-candles) |
 | [2691-count-vowel-strings-in-ranges](https://github.com/navalgaikwad/Leetcode/tree/master/2691-count-vowel-strings-in-ranges) |
 | [3451-string-compression-iii](https://github.com/navalgaikwad/Leetcode/tree/master/3451-string-compression-iii) |
@@ -518,6 +520,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0621-task-scheduler](https://github.com/navalgaikwad/Leetcode/tree/master/0621-task-scheduler) |
 | [0778-reorganize-string](https://github.com/navalgaikwad/Leetcode/tree/master/0778-reorganize-string) |
 | [1034-subarrays-with-k-different-integers](https://github.com/navalgaikwad/Leetcode/tree/master/1034-subarrays-with-k-different-integers) |
+| [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/navalgaikwad/Leetcode/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
 | [3594-identify-the-largest-outlier-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/3594-identify-the-largest-outlier-in-an-array) |
 ## Trie
 |  |
