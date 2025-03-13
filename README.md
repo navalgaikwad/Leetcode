@@ -318,6 +318,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0404-sum-of-left-leaves](https://github.com/navalgaikwad/Leetcode/tree/master/0404-sum-of-left-leaves) |
 | [0542-01-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0542-01-matrix) |
 | [0547-number-of-provinces](https://github.com/navalgaikwad/Leetcode/tree/master/0547-number-of-provinces) |
+| [0617-merge-two-binary-trees](https://github.com/navalgaikwad/Leetcode/tree/master/0617-merge-two-binary-trees) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0695-max-area-of-island](https://github.com/navalgaikwad/Leetcode/tree/master/0695-max-area-of-island) |
 | [0721-accounts-merge](https://github.com/navalgaikwad/Leetcode/tree/master/0721-accounts-merge) |
@@ -624,6 +625,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0543-diameter-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0543-diameter-of-binary-tree) |
 | [0547-number-of-provinces](https://github.com/navalgaikwad/Leetcode/tree/master/0547-number-of-provinces) |
 | [0572-subtree-of-another-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0572-subtree-of-another-tree) |
+| [0617-merge-two-binary-trees](https://github.com/navalgaikwad/Leetcode/tree/master/0617-merge-two-binary-trees) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0695-max-area-of-island](https://github.com/navalgaikwad/Leetcode/tree/master/0695-max-area-of-island) |
 | [0721-accounts-merge](https://github.com/navalgaikwad/Leetcode/tree/master/0721-accounts-merge) |
@@ -680,6 +682,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0404-sum-of-left-leaves](https://github.com/navalgaikwad/Leetcode/tree/master/0404-sum-of-left-leaves) |
 | [0543-diameter-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0572-subtree-of-another-tree) |
+| [0617-merge-two-binary-trees](https://github.com/navalgaikwad/Leetcode/tree/master/0617-merge-two-binary-trees) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/navalgaikwad/Leetcode/tree/master/0789-kth-largest-element-in-a-stream) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
@@ -722,6 +725,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0404-sum-of-left-leaves](https://github.com/navalgaikwad/Leetcode/tree/master/0404-sum-of-left-leaves) |
 | [0543-diameter-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0572-subtree-of-another-tree) |
+| [0617-merge-two-binary-trees](https://github.com/navalgaikwad/Leetcode/tree/master/0617-merge-two-binary-trees) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/navalgaikwad/Leetcode/tree/master/0789-kth-largest-element-in-a-stream) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
