@@ -4,6 +4,7 @@ class Solution {
     class Pair {
         String word;
         int level;
+
         Pair(String word, int level) {
             this.word = word;
             this.level = level;
@@ -12,28 +13,29 @@ class Solution {
 
     public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
         /*
-        adjecny list
-        set
-        distance as seen map
-        as as word ladder
-        */
+         * adjecny list
+         * set
+         * distance as seen map
+         * as as word ladder
+         */
         Set<String> set = new HashSet<>(wordList);
         List<List<String>> result = new ArrayList<>();
-        if (!set.contains(endWord)) return result;
+        if (!set.contains(endWord))
+            return result;
 
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(beginWord, 1));
         Map<String, List<String>> adjList = new HashMap<>();
-        Map<String, Integer> distance = new HashMap<>(); //same as queue
-        
+        Map<String, Integer> distance = new HashMap<>(); // same as queue
+
         for (String word : wordList) {
             adjList.put(word, new ArrayList<>());
         }
-        
+
         adjList.put(beginWord, new ArrayList<>());
-        distance.put(beginWord, 1); 
+        distance.put(beginWord, 1);
         set.add(beginWord);
-        
+
         while (!q.isEmpty()) {
             Pair current = q.remove();
             String word = current.word;
@@ -44,16 +46,16 @@ class Solution {
                     wrd[i] = c;
                     String nextWord = String.valueOf(wrd);
                     if (set.contains(nextWord) && (!distance.containsKey(nextWord) || distance.get(nextWord) == level + 1)) {
-                        if (!distance.containsKey(nextWord)) {//not visited asel tar tak nahitar noko taku
+                        if (!distance.containsKey(nextWord)) {// not visited asel tar tak nahitar noko taku
                             q.add(new Pair(nextWord, level + 1));
-                            distance.put(nextWord, level + 1);//for seen same as queueu
+                            distance.put(nextWord, level + 1);// for seen same as queueu
                         }
-                        adjList.get(nextWord).add(word);//add in adj list
+                        adjList.get(nextWord).add(word);// add in adj list
                     }
                 }
             }
         }
-        
+
         List<String> runningList = new ArrayList<>();
         backtrack(result, runningList, beginWord, endWord, adjList);
         return result;
@@ -66,7 +68,7 @@ class Solution {
             runningList.remove(0);
             return;
         }
-        runningList.add(0, endWord);//enter end word
+        runningList.add(0, endWord);// enter end word
         for (String prevWord : adjList.get(endWord)) {
             backtrack(result, runningList, beginWord, prevWord, adjList);
         }
