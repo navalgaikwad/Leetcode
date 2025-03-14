@@ -116,6 +116,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1848-sum-of-unique-elements](https://github.com/navalgaikwad/Leetcode/tree/master/1848-sum-of-unique-elements) |
 | [1886-minimum-limit-of-balls-in-a-bag](https://github.com/navalgaikwad/Leetcode/tree/master/1886-minimum-limit-of-balls-in-a-bag) |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/navalgaikwad/Leetcode/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
+| [2048-build-array-from-permutation](https://github.com/navalgaikwad/Leetcode/tree/master/2048-build-array-from-permutation) |
 | [2164-two-best-non-overlapping-events](https://github.com/navalgaikwad/Leetcode/tree/master/2164-two-best-non-overlapping-events) |
 | [2165-plates-between-candles](https://github.com/navalgaikwad/Leetcode/tree/master/2165-plates-between-candles) |
 | [2316-count-hills-and-valleys-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/2316-count-hills-and-valleys-in-an-array) |
@@ -593,6 +594,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0054-spiral-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0054-spiral-matrix) |
 | [0415-add-strings](https://github.com/navalgaikwad/Leetcode/tree/master/0415-add-strings) |
 | [0735-asteroid-collision](https://github.com/navalgaikwad/Leetcode/tree/master/0735-asteroid-collision) |
+| [2048-build-array-from-permutation](https://github.com/navalgaikwad/Leetcode/tree/master/2048-build-array-from-permutation) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 ## Divide and Conquer
 |  |
