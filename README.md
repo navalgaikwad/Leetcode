@@ -123,6 +123,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [2164-two-best-non-overlapping-events](https://github.com/navalgaikwad/Leetcode/tree/master/2164-two-best-non-overlapping-events) |
 | [2165-plates-between-candles](https://github.com/navalgaikwad/Leetcode/tree/master/2165-plates-between-candles) |
 | [2316-count-hills-and-valleys-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/2316-count-hills-and-valleys-in-an-array) |
+| [2374-steps-to-make-array-non-decreasing](https://github.com/navalgaikwad/Leetcode/tree/master/2374-steps-to-make-array-non-decreasing) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [2550-words-within-two-edits-of-dictionary](https://github.com/navalgaikwad/Leetcode/tree/master/2550-words-within-two-edits-of-dictionary) |
 | [2662-check-knight-tour-configuration](https://github.com/navalgaikwad/Leetcode/tree/master/2662-check-knight-tour-configuration) |
@@ -473,12 +474,14 @@ Collection of LeetCode questions to ace the coding interview!
 | [1320-remove-all-adjacent-duplicates-in-string-ii](https://github.com/navalgaikwad/Leetcode/tree/master/1320-remove-all-adjacent-duplicates-in-string-ii) |
 | [1371-minimum-remove-to-make-valid-parentheses](https://github.com/navalgaikwad/Leetcode/tree/master/1371-minimum-remove-to-make-valid-parentheses) |
 | [2236-maximum-twin-sum-of-a-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/2236-maximum-twin-sum-of-a-linked-list) |
+| [2374-steps-to-make-array-non-decreasing](https://github.com/navalgaikwad/Leetcode/tree/master/2374-steps-to-make-array-non-decreasing) |
 ## Monotonic Stack
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/navalgaikwad/Leetcode/tree/master/0042-trapping-rain-water) |
 | [0456-132-pattern](https://github.com/navalgaikwad/Leetcode/tree/master/0456-132-pattern) |
 | [0496-next-greater-element-i](https://github.com/navalgaikwad/Leetcode/tree/master/0496-next-greater-element-i) |
+| [2374-steps-to-make-array-non-decreasing](https://github.com/navalgaikwad/Leetcode/tree/master/2374-steps-to-make-array-non-decreasing) |
 ## Ordered Set
 |  |
 | ------- |
@@ -697,6 +700,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0725-split-linked-list-in-parts](https://github.com/navalgaikwad/Leetcode/tree/master/0725-split-linked-list-in-parts) |
 | [0908-middle-of-the-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/0908-middle-of-the-linked-list) |
 | [2236-maximum-twin-sum-of-a-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/2236-maximum-twin-sum-of-a-linked-list) |
+| [2374-steps-to-make-array-non-decreasing](https://github.com/navalgaikwad/Leetcode/tree/master/2374-steps-to-make-array-non-decreasing) |
 ## Tree
 |  |
 | ------- |
