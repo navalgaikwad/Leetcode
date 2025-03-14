@@ -337,6 +337,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0199-binary-tree-right-side-view](https://github.com/navalgaikwad/Leetcode/tree/master/0199-binary-tree-right-side-view) |
 | [0200-number-of-islands](https://github.com/navalgaikwad/Leetcode/tree/master/0200-number-of-islands) |
 | [0210-course-schedule-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0210-course-schedule-ii) |
+| [0310-minimum-height-trees](https://github.com/navalgaikwad/Leetcode/tree/master/0310-minimum-height-trees) |
 | [0322-coin-change](https://github.com/navalgaikwad/Leetcode/tree/master/0322-coin-change) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0404-sum-of-left-leaves](https://github.com/navalgaikwad/Leetcode/tree/master/0404-sum-of-left-leaves) |
@@ -494,6 +495,7 @@ Collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0133-clone-graph](https://github.com/navalgaikwad/Leetcode/tree/master/0133-clone-graph) |
 | [0210-course-schedule-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0210-course-schedule-ii) |
+| [0310-minimum-height-trees](https://github.com/navalgaikwad/Leetcode/tree/master/0310-minimum-height-trees) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0547-number-of-provinces](https://github.com/navalgaikwad/Leetcode/tree/master/0547-number-of-provinces) |
 | [1275-validate-binary-tree-nodes](https://github.com/navalgaikwad/Leetcode/tree/master/1275-validate-binary-tree-nodes) |
@@ -659,6 +661,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0230-kth-smallest-element-in-a-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
+| [0310-minimum-height-trees](https://github.com/navalgaikwad/Leetcode/tree/master/0310-minimum-height-trees) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0404-sum-of-left-leaves](https://github.com/navalgaikwad/Leetcode/tree/master/0404-sum-of-left-leaves) |
 | [0543-diameter-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0543-diameter-of-binary-tree) |
@@ -829,6 +832,7 @@ Collection of LeetCode questions to ace the coding interview!
 |  |
 | ------- |
 | [0210-course-schedule-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0210-course-schedule-ii) |
+| [0310-minimum-height-trees](https://github.com/navalgaikwad/Leetcode/tree/master/0310-minimum-height-trees) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0329-longest-increasing-path-in-a-matrix) |
 ## Interactive
 |  |
