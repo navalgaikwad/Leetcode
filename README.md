@@ -57,6 +57,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0239-sliding-window-maximum](https://github.com/navalgaikwad/Leetcode/tree/master/0239-sliding-window-maximum) |
 | [0240-search-a-2d-matrix-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0274-h-index](https://github.com/navalgaikwad/Leetcode/tree/master/0274-h-index) |
+| [0275-h-index-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0275-h-index-ii) |
 | [0283-move-zeroes](https://github.com/navalgaikwad/Leetcode/tree/master/0283-move-zeroes) |
 | [0300-longest-increasing-subsequence](https://github.com/navalgaikwad/Leetcode/tree/master/0300-longest-increasing-subsequence) |
 | [0303-range-sum-query-immutable](https://github.com/navalgaikwad/Leetcode/tree/master/0303-range-sum-query-immutable) |
@@ -400,6 +401,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0081-search-in-rotated-sorted-array-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0081-search-in-rotated-sorted-array-ii) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/navalgaikwad/Leetcode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0240-search-a-2d-matrix-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0240-search-a-2d-matrix-ii) |
+| [0275-h-index-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0275-h-index-ii) |
 | [0278-first-bad-version](https://github.com/navalgaikwad/Leetcode/tree/master/0278-first-bad-version) |
 | [0300-longest-increasing-subsequence](https://github.com/navalgaikwad/Leetcode/tree/master/0300-longest-increasing-subsequence) |
 | [0349-intersection-of-two-arrays](https://github.com/navalgaikwad/Leetcode/tree/master/0349-intersection-of-two-arrays) |
