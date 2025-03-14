@@ -1,31 +1,32 @@
 class Solution {
+    //O(N∗Amount) //O(Amount)
     public int coinChange(int[] coins, int amount) {
-        Integer result = dp(coins, amount, new HashMap<>());
-        return result == null ? -1 : result;
+        Integer result =  helper(coins, amount, new HashMap<>());
+        return result != null ? result : -1;
+        
     }
-    
-    Integer dp(int[] coins, int target, HashMap<Integer, Integer> memo) {
-        if(target == 0) {
-            return 0;
-        }
-        if(target < 0) {
+
+    Integer helper(int[] coins, int amount, Map<Integer, Integer> memo) {
+        if(amount < 0) {
             return null;
         }
-        if(memo.containsKey(target)) {
-            return memo.get(target);
-        } 
-        Integer shorter = null;
+        if(amount ==0) {
+            return 0;
+        }
+        if(memo.containsKey(amount)) {
+            return memo.get(amount);
+        }
+        Integer total = null;
         for(int coin : coins) {
-            Integer remainder = target - coin;
-            Integer value = dp(coins, remainder, memo);
-            if(value != null) {
-                int count = value + 1;
-                if(shorter == null || value < shorter) {
-                    shorter = count;
+            Integer remainder = helper(coins, amount - coin, memo);
+            if(remainder != null) {
+                int count = remainder + 1;
+                if(total == null || count < total) {
+                    total = count;
                 }
             }
         }
-        memo.put(target, shorter);
-        return shorter;
+        memo.put(amount, total);
+        return total;
     }
 }
