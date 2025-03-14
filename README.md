@@ -123,6 +123,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [2165-plates-between-candles](https://github.com/navalgaikwad/Leetcode/tree/master/2165-plates-between-candles) |
 | [2316-count-hills-and-valleys-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/2316-count-hills-and-valleys-in-an-array) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
+| [2662-check-knight-tour-configuration](https://github.com/navalgaikwad/Leetcode/tree/master/2662-check-knight-tour-configuration) |
 | [2691-count-vowel-strings-in-ranges](https://github.com/navalgaikwad/Leetcode/tree/master/2691-count-vowel-strings-in-ranges) |
 | [3594-identify-the-largest-outlier-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/3594-identify-the-largest-outlier-in-an-array) |
 | [3612-adjacent-increasing-subarrays-detection-i](https://github.com/navalgaikwad/Leetcode/tree/master/3612-adjacent-increasing-subarrays-detection-i) |
@@ -349,6 +350,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1275-validate-binary-tree-nodes](https://github.com/navalgaikwad/Leetcode/tree/master/1275-validate-binary-tree-nodes) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/navalgaikwad/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1554-minimum-time-to-collect-all-apples-in-a-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1554-minimum-time-to-collect-all-apples-in-a-tree) |
+| [2662-check-knight-tour-configuration](https://github.com/navalgaikwad/Leetcode/tree/master/2662-check-knight-tour-configuration) |
 ## Math
 |  |
 | ------- |
@@ -508,6 +510,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1331-path-with-maximum-gold](https://github.com/navalgaikwad/Leetcode/tree/master/1331-path-with-maximum-gold) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/navalgaikwad/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1550-find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows](https://github.com/navalgaikwad/Leetcode/tree/master/1550-find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows) |
+| [2662-check-knight-tour-configuration](https://github.com/navalgaikwad/Leetcode/tree/master/2662-check-knight-tour-configuration) |
 ## Shortest Path
 |  |
 | ------- |
@@ -608,6 +611,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0735-asteroid-collision](https://github.com/navalgaikwad/Leetcode/tree/master/0735-asteroid-collision) |
 | [2048-build-array-from-permutation](https://github.com/navalgaikwad/Leetcode/tree/master/2048-build-array-from-permutation) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
+| [2662-check-knight-tour-configuration](https://github.com/navalgaikwad/Leetcode/tree/master/2662-check-knight-tour-configuration) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -662,6 +666,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1285-balance-a-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1285-balance-a-binary-search-tree) |
 | [1554-minimum-time-to-collect-all-apples-in-a-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1554-minimum-time-to-collect-all-apples-in-a-tree) |
 | [2347-count-nodes-equal-to-average-of-subtree](https://github.com/navalgaikwad/Leetcode/tree/master/2347-count-nodes-equal-to-average-of-subtree) |
+| [2662-check-knight-tour-configuration](https://github.com/navalgaikwad/Leetcode/tree/master/2662-check-knight-tour-configuration) |
 ## Bit Manipulation
 |  |
 | ------- |
