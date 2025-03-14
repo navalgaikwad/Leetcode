@@ -1,78 +1,70 @@
-import java.util.*;
-
 class Solution {
     class Pair {
         String word;
-        int level;
+        int count;
 
-        Pair(String word, int level) {
+        Pair(String word, int count) {
             this.word = word;
-            this.level = level;
+            this.count = count;
         }
     }
 
     public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
-        /*
-         * adjecny list
-         * set
-         * distance as seen map
-         * as as word ladder
-         */
-        Set<String> set = new HashSet<>(wordList);
-        List<List<String>> result = new ArrayList<>();
-        if (!set.contains(endWord))
-            return result;
-
+        if (!wordList.contains(endWord)) {
+            return new ArrayList<>();
+        }
+        Map<String, ArrayList<String>> adj = new HashMap<>();
+        Map<String, Integer> distance = new HashMap<>();
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(beginWord, 1));
-        Map<String, List<String>> adjList = new HashMap<>();
-        Map<String, Integer> distance = new HashMap<>(); // same as queue
-
-        for (String word : wordList) {
-            adjList.put(word, new ArrayList<>());
-        }
-
-        adjList.put(beginWord, new ArrayList<>());
         distance.put(beginWord, 1);
-        set.add(beginWord);
+        Set<String> set = new HashSet<>(wordList);
+        for (String word : wordList) {
+            adj.put(word, new ArrayList<>());
+        }
+        adj.put(beginWord, new ArrayList<>());
+        adj.put(endWord, new ArrayList<>());
 
         while (!q.isEmpty()) {
             Pair current = q.remove();
             String word = current.word;
-            int level = current.level;
+            int level = current.count;
             for (int i = 0; i < word.length(); i++) {
-                char[] wrd = word.toCharArray();
+                char wrd[] = word.toCharArray();
                 for (char c = 'a'; c <= 'z'; c++) {
                     wrd[i] = c;
                     String nextWord = String.valueOf(wrd);
-                    if (set.contains(nextWord) && (!distance.containsKey(nextWord) || distance.get(nextWord) == level + 1)) {
-                        if (!distance.containsKey(nextWord)) {// not visited asel tar tak nahitar noko taku
+                    if (set.contains(nextWord)) {
+                        if (!distance.containsKey(nextWord)) {
                             q.add(new Pair(nextWord, level + 1));
-                            distance.put(nextWord, level + 1);// for seen same as queueu
+                            distance.put(nextWord, level + 1);
                         }
-                        adjList.get(nextWord).add(word);// add in adj list
+                        if (distance.get(nextWord) == level + 1) {
+                            adj.get(nextWord).add(word);
+                        }
+
                     }
                 }
             }
         }
-
-        List<String> runningList = new ArrayList<>();
-        backtrack(result, runningList, beginWord, endWord, adjList);
+        List<List<String>> result = new ArrayList<>();
+        backTracking(result, beginWord, endWord, new ArrayList<>(), adj);
         return result;
     }
 
-    private void backtrack(List<List<String>> result, List<String> runningList, String beginWord, String endWord, Map<String, List<String>> adjList) {
-        if (endWord.equals(beginWord)) {
-            runningList.add(0, beginWord);
+    void backTracking(List<List<String>> result, String begin, String end, ArrayList<String> runningList,
+            Map<String, ArrayList<String>> adj) {
+        if (end.equals(begin)) {
+            runningList.add(0, begin);
             result.add(new ArrayList<>(runningList));
             runningList.remove(0);
             return;
         }
-        runningList.add(0, endWord);// enter end word
-        for (String prevWord : adjList.get(endWord)) {
-            backtrack(result, runningList, beginWord, prevWord, adjList);
+        runningList.add(0, end);
+        for (String previous : adj.get(end)) {
+            backTracking(result, begin, previous, runningList, adj);
         }
+
         runningList.remove(0);
     }
-
 }
