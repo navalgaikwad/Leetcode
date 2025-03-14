@@ -33,7 +33,7 @@ class Solution {
                 for(Integer neighbour: adj[curr]){
                     indirect[neighbour]--; 
                     if(indirect[neighbour]==1){
-                    q.add(neighbour);
+                        q.add(neighbour);
                 }
               }
                  result.add(curr);           
