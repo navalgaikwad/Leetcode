@@ -334,6 +334,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0101-symmetric-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0101-symmetric-tree) |
 | [0102-binary-tree-level-order-traversal](https://github.com/navalgaikwad/Leetcode/tree/master/0102-binary-tree-level-order-traversal) |
 | [0104-maximum-depth-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
+| [0112-path-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0112-path-sum) |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/navalgaikwad/Leetcode/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0126-word-ladder-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0126-word-ladder-ii) |
 | [0127-word-ladder](https://github.com/navalgaikwad/Leetcode/tree/master/0127-word-ladder) |
@@ -658,6 +659,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0098-validate-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0098-validate-binary-search-tree) |
 | [0101-symmetric-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0101-symmetric-tree) |
 | [0104-maximum-depth-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
+| [0112-path-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0112-path-sum) |
 | [0113-path-sum-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0113-path-sum-ii) |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/navalgaikwad/Leetcode/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0129-sum-root-to-leaf-numbers](https://github.com/navalgaikwad/Leetcode/tree/master/0129-sum-root-to-leaf-numbers) |
@@ -725,6 +727,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0102-binary-tree-level-order-traversal](https://github.com/navalgaikwad/Leetcode/tree/master/0102-binary-tree-level-order-traversal) |
 | [0104-maximum-depth-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/navalgaikwad/Leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
+| [0112-path-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0112-path-sum) |
 | [0113-path-sum-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0113-path-sum-ii) |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/navalgaikwad/Leetcode/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0129-sum-root-to-leaf-numbers](https://github.com/navalgaikwad/Leetcode/tree/master/0129-sum-root-to-leaf-numbers) |
@@ -770,6 +773,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0102-binary-tree-level-order-traversal](https://github.com/navalgaikwad/Leetcode/tree/master/0102-binary-tree-level-order-traversal) |
 | [0104-maximum-depth-of-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/navalgaikwad/Leetcode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
+| [0112-path-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0112-path-sum) |
 | [0113-path-sum-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0113-path-sum-ii) |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/navalgaikwad/Leetcode/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0129-sum-root-to-leaf-numbers](https://github.com/navalgaikwad/Leetcode/tree/master/0129-sum-root-to-leaf-numbers) |
