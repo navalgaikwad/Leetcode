@@ -132,6 +132,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [2374-steps-to-make-array-non-decreasing](https://github.com/navalgaikwad/Leetcode/tree/master/2374-steps-to-make-array-non-decreasing) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [2550-words-within-two-edits-of-dictionary](https://github.com/navalgaikwad/Leetcode/tree/master/2550-words-within-two-edits-of-dictionary) |
+| [2639-separate-the-digits-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/2639-separate-the-digits-in-an-array) |
 | [2662-check-knight-tour-configuration](https://github.com/navalgaikwad/Leetcode/tree/master/2662-check-knight-tour-configuration) |
 | [2691-count-vowel-strings-in-ranges](https://github.com/navalgaikwad/Leetcode/tree/master/2691-count-vowel-strings-in-ranges) |
 | [3594-identify-the-largest-outlier-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/3594-identify-the-largest-outlier-in-an-array) |
@@ -668,6 +669,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0735-asteroid-collision](https://github.com/navalgaikwad/Leetcode/tree/master/0735-asteroid-collision) |
 | [2048-build-array-from-permutation](https://github.com/navalgaikwad/Leetcode/tree/master/2048-build-array-from-permutation) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
+| [2639-separate-the-digits-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/2639-separate-the-digits-in-an-array) |
 | [2662-check-knight-tour-configuration](https://github.com/navalgaikwad/Leetcode/tree/master/2662-check-knight-tour-configuration) |
 ## Divide and Conquer
 |  |
