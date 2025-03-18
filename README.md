@@ -169,6 +169,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0349-intersection-of-two-arrays](https://github.com/navalgaikwad/Leetcode/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0350-intersection-of-two-arrays-ii) |
 | [0383-ransom-note](https://github.com/navalgaikwad/Leetcode/tree/master/0383-ransom-note) |
+| [0398-random-pick-index](https://github.com/navalgaikwad/Leetcode/tree/master/0398-random-pick-index) |
 | [0451-sort-characters-by-frequency](https://github.com/navalgaikwad/Leetcode/tree/master/0451-sort-characters-by-frequency) |
 | [0496-next-greater-element-i](https://github.com/navalgaikwad/Leetcode/tree/master/0496-next-greater-element-i) |
 | [0523-continuous-subarray-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0523-continuous-subarray-sum) |
@@ -403,6 +404,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0273-integer-to-english-words](https://github.com/navalgaikwad/Leetcode/tree/master/0273-integer-to-english-words) |
 | [0326-power-of-three](https://github.com/navalgaikwad/Leetcode/tree/master/0326-power-of-three) |
 | [0367-valid-perfect-square](https://github.com/navalgaikwad/Leetcode/tree/master/0367-valid-perfect-square) |
+| [0398-random-pick-index](https://github.com/navalgaikwad/Leetcode/tree/master/0398-random-pick-index) |
 | [0415-add-strings](https://github.com/navalgaikwad/Leetcode/tree/master/0415-add-strings) |
 | [0523-continuous-subarray-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0523-continuous-subarray-sum) |
 | [0633-sum-of-square-numbers](https://github.com/navalgaikwad/Leetcode/tree/master/0633-sum-of-square-numbers) |
@@ -875,6 +877,7 @@ Collection of LeetCode questions to ace the coding interview!
 ## Randomized
 |  |
 | ------- |
+| [0398-random-pick-index](https://github.com/navalgaikwad/Leetcode/tree/master/0398-random-pick-index) |
 | [0912-random-pick-with-weight](https://github.com/navalgaikwad/Leetcode/tree/master/0912-random-pick-with-weight) |
 ## Bucket Sort
 |  |
@@ -916,4 +919,8 @@ Collection of LeetCode questions to ace the coding interview!
 | ------- |
 | [0789-kth-largest-element-in-a-stream](https://github.com/navalgaikwad/Leetcode/tree/master/0789-kth-largest-element-in-a-stream) |
 | [0937-online-stock-span](https://github.com/navalgaikwad/Leetcode/tree/master/0937-online-stock-span) |
+## Reservoir Sampling
+|  |
+| ------- |
+| [0398-random-pick-index](https://github.com/navalgaikwad/Leetcode/tree/master/0398-random-pick-index) |
 <!---LeetCode Topics End-->
