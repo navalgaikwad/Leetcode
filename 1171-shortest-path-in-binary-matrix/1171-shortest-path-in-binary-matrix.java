@@ -1,37 +1,33 @@
 class Solution {
     public int shortestPathBinaryMatrix(int[][] grid) {
-        if (grid[0][0] == 1) {
-            return -1; 
+         int m = grid.length;
+        int n = grid[0].length;
+        if(grid[0][0] == 1 || grid[m-1][n-1] == 1) {
+            return -1;
         }
-        int[][] dirs = {{0,1}, {1,0},{-1,0}, {0, -1}, {1, 1}, {-1, 1}, {1, -1},{-1,-1}};
+        int[][] dirs= {{0,1}, {1, 0}, {-1, 0}, {0, -1}, {-1, 1}, {1, -1}, {1, 1}, {-1, -1}};
         Queue<int[]> q = new LinkedList<>();
-        q.add(new int[]{0,0,1});
-        //Boolean[][] visited = new Boolean[grid.length][grid[0].length];
-        //visited[0][0] = true;
-        HashSet<String> set = new HashSet<>();
-        set.add("0-0");
-        int min = Integer.MAX_VALUE;
+        q.add(new int[]{0, 0, 1});
+       
+        boolean[][] visited = new boolean[m][n];
+        visited[0][0] = true;
         while(!q.isEmpty()) {
             int[] current = q.remove();
-            int i = current[0];
-            int j = current[1];
-            int count = current[2];
-            if(i == grid.length - 1 && j == grid[0].length -1) {
-                return count;
+            int x = current[0];
+            int y = current[1];
+            int level = current[2];
+            if(x == m -1 && y == n-1) {
+                return level;
             }
             for(int[] dir : dirs) {
-                int x = i + dir[0];
-                int y = j + dir[1];
-                if(x >= 0 && x < grid.length && y >= 0 && y < grid[0].length && grid[x][y] != 1 && !set.contains(x+"-"+y)) {
-                    grid[x][y] = 1;
-                    //visited[x][y] = true;
-                    set.add(x+"-"+y);
-                    q.add(new int[]{x, y, count + 1});
-
+                int i = x + dir[0];
+                int j = y + dir[1];
+                if(i>=0 && i < m && j >=0 && j < n && grid[i][j]!=1 && !visited[i][j] ) {
+                    q.add(new int[]{i, j, level  +1});
+                    visited[i][j] = true;
                 }
             }
         }
         return -1;
-        
     }
 }
