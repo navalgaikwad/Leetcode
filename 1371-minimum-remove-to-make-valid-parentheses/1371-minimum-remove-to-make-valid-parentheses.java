@@ -1,38 +1,27 @@
 class Solution {
     public String minRemoveToMakeValid(String s) {
-        int n = s.length();
-        //remove extra closing
-        char[] arr = s.toCharArray();
-        int count =0;
-        for(int i=0; i<arr.length; i++) {
-            if(s.charAt(i) == '(') {
-                count++;
-            }else if(s.charAt(i) == ')'){
-                if(count == 0) {
-                    arr[i] = '#';
-                }else {
-                    count--;
-                }
-            }
-        }
-        count = 0;
-        for(int i=arr.length-1; i>=0; i--) {
-            if(s.charAt(i) == '(') {
-                 if(count == 0) {
-                    arr[i] = '#';
-                }else {
-                    count--;
-                }
-            }else if(s.charAt(i) == ')'){
-                count++;
-            }
-        }
         StringBuilder sb = new StringBuilder();
-        for(char c : arr) {
-            if(c!='#') {
-                sb.append(c);
+        int open = 0;
+        for(char c : s.toCharArray()) {
+            if(c == '(') {
+                open++;
+            }else if(c == ')'){
+                if(open == 0) {
+                    continue;
+                }else {
+                    open--;
+                }
             }
+            sb.append(c);
         }
-        return sb.toString();
+
+        StringBuilder result = new StringBuilder();
+        for(int i=sb.length()-1; i>=0; i--) {
+            if(sb.charAt(i) == '(' && open-->0) {
+                continue;
+            }
+            result.append(sb.charAt(i));
+        }
+        return result.reverse().toString();
     }
 }
