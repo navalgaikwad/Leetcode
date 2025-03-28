@@ -4,34 +4,36 @@ class Solution {
         int sign = 1;
         int result = 0;
         int number = 0;
-         for(int i=0; i<s.length(); i++) {
-             char c = s.charAt(i);
+        for(int i=0; i<s.length(); i++) {
+            char c = s.charAt(i);
             if(Character.isDigit(c)) {
-                //while( i < s.length() && Character.isDigit(c)) {
-                    number = number * 10 + Character.getNumericValue(c);
-                //}
+                number = number * 10 + (c - '0');
             }else if(c == '+') {
-                result = result  + sign * number;
+                result = result + sign * number;
+                number = 0;
                 sign = 1;
-                number = 0;
             }else if(c == '-') {
-                result = result  + sign * number;
-                sign = -1;
+                result = result + sign * number;
                 number = 0;
-            }else if(c == '('){
+                sign = -1;
+            }else if(c == '(') {
                 st.push(result);
                 st.push(sign);
-                result = 0;
                 sign = 1;
-            }else if( c == ')') {
-                result = result  + sign * number;
+                result = 0;
+            }else if(c == ')') {
+                result = result + sign * number;
+                int sig = st.pop();
+                int num = st.pop();
+                result = result * sig + num;
                 number = 0;
-                result*=st.pop();
-                result+=st.pop();
+                
             }
+
         }
-        if(number != 0) result += sign * number;
+        if(number!=0)  {
+            result += sign * number;
+        } 
         return result;
     }
-        
 }
