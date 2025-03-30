@@ -24,7 +24,7 @@ class Solution {
             return null;
         }
         Map<Node, Node> map = new HashMap<>();
-        map.put(node, new Node(node.val, new ArrayList<>()));
+        map.put(node, new Node(node.val, new ArrayList<>()));//vvimp
         Queue<Node> q = new LinkedList<>();
         q.add(node);
         while(!q.isEmpty()) {
@@ -34,7 +34,7 @@ class Solution {
                     map.put(neighbor, new Node(neighbor.val, new ArrayList<>()));
                     q.add(neighbor);
                 }
-                map.get(current).neighbors.add(map.get(neighbor));
+                map.get(current).neighbors.add(map.get(neighbor));//vvimp map.grt(neigh)
             }
         }
         return map.get(node);
