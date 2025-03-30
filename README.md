@@ -28,6 +28,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0049-group-anagrams](https://github.com/navalgaikwad/Leetcode/tree/master/0049-group-anagrams) |
 | [0053-maximum-subarray](https://github.com/navalgaikwad/Leetcode/tree/master/0053-maximum-subarray) |
 | [0054-spiral-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0054-spiral-matrix) |
+| [0055-jump-game](https://github.com/navalgaikwad/Leetcode/tree/master/0055-jump-game) |
 | [0056-merge-intervals](https://github.com/navalgaikwad/Leetcode/tree/master/0056-merge-intervals) |
 | [0057-insert-interval](https://github.com/navalgaikwad/Leetcode/tree/master/0057-insert-interval) |
 | [0073-set-matrix-zeroes](https://github.com/navalgaikwad/Leetcode/tree/master/0073-set-matrix-zeroes) |
@@ -305,6 +306,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0032-longest-valid-parentheses](https://github.com/navalgaikwad/Leetcode/tree/master/0032-longest-valid-parentheses) |
 | [0042-trapping-rain-water](https://github.com/navalgaikwad/Leetcode/tree/master/0042-trapping-rain-water) |
 | [0053-maximum-subarray](https://github.com/navalgaikwad/Leetcode/tree/master/0053-maximum-subarray) |
+| [0055-jump-game](https://github.com/navalgaikwad/Leetcode/tree/master/0055-jump-game) |
 | [0062-unique-paths](https://github.com/navalgaikwad/Leetcode/tree/master/0062-unique-paths) |
 | [0118-pascals-triangle](https://github.com/navalgaikwad/Leetcode/tree/master/0118-pascals-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/navalgaikwad/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
@@ -330,6 +332,7 @@ Collection of LeetCode questions to ace the coding interview!
 ## Greedy
 |  |
 | ------- |
+| [0055-jump-game](https://github.com/navalgaikwad/Leetcode/tree/master/0055-jump-game) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0334-increasing-triplet-subsequence](https://github.com/navalgaikwad/Leetcode/tree/master/0334-increasing-triplet-subsequence) |
 | [0605-can-place-flowers](https://github.com/navalgaikwad/Leetcode/tree/master/0605-can-place-flowers) |
