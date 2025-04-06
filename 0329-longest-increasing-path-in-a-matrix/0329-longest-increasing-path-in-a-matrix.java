@@ -25,3 +25,6 @@ class Solution {
         return memo[i][j];
     }
 }
+//O(m * n)
+//O((m * n) * (4 ^ (m * n)))  --> Exponential
+//Because each cell can go in 4 directions, and without memoization you re-explore subpaths many times.
