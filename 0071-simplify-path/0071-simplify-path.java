@@ -1,37 +1,23 @@
 class Solution {
     public String simplifyPath(String path) {
-        Stack<String> s= new Stack<>();
-        String[] arr = path.split("/");
-        for(String a : arr) {
-            if(a.equals("..")) {
-                if(!s.isEmpty()) {
-                    s.pop();
+        Stack<String> stack = new Stack<>();
+        String[] array = path.split("/");
+        for(String arr : array) {
+            if(arr.equals("..")) {
+                if(!stack.isEmpty()) {
+                    stack.pop();
                 }
-            } else if( !a.equals(".") && !a.isEmpty()) {//.ani empty
-                s.push(a);
+            }else if(!arr.isEmpty() && !arr.equals(".")) {
+                stack.push(arr);
             }
         }
-        if(s.isEmpty())  return "/";
-        StringBuilder st  = new StringBuilder();
-            for(String sb:s) {
-                st.append("/"+sb);
-            }
-            return st.toString();
+        //System.out.print(stack);
+        if(stack.isEmpty())  return "/";
+        StringBuilder sb = new StringBuilder();
+        for(String s : stack) {
+            sb.append("/");
+            sb.append(s);
+        }
+        return sb.toString();
     }
 }
-
-/*
-
-
-home
-
-naval
-
-..
-
-1.sepearate by /
-2. when i find .. remove from stack
-
-
-
-*/
