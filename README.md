@@ -77,6 +77,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0399-evaluate-division](https://github.com/navalgaikwad/Leetcode/tree/master/0399-evaluate-division) |
 | [0414-third-maximum-number](https://github.com/navalgaikwad/Leetcode/tree/master/0414-third-maximum-number) |
 | [0456-132-pattern](https://github.com/navalgaikwad/Leetcode/tree/master/0456-132-pattern) |
+| [0480-sliding-window-median](https://github.com/navalgaikwad/Leetcode/tree/master/0480-sliding-window-median) |
 | [0494-target-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0494-target-sum) |
 | [0496-next-greater-element-i](https://github.com/navalgaikwad/Leetcode/tree/master/0496-next-greater-element-i) |
 | [0498-diagonal-traverse](https://github.com/navalgaikwad/Leetcode/tree/master/0498-diagonal-traverse) |
@@ -183,6 +184,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0383-ransom-note](https://github.com/navalgaikwad/Leetcode/tree/master/0383-ransom-note) |
 | [0398-random-pick-index](https://github.com/navalgaikwad/Leetcode/tree/master/0398-random-pick-index) |
 | [0451-sort-characters-by-frequency](https://github.com/navalgaikwad/Leetcode/tree/master/0451-sort-characters-by-frequency) |
+| [0480-sliding-window-median](https://github.com/navalgaikwad/Leetcode/tree/master/0480-sliding-window-median) |
 | [0496-next-greater-element-i](https://github.com/navalgaikwad/Leetcode/tree/master/0496-next-greater-element-i) |
 | [0523-continuous-subarray-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0523-continuous-subarray-sum) |
 | [0525-contiguous-array](https://github.com/navalgaikwad/Leetcode/tree/master/0525-contiguous-array) |
@@ -501,6 +503,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0003-longest-substring-without-repeating-characters](https://github.com/navalgaikwad/Leetcode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0076-minimum-window-substring](https://github.com/navalgaikwad/Leetcode/tree/master/0076-minimum-window-substring) |
 | [0239-sliding-window-maximum](https://github.com/navalgaikwad/Leetcode/tree/master/0239-sliding-window-maximum) |
+| [0480-sliding-window-median](https://github.com/navalgaikwad/Leetcode/tree/master/0480-sliding-window-median) |
 | [0643-maximum-average-subarray-i](https://github.com/navalgaikwad/Leetcode/tree/master/0643-maximum-average-subarray-i) |
 | [0658-find-k-closest-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0658-find-k-closest-elements) |
 | [0713-subarray-product-less-than-k](https://github.com/navalgaikwad/Leetcode/tree/master/0713-subarray-product-less-than-k) |
@@ -517,6 +520,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0295-find-median-from-data-stream](https://github.com/navalgaikwad/Leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0347-top-k-frequent-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0451-sort-characters-by-frequency](https://github.com/navalgaikwad/Leetcode/tree/master/0451-sort-characters-by-frequency) |
+| [0480-sliding-window-median](https://github.com/navalgaikwad/Leetcode/tree/master/0480-sliding-window-median) |
 | [0621-task-scheduler](https://github.com/navalgaikwad/Leetcode/tree/master/0621-task-scheduler) |
 | [0658-find-k-closest-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0658-find-k-closest-elements) |
 | [0778-reorganize-string](https://github.com/navalgaikwad/Leetcode/tree/master/0778-reorganize-string) |
