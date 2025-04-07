@@ -73,6 +73,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0349-intersection-of-two-arrays](https://github.com/navalgaikwad/Leetcode/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0350-intersection-of-two-arrays-ii) |
 | [0377-combination-sum-iv](https://github.com/navalgaikwad/Leetcode/tree/master/0377-combination-sum-iv) |
+| [0380-insert-delete-getrandom-o1](https://github.com/navalgaikwad/Leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 | [0399-evaluate-division](https://github.com/navalgaikwad/Leetcode/tree/master/0399-evaluate-division) |
 | [0414-third-maximum-number](https://github.com/navalgaikwad/Leetcode/tree/master/0414-third-maximum-number) |
 | [0456-132-pattern](https://github.com/navalgaikwad/Leetcode/tree/master/0456-132-pattern) |
@@ -178,6 +179,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0347-top-k-frequent-elements](https://github.com/navalgaikwad/Leetcode/tree/master/0347-top-k-frequent-elements) |
 | [0349-intersection-of-two-arrays](https://github.com/navalgaikwad/Leetcode/tree/master/0349-intersection-of-two-arrays) |
 | [0350-intersection-of-two-arrays-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0350-intersection-of-two-arrays-ii) |
+| [0380-insert-delete-getrandom-o1](https://github.com/navalgaikwad/Leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 | [0383-ransom-note](https://github.com/navalgaikwad/Leetcode/tree/master/0383-ransom-note) |
 | [0398-random-pick-index](https://github.com/navalgaikwad/Leetcode/tree/master/0398-random-pick-index) |
 | [0451-sort-characters-by-frequency](https://github.com/navalgaikwad/Leetcode/tree/master/0451-sort-characters-by-frequency) |
@@ -428,6 +430,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0273-integer-to-english-words](https://github.com/navalgaikwad/Leetcode/tree/master/0273-integer-to-english-words) |
 | [0326-power-of-three](https://github.com/navalgaikwad/Leetcode/tree/master/0326-power-of-three) |
 | [0367-valid-perfect-square](https://github.com/navalgaikwad/Leetcode/tree/master/0367-valid-perfect-square) |
+| [0380-insert-delete-getrandom-o1](https://github.com/navalgaikwad/Leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 | [0398-random-pick-index](https://github.com/navalgaikwad/Leetcode/tree/master/0398-random-pick-index) |
 | [0415-add-strings](https://github.com/navalgaikwad/Leetcode/tree/master/0415-add-strings) |
 | [0523-continuous-subarray-sum](https://github.com/navalgaikwad/Leetcode/tree/master/0523-continuous-subarray-sum) |
@@ -903,6 +906,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0232-implement-queue-using-stacks](https://github.com/navalgaikwad/Leetcode/tree/master/0232-implement-queue-using-stacks) |
 | [0295-find-median-from-data-stream](https://github.com/navalgaikwad/Leetcode/tree/master/0295-find-median-from-data-stream) |
 | [0303-range-sum-query-immutable](https://github.com/navalgaikwad/Leetcode/tree/master/0303-range-sum-query-immutable) |
+| [0380-insert-delete-getrandom-o1](https://github.com/navalgaikwad/Leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/navalgaikwad/Leetcode/tree/master/0789-kth-largest-element-in-a-stream) |
 | [0937-online-stock-span](https://github.com/navalgaikwad/Leetcode/tree/master/0937-online-stock-span) |
 ## Memoization
@@ -926,6 +930,7 @@ Collection of LeetCode questions to ace the coding interview!
 ## Randomized
 |  |
 | ------- |
+| [0380-insert-delete-getrandom-o1](https://github.com/navalgaikwad/Leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 | [0398-random-pick-index](https://github.com/navalgaikwad/Leetcode/tree/master/0398-random-pick-index) |
 | [0912-random-pick-with-weight](https://github.com/navalgaikwad/Leetcode/tree/master/0912-random-pick-with-weight) |
 ## Bucket Sort
