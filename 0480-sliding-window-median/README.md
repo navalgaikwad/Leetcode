@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/sliding-window-median/">480. Sliding Window Median</a></h2><h3>Hard</h3><hr><div><p>The <strong>median</strong> is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle values.</p>
+<h2><a href="https://leetcode.com/problems/sliding-window-median">480. Sliding Window Median</a></h2><h3>Hard</h3><hr><p>The <strong>median</strong> is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle values.</p>
 
 <ul>
 	<li>For examples, if <code>arr = [2,<u>3</u>,4]</code>, the median is <code>3</code>.</li>
@@ -12,7 +12,8 @@
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> nums = [1,3,-1,-3,5,3,6,7], k = 3
+<pre>
+<strong>Input:</strong> nums = [1,3,-1,-3,5,3,6,7], k = 3
 <strong>Output:</strong> [1.00000,-1.00000,-1.00000,3.00000,5.00000,6.00000]
 <strong>Explanation:</strong> 
 Window position                Median
@@ -27,7 +28,8 @@ Window position                Median
 
 <p><strong class="example">Example 2:</strong></p>
 
-<pre><strong>Input:</strong> nums = [1,2,3,4,2,3,1,4,2], k = 3
+<pre>
+<strong>Input:</strong> nums = [1,2,3,4,2,3,1,4,2], k = 3
 <strong>Output:</strong> [2.00000,3.00000,3.00000,3.00000,2.00000,3.00000,2.00000]
 </pre>
 
@@ -38,4 +40,3 @@ Window position                Median
 	<li><code>1 &lt;= k &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
 	<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>
 </ul>
-</div>
