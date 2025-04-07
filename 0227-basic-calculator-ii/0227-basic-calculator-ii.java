@@ -1,39 +1,46 @@
 class Solution {
     public int calculate(String s) {
-        Stack<Integer> stack = new Stack<>();
-        char sign = '+';
+        Stack<Integer> st = new Stack<>();
+        int result = 0;
         int number = 0;
-        
+        char sign = '+';
+        int prev = 0;
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-
-            // Accumulate the number if it's a digit
             if (Character.isDigit(c)) {
-                number = number * 10 + (c - '0');
-            }
-            
-            // Process the accumulated number when encountering an operator or at the end of the string
-            if ((!Character.isDigit(c) && !Character.isWhitespace(c)) || i == s.length() - 1) {
-                if (sign == '+') {
-                    stack.push(number);
-                } else if (sign == '-') {
-                    stack.push(-number);
-                } else if (sign == '*') {
-                    stack.push(stack.pop() * number);
-                } else if (sign == '/') {
-                    stack.push(stack.pop() / number);
+                while (i < s.length() && Character.isDigit(s.charAt(i))) {
+                    number = number * 10 + s.charAt(i) - '0';
+                    i++;
                 }
-                sign = c; // Update the sign to the current operator
-                number = 0; // Reset number for the next round
+                i--;
+            }
+            if ((!Character.isDigit(c) && c != ' ') || i == s.length() - 1) {
+                if (sign == '+') {
+                    //st.push(number);
+                    result += number;
+                    prev = number;
+                } else if (sign == '-') {
+                   // st.push(-number);
+                   result-=number;
+                   prev = - number;
+                } else if (sign == '*') {
+                   // st.push(st.pop() * number);
+                   result = result - prev + (prev * number);
+                   prev = prev * number;
+
+                } else if (sign == '/') {
+                    //st.push(st.pop() / number);
+                    result = result - prev + (prev / number);
+                    prev = prev / number;
+                }
+                sign = c;
+                number = 0;
             }
         }
-
-        // Sum up all values in the stack for the final result
-        int result = 0;
-        while (!stack.isEmpty()) {
-            result += stack.pop();
-        }
-        
+        // // int result = 0;
+        // for (int sa : st) {
+        //     result += sa;
+        // }
         return result;
     }
 }
