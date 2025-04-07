@@ -1,43 +1,44 @@
 class RandomizedSet {
-
-    List<Integer> nums;
-    Map<Integer, Integer> idxMap;
-    Random random;
-
+    Map<Integer, Integer> map = new HashMap<>();
+    ArrayList<Integer> list = new ArrayList<>();
+    Random random = new Random();
     public RandomizedSet() {
-        nums = new ArrayList<>();
-        idxMap = new HashMap<>();
-        random = new Random();
+        
     }
-
+    
     public boolean insert(int val) {
-        if (idxMap.containsKey(val)) {
-            return false;
+        if(!map.containsKey(val)) {
+            map.put(val, list.size());
+            list.add(val);
+            return true;
         }
-
-        idxMap.put(val, nums.size()); //val and list of the list where index is saved
-        nums.add(val);//and save in the list
-        return true;
+        return false;
     }
-
+    
     public boolean remove(int val) {
-        if (!idxMap.containsKey(val)) {
-            return false;
+        if(map.containsKey(val)) {
+            int lastValue = list.get(list.size()-1);
+            int idx = map.get(val);
+            
+            list.set(idx, lastValue);
+            map.put(lastValue, idx);
+            list.remove(list.size()-1);
+            map.remove(val);
+            return true;
+            
         }
-        // if both are not matching 
-        int idx = idxMap.get(val);
-        int lastIdx = nums.size() - 1; 
-        if (idx != lastIdx) {
-            int lastVal = nums.get(lastIdx);// get the last value
-            nums.set(idx, lastVal);//update the last index
-            idxMap.put(lastVal, idx);// update map
-        }
-        nums.remove(lastIdx);// if both are same  remove from the the map and and list
-        idxMap.remove(val);
-        return true;
+        return false;
     }
-
+    
     public int getRandom() {
-        return nums.get(random.nextInt(nums.size()));
+        return list.get(random.nextInt(list.size()));
     }
 }
+
+/**
+ * Your RandomizedSet object will be instantiated and called as such:
+ * RandomizedSet obj = new RandomizedSet();
+ * boolean param_1 = obj.insert(val);
+ * boolean param_2 = obj.remove(val);
+ * int param_3 = obj.getRandom();
+ */
