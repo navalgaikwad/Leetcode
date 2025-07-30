@@ -142,6 +142,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [2164-two-best-non-overlapping-events](https://github.com/navalgaikwad/Leetcode/tree/master/2164-two-best-non-overlapping-events) |
 | [2165-plates-between-candles](https://github.com/navalgaikwad/Leetcode/tree/master/2165-plates-between-candles) |
 | [2316-count-hills-and-valleys-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/2316-count-hills-and-valleys-in-an-array) |
+| [2349-check-if-there-is-a-valid-parentheses-string-path](https://github.com/navalgaikwad/Leetcode/tree/master/2349-check-if-there-is-a-valid-parentheses-string-path) |
 | [2374-steps-to-make-array-non-decreasing](https://github.com/navalgaikwad/Leetcode/tree/master/2374-steps-to-make-array-non-decreasing) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [2550-words-within-two-edits-of-dictionary](https://github.com/navalgaikwad/Leetcode/tree/master/2550-words-within-two-edits-of-dictionary) |
@@ -341,6 +342,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1025-minimum-cost-for-tickets](https://github.com/navalgaikwad/Leetcode/tree/master/1025-minimum-cost-for-tickets) |
 | [2040-minimum-cost-to-reach-destination-in-time](https://github.com/navalgaikwad/Leetcode/tree/master/2040-minimum-cost-to-reach-destination-in-time) |
 | [2164-two-best-non-overlapping-events](https://github.com/navalgaikwad/Leetcode/tree/master/2164-two-best-non-overlapping-events) |
+| [2349-check-if-there-is-a-valid-parentheses-string-path](https://github.com/navalgaikwad/Leetcode/tree/master/2349-check-if-there-is-a-valid-parentheses-string-path) |
 ## Greedy
 |  |
 | ------- |
@@ -616,6 +618,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1331-path-with-maximum-gold](https://github.com/navalgaikwad/Leetcode/tree/master/1331-path-with-maximum-gold) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/navalgaikwad/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1550-find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows](https://github.com/navalgaikwad/Leetcode/tree/master/1550-find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows) |
+| [2349-check-if-there-is-a-valid-parentheses-string-path](https://github.com/navalgaikwad/Leetcode/tree/master/2349-check-if-there-is-a-valid-parentheses-string-path) |
 | [2662-check-knight-tour-configuration](https://github.com/navalgaikwad/Leetcode/tree/master/2662-check-knight-tour-configuration) |
 ## Shortest Path
 |  |
