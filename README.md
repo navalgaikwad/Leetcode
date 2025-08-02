@@ -266,6 +266,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1128-remove-all-adjacent-duplicates-in-string](https://github.com/navalgaikwad/Leetcode/tree/master/1128-remove-all-adjacent-duplicates-in-string) |
 | [1320-remove-all-adjacent-duplicates-in-string-ii](https://github.com/navalgaikwad/Leetcode/tree/master/1320-remove-all-adjacent-duplicates-in-string-ii) |
 | [1371-minimum-remove-to-make-valid-parentheses](https://github.com/navalgaikwad/Leetcode/tree/master/1371-minimum-remove-to-make-valid-parentheses) |
+| [1437-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/navalgaikwad/Leetcode/tree/master/1437-minimum-insertion-steps-to-make-a-string-palindrome) |
 | [1460-number-of-substrings-containing-all-three-characters](https://github.com/navalgaikwad/Leetcode/tree/master/1460-number-of-substrings-containing-all-three-characters) |
 | [1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence](https://github.com/navalgaikwad/Leetcode/tree/master/1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence) |
 | [1781-check-if-two-string-arrays-are-equivalent](https://github.com/navalgaikwad/Leetcode/tree/master/1781-check-if-two-string-arrays-are-equivalent) |
@@ -342,6 +343,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1008-binary-tree-cameras](https://github.com/navalgaikwad/Leetcode/tree/master/1008-binary-tree-cameras) |
 | [1013-fibonacci-number](https://github.com/navalgaikwad/Leetcode/tree/master/1013-fibonacci-number) |
 | [1025-minimum-cost-for-tickets](https://github.com/navalgaikwad/Leetcode/tree/master/1025-minimum-cost-for-tickets) |
+| [1437-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/navalgaikwad/Leetcode/tree/master/1437-minimum-insertion-steps-to-make-a-string-palindrome) |
 | [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/navalgaikwad/Leetcode/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
 | [2040-minimum-cost-to-reach-destination-in-time](https://github.com/navalgaikwad/Leetcode/tree/master/2040-minimum-cost-to-reach-destination-in-time) |
 | [2164-two-best-non-overlapping-events](https://github.com/navalgaikwad/Leetcode/tree/master/2164-two-best-non-overlapping-events) |
