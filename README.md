@@ -130,6 +130,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1539-diagonal-traverse-ii](https://github.com/navalgaikwad/Leetcode/tree/master/1539-diagonal-traverse-ii) |
 | [1550-find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows](https://github.com/navalgaikwad/Leetcode/tree/master/1550-find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows) |
 | [1556-make-two-arrays-equal-by-reversing-subarrays](https://github.com/navalgaikwad/Leetcode/tree/master/1556-make-two-arrays-equal-by-reversing-subarrays) |
+| [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/navalgaikwad/Leetcode/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/navalgaikwad/Leetcode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
 | [1646-kth-missing-positive-number](https://github.com/navalgaikwad/Leetcode/tree/master/1646-kth-missing-positive-number) |
 | [1675-magnetic-force-between-two-balls](https://github.com/navalgaikwad/Leetcode/tree/master/1675-magnetic-force-between-two-balls) |
@@ -341,6 +342,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1008-binary-tree-cameras](https://github.com/navalgaikwad/Leetcode/tree/master/1008-binary-tree-cameras) |
 | [1013-fibonacci-number](https://github.com/navalgaikwad/Leetcode/tree/master/1013-fibonacci-number) |
 | [1025-minimum-cost-for-tickets](https://github.com/navalgaikwad/Leetcode/tree/master/1025-minimum-cost-for-tickets) |
+| [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/navalgaikwad/Leetcode/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
 | [2040-minimum-cost-to-reach-destination-in-time](https://github.com/navalgaikwad/Leetcode/tree/master/2040-minimum-cost-to-reach-destination-in-time) |
 | [2164-two-best-non-overlapping-events](https://github.com/navalgaikwad/Leetcode/tree/master/2164-two-best-non-overlapping-events) |
 | [2349-check-if-there-is-a-valid-parentheses-string-path](https://github.com/navalgaikwad/Leetcode/tree/master/2349-check-if-there-is-a-valid-parentheses-string-path) |
@@ -520,6 +522,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1034-subarrays-with-k-different-integers](https://github.com/navalgaikwad/Leetcode/tree/master/1034-subarrays-with-k-different-integers) |
 | [1046-max-consecutive-ones-iii](https://github.com/navalgaikwad/Leetcode/tree/master/1046-max-consecutive-ones-iii) |
 | [1460-number-of-substrings-containing-all-three-characters](https://github.com/navalgaikwad/Leetcode/tree/master/1460-number-of-substrings-containing-all-three-characters) |
+| [1586-longest-subarray-of-1s-after-deleting-one-element](https://github.com/navalgaikwad/Leetcode/tree/master/1586-longest-subarray-of-1s-after-deleting-one-element) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
