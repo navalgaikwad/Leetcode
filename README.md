@@ -414,6 +414,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0753-open-the-lock](https://github.com/navalgaikwad/Leetcode/tree/master/0753-open-the-lock) |
 | [0854-making-a-large-island](https://github.com/navalgaikwad/Leetcode/tree/master/0854-making-a-large-island) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
+| [0922-possible-bipartition](https://github.com/navalgaikwad/Leetcode/tree/master/0922-possible-bipartition) |
 | [0971-shortest-bridge](https://github.com/navalgaikwad/Leetcode/tree/master/0971-shortest-bridge) |
 | [0998-check-completeness-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0998-check-completeness-of-a-binary-tree) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
@@ -602,6 +603,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/navalgaikwad/Leetcode/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0399-evaluate-division](https://github.com/navalgaikwad/Leetcode/tree/master/0399-evaluate-division) |
 | [0547-number-of-provinces](https://github.com/navalgaikwad/Leetcode/tree/master/0547-number-of-provinces) |
+| [0922-possible-bipartition](https://github.com/navalgaikwad/Leetcode/tree/master/0922-possible-bipartition) |
 | [1275-validate-binary-tree-nodes](https://github.com/navalgaikwad/Leetcode/tree/master/1275-validate-binary-tree-nodes) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/navalgaikwad/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [2040-minimum-cost-to-reach-destination-in-time](https://github.com/navalgaikwad/Leetcode/tree/master/2040-minimum-cost-to-reach-destination-in-time) |
@@ -799,6 +801,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0733-flood-fill](https://github.com/navalgaikwad/Leetcode/tree/master/0733-flood-fill) |
 | [0854-making-a-large-island](https://github.com/navalgaikwad/Leetcode/tree/master/0854-making-a-large-island) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
+| [0922-possible-bipartition](https://github.com/navalgaikwad/Leetcode/tree/master/0922-possible-bipartition) |
 | [0971-shortest-bridge](https://github.com/navalgaikwad/Leetcode/tree/master/0971-shortest-bridge) |
 | [0975-range-sum-of-bst](https://github.com/navalgaikwad/Leetcode/tree/master/0975-range-sum-of-bst) |
 | [1008-binary-tree-cameras](https://github.com/navalgaikwad/Leetcode/tree/master/1008-binary-tree-cameras) |
@@ -953,6 +956,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0695-max-area-of-island](https://github.com/navalgaikwad/Leetcode/tree/master/0695-max-area-of-island) |
 | [0721-accounts-merge](https://github.com/navalgaikwad/Leetcode/tree/master/0721-accounts-merge) |
 | [0854-making-a-large-island](https://github.com/navalgaikwad/Leetcode/tree/master/0854-making-a-large-island) |
+| [0922-possible-bipartition](https://github.com/navalgaikwad/Leetcode/tree/master/0922-possible-bipartition) |
 | [1275-validate-binary-tree-nodes](https://github.com/navalgaikwad/Leetcode/tree/master/1275-validate-binary-tree-nodes) |
 ## Randomized
 |  |
