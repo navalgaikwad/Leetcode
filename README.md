@@ -151,6 +151,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [2550-words-within-two-edits-of-dictionary](https://github.com/navalgaikwad/Leetcode/tree/master/2550-words-within-two-edits-of-dictionary) |
 | [2639-separate-the-digits-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/2639-separate-the-digits-in-an-array) |
 | [2662-check-knight-tour-configuration](https://github.com/navalgaikwad/Leetcode/tree/master/2662-check-knight-tour-configuration) |
+| [2664-maximize-greatness-of-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/2664-maximize-greatness-of-an-array) |
 | [2691-count-vowel-strings-in-ranges](https://github.com/navalgaikwad/Leetcode/tree/master/2691-count-vowel-strings-in-ranges) |
 | [3594-identify-the-largest-outlier-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/3594-identify-the-largest-outlier-in-an-array) |
 | [3612-adjacent-increasing-subarrays-detection-i](https://github.com/navalgaikwad/Leetcode/tree/master/3612-adjacent-increasing-subarrays-detection-i) |
@@ -315,6 +316,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1798-max-number-of-k-sum-pairs](https://github.com/navalgaikwad/Leetcode/tree/master/1798-max-number-of-k-sum-pairs) |
 | [2164-two-best-non-overlapping-events](https://github.com/navalgaikwad/Leetcode/tree/master/2164-two-best-non-overlapping-events) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
+| [2664-maximize-greatness-of-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/2664-maximize-greatness-of-an-array) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -365,6 +367,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1285-balance-a-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1285-balance-a-binary-search-tree) |
 | [1478-maximum-number-of-events-that-can-be-attended](https://github.com/navalgaikwad/Leetcode/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
+| [2664-maximize-greatness-of-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/2664-maximize-greatness-of-an-array) |
 ## Prefix Sum
 |  |
 | ------- |
@@ -681,6 +684,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1798-max-number-of-k-sum-pairs](https://github.com/navalgaikwad/Leetcode/tree/master/1798-max-number-of-k-sum-pairs) |
 | [1894-merge-strings-alternately](https://github.com/navalgaikwad/Leetcode/tree/master/1894-merge-strings-alternately) |
 | [2236-maximum-twin-sum-of-a-linked-list](https://github.com/navalgaikwad/Leetcode/tree/master/2236-maximum-twin-sum-of-a-linked-list) |
+| [2664-maximize-greatness-of-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/2664-maximize-greatness-of-an-array) |
 ## String Matching
 |  |
 | ------- |
