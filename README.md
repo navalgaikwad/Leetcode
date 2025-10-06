@@ -213,6 +213,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1798-max-number-of-k-sum-pairs](https://github.com/navalgaikwad/Leetcode/tree/master/1798-max-number-of-k-sum-pairs) |
 | [1848-sum-of-unique-elements](https://github.com/navalgaikwad/Leetcode/tree/master/1848-sum-of-unique-elements) |
 | [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/navalgaikwad/Leetcode/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
+| [2186-count-vowel-substrings-of-a-string](https://github.com/navalgaikwad/Leetcode/tree/master/2186-count-vowel-substrings-of-a-string) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [3594-identify-the-largest-outlier-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/3594-identify-the-largest-outlier-in-an-array) |
 | [3656-minimum-number-of-operations-to-make-elements-in-array-distinct](https://github.com/navalgaikwad/Leetcode/tree/master/3656-minimum-number-of-operations-to-make-elements-in-array-distinct) |
@@ -277,6 +278,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/navalgaikwad/Leetcode/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
 | [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/navalgaikwad/Leetcode/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
 | [2165-plates-between-candles](https://github.com/navalgaikwad/Leetcode/tree/master/2165-plates-between-candles) |
+| [2186-count-vowel-substrings-of-a-string](https://github.com/navalgaikwad/Leetcode/tree/master/2186-count-vowel-substrings-of-a-string) |
 | [2550-words-within-two-edits-of-dictionary](https://github.com/navalgaikwad/Leetcode/tree/master/2550-words-within-two-edits-of-dictionary) |
 | [2691-count-vowel-strings-in-ranges](https://github.com/navalgaikwad/Leetcode/tree/master/2691-count-vowel-strings-in-ranges) |
 | [3451-string-compression-iii](https://github.com/navalgaikwad/Leetcode/tree/master/3451-string-compression-iii) |
