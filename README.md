@@ -145,6 +145,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [2048-build-array-from-permutation](https://github.com/navalgaikwad/Leetcode/tree/master/2048-build-array-from-permutation) |
 | [2164-two-best-non-overlapping-events](https://github.com/navalgaikwad/Leetcode/tree/master/2164-two-best-non-overlapping-events) |
 | [2165-plates-between-candles](https://github.com/navalgaikwad/Leetcode/tree/master/2165-plates-between-candles) |
+| [2308-divide-array-into-equal-pairs](https://github.com/navalgaikwad/Leetcode/tree/master/2308-divide-array-into-equal-pairs) |
 | [2316-count-hills-and-valleys-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/2316-count-hills-and-valleys-in-an-array) |
 | [2349-check-if-there-is-a-valid-parentheses-string-path](https://github.com/navalgaikwad/Leetcode/tree/master/2349-check-if-there-is-a-valid-parentheses-string-path) |
 | [2374-steps-to-make-array-non-decreasing](https://github.com/navalgaikwad/Leetcode/tree/master/2374-steps-to-make-array-non-decreasing) |
@@ -214,6 +215,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1848-sum-of-unique-elements](https://github.com/navalgaikwad/Leetcode/tree/master/1848-sum-of-unique-elements) |
 | [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/navalgaikwad/Leetcode/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
 | [2186-count-vowel-substrings-of-a-string](https://github.com/navalgaikwad/Leetcode/tree/master/2186-count-vowel-substrings-of-a-string) |
+| [2308-divide-array-into-equal-pairs](https://github.com/navalgaikwad/Leetcode/tree/master/2308-divide-array-into-equal-pairs) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [3594-identify-the-largest-outlier-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/3594-identify-the-largest-outlier-in-an-array) |
 | [3656-minimum-number-of-operations-to-make-elements-in-array-distinct](https://github.com/navalgaikwad/Leetcode/tree/master/3656-minimum-number-of-operations-to-make-elements-in-array-distinct) |
@@ -709,6 +711,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1034-subarrays-with-k-different-integers](https://github.com/navalgaikwad/Leetcode/tree/master/1034-subarrays-with-k-different-integers) |
 | [1848-sum-of-unique-elements](https://github.com/navalgaikwad/Leetcode/tree/master/1848-sum-of-unique-elements) |
 | [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/navalgaikwad/Leetcode/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
+| [2308-divide-array-into-equal-pairs](https://github.com/navalgaikwad/Leetcode/tree/master/2308-divide-array-into-equal-pairs) |
 | [3594-identify-the-largest-outlier-in-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/3594-identify-the-largest-outlier-in-an-array) |
 ## Trie
 |  |
@@ -828,6 +831,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0090-subsets-ii](https://github.com/navalgaikwad/Leetcode/tree/master/0090-subsets-ii) |
 | [0231-power-of-two](https://github.com/navalgaikwad/Leetcode/tree/master/0231-power-of-two) |
 | [1022-unique-paths-iii](https://github.com/navalgaikwad/Leetcode/tree/master/1022-unique-paths-iii) |
+| [2308-divide-array-into-equal-pairs](https://github.com/navalgaikwad/Leetcode/tree/master/2308-divide-array-into-equal-pairs) |
 ## Linked List
 |  |
 | ------- |
