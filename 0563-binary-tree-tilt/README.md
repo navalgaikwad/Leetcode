@@ -1,11 +1,12 @@
-<h2><a href="https://leetcode.com/problems/binary-tree-tilt/">563. Binary Tree Tilt</a></h2><h3>Easy</h3><hr><div><p>Given the <code>root</code> of a binary tree, return <em>the sum of every tree node's <strong>tilt</strong>.</em></p>
+<h2><a href="https://leetcode.com/problems/binary-tree-tilt">563. Binary Tree Tilt</a></h2><h3>Easy</h3><hr><p>Given the <code>root</code> of a binary tree, return <em>the sum of every tree node&#39;s <strong>tilt</strong>.</em></p>
 
 <p>The <strong>tilt</strong> of a tree node is the <strong>absolute difference</strong> between the sum of all left subtree node <strong>values</strong> and all right subtree node <strong>values</strong>. If a node does not have a left child, then the sum of the left subtree node <strong>values</strong> is treated as <code>0</code>. The rule is similar if the node does not have a right child.</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/10/20/tilt1.jpg" style="width: 712px; height: 182px;">
-<pre><strong>Input:</strong> root = [1,2,3]
+<img alt="" src="https://assets.leetcode.com/uploads/2020/10/20/tilt1.jpg" style="width: 712px; height: 182px;" />
+<pre>
+<strong>Input:</strong> root = [1,2,3]
 <strong>Output:</strong> 1
 <strong>Explanation:</strong> 
 Tilt of node 2 : |0-0| = 0 (no children)
@@ -15,8 +16,9 @@ Sum of every tilt : 0 + 0 + 1 = 1
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/10/20/tilt2.jpg" style="width: 800px; height: 203px;">
-<pre><strong>Input:</strong> root = [4,2,9,3,5,null,7]
+<img alt="" src="https://assets.leetcode.com/uploads/2020/10/20/tilt2.jpg" style="width: 800px; height: 203px;" />
+<pre>
+<strong>Input:</strong> root = [4,2,9,3,5,null,7]
 <strong>Output:</strong> 15
 <strong>Explanation:</strong> 
 Tilt of node 3 : |0-0| = 0 (no children)
@@ -29,8 +31,9 @@ Sum of every tilt : 0 + 0 + 0 + 2 + 7 + 6 = 15
 </pre>
 
 <p><strong class="example">Example 3:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/10/20/tilt3.jpg" style="width: 800px; height: 293px;">
-<pre><strong>Input:</strong> root = [21,7,14,1,1,2,2,3,3]
+<img alt="" src="https://assets.leetcode.com/uploads/2020/10/20/tilt3.jpg" style="width: 800px; height: 293px;" />
+<pre>
+<strong>Input:</strong> root = [21,7,14,1,1,2,2,3,3]
 <strong>Output:</strong> 9
 </pre>
 
@@ -41,4 +44,3 @@ Sum of every tilt : 0 + 0 + 0 + 2 + 7 + 6 = 15
 	<li>The number of nodes in the tree is in the range <code>[0, 10<sup>4</sup>]</code>.</li>
 	<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>
 </ul>
-</div>
