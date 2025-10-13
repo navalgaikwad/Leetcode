@@ -206,6 +206,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0778-reorganize-string](https://github.com/navalgaikwad/Leetcode/tree/master/0778-reorganize-string) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0940-fruit-into-baskets](https://github.com/navalgaikwad/Leetcode/tree/master/0940-fruit-into-baskets) |
+| [1023-time-based-key-value-store](https://github.com/navalgaikwad/Leetcode/tree/master/1023-time-based-key-value-store) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1034-subarrays-with-k-different-integers](https://github.com/navalgaikwad/Leetcode/tree/master/1034-subarrays-with-k-different-integers) |
 | [1218-lowest-common-ancestor-of-deepest-leaves](https://github.com/navalgaikwad/Leetcode/tree/master/1218-lowest-common-ancestor-of-deepest-leaves) |
@@ -271,6 +272,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0812-rotate-string](https://github.com/navalgaikwad/Leetcode/tree/master/0812-rotate-string) |
 | [0851-goat-latin](https://github.com/navalgaikwad/Leetcode/tree/master/0851-goat-latin) |
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/navalgaikwad/Leetcode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
+| [1023-time-based-key-value-store](https://github.com/navalgaikwad/Leetcode/tree/master/1023-time-based-key-value-store) |
 | [1128-remove-all-adjacent-duplicates-in-string](https://github.com/navalgaikwad/Leetcode/tree/master/1128-remove-all-adjacent-duplicates-in-string) |
 | [1320-remove-all-adjacent-duplicates-in-string-ii](https://github.com/navalgaikwad/Leetcode/tree/master/1320-remove-all-adjacent-duplicates-in-string-ii) |
 | [1371-minimum-remove-to-make-valid-parentheses](https://github.com/navalgaikwad/Leetcode/tree/master/1371-minimum-remove-to-make-valid-parentheses) |
@@ -511,6 +513,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0892-shortest-subarray-with-sum-at-least-k](https://github.com/navalgaikwad/Leetcode/tree/master/0892-shortest-subarray-with-sum-at-least-k) |
 | [0907-koko-eating-bananas](https://github.com/navalgaikwad/Leetcode/tree/master/0907-koko-eating-bananas) |
 | [0912-random-pick-with-weight](https://github.com/navalgaikwad/Leetcode/tree/master/0912-random-pick-with-weight) |
+| [1023-time-based-key-value-store](https://github.com/navalgaikwad/Leetcode/tree/master/1023-time-based-key-value-store) |
 | [1046-max-consecutive-ones-iii](https://github.com/navalgaikwad/Leetcode/tree/master/1046-max-consecutive-ones-iii) |
 | [1550-find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows](https://github.com/navalgaikwad/Leetcode/tree/master/1550-find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/navalgaikwad/Leetcode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
@@ -958,6 +961,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0380-insert-delete-getrandom-o1](https://github.com/navalgaikwad/Leetcode/tree/master/0380-insert-delete-getrandom-o1) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/navalgaikwad/Leetcode/tree/master/0789-kth-largest-element-in-a-stream) |
 | [0937-online-stock-span](https://github.com/navalgaikwad/Leetcode/tree/master/0937-online-stock-span) |
+| [1023-time-based-key-value-store](https://github.com/navalgaikwad/Leetcode/tree/master/1023-time-based-key-value-store) |
 ## Memoization
 |  |
 | ------- |
