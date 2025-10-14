@@ -144,6 +144,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1886-minimum-limit-of-balls-in-a-bag](https://github.com/navalgaikwad/Leetcode/tree/master/1886-minimum-limit-of-balls-in-a-bag) |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/navalgaikwad/Leetcode/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
 | [2020-remove-one-element-to-make-the-array-strictly-increasing](https://github.com/navalgaikwad/Leetcode/tree/master/2020-remove-one-element-to-make-the-array-strictly-increasing) |
+| [2038-nearest-exit-from-entrance-in-maze](https://github.com/navalgaikwad/Leetcode/tree/master/2038-nearest-exit-from-entrance-in-maze) |
 | [2040-minimum-cost-to-reach-destination-in-time](https://github.com/navalgaikwad/Leetcode/tree/master/2040-minimum-cost-to-reach-destination-in-time) |
 | [2048-build-array-from-permutation](https://github.com/navalgaikwad/Leetcode/tree/master/2048-build-array-from-permutation) |
 | [2164-two-best-non-overlapping-events](https://github.com/navalgaikwad/Leetcode/tree/master/2164-two-best-non-overlapping-events) |
@@ -441,6 +442,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1275-validate-binary-tree-nodes](https://github.com/navalgaikwad/Leetcode/tree/master/1275-validate-binary-tree-nodes) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/navalgaikwad/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1554-minimum-time-to-collect-all-apples-in-a-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1554-minimum-time-to-collect-all-apples-in-a-tree) |
+| [2038-nearest-exit-from-entrance-in-maze](https://github.com/navalgaikwad/Leetcode/tree/master/2038-nearest-exit-from-entrance-in-maze) |
 | [2662-check-knight-tour-configuration](https://github.com/navalgaikwad/Leetcode/tree/master/2662-check-knight-tour-configuration) |
 ## Math
 |  |
@@ -653,6 +655,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1331-path-with-maximum-gold](https://github.com/navalgaikwad/Leetcode/tree/master/1331-path-with-maximum-gold) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/navalgaikwad/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1550-find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows](https://github.com/navalgaikwad/Leetcode/tree/master/1550-find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows) |
+| [2038-nearest-exit-from-entrance-in-maze](https://github.com/navalgaikwad/Leetcode/tree/master/2038-nearest-exit-from-entrance-in-maze) |
 | [2349-check-if-there-is-a-valid-parentheses-string-path](https://github.com/navalgaikwad/Leetcode/tree/master/2349-check-if-there-is-a-valid-parentheses-string-path) |
 | [2662-check-knight-tour-configuration](https://github.com/navalgaikwad/Leetcode/tree/master/2662-check-knight-tour-configuration) |
 ## Shortest Path
