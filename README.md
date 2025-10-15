@@ -127,6 +127,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1256-rank-transform-of-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/1256-rank-transform-of-an-array) |
 | [1331-path-with-maximum-gold](https://github.com/navalgaikwad/Leetcode/tree/master/1331-path-with-maximum-gold) |
 | [1421-find-numbers-with-even-number-of-digits](https://github.com/navalgaikwad/Leetcode/tree/master/1421-find-numbers-with-even-number-of-digits) |
+| [1426-find-n-unique-integers-sum-up-to-zero](https://github.com/navalgaikwad/Leetcode/tree/master/1426-find-n-unique-integers-sum-up-to-zero) |
 | [1478-maximum-number-of-events-that-can-be-attended](https://github.com/navalgaikwad/Leetcode/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/navalgaikwad/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1497-design-a-stack-with-increment-operation](https://github.com/navalgaikwad/Leetcode/tree/master/1497-design-a-stack-with-increment-operation) |
@@ -472,6 +473,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0912-random-pick-with-weight](https://github.com/navalgaikwad/Leetcode/tree/master/0912-random-pick-with-weight) |
 | [1013-fibonacci-number](https://github.com/navalgaikwad/Leetcode/tree/master/1013-fibonacci-number) |
 | [1421-find-numbers-with-even-number-of-digits](https://github.com/navalgaikwad/Leetcode/tree/master/1421-find-numbers-with-even-number-of-digits) |
+| [1426-find-n-unique-integers-sum-up-to-zero](https://github.com/navalgaikwad/Leetcode/tree/master/1426-find-n-unique-integers-sum-up-to-zero) |
 | [1585-the-kth-factor-of-n](https://github.com/navalgaikwad/Leetcode/tree/master/1585-the-kth-factor-of-n) |
 | [2383-add-two-integers](https://github.com/navalgaikwad/Leetcode/tree/master/2383-add-two-integers) |
 ## Recursion
