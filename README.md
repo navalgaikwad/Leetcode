@@ -283,6 +283,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [1437-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/navalgaikwad/Leetcode/tree/master/1437-minimum-insertion-steps-to-make-a-string-palindrome) |
 | [1460-number-of-substrings-containing-all-three-characters](https://github.com/navalgaikwad/Leetcode/tree/master/1460-number-of-substrings-containing-all-three-characters) |
 | [1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence](https://github.com/navalgaikwad/Leetcode/tree/master/1566-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence) |
+| [1652-minimum-suffix-flips](https://github.com/navalgaikwad/Leetcode/tree/master/1652-minimum-suffix-flips) |
 | [1781-check-if-two-string-arrays-are-equivalent](https://github.com/navalgaikwad/Leetcode/tree/master/1781-check-if-two-string-arrays-are-equivalent) |
 | [1894-merge-strings-alternately](https://github.com/navalgaikwad/Leetcode/tree/master/1894-merge-strings-alternately) |
 | [1895-minimum-number-of-operations-to-move-all-balls-to-each-box](https://github.com/navalgaikwad/Leetcode/tree/master/1895-minimum-number-of-operations-to-move-all-balls-to-each-box) |
@@ -380,6 +381,7 @@ Collection of LeetCode questions to ace the coding interview!
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/navalgaikwad/Leetcode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
 | [1285-balance-a-binary-search-tree](https://github.com/navalgaikwad/Leetcode/tree/master/1285-balance-a-binary-search-tree) |
 | [1478-maximum-number-of-events-that-can-be-attended](https://github.com/navalgaikwad/Leetcode/tree/master/1478-maximum-number-of-events-that-can-be-attended) |
+| [1652-minimum-suffix-flips](https://github.com/navalgaikwad/Leetcode/tree/master/1652-minimum-suffix-flips) |
 | [2436-make-array-zero-by-subtracting-equal-amounts](https://github.com/navalgaikwad/Leetcode/tree/master/2436-make-array-zero-by-subtracting-equal-amounts) |
 | [2664-maximize-greatness-of-an-array](https://github.com/navalgaikwad/Leetcode/tree/master/2664-maximize-greatness-of-an-array) |
 ## Prefix Sum
